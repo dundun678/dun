@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF 实用工具箱</title>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<style>
+:root {
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --primary-light: #EEF2FF;
+  --danger: #EF4444;
+  --danger-hover: #DC2626;
+  --danger-light: #FEF2F2;
+  --success: #10B981;
+  --success-light: #ECFDF5;
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --border: #E2E8F0;
+  --text: #1E293B;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.logo svg { width:32px; height:32px; }
+
+.badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 4px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab:hover { color: var(--text); background: #F1F5F9; }
+.tab.active {
+  color: var(--primary);
+  background: var(--primary-light);
+  font-weight: 600;
+}
+
+.tab svg { width:18px; height:18px; }
+
+.panel { display:none; }
+.panel.active { display:block; }
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: #FAFBFC;
+}
+
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.drop-zone svg { width:48px; height:48px; color: var(--text-muted); margin-bottom: 12px; }
+.drop-zone .title { font-size:16px; font-weight:600; color: var(--text); margin-bottom:4px; }
+.drop-zone .hint { font-size:13px; color: var(--text-muted); }
+
+.file-list { margin-top: 20px; }
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.file-item:hover { border-color: #CBD5E1; }
+.file-item.dragging { opacity: 0.5; background: var(--primary-light); border-color: var(--primary); }
+.file-item.drag-target { border-color: var(--primary); border-style: solid; }
+.file-item .drag-handle { cursor:grab; color: var(--text-muted); padding: 4px; }
+.file-item .drag-handle:active { cursor:grabbing; }
+.file-item .file-icon { width:36px; height:36px; background: var(--danger-light); color: var(--danger); border-radius: 8px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; }
+.file-item .file-info { flex:1; min-width:0; }
+.file-item .file-name { font-size:14px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.file-item .file-size { font-size:12px; color: var(--text-muted); }
+.file-item .file-pages { font-size:12px; color: var(--primary); font-weight:500; }
+.file-item .remove-btn {
+  width:28px; height:28px; border:none; background:transparent;
+  color: var(--text-muted); cursor:pointer; border-radius:6px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; transition:all 0.15s; flex-shrink:0;
+}
+.file-item .remove-btn:hover { color: var(--danger); background: var(--danger-light); }
+
+.input-group { margin-top: 20px; }
+.input-group label { display:block; font-size:14px; font-weight:500; margin-bottom:6px; color: var(--text); }
+.input-group .helper { font-size:12px; color: var(--text-muted); margin-top:4px; }
+
+.page-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.page-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover:not(:disabled) { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(79,70,229,0.3); }
+.btn-primary:disabled { opacity:0.5; cursor:not-allowed; }
+
+.btn-danger { background: var(--danger); color: #fff; }
+.btn-danger:hover:not(:disabled) { background: var(--danger-hover); }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.btn-outline:hover { background: #F1F5F9; color: var(--text); }
+
+.btn-sm { padding: 8px 16px; font-size:13px; }
+
+.action-bar {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.result-info {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--success-light);
+  border-radius: 8px;
+  color: var(--success);
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.result-info.show { display: flex; align-items: center; gap: 8px; }
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1E293B;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+.toast.error { background: var(--danger); }
+
+.info-strip {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.info-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.info-chip .count { font-weight:700; color: var(--primary); }
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+.loading-box {
+  text-align: center;
+  padding: 40px;
+}
+.spinner {
+  width:40px; height:40px;
+  border:3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius:50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.loading-text { font-size:15px; color: var(--text-secondary); font-weight:500; }
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .main { padding: 20px 12px 40px; }
+  .card { padding: 20px; }
+  .tabs { flex-direction: column; gap: 2px; padding: 4px 8px; }
+  .tab { padding: 10px 16px; justify-content: flex-start; }
+  .drop-zone { padding: 32px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#4F46E5"/><path d="M8 10h16v2H8zm0 5h12v2H8zm0 5h16v2H8z" fill="#fff"/></svg>
+      PDF 实用工具箱
+      <span class="badge">所有处理均在浏览器本地完成</span>
+    </div>
+    <span style="font-size:12px;color:var(--text-muted)">工具开发者：wxid18170872245</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('merge')">
+      <svg viewBox="0 0 18 18" fill="currentColor"><path d="M4 3h7l3 3v9a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm0 1v11h9V6.5H9.5a.5.5 0 01-.5-.5V4H4zm8 0h.3L14 5.7v.3h-2V4zM1 5v9a1 1 0 001 1h1V5H2a1 1 0 00-1 1zm15-1v10h1a1 1 0 001-1V5a1 1 0 00-1-1h-1z"/></svg>
+      合并 PDF
+    </button>
+    <button class="tab" onclick="switchTab('delete')">
+      <svg viewBox="0 0 18 18" fill="currentColor"><path d="M3 4h12v1H3zm2-2h8l1 1H4zm1 11V7h1v6zm3 0V7h1v6zm-3.5 2h7l-.5 2H6zm11-11H2v1h14z"/></svg>
+      删除页面
+    </button>
+    <button class="tab" onclick="switchTab('extract')">
+      <svg viewBox="0 0 18 18" fill="currentColor"><path d="M4 3h7l3 3v9a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm0 1v11h9V6.5H9.5a.5.5 0 01-.5-.5V4H4zm8 0h.3L14 5.7v.3h-2V4zM6 7h5v1H6zm0 2h5v1H6zm1 2h3v1H7z"/></svg>
+      提取页面
+    </button>
+  </div>
+
+  <!-- ===== 合并PDF ===== -->
+  <div id="panel-merge" class="panel active">
+    <div class="card">
+      <div class="drop-zone" id="drop-merge" onclick="document.getElementById('file-input-merge').click()">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M6 22h36" stroke="currentColor" stroke-width="2.5"/><path d="M24 26v8m-4-4l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="title">点击选择或拖拽 PDF 文件到此处</div>
+        <div class="hint">支持同时选择多个PDF文件，拖拽卡片可调整合并顺序</div>
+      </div>
+      <input type="file" id="file-input-merge" accept=".pdf" multiple hidden onchange="handleMergeFiles(this.files)">
+      <div class="file-list" id="merge-list"></div>
+      <div class="action-bar">
+        <button class="btn btn-primary" id="btn-merge" disabled onclick="doMerge()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3 2v10l2-2 1 1-4 4-4-4 1-1 2 2V2h2zm7 0h2v10l2-2 1 1-4 4-4-4 1-1 2 2V2z"/></svg>
+          合并并下载
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-clear-merge" disabled onclick="clearMergeFiles()">清空列表</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 删除页面 ===== -->
+  <div id="panel-delete" class="panel">
+    <div class="card">
+      <div class="drop-zone" id="drop-delete" onclick="document.getElementById('file-input-delete').click()">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M8 20h32" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/><line x1="18" y1="18" x2="30" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <div class="title">点击选择或拖拽一个 PDF 文件</div>
+        <div class="hint">选择需要删除页面的PDF文件</div>
+      </div>
+      <input type="file" id="file-input-delete" accept=".pdf" hidden onchange="handleDeleteFile(this.files)">
+      <div class="file-list" id="delete-file-info"></div>
+      <div class="input-group" id="delete-input-group" style="display:none">
+        <label>要删除的页码</label>
+        <input type="text" class="page-input" id="delete-pages-input" placeholder="例如：1,3,5-7  或  1，3，5-7（支持中文逗号）">
+        <div class="helper">支持逗号分隔的页码和页码范围，如 "1,3,5-8,10"。支持中文逗号" ，"。</div>
+      </div>
+      <div class="action-bar" id="delete-actions" style="display:none">
+        <button class="btn btn-danger" id="btn-delete" onclick="doDelete()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12v1H2zm3-2h6l.5 1H14v1H2V2h3.5zm1 8V7h1v2zm2.5 0V7h1v2zm-3 3.5h5L10 15H6z"/></svg>
+          删除并下载
+        </button>
+        <button class="btn btn-outline btn-sm" onclick="clearDeleteFile()">重新选择</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 提取页面 ===== -->
+  <div id="panel-extract" class="panel">
+    <div class="card">
+      <div class="drop-zone" id="drop-extract" onclick="document.getElementById('file-input-extract').click()">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2.5"/><rect x="22" y="22" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M28 24l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="title">点击选择或拖拽一个 PDF 文件</div>
+        <div class="hint">从PDF中提取指定页面，生成新的PDF文件</div>
+      </div>
+      <input type="file" id="file-input-extract" accept=".pdf" hidden onchange="handleExtractFile(this.files)">
+      <div class="file-list" id="extract-file-info"></div>
+      <div class="input-group" id="extract-input-group" style="display:none">
+        <label>要提取的页码</label>
+        <input type="text" class="page-input" id="extract-pages-input" placeholder="例如：1,3,5-7  或  1，3，5-7（支持中文逗号）">
+        <div class="helper">支持逗号分隔的页码和页码范围，如 "1,3,5-8,10"。支持中文逗号" ，"。</div>
+      </div>
+      <div class="action-bar" id="extract-actions" style="display:none">
+        <button class="btn btn-primary" id="btn-extract" onclick="doExtract()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M4 3h7l3 3v9a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm0 1v11h9V6.5H9.5a.5.5 0 01-.5-.5V4H4zm8 0h.3L14 5.7v.3h-2V4zM7 8h5v1H7zm0 2h5v1H7zm1 2h3v1H8z"/></svg>
+          提取并下载
+        </button>
+        <button class="btn btn-outline btn-sm" onclick="clearExtractFile()">重新选择</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  基于 pdf-lib 开源库 · 一个工具，搞定一切，快如闪电！<br>本地运行，不泄隐私，无广告，无付费.
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="loading-overlay" id="loading" style="display:none">
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <div class="loading-text" id="loading-text">处理中...</div>
+  </div>
+</div>
+
+<script>
+// ========== 状态管理 ==========
+let mergeFiles = [];
+let deleteFile = null;
+let deleteFileBytes = null;
+let deletePageCount = 0;
+let extractFile = null;
+let extractFileBytes = null;
+let extractPageCount = 0;
+let dragSrcIndex = null;
+
+// ========== tab 切换 ==========
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.toggle('active', t.textContent.trim().includes(
+      tab==='merge'?'合并':tab==='delete'?'删除':'提取'
+    ));
+  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+
+// ========== Toast ==========
+let toastTimer;
+function showToast(msg, isError) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + (isError ? 'error' : '') + ' show';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ========== Loading ==========
+function showLoading(text) {
+  document.getElementById('loading-text').textContent = text || '处理中...';
+  document.getElementById('loading').style.display = 'flex';
+}
+function hideLoading() {
+  document.getElementById('loading').style.display = 'none';
+}
+
+// ========== 文件大小格式化 ==========
+function fmtSize(bytes) {
+  if (!bytes) return '未知';
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / 1048576).toFixed(2) + ' MB';
+}
+
+// ========== 页码解析 ==========
+function parsePages(input, maxPage) {
+  if (!input || !input.trim()) return [];
+  const pages = new Set();
+  // 标准化：中文逗号 → 英文逗号
+  let s = input.trim().replace(/，/g, ',').replace(/\s+/g, '');
+  const parts = s.split(',');
+  for (const part of parts) {
+    if (!part) continue;
+    if (part.includes('-')) {
+      const [start, end] = part.split('-').map(Number);
+      if (isNaN(start) || isNaN(end) || start < 1 || end > maxPage || start > end) {
+        throw new Error('页码范围无效: ' + part + '（页码需在 1-' + maxPage + ' 之间）');
+      }
+      for (let i = start; i <= end; i++) pages.add(i);
+    } else {
+      const n = Number(part);
+      if (isNaN(n) || n < 1 || n > maxPage) {
+        throw new Error('页码无效: ' + part + '（页码需在 1-' + maxPage + ' 之间）');
+      }
+      pages.add(n);
+    }
+  }
+  return Array.from(pages).sort((a,b) => a-b);
+}
+
+// ========== 合并PDF ==========
+function handleMergeFiles(fileList) {
+  for (const f of fileList) {
+    if (f.type !== 'application/pdf' && !f.name.toLowerCase().endsWith('.pdf')) {
+      showToast(f.name + ' 不是PDF文件，已跳过', true);
+      continue;
+    }
+    mergeFiles.push(f);
+  }
+  document.getElementById('file-input-merge').value = '';
+  renderMergeList();
+}
+
+function renderMergeList() {
+  const container = document.getElementById('merge-list');
+  const btnMerge = document.getElementById('btn-merge');
+  const btnClear = document.getElementById('btn-clear-merge');
+
+  if (mergeFiles.length === 0) {
+    container.innerHTML = '';
+    btnMerge.disabled = true;
+    btnClear.disabled = true;
+    return;
+  }
+
+  container.innerHTML = mergeFiles.map((f, i) => `
+    <div class="file-item" draggable="true"
+         data-index="${i}"
+         ondragstart="dragMergeStart(event,${i})"
+         ondragover="dragMergeOver(event)"
+         ondragenter="dragMergeEnter(event,${i})"
+         ondragleave="dragMergeLeave(event)"
+         ondrop="dragMergeDrop(event,${i})"
+         ondragend="dragMergeEnd()">
+      <span class="drag-handle" title="拖拽排序">⠿</span>
+      <div class="file-icon">PDF</div>
+      <div class="file-info">
+        <div class="file-name">${f.name}</div>
+        <div class="file-size">${fmtSize(f.size)}</div>
+      </div>
+      <div class="file-pages" style="margin-right:8px">#${i+1}</div>
+      <button class="remove-btn" onclick="event.stopPropagation(); removeMergeFile(${i})" title="移除">✕</button>
+    </div>
+  `).join('');
+
+  btnMerge.disabled = mergeFiles.length < 2;
+  btnClear.disabled = false;
+}
+
+function removeMergeFile(i) {
+  mergeFiles.splice(i, 1);
+  renderMergeList();
+}
+
+function clearMergeFiles() {
+  mergeFiles = [];
+  renderMergeList();
+}
+
+// 拖拽排序
+function dragMergeStart(e, index) {
+  dragSrcIndex = index;
+  e.target.closest('.file-item').classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', index);
+}
+
+function dragMergeOver(e) { e.preventDefault(); e.dataTransfer.dropEffect = 'move'; }
+
+function dragMergeEnter(e, index) {
+  e.preventDefault();
+  if (index !== dragSrcIndex) {
+    e.target.closest('.file-item')?.classList.add('drag-target');
+  }
+}
+
+function dragMergeLeave(e) {
+  e.target.closest('.file-item')?.classList.remove('drag-target');
+}
+
+function dragMergeDrop(e, targetIndex) {
+  e.preventDefault();
+  e.target.closest('.file-item')?.classList.remove('drag-target');
+  if (dragSrcIndex !== null && dragSrcIndex !== targetIndex) {
+    const [item] = mergeFiles.splice(dragSrcIndex, 1);
+    mergeFiles.splice(targetIndex, 0, item);
+    renderMergeList();
+  }
+  dragSrcIndex = null;
+}
+
+function dragMergeEnd() {
+  document.querySelectorAll('.file-item').forEach(el => {
+    el.classList.remove('dragging', 'drag-target');
+  });
+  dragSrcIndex = null;
+}
+
+async function doMerge() {
+  if (mergeFiles.length < 2) return;
+  showLoading('正在合并 PDF...');
+
+  try {
+    const { PDFDocument } = PDFLib;
+    const mergedDoc = await PDFDocument.create();
+
+    for (const file of mergeFiles) {
+      const bytes = await file.arrayBuffer();
+      const doc = await PDFDocument.load(bytes, { ignoreEncryption: true });
+      const copiedPages = await mergedDoc.copyPages(doc, doc.getPageIndices());
+      copiedPages.forEach(p => mergedDoc.addPage(p));
+    }
+
+    const outBytes = await mergedDoc.save();
+    downloadBlob(outBytes, '合并文档.pdf');
+    showToast('合并完成！共 ' + mergedDoc.getPageCount() + ' 页');
+  } catch (err) {
+    console.error(err);
+    showToast('合并失败：' + err.message, true);
+  } finally {
+    hideLoading();
+  }
+}
+
+// ========== 删除页面 ==========
+async function handleDeleteFile(fileList) {
+  if (!fileList.length) return;
+  const f = fileList[0];
+  if (f.type !== 'application/pdf' && !f.name.toLowerCase().endsWith('.pdf')) {
+    showToast('请选择PDF文件', true);
+    return;
+  }
+
+  showLoading('正在读取文件...');
+  try {
+    const bytes = await f.arrayBuffer();
+    const { PDFDocument } = PDFLib;
+    const doc = await PDFDocument.load(bytes, { ignoreEncryption: true });
+    deleteFile = f;
+    deleteFileBytes = bytes;
+    deletePageCount = doc.getPageCount();
+
+    document.getElementById('delete-file-info').innerHTML = `
+      <div class="info-strip">
+        <div class="info-chip">📄 ${f.name}</div>
+        <div class="info-chip">📏 ${fmtSize(f.size)}</div>
+        <div class="info-chip">📑 <span class="count">${deletePageCount}</span> 页</div>
+      </div>
+    `;
+    document.getElementById('delete-input-group').style.display = 'block';
+    document.getElementById('delete-actions').style.display = 'flex';
+    document.getElementById('delete-pages-input').value = '';
+    document.getElementById('delete-pages-input').focus();
+  } catch (err) {
+    showToast('读取文件失败：' + err.message, true);
+  } finally {
+    hideLoading();
+    document.getElementById('file-input-delete').value = '';
+  }
+}
+
+function clearDeleteFile() {
+  deleteFile = null;
+  deleteFileBytes = null;
+  deletePageCount = 0;
+  document.getElementById('delete-file-info').innerHTML = '';
+  document.getElementById('delete-input-group').style.display = 'none';
+  document.getElementById('delete-actions').style.display = 'none';
+  document.getElementById('delete-pages-input').value = '';
+}
+
+async function doDelete() {
+  if (!deleteFileBytes) return;
+  const input = document.getElementById('delete-pages-input').value;
+  let pagesToRemove;
+  try {
+    pagesToRemove = parsePages(input, deletePageCount);
+  } catch (err) {
+    showToast(err.message, true);
+    return;
+  }
+  if (pagesToRemove.length === 0) {
+    showToast('请输入要删除的页码', true);
+    return;
+  }
+  if (pagesToRemove.length >= deletePageCount) {
+    showToast('不能删除所有页面，至少保留一页', true);
+    return;
+  }
+
+  showLoading('正在删除页面...');
+  try {
+    const { PDFDocument } = PDFLib;
+    const doc = await PDFDocument.load(deleteFileBytes, { ignoreEncryption: true });
+    const removeSet = new Set(pagesToRemove.map(p => p - 1)); // 转为0-based索引
+    const toRemove = [];
+    for (let i = doc.getPageCount() - 1; i >= 0; i--) {
+      if (removeSet.has(i)) toRemove.push(i);
+    }
+    // 从后往前删除，避免索引错位
+    for (const idx of toRemove) {
+      doc.removePage(idx);
+    }
+
+    const outBytes = await doc.save();
+    const baseName = deleteFile.name.replace(/\.pdf$/i, '');
+    downloadBlob(outBytes, baseName + '_已删除页面.pdf');
+    showToast('删除完成！已删除 ' + pagesToRemove.length + ' 页，剩余 ' + doc.getPageCount() + ' 页');
+  } catch (err) {
+    console.error(err);
+    showToast('删除失败：' + err.message, true);
+  } finally {
+    hideLoading();
+  }
+}
+
+// ========== 提取页面 ==========
+async function handleExtractFile(fileList) {
+  if (!fileList.length) return;
+  const f = fileList[0];
+  if (f.type !== 'application/pdf' && !f.name.toLowerCase().endsWith('.pdf')) {
+    showToast('请选择PDF文件', true);
+    return;
+  }
+
+  showLoading('正在读取文件...');
+  try {
+    const bytes = await f.arrayBuffer();
+    const { PDFDocument } = PDFLib;
+    const doc = await PDFDocument.load(bytes, { ignoreEncryption: true });
+    extractFile = f;
+    extractFileBytes = bytes;
+    extractPageCount = doc.getPageCount();
+
+    document.getElementById('extract-file-info').innerHTML = `
+      <div class="info-strip">
+        <div class="info-chip">📄 ${f.name}</div>
+        <div class="info-chip">📏 ${fmtSize(f.size)}</div>
+        <div class="info-chip">📑 <span class="count">${extractPageCount}</span> 页</div>
+      </div>
+    `;
+    document.getElementById('extract-input-group').style.display = 'block';
+    document.getElementById('extract-actions').style.display = 'flex';
+    document.getElementById('extract-pages-input').value = '';
+    document.getElementById('extract-pages-input').focus();
+  } catch (err) {
+    showToast('读取文件失败：' + err.message, true);
+  } finally {
+    hideLoading();
+    document.getElementById('file-input-extract').value = '';
+  }
+}
+
+function clearExtractFile() {
+  extractFile = null;
+  extractFileBytes = null;
+  extractPageCount = 0;
+  document.getElementById('extract-file-info').innerHTML = '';
+  document.getElementById('extract-input-group').style.display = 'none';
+  document.getElementById('extract-actions').style.display = 'none';
+  document.getElementById('extract-pages-input').value = '';
+}
+
+async function doExtract() {
+  if (!extractFileBytes) return;
+  const input = document.getElementById('extract-pages-input').value;
+  let pagesToExtract;
+  try {
+    pagesToExtract = parsePages(input, extractPageCount);
+  } catch (err) {
+    showToast(err.message, true);
+    return;
+  }
+  if (pagesToExtract.length === 0) {
+    showToast('请输入要提取的页码', true);
+    return;
+  }
+
+  showLoading('正在提取页面...');
+  try {
+    const { PDFDocument } = PDFLib;
+    const srcDoc = await PDFDocument.load(extractFileBytes, { ignoreEncryption: true });
+    const newDoc = await PDFDocument.create();
+    const pageIndices = pagesToExtract.map(p => p - 1); // 转为0-based索引
+    const copiedPages = await newDoc.copyPages(srcDoc, pageIndices);
+    copiedPages.forEach(p => newDoc.addPage(p));
+
+    const outBytes = await newDoc.save();
+    const baseName = extractFile.name.replace(/\.pdf$/i, '');
+    downloadBlob(outBytes, baseName + '_提取页面.pdf');
+    showToast('提取完成！共提取 ' + pagesToExtract.length + ' 页');
+  } catch (err) {
+    console.error(err);
+    showToast('提取失败：' + err.message, true);
+  } finally {
+    hideLoading();
+  }
+}
+
+// ========== 通用：文件下载 ==========
+function downloadBlob(bytes, filename) {
+  const blob = new Blob([bytes], { type: 'application/pdf' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ========== 通用：拖拽上传 ==========
+['drop-merge', 'drop-delete', 'drop-extract'].forEach(id => {
+  const zone = document.getElementById(id);
+  if (!zone) return;
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('drag-over');
+    const files = e.dataTransfer.files;
+    if (!files.length) return;
+    if (id === 'drop-merge') handleMergeFiles(files);
+    else if (id === 'drop-delete') handleDeleteFile(files);
+    else if (id === 'drop-extract') handleExtractFile(files);
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年高考数学全国一卷（新高考Ⅰ卷）第 14 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年高考数学全国一卷（新高考Ⅰ卷）第 14 题研究报告</h1>
+  <div class="lead">研究对象：甲乙卡片四轮博弈概率题　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>甲、乙两人各有四张卡片，每张卡片上标有一个数字，甲的卡片上分别标有数字 <span class="formula">\(1,3,5,7\)</span>，乙的卡片上分别标有数字 <span class="formula">\(2,4,6,8\)</span>。两人进行四轮比赛。在每轮比赛中，两人各自从自己持有的卡片中随机选一张，并比较所选卡片上数字的大小，数字大的人得 <span class="formula">\(1\)</span> 分，数字小的人得 <span class="formula">\(0\)</span> 分，然后各自弃置此轮所选的卡片（弃置的卡片在此后的轮次中不能使用）。则四轮比赛后，甲的总得分不小于 <span class="formula">\(2\)</span> 的概率为 <span class="formula">\(\_\_\_\_\_\_\_\_\_\_\)</span>。</p>
+
+<blockquote>答案：<span class="formula">\(\dfrac{1}{2}\)</span>（或 <span class="formula">\(0.5\)</span>）。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2024 年普通高考数学（新高考Ⅰ卷 / 全国一卷）</td></tr>
+<tr><td>题号</td><td>第 14 题（填空题第 3 小题）</td></tr>
+<tr><td>题型与分值</td><td>填空题，单空，5 分</td></tr>
+<tr><td>所属模块</td><td>概率统计（古典概型、排列组合、随机变量及其期望）</td></tr>
+<tr><td>难度定位</td><td>较难题（填空题中的区分度担当，多家教辅标注"较难题/中档偏难"）</td></tr>
+<tr><td>实测数据</td><td>暂无官方公开的省级均分；据一线教师评析，该题区分度良好，属于本卷填空题里最易失分的一空，得分率偏低</td></tr>
+<tr><td>核心障碍</td><td>"随机出牌"的等可能样本空间识别、分类不重不漏、能否想到用期望缩枚举量</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>古典概型与等可能样本空间</b>：两人各按不放回随机顺序出牌，等价于甲、乙的四张卡片做"均匀随机双射配对"，样本空间共 <span class="formula">\(4!=24\)</span> 种等可能结果。这是本题的建模核心。</li>
+<li><b>排列组合与分类计数</b>：按甲的总得分（0、1、2、3 分）分类，逐类数出符合条件的配对种数，要求"不重不漏"。</li>
+<li><b>随机变量的期望（期望的可加性）</b>：将四轮得分记为 <span class="formula">\(X_1,X_2,X_3,X_4\)</span> 与总分 <span class="formula">\(X\)</span>，利用单轮胜率与线性期望快速得到 <span class="formula">\(E(X)\)</span>，从而化简枚举。</li>
+<li><b>极端情形的小枚举</b>：<span class="formula">\(X=0\)</span> 与 <span class="formula">\(X=3\)</span> 各自只有唯一配对方式，属于"一眼可得"的边界情形。</li>
+<li><b>对称性 / 互补事件</b>：求"不小于 2"可走"直接数 2 分与 3 分"或"用 1 减小于 2（0 分与 1 分）"两条路径。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>能力维度（高考评价体系）</th><th>本题落点</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>读懂"每轮随机选一张、比大小、弃置、后续轮次不可用"的规则，正确还原出"不放回随机配对"的等可能结构</td></tr>
+<tr><td>抽象概括</td><td>把"四轮比赛"抽象为甲、乙卡片集合之间的一个均匀随机双射；把每轮胜负抽象为指示变量 <span class="formula">\(X_i\in\{0,1\}\)</span></td></tr>
+<tr><td>推理论证</td><td>分类讨论得分情形并保证计数的完备性与互斥性；用期望等式反推概率分布</td></tr>
+<tr><td>运算求解</td><td>单轮胜率 <span class="formula">\(\frac{6}{16}=\frac{3}{8}\)</span> 的判定、<span class="formula">\(4\times\frac{3}{8}=\frac{3}{2}\)</span> 的期望计算、解二元一次方程组求 <span class="formula">\(P_1,P_2\)</span></td></tr>
+<tr><td>探索创新</td><td>在 24 种全枚举偏繁琐时，主动转向"期望 + 两个极端点"的巧算路径，体现算法选择的灵活性</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>将博弈过程抽象为随机双射与随机变量</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>分类计数的完备互斥、期望等式反推分布</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★</span></td><td>胜率、期望、方程组求解</td></tr>
+<tr><td>数据分析</td><td><span class="star">★★</span></td><td>对样本空间结构与分布的整体把握</td></tr>
+<tr><td>直观想象</td><td><span class="star">★</span></td><td>本题无图形依赖，该素养介入较少</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★</span></td><td>把"卡片对局"建模为古典概型</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题置于填空题第 14 题（压轴填空）位置，命题意图可概括为：</p>
+
+<ul>
+<li><b>情境生活化、规则游戏化</b>：以"两人各持四张牌、四轮博弈"为情境，贴近学生经验，读题门槛低，但建模门槛不低。</li>
+<li><b>去套路化</b>：不考常规"摸球/掷骰"模板，而用"不放回随机配对"这一隐蔽结构，学生极易误以为"每轮独立"，从而错用二项分布。</li>
+<li><b>隐蔽的等可能性</b>：甲、乙出牌顺序相互独立且各为均匀随机排列，二者"按轮对齐"后恰构成全部 <span class="formula">\(4!=24\)</span> 种配对上的均匀分布——这是破题的关键洞察，也是主要区分点。</li>
+<li><b>区分度设计</b>：直接全枚举 24 种可行但易错；更优解需结合"单轮胜率固定 + 期望可加 + 两端极端情形"来大幅压缩工作量。不同思维层次的学生在此分野明显。</li>
+<li><b>数值友好</b>：最终答案为整齐的 <span class="formula">\(\frac{1}{2}\)</span>，既让认真推算者获得正反馈，又隐含"对称性"的妙味。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 方法一：分类计数（枚举配对法）</h3>
+
+<p>由于双方均不放回随机出牌，四轮结束后自然形成甲四张卡片与乙四张卡片的一个一一对应（配对）。所有可能的配对共 <span class="formula">\(4!=24\)</span> 种，且每种等可能。记甲的得分为 <span class="formula">\(X\)</span>。</p>
+
+<p>先观察单卡胜负：甲持 <span class="formula">\(1\)</span> 必负（乙最小为 <span class="formula">\(2\)</span>）；持 <span class="formula">\(3\)</span> 仅胜 <span class="formula">\(2\)</span>；持 <span class="formula">\(5\)</span> 胜 <span class="formula">\(2,4\)</span>；持 <span class="formula">\(7\)</span> 胜 <span class="formula">\(2,4,6\)</span>。故 <span class="formula">\(X\)</span> 最大为 <span class="formula">\(3\)</span>（甲卡 <span class="formula">\(1\)</span> 必失 1 分）。</p>
+
+<p><b>① 甲得 0 分</b>：四张全负，唯一配对 <span class="formula">\((1,2),(3,4),(5,6),(7,8)\)</span>，计 <span class="formula">\(1\)</span> 种。</p>
+<p><b>② 甲得 3 分</b>：仅甲卡 <span class="formula">\(1\)</span> 负、其余全胜，唯一配对 <span class="formula">\((1,8),(3,2),(5,4),(7,6)\)</span>，计 <span class="formula">\(1\)</span> 种。</p>
+<p><b>③ 甲得 2 分</b>：恰有两张获胜，分三类：</p>
+<ul>
+<li>胜 <span class="formula">\(3,5\)</span>：须 <span class="formula">\((3,2),(5,4)\)</span>，余 <span class="formula">\((1,6),(7,8)\)</span> 且 <span class="formula">\(7\)</span> 负成立 → <span class="formula">\(1\)</span> 种；</li>
+<li>胜 <span class="formula">\(3,7\)</span>：须 <span class="formula">\((3,2)\)</span>，<span class="formula">\(7\)</span> 胜需对手为 <span class="formula">\(4\)</span> 或 <span class="formula">\(6\)</span>，<span class="formula">\(5\)</span> 负，得
+<span class="formula">\((3,2),(7,4),(1,6),(5,8)\)</span>、<span class="formula">\((3,2),(7,4),(1,8),(5,6)\)</span>、<span class="formula">\((3,2),(7,6),(1,4),(5,8)\)</span> → <span class="formula">\(3\)</span> 种；</li>
+<li>胜 <span class="formula">\(5,7\)</span>：<span class="formula">\(5\)</span> 胜对手 <span class="formula">\(2\)</span> 或 <span class="formula">\(4\)</span>，<span class="formula">\(7\)</span> 胜对手 <span class="formula">\(2,4,6\)</span>，<span class="formula">\(3\)</span> 负、<span class="formula">\(1\)</span> 负，共 <span class="formula">\(7\)</span> 种：
+<span class="formula">\((5,2),(7,4),(1,6),(3,8)\)</span>、<span class="formula">\((5,2),(7,4),(1,8),(3,6)\)</span>、<span class="formula">\((5,4),(7,2),(1,6),(3,8)\)</span>、<span class="formula">\((5,4),(7,2),(1,8),(3,6)\)</span>、<span class="formula">\((5,2),(7,6),(1,4),(3,8)\)</span>、<span class="formula">\((5,2),(7,6),(1,8),(3,4)\)</span>、<span class="formula">\((5,4),(7,6),(1,2),(3,8)\)</span>。</li>
+</ul>
+<p>故得 2 分共 <span class="formula">\(1+3+7=11\)</span> 种。</p>
+
+<p>因此得分不小于 <span class="formula">\(2\)</span> 的配对数 = <span class="formula">\(11+1=12\)</span> 种，所求概率</p>
+<p class="formula">\[P(X\ge 2)=\frac{12}{24}=\frac{1}{2}.\]</p>
+
+<h3>7.2 方法二：随机变量期望法（巧算）</h3>
+
+<p>设第 <span class="formula">\(i\)</span> 轮甲得分为 <span class="formula">\(X_i\in\{0,1\}\)</span>，总分 <span class="formula">\(X=X_1+X_2+X_3+X_4\)</span>。固定某一轮，甲、乙各出一张共 <span class="formula">\(4\times4=16\)</span> 种等可能有序组合，甲获胜的组合为 <span class="formula">\((3,2),(5,2),(5,4),(7,2),(7,4),(7,6)\)</span> 共 <span class="formula">\(6\)</span> 种，故</p>
+<p class="formula">\[P(X_i=1)=\frac{6}{16}=\frac{3}{8},\qquad E(X_i)=\frac{3}{8}.\]</p>
+<p>由期望可加性，</p>
+<p class="formula">\[E(X)=4\times\frac{3}{8}=\frac{3}{2}.\]</p>
+<p>又 <span class="formula">\(X\in\{0,1,2,3\}\)</span>。前面已得 <span class="formula">\(P(X=0)=P(X=3)=\frac{1}{24}\)</span>。设 <span class="formula">\(P_1=P(X=1),P_2=P(X=2)\)</span>，则</p>
+<p class="formula">\[P_1+P_2=1-\frac{2}{24}=\frac{11}{12},\]</p>
+<p class="formula">\[P_1+2P_2+3\cdot\frac{1}{24}=\frac{3}{2}\ \Longrightarrow\ P_1+2P_2=\frac{11}{8}.\]</p>
+<p>两式相减得 <span class="formula">\(P_2=\frac{11}{24}\)</span>，于是</p>
+<p class="formula">\[P(X\ge 2)=P_2+P(X=3)=\frac{11}{24}+\frac{1}{24}=\frac{12}{24}=\frac{1}{2}.\]</p>
+
+<h3>7.3 独立核验（逐配对枚举）</h3>
+
+<p>将 <span class="formula">\(4!=24\)</span> 种配对逐一按"甲(1,3,5,7) 依次对阵乙某排列"计算胜场数，分布为：<span class="formula">\(X=0\)</span> 计 <span class="formula">\(1\)</span> 种，<span class="formula">\(X=1\)</span> 计 <span class="formula">\(11\)</span> 种，<span class="formula">\(X=2\)</span> 计 <span class="formula">\(11\)</span> 种，<span class="formula">\(X=3\)</span> 计 <span class="formula">\(1\)</span> 种，合计 <span class="formula">\(24\)</span>。故 <span class="formula">\(P(X\ge 2)=\frac{11+1}{24}=\frac{1}{2}\)</span>，与方法一、二完全一致，答案确为 <span class="formula">\(\frac{1}{2}\)</span>。</p>
+
+<div class="note"><b>存疑点说明：</b>题干中"各自从自己持有的卡片中随机选一张"在每轮是均匀随机且两轮独立，但<b>跨轮不放回</b>。正确的样本空间是"四轮结束后的 24 种配对"而非"每轮独立重复"。个别资料若误用"单轮胜率 <span class="formula">\(3/8\)</span> 套二项分布 <span class="formula">\(B(4,3/8)\)</span>"会得 <span class="formula">\(1-(5/8)^4-4\cdot(3/8)(5/8)^3\neq 1/2\)</span>，这是典型错误，根因在于"不放回"破坏了轮间独立。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>点睛之笔（建模）</b>："四轮不放回随机出牌" ⇔ "甲乙卡片的均匀随机双射"，样本空间直接定为 <span class="formula">\(4!=24\)</span>，切忌当独立重复试验。</li>
+<li><b>端点先拿</b>：<span class="formula">\(X=0\)</span> 与 <span class="formula">\(X=3\)</span> 都只有唯一配对，先数出来，既校准方向又作为期望法的支点。</li>
+<li><b>期望减枚举</b>：算出 <span class="formula">\(E(X)=3/2\)</span> 后，再结合两个端点概率，用二元一次方程组反推 <span class="formula">\(P_1,P_2\)</span>，把"数 22 种"压缩为"数 2 种"。</li>
+<li><b>互补取舍</b>：也可先数"小于 2"（即 0 与 1 分）共 <span class="formula">\(1+11=12\)</span> 种，再用 <span class="formula">\(1-12/24\)</span> 得结果，路径更短。</li>
+<li><b>分类防漏</b>：数 2 分时按"哪两张甲卡获胜"分成三类（胜3&5 / 胜3&7 / 胜5&7），再在每类内分配对手，确保不重不漏。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>古典概型重回压轴填空</b>：在"概率统计"被前移、模块瘦身之后，此类"小情境 + 精建模"的填空概率题成为区分尖子生的高频载体。</li>
+<li><b>强调"等可能性"的隐蔽识别</b>：命题将继续设置"看似独立、实则不放回/相关"的陷阱（如随机配对、随机分配、抽签顺序），考查学生能否正确锁定样本空间。</li>
+<li><b>计数与概率深度融合</b>：排列组合的分类计数不再单独命题，而是嵌入概率求解，要求学生"会数且数得对"。</li>
+<li><b>鼓励多解与算法选择</b>：像本题这样"全枚举可行但期望法更优"的设计会被保留，引导教学重视思维经济性。</li>
+<li><b>数值设计讲究</b>：答案多为简洁分数（如 <span class="formula">\(1/2\)</span>），既降低纯运算负担，又把区分点放在"建模与计数策略"上。</li>
+<li><b>情境更多元</b>：博弈、配对、分配、排队、抽样等生活化情境将持续出现，弱化套路、强化素养。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>误用二项分布</b>：把四轮当成独立重复，套 <span class="formula">\(B(4,3/8)\)</span> 求 <span class="formula">\(P(X\ge2)\)</span>，忽略"弃置后不可用"导致轮间不独立（最普遍错误）。</li>
+<li><b>样本空间定错</b>：误以为总情况数是 <span class="formula">\(4^4\)</span> 或 <span class="formula">\(16^4\)</span>，未意识到双方出牌顺序共同决定一个 24 种配对的均匀结构。</li>
+<li><b>分类计数重漏</b>：数 2 分情形时漏掉"胜5&7"中的若干子情形，或把不同对手分配重复计算。</li>
+<li><b>漏掉极端校验</b>：未注意甲卡 <span class="formula">\(1\)</span> 必负，从而误以为 <span class="formula">\(X\)</span> 可取 4、或把 <span class="formula">\(X=3\)</span> 的情形数错。</li>
+<li><b>算错单轮胜率</b>：把甲单轮获胜组合数误数成 8（误把 <span class="formula">\((7,8)\)</span> 等也算赢），导致后续全错。</li>
+<li><b>期望法支点缺失</b>：用期望法却不会枚举 <span class="formula">\(P(X=0),P(X=3)\)</span>，方程组无解或不唯一。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>作为 2024 新高考Ⅰ卷填空题压轴，本题在网络教研圈讨论充分，主流共识如下：</p>
+
+<ul>
+<li><b>答案一致</b>：高考直通车、教习网等权威解析均给出答案 <span class="formula">\(\frac{1}{2}\)</span>（或 <span class="formula">\(0.5\)</span>），与本文独立核验吻合。</li>
+<li><b>解法两派</b>：一类是<b>分类计数（全枚举）</b>，教习网《历年真题分类汇编》给出"0 分 1 种、1 分 1+3+7=11 种，故小于 2 为 12 种、不小于 2 为 12 种"的清晰拆解；另一类是<b>随机变量期望法</b>，51jiaoxi 解析版与多家转载强调"利用期望可加性避开繁琐列举"为本题关键。</li>
+<li><b>争议/分歧</b>：个别自媒体把单轮胜率与二项分布混用得出错误答案，被一线教师指正；总体不存在答案分歧，分歧仅在"哪种解法更适合考场"。多数教师认为：基础扎实者用分类计数更稳，思维灵活者用期望法更快。</li>
+<li><b>教学评价</b>：普遍认为本题"看似游戏、实则考建模"，是检验学生是否真正理解"等可能样本空间"与"独立性的前提"的优质题，区分度好。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>夯实"样本空间"概念</b>：用本题作为反例，讲清"不放回随机配对"与"独立重复试验"的本质区别，避免二项分布滥用。</li>
+<li><b>训练计数分类的严谨性</b>：以"按获胜卡张数分类 + 类内分配对手"为范式，要求学生自查"是否重、是否漏"。</li>
+<li><b>双解法并重</b>：既教全枚举（保底），也教期望+端点的巧算（提效），让学生根据题目数据规模自主选择。</li>
+<li><b>强化极端情形意识</b>：拿到随机变量题先找取值端点与边界配对，往往能"四两拨千斤"。</li>
+<li><b>重视情境建模</b>：引导学生把生活化博弈/分配问题翻译为"配对、排列、组合"的数学结构。</li>
+<li><b>规范书写</b>：填空题也需呈现关键计数逻辑（哪几类、各几种），便于自查与阅卷采意。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>高考直通车．2024 年新高考Ⅰ卷数学真题及解析（第 14 题）．http://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202406/20240612091714_OGnV19.pdf</li>
+<li>教习网．2026 高考数学专题复习之历年真题分类汇编_专题十一 计数原理、概率与统计．https://m.51jiaoxi.com/doc-18170203.html</li>
+<li>教习网．2024 年高考真题——数学试卷（新高考Ⅰ卷）解析版．https://www.51jiaoxi.com/doc-15876934.html</li>
+<li>科心物联优途升学．2024 年高考新高考 I 卷（数学）-概率（期望法解析）．https://news.ytowin.com/2025/59/17/4b0f53261426d8.html</li>
+</ul>
+
+
+</div>
+</body>
+</html>

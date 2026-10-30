@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年九省联考数学第 14 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年九省联考数学第 14 题研究报告</h1>
+  <div class="lead">研究对象：填空压轴最值题（max{b-a,c-b,1-c}）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>以 <code>max M</code> 表示数集 <span class="math">\(M\)</span> 中最大的数。设 <span class="math">\(0&lt;a&lt;b&lt;c&lt;1\)</span>，已知 <span class="math">\(b\geq 2a\)</span> 或 <span class="math">\(a+b\leq 1\)</span>，则 <span class="math">\(\max\{b-a,\;c-b,\;1-c\}\)</span> 的最小值为<b>______</b>。</p>
+
+<blockquote>题源：2024 年 1 月普通高等学校招生全国统一考试适应性测试（九省联考 / 新高考 19 题结构首演）数学试卷，填空题第 14 题（填空压轴），5 分。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead>
+<tr><th>项目</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>卷型</td><td>2024 九省联考（河南、安徽、江西、吉林、黑龙江、广西、贵州、甘肃、新疆九省适应性演练）</td></tr>
+<tr><td>题号 / 题型</td><td>第 14 题 / 填空题（单空）</td></tr>
+<tr><td>分值</td><td>5 分</td></tr>
+<tr><td>考查模块</td><td>不等式（含参最值、基本不等式放缩）、函数与不等式综合</td></tr>
+<tr><td>核心方法</td><td>换元法（桥变量）+ 分类讨论 + 不等式放缩求最值</td></tr>
+<tr><td>难度预估</td><td><b>中上偏难</b>（填空压轴，区分度高）</td></tr>
+<tr><td>实测数据</td><td>据一线教师评析：九省联考整体偏难、平均分偏低，第 14 题作为填空压轴，多数考生空着或误答为 <span class="math">\(\frac14\)</span>，满分率很低；暂无权威分题得分率公开数据。</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>最大值符号 <span class="math">\(\max\)</span> 的语义</b>：<span class="math">\(\max\{x_1,x_2,x_3\}\geq x_i\)</span> 对每一项都成立，这是放缩的入手点。本题用 <code>max</code> 给出一个"上界控制"的视角。</li>
+<li><b>换元（桥变量）法</b>：令 <span class="math">\(b-a=m,\;c-b=n,\;1-c=p\;(m,n,p&gt;0)\)</span>，把三个待定差表示为独立正变量，并把 <span class="math">\(a,b,c\)</span> 用 <span class="math">\(m,n,p\)</span> 反解，从而把"含 <span class="math">\(a,b,c\)</span> 的不等式"转化为"含 <span class="math">\(m,n,p\)</span> 的线性规划式"。</li>
+<li><b>逻辑联结词"或"的分类处理</b>：条件 <span class="math">\(b\geq 2a\)</span> 或 <span class="math">\(a+b\leq 1\)</span> 意味着任一成立即可，因此必须<b>分两类讨论</b>，再取两类下界的最小值作为总体下界。</li>
+<li><b>不等式放缩与等号成立条件</b>：利用 <span class="math">\(m,n,p\leq M\)</span>（<span class="math">\(M=\max\{m,n,p\}\)</span>）对线性组合上界进行放缩，并检验等号能否同时取到（即能否构造出满足条件的 <span class="math">\(a,b,c\)</span>）。</li>
+<li><b>基本不等式思想</b>：本题虽未直接套用均值不等式，但"在和固定的前提下，各分量相等时最大值最小"的均衡思想与基本不等式一脉相承。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead>
+<tr><th>《高考评价体系》能力</th><th>本题中的体现</th></tr>
+</thead>
+<tbody>
+<tr><td>信息获取与识别</td><td>准确读取 <code>max</code> 定义与"或"条件，识别三差 <span class="math">\(b-a,\;c-b,\;1-c\)</span> 均为正。</td></tr>
+<tr><td>抽象概括</td><td>引入桥变量 <span class="math">\(m,n,p\)</span>，将具象的 <span class="math">\(a,b,c\)</span> 约束抽象为线性不等式组，完成"降维"。</td></tr>
+<tr><td>推理论证</td><td>对"或"条件严谨分类，分别在两类下推导 <span class="math">\(M\)</span> 的下界，并论证等号可取到，逻辑链条完整。</td></tr>
+<tr><td>运算求解</td><td>对 <span class="math">\(2m+n+p\)</span> 与 <span class="math">\(m+2n+2p\)</span> 两类线性组合做放缩，注意系数配凑。</td></tr>
+<tr><td>探索创新</td><td>"用 <span class="math">\(\max\)</span> 包装三差、用换元把最值问题转化为不等式组"的命题与解题巧思。</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead>
+<tr><th>核心素养</th><th>星级</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>数学抽象</td><td><span class="star">★★★★★</span></td><td>把"三个间隔的最大值最小"抽象为 <span class="math">\(\max\{m,n,p\}\)</span>，并以换元建立代数模型。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★☆</span></td><td>"或"条件的分类讨论与"下界 + 可取到"的严谨论证。</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★☆</span></td><td>线性组合的配凑与放缩，等号条件检验。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★☆☆☆</span></td><td>无图形，但"把 <span class="math">\([0,1]\)</span> 用三个分界点 <span class="math">\(a,b,c\)</span> 切成四段"的直觉有助于理解。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★☆☆☆</span></td><td>换元即一种简单建模：将约束条件转化为可解的代数不等式组。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>本题不直接涉及。</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题是 2024 九省联考填空题的压轴，体现了新高考"小切口、深思维"的命题导向：</p>
+<ul>
+<li><b>新定义情境</b>：以 <code>max M</code> 这一通俗记号包装，降低阅读门槛，但实质考查不等式放缩，属于"新瓶装旧酒"的轻量新定义题。</li>
+<li><b>去套路化</b>：不依赖任何固定题型模板，常规"待定系数/主元法"之外，更自然的解法是换元 + 分类，考察学生面对陌生结构时的建模能力。</li>
+<li><b>认知入口低、区分度高</b>：看懂题只需初中不等式常识；但"或"条件的分类与"为何不能统一处理"是天然区分点——想当然把两类合并或用错等号条件就会丢分。</li>
+<li><b>与整体试卷结构呼应</b>：九省联考首次采用 19 题新结构，填空题缩为 3 道，第 14 题承载了"压轴区分"的职能，难度与思维量向解答题靠拢。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 解题思路</h3>
+
+<p>记 <span class="math">\(M=\max\{b-a,\;c-b,\;1-c\}\)</span>。由 <span class="math">\(0&lt;a&lt;b&lt;c&lt;1\)</span> 知三差均大于 <span class="math">\(0\)</span>。令</p>
+
+<div class="formula">
+<span class="math">\(b-a=m,\qquad c-b=n,\qquad 1-c=p\)</span>，
+</div>
+
+<p>其中 <span class="math">\(m,n,p&gt;0\)</span>。由此反解</p>
+
+<div class="formula">
+<span class="math">\(c=1-p,\qquad b=1-n-p,\qquad a=1-m-n-p\)</span>。
+</div>
+
+<p>条件中的"或"提示我们分两类讨论，且两类的可行域互不重合（部分重叠），总体最小值取两类下界的较小者。</p>
+
+<h3>7.2 第（1）类：当 <span class="math">\(b\geq 2a\)</span> 时</h3>
+
+<p>代入反解式：</p>
+
+<div class="formula">
+<span class="math">\(1-n-p\;\geq\;2(1-m-n-p)=2-2m-2n-2p\)</span>，
+</div>
+
+<p>整理得</p>
+
+<div class="formula">
+<span class="math">\(2m+n+p\;\geq\;1\)</span>。
+</div>
+
+<p>又因为 <span class="math">\(M=\max\{m,n,p\}\)</span>，故 <span class="math">\(m\leq M,\;n\leq M,\;p\leq M\)</span>，于是</p>
+
+<div class="formula">
+<span class="math">\(2m+n+p\;\leq\;2M+M+M=4M\)</span>。
+</div>
+
+<p>结合 <span class="math">\(2m+n+p\geq 1\)</span> 得 <span class="math">\(4M\geq 1\)</span>，即</p>
+
+<div class="formula">
+<span class="math">\(M\;\geq\;\dfrac14\)</span>。
+</div>
+
+<p>等号成立需 <span class="math">\(m=n=p=M\)</span> 且 <span class="math">\(4M=1\)</span>，即 <span class="math">\(m=n=p=\frac14\)</span>，此时 <span class="math">\(a=\frac14,\;b=\frac12,\;c=\frac34\)</span>，满足 <span class="math">\(b=2a\)</span>（边界成立）。故此类下 <span class="math">\(M_{\min}=\frac14\)</span>。</p>
+
+<h3>7.3 第（2）类：当 <span class="math">\(a+b\leq 1\)</span> 时</h3>
+
+<p>代入反解式：</p>
+
+<div class="formula">
+<span class="math">\((1-m-n-p)+(1-n-p)\;\leq\;1\)</span>，
+</div>
+
+<p>整理得</p>
+
+<div class="formula">
+<span class="math">\(m+2n+2p\;\geq\;1\)</span>。
+</div>
+
+<p>同理，<span class="math">\(m\leq M,\;n\leq M,\;p\leq M\)</span>，于是</p>
+
+<div class="formula">
+<span class="math">\(m+2n+2p\;\leq\;M+2M+2M=5M\)</span>。
+</div>
+
+<p>结合 <span class="math">\(m+2n+2p\geq 1\)</span> 得 <span class="math">\(5M\geq 1\)</span>，即</p>
+
+<div class="formula">
+<span class="math">\(M\;\geq\;\dfrac15\)</span>。
+</div>
+
+<p>等号成立需 <span class="math">\(m=n=p=M\)</span> 且 <span class="math">\(5M=1\)</span>，即 <span class="math">\(m=n=p=\frac15\)</span>，此时 <span class="math">\(a=\frac25,\;b=\frac35,\;c=\frac45\)</span>，满足 <span class="math">\(a+b=1\)</span>（边界成立）。故此类下 <span class="math">\(M_{\min}=\frac15\)</span>。</p>
+
+<h3>7.4 综合结论</h3>
+
+<p>原条件为"或"，每个可行点至少落入两类之一：落入第（1）类的点有 <span class="math">\(M\geq\frac14\)</span>；落入第（2）类的点有 <span class="math">\(M\geq\frac15\)</span>。因此<b>全体可行点</b>都满足 <span class="math">\(M\geq\frac15\)</span>，且取等构造 <span class="math">\(a=\frac25,\;b=\frac35,\;c=\frac45\)</span> 真实可行。所以</p>
+
+<div class="formula">
+<span class="math">\(\max\{b-a,\;c-b,\;1-c\}\)</span> 的最小值为 <span class="math">\(\boxed{\dfrac15}\)</span>。
+</div>
+
+<div class="note"><b>点睛</b>：本题最易错处是"两类下界取最小"。第（1）类得到 <span class="math">\(\frac14\)</span>、第（2）类得到 <span class="math">\(\frac15\)</span>，由于是"或"条件，总体最小值是两者的较小值 <span class="math">\(\frac15\)</span>，而非相加或取大。若误把"或"当"且"，或漏掉第（2）类的更紧下界，就会答成 <span class="math">\(\frac14\)</span>。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>桥变量（换元）切入</b>：看到"三个差的最大值最小"，立即设三差为 <span class="math">\(m,n,p\)</span>，并用其反解 <span class="math">\(a,b,c\)</span>。这一步把"三元含约束最值"变成"正变量的线性不等式组"，是破题关键。</li>
+<li><b>"或"= 分类</b>：永远把"或"翻译成"分两类，分别求下界，再取小"。这是本题的逻辑主线。</li>
+<li><b>放缩的系数配凑</b>：每一类都从条件推出一个形如 <span class="math">\(\alpha m+\beta n+\gamma p\geq 1\)</span> 的式子，再用 <span class="math">\(m,n,p\leq M\)</span> 放成 <span class="math">\((\alpha+\beta+\gamma)M\geq 1\)</span>。系数和就是分母（4 或 5）。</li>
+<li><b>必验等号</b>：求出下界后必须构造一组 <span class="math">\(a,b,c\)</span> 验证"既能取到该值、又满足原约束"。本题两类的等号构造都很干净（均匀三分段），验证了最小值的真实性。</li>
+<li><b>几何直觉辅助</b>：把区间 <span class="math">\([0,1]\)</span> 用 <span class="math">\(a,b,c\)</span> 切成四段，其中三段（<span class="math">\(a\)</span> 之前、三差、<span class="math">\(1-c\)</span>）受控，本质是"让可控的三段尽量均衡"，与"和固定时等分使最大值最小"一致。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>轻量新定义常态化</b>：以通俗记号（<code>max</code>、自定义运算等）包装传统考点，降低阅读门槛、抬高思维门槛，此类题在填空压轴与多选压轴中增多。</li>
+<li><b>不等式放缩回归</b>：在"最值 + 含参条件"情境中，换元 + 分类 + 放缩（而非生硬套均值不等式）成为主流解法，注重等号可达成性检验。</li>
+<li><b>逻辑推理权重上升</b>："或 / 且""存在 / 任意"等逻辑词成为命题与区分的抓手，分类讨论的严谨性直接决定得分。</li>
+<li><b>填空压轴解答题化</b>：新结构下填空题仅 3 道，第 14 题的思维量明显向小解答题靠拢，可能出现"多步推理才能填出单空"的格局。</li>
+<li><b>跨模块融合</b>：本题表面是不等式，实则综合了函数最值、代数变形与逻辑分析，未来更可能出现"不等式 + 数列 / 解析几何参数范围"的融合题。</li>
+<li><b>重视"构造反例 / 取等构造"</b>：命题愈发强调"下界能否取到"，教学中应强化等号条件与可行性验证的训练。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>误读"或"为"且"</b>：这是最高频错误，导致把两类条件合并或只算一类，答成 <span class="math">\(\frac14\)</span> 或漏解。</li>
+<li><b>不会换元、硬算 <span class="math">\(a,b,c\)</span></b>：试图直接用 <span class="math">\(a,b,c\)</span> 三个变量做不等式，陷入"变量多、约束杂"的泥潭，无从下手。</li>
+<li><b>下界求出后不验等号</b>：算出 <span class="math">\(\frac15\)</span> 却写不出取等构造，或构造出的 <span class="math">\(a,b,c\)</span> 不满足 <span class="math">\(0&lt;a&lt;b&lt;c&lt;1\)</span>，严谨性扣分。</li>
+<li><b>忽略三差为正</b>：忘记 <span class="math">\(0&lt;a&lt;b&lt;c&lt;1\)</span> 隐含 <span class="math">\(b-a,c-b,1-c&gt;0\)</span>，放缩时方向出错。</li>
+<li><b>分类不全或重叠处理混乱</b>：两类可行域有重叠（如 <span class="math">\(a=\frac14,b=\frac12,c=\frac34\)</span> 同时满足两类），不少学生担心"算重"，反而漏掉更优的第（2）类结果。</li>
+<li><b>时间分配不当</b>：作为填空压轴，部分学生耗时过长仍未果，挤压解答题时间。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>九省联考作为新高考 19 题结构的"首演"，引发一线教师与自媒体大量评析，第 14 题是填空压轴讨论焦点之一：</p>
+<ul>
+<li><b>主流解法高度一致</b>：学科网 / 人人文库等平台流传的解析版均采用"换元 <span class="math">\(m,n,p\)</span> + 分类（<span class="math">\(b\geq 2a\)</span> 与 <span class="math">\(a+b\leq 1\)</span>）+ 放缩"的标准路径，答案统一为 <span class="math">\(\frac15\)</span>。</li>
+<li><b>待定系数法变式</b>：《新高考数学填空压轴题赏析》（fx361 期刊）给出"桥变量 + 待定系数配凑"的进阶解法，强调用待定系数把 <span class="math">\(2a-b\)</span>、<span class="math">\(a+b\)</span> 表示成 <span class="math">\(b-a\)</span> 与 <span class="math">\(1-b\)</span> 的线性组合，再放缩。</li>
+<li><b>教学共识</b>：教师普遍认为本题"入口低、区分度高"，是训练"换元建模 + 分类讨论 + 等号验证"的优质素材；同时提醒学生重视逻辑联结词与可行性检验。</li>
+<li><b>分歧 / 存疑点</b>：个别平台流传的"官方答案"在邻近的圆锥题（第 13 题）上有过争议（是否把圆锥高当成球半径），但第 14 题的答案 <span class="math">\(\frac15\)</span> 与解析在各来源间高度一致，无误。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>强化"换元建模"意识</b>：遇到"若干差 / 和的最值"问题，训练学生本能地设差、设段为变量，把几何/代数约束转化为不等式组。</li>
+<li><b>狠抓逻辑词训练</b>：把"或 / 且 / 存在 / 任意"作为专项，结合本题讲清"或 → 分类取小""且 → 同时成立"的差别。</li>
+<li><b>养成"验等号"习惯</b>：每求一个下界，立即追问"等号能否取到、构造出的点是否合法"，把可行性检验写成固定步骤。</li>
+<li><b>重视放缩的"系数配凑"</b>：通过本题归纳"由条件推出 <span class="math">\(\sum k_i x_i\geq c\)</span>，再用 <span class="math">\(x_i\leq M\)</span> 放成 <span class="math">\((\sum k_i)M\geq c\)</span>"的通法，举一反三。</li>
+<li><b>填空压轴限时训练</b>：按"3 分钟无思路即跳"的原则训练时间分配，避免因单题拖累全局。</li>
+<li><b>适度拓展"分段均衡"直觉</b>：用 <span class="math">\([0,1]\)</span> 切段模型帮助学生直观理解"和固定时等分使最大段最小"，连接基本不等式思想。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>2024 年 1 月普通高等学校招生全国统一考试适应性测试（九省联考）数学试题（解析版）—— 学科网 / 人人文库等平台流传版。</li>
+<li>《新高考数学填空压轴题赏析》，看刊宝（fx361.com），2024-01。</li>
+<li>《例谈一类最值问题的求解》，数学期刊专栏（ima.qq.com 知识库转载）。</li>
+<li>2024 九省联考数学试题官方答案（renrendoc.com 转载版），第 14 题答案为 <span class="math">\(\frac15\)</span>。</li>
+</ol>
+
+<footer>研究报告由高中数学教师教研视角生成 · 公式经 MathJax 渲染 · 数据来源见参考文献，部分评析为一线教师共识性观点。</footer>
+
+
+</div>
+</body>
+</html>

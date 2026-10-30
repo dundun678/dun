@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年高考数学新课标Ⅱ卷第 14 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年高考数学新课标Ⅱ卷第 14 题研究报告</h1>
+  <div class="lead">研究对象：4×4 方格表选格（计数 + 最值）　·　题型定位：填空题（压轴填空）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p><strong>题目（2024 年新课标Ⅱ卷·第 14 题，填空题，5 分）。</strong>在右图的 \(4\times 4\) 方格表中选 4 个方格，要求每行和每列均恰有一个方格被选中，则共有 ________ 种选法；在所有符合上述要求的选法中，选中方格中的 4 个数之和的最大值是 ________。</p>
+
+<table>
+<tr><th></th><th>第 1 列</th><th>第 2 列</th><th>第 3 列</th><th>第 4 列</th></tr>
+<tr><td>第 1 行</td><td>11</td><td>21</td><td>31</td><td>40</td></tr>
+<tr><td>第 2 行</td><td>12</td><td>22</td><td>33</td><td>42</td></tr>
+<tr><td>第 3 行</td><td>13</td><td>22</td><td>33</td><td>43</td></tr>
+<tr><td>第 4 行</td><td>15</td><td>24</td><td>34</td><td>44</td></tr>
+</table>
+
+<p>即：在 \(4\times 4\) 整数表中选取 4 个互不同行、互不同列的格子，第一空求选法总数，第二空求所取 4 数之和的最大可能值。</p>
+
+<blockquote>官方答案：第一空 <strong>24</strong>；第二空 <strong>112</strong>（满足最大值的选法之一为：第 1 行取 21、第 2 行取 33、第 3 行取 43、第 4 行取 15，即 \(21+33+43+15=112\)）。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>试卷与年份</td><td>2024 年普通高等学校招生全国统一考试数学（新课标Ⅱ卷）</td></tr>
+<tr><td>题号</td><td>第 14 题（填空题最后一题，压轴填空）</td></tr>
+<tr><td>题型 / 分值</td><td>填空题（双空）/ 5 分</td></tr>
+<tr><td>考查模块</td><td>计数原理（排列）、组合最值 / 分配问题</td></tr>
+<tr><td>难度定位</td><td>较难题（填空压轴，区分度主要来自第二空）</td></tr>
+<tr><td>能力侧重</td><td>运算求解、逻辑推理、抽象概括</td></tr>
+<tr><td>实测情况</td><td>据一线教师评析，第二空“最大值”易想错，是整卷填空区分度的关键题眼之一</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>排列与排列数</strong>：4 行 4 列“每行每列恰一个”等价于 4 个元素的全排列，即 \(A_4^4 = 4! = 24\)，这是第一空的核心。</li>
+<li><strong>“非攻击车”模型（拉丁方雏形）</strong>：在 \(n\times n\) 棋盘上放 \(n\) 个互不同行同列的车，放法数为 \(n!\)。本题 \(n=4\)。</li>
+<li><strong>位值原理与按位拆分</strong>：表中每个两位数可拆为“十位 + 个位”，而十位由列唯一决定，从而把最值问题降维到“个位之和最大”。</li>
+<li><strong>分配问题（最优化）</strong>：第二空本质是在“每行每列恰取一个”约束下求加权和最大，是组合最优化/指派问题的初等版本。</li>
+<li><strong>常数偏移不变性</strong>：对每一行（或每一列）同时减去同一常数，因“每行每列恰取一个”，总偏移量固定，最优选法不变——这是第二空的高级解法（见 7.2 方法二）。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<tr><th>《高考评价体系》能力</th><th>在本题中体现</th></tr>
+<tr><td>信息获取</td><td>从“方格表 + 每行每列恰一个”中准确提取约束条件，识别为排列/指派模型</td></tr>
+<tr><td>抽象概括</td><td>把具体数字表抽象为矩阵，把“选格”抽象为排列与指派约束</td></tr>
+<tr><td>推理论证</td><td>论证选法数为 \(4!\)；论证最大值需说明“为何不能再大”（约束下的极值）</td></tr>
+<tr><td>运算求解</td><td>枚举/调配出最大和 112，并能给出一个达到最大的具体方案</td></tr>
+<tr><td>探索创新</td><td>第二空需跳出“逐行取最大”的直觉，进行整体调配，体现创新思维</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★★</span></td><td>计数与最值的精确运算，全题主干</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★★</span></td><td>将方格选格抽象为排列/指派</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>论证总数与最大值的合理性</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★</span></td><td>在 4×4 表上直观感知行列约束</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★</span></td><td>把情境转化为最优化模型</td></tr>
+<tr><td>数据分析</td><td><span class="star">★</span></td><td>对 16 个数据的结构分析</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题设置在填空题最后（第 12—14 题为填空，第 14 题为压轴填空），体现出新课标卷“低起点、多层次、高区分”的命题导向：</p>
+
+<ul>
+<li><strong>双空递进</strong>：第一空是基础计数（排列），第二空是组合最值，由易到难，既送分又拉差距。</li>
+<li><strong>情境简洁、模型深刻</strong>：仅给一张 4×4 数字表与一句约束，不依赖复杂背景，但背后藏着排列模型与指派最值两层思维。</li>
+<li><strong>去套路化</strong>：不是教材里“排队、分组”式标准排列组合应用，而是需要自己建模，考查真实数学能力。</li>
+<li><strong>反直觉设计</strong>：第二空若机械地“每行取最大”会违反列约束，必须整体权衡，专门区分“会算排列”与“真懂最优化”的学生。</li>
+<li><strong>区分度来源</strong>：第一空几乎人人得分，第二空才是区分尖子生与中等生的关键，体现压轴填空的选拔功能。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第一空：选法种数</h3>
+
+<p><strong>思路</strong>：“每行和每列均恰有一个方格被选中”，等价于为第 1、2、3、4 行分别指定一个互不相同的列号，即 4 个列号的一个全排列。</p>
+
+<p><strong>解法一（逐列计数）</strong>：先定第 1 列被选中的行，有 4 种；再定第 2 列，剩下 3 行可选，有 3 种；第 3 列有 2 种；第 4 列只剩 1 种。由乘法原理：</p>
+
+<p class="formula">\[ 4\times 3\times 2\times 1 = 4! = 24 \]</p>
+
+<p><strong>解法二（排列模型）</strong>：把 4 个被选中的格子看作 4 个“互不攻击的车”，等价放法数为 \(4! = 24\)。</p>
+
+<p>故第一空答案为 <strong>24</strong>。</p>
+
+<h3>7.2 第二空：4 个数之和的最大值</h3>
+
+<p><strong>方法一（位值分解，最易上手）</strong></p>
+
+<p>观察各列数字的十位：第 1 列全是 1 打头（11,12,13,15），第 2 列全是 2 打头，第 3 列全是 3 打头，第 4 列全是 4 打头。由于每种合法选法必从每一列各取一个数，所选 4 个数的<strong>十位数字之和恒为</strong> \(1+2+3+4=10\)，即十位部分固定贡献 \(10\times 10 = 100\)。</p>
+
+<p>因此“总和最大”等价于“所选 4 个数的<strong>个位数字之和最大</strong>”。写出个位表：</p>
+
+<table>
+<tr><th></th><th>第 1 列</th><th>第 2 列</th><th>第 3 列</th><th>第 4 列</th></tr>
+<tr><td>第 1 行</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>第 2 行</td><td>2</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>第 3 行</td><td>3</td><td>2</td><td>3</td><td>3</td></tr>
+<tr><td>第 4 行</td><td>5</td><td>4</td><td>4</td><td>4</td></tr>
+</table>
+
+<p>在“每行每列恰取一个”约束下最大化个位和。注意到第 4 行个位普遍很大（5,4,4,4），应优先让第 4 行选到第 1 列的 5（这是全表最大的个位）。随后在第 1、2、3 行与第 2、3、4 列间调配：</p>
+
+<ul>
+<li>第 4 行 → 第 1 列：个位 5；</li>
+<li>第 3 行 → 第 4 列：个位 3；</li>
+<li>第 2 行 → 第 3 列：个位 3；</li>
+<li>第 1 行 → 第 2 列：个位 1；</li>
+</ul>
+
+<p>个位和 \(=5+3+3+1=12\)，故总和最大值为</p>
+
+<p class="formula">\[ 100 + 12 = 112 \]</p>
+
+<p>对应选法：第 1 行取 21、第 2 行取 33、第 3 行取 43、第 4 行取 15，即</p>
+
+<p class="formula">\[ 21+33+43+15 = 112 \]</p>
+
+<p>逐项核对：行 1,2,3,4 各取一个（21,33,43,15），列 2,3,4,1 各取一个，满足约束。故第二空答案为 <strong>112</strong>。</p>
+
+<p><strong>方法二（行列常数偏移法，Math173 通用技巧）</strong></p>
+
+<p>关键事实：因“每行每列恰取一个”，若对第 1、2、3、4 列分别同时减去 \(10,20,30,40\)，再对第 1、2、3、4 行分别同时减去 \(1,2,3,4\)，则任意一种合法选法被减去的总量都相同，等于</p>
+
+<p class="formula">\[ (10+20+30+40)+(1+2+3+4)=100+10=110 \]</p>
+
+<p>于是“原表和最大”等价于“偏移后表和最大”。偏移后表格为</p>
+
+<table>
+<tr><th></th><th>第 1 列</th><th>第 2 列</th><th>第 3 列</th><th>第 4 列</th></tr>
+<tr><td>第 1 行</td><td>0</td><td>0</td><td>0</td><td>-1</td></tr>
+<tr><td>第 2 行</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>第 3 行</td><td>0</td><td>-1</td><td>0</td><td>0</td></tr>
+<tr><td>第 4 行</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+
+<p>在每行每列恰取一个约束下，偏移后和的最大值为 \(1+1+0+0=2\)（取第 4 行第 1 列的 1、第 2 行第 3 列的 1，其余取 0）。加回固定偏移量：</p>
+
+<p class="formula">\[ 110 + 2 = 112 \]</p>
+
+<p>与方法一结果一致，且揭示了“列/行整体平移不改变最优结构”的通用原理，可推广到任意 \(n\times n\) 指派最值问题。</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>计数别数错</strong>：把“每行每列恰一个”立刻翻译成“排列/全排列”，直接得 \(4! = 24\)，不要误用组合数或逐个数。</li>
+<li><strong>降维思考</strong>：第二空看到两位数表，先拆十位、个位；十位由列固定，问题瞬间降为“个位之和最大”，复杂度大降。</li>
+<li><strong>整体调配，而非逐行贪心</strong>：不能直接每行取最大（40,42,43,44）而忽略列冲突；要在行列双重约束下统筹。</li>
+<li><strong>常数偏移法（进阶）</strong>：行列整体减常数不改变最优选法，借此把表“削平”，剩余正值即额外收益——这是分配问题的核心技巧。</li>
+<li><strong>点睛</strong>：最大值不一定“每格都尽量大”，而是“在约束下整体最优”；给出一组达到最大的具体选法（21,33,43,15）既是答案也是验证。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><strong>计数与最值合体</strong>：双空设计（一计数、一最值）能同时考查“会不会算”与“会不会想”，预计继续受命题者青睐。</li>
+<li><strong>表格 / 矩阵型情境增多</strong>：以数表、方阵、网格为载体的题目贴近数据素养，符合新课标强调的“用数学处理信息”。</li>
+<li><strong>弱化机械计算、强化建模</strong>：不再考“排队分球”式套公式，而是要求自行识别模型（排列、指派、递推）。</li>
+<li><strong>最优化思想下沉</strong>：贪心与调整、局部与整体的矛盾会更多进入中档/压轴题，呼应大学“运筹与优化”思维。</li>
+<li><strong>压轴填空精细化</strong>：用“易想的错解”制造区分度（如本题第二空），将成为填空压轴常用手法。</li>
+<li><strong>新情境延展</strong>：可能结合向量、矩阵、路径、覆盖等更现代的离散结构命题。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>第一空混淆计数原理</strong>：误用 \(C_4^2\)、或把“每行每列恰一个”理解成“任取 4 格”，得到错误种数。</li>
+<li><strong>第二空“逐行取最大”</strong>：直接取每行最大（40,42,43,44）相加得 169，却严重违反“每列恰一个”的约束——这是最高频错误。</li>
+<li><strong>局部贪心未察觉冲突</strong>：即使想到列约束，也常在调配时顾此失彼，算不出真正的 112。</li>
+<li><strong>不会位值降维</strong>：面对两位数表无从下手，想不到“十位固定、只需优化个位”。</li>
+<li><strong>给不出具体方案</strong>：能猜到或算到 112，却写不出一组达到最大的选法，导致过程不完整、被扣分。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题为 2024 年新课标Ⅱ卷真题，公开解析与讨论丰富，主要共识与亮点如下：</p>
+
+<ul>
+<li><strong>答案共识</strong>：多家机构（教习网、91apu、Math173 等）一致给出答案 <strong>24；112</strong>。</li>
+<li><strong>主流解法一（行列计数）</strong>：教习网等指出“第 1 列 4 种、第 2 列 3 种、第 3 列 2 种、第 4 列 1 种”，得 \(4\times3\times2\times1=24\)。</li>
+<li><strong>主流解法二（位值分解）</strong>：教习网强调“十位固定为 1,2,3,4，个位各行取最大 1,3,3,5”，得 \(21+33+43+15=112\)。</li>
+<li><strong>进阶亮点（Math173）</strong>：提出“行列整体减常数不改变最优结构”的通用指派技巧，并用常数偏移把表削平，漂亮地得到最大值 112，被视为本题最具教学价值的解法。</li>
+<li><strong>争议 / 讨论焦点</strong>：一线教师普遍反映第二空是“看似简单、极易算错”的典型，讨论多集中于如何向学生讲清“局部最大 ≠ 整体最大”。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>强化模型识别</strong>：训练学生一眼把“每行每列恰一个”对应到“排列 / 非攻击车”，避免计数原理误用。</li>
+<li><strong>渗透位值思想</strong>：两位数表题先拆十位个位，把“最值”降维，培养结构化拆解习惯。</li>
+<li><strong>引入“调整法 / 常数偏移”</strong>：把 Math173 的技巧作为分配问题的通用工具，提升学生处理最值类题的层次。</li>
+<li><strong>纠正“局部最大即全局最大”的错觉</strong>：用本题第二空的反例，专门训练“约束意识”与“整体统筹”。</li>
+<li><strong>要求“给出具体方案”</strong>：最值题不仅要结果，更要一组达到极值的构造，培养严谨表达与验证习惯。</li>
+<li><strong>设计变式</strong>：可让学生改数值、改维度（如 5×5 表），或改为“和最小”，巩固模型与技巧。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>教习网《2026 高考数学历年真题分类汇编·专题十一》——2024 新课标Ⅱ卷第 14 题解析（答案 24；112，位值分解法）。</li>
+<li>Math173（蓝琦）《每日一题[3456]方阵简化》——行列常数偏移法，答案 24；34；112。</li>
+<li>91apu 高考数学《2024 年高考数学新高考Ⅱ-14》——排列数计数与最大值 112 解析。</li>
+<li>腾讯 ima 知识库《高中数学·专题 08 排列组合》——2024 新高考Ⅱ卷第 14 题真题研析。</li>
+</ul>
+
+
+</div>
+</body>
+</html>

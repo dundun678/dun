@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025年高考数学全国二卷第14题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025年高考数学全国二卷第14题研究报告</h1>
+  <div class="lead">研究对象：圆柱内两等球最大半径（填空题）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>一个底面半径为 \(4\ \mathrm{cm}\)，高为 \(9\ \mathrm{cm}\) 的封闭圆柱形容器（容器壁厚度忽略不计）内有两个半径相等的铁球，则铁球半径的最大值为 <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u> \(\mathrm{cm}\)。</p>
+
+<p class="kw">题型：填空题（全国二卷第 14 题，5 分）　难度定位：中档偏易，区分度良好。</p>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead>
+<tr><th>项目</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>卷型</td><td>2025 年高考数学全国二卷（新高考Ⅱ卷）</td></tr>
+<tr><td>题号 / 题型</td><td>第 14 题 / 填空题（共 3 道填空题，每题 5 分）</td></tr>
+<tr><td>分值</td><td>5 分</td></tr>
+<tr><td>考查模块</td><td>立体几何（圆柱与球的位置关系、轴截面）</td></tr>
+<tr><td>核心方法</td><td>轴截面降维（空间问题→平面几何）、相切与勾股定理、一元二次方程</td></tr>
+<tr><td>标准答案</td><td>\(\dfrac{5}{2}\)（即 \(2.5\)）\(\mathrm{cm}\)</td></tr>
+<tr><td>难度估计</td><td>中档（约 0.55–0.65）；据一线教师评析，属"送分但不易想全"的中档题，得分率中等</td></tr>
+<tr><td>实测数据</td><td>官方未单独披露省均分；网传填空题整体得分率一般，第 14 题因需"轴截面降维"思维，不少学生只想到竖直叠放而答 \(\frac{9}{4}\)，错失满分</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>圆柱的轴截面</b>：过圆柱轴线的平面截圆柱所得矩形，其宽等于底面直径 \(2R=8\ \mathrm{cm}\)，高等于圆柱高 \(H=9\ \mathrm{cm}\)。这是把"空间放球"问题转化为"平面放圆"的关键。</li>
+<li><b>球的截面性质</b>：过球心的平面截球得大圆；球与圆柱的位置关系，在轴截面中表现为圆与矩形的位置关系。</li>
+<li><b>相切条件</b>：两球（圆）外切 \(\iff\) 圆心距等于半径之和 \(2r\)；球与圆柱壁、与底面相切 \(\iff\) 对应方向的距离恰好等于 \(r\)。</li>
+<li><b>空间想象与投影</b>：两球心到圆柱轴线的距离、彼此的水平错开量与竖直错开量，需在轴截面中正确投影还原。</li>
+<li><b>勾股定理 / 两点距离</b>：由圆心距平方关系 \((2r)^2=(8-2r)^2+(9-2r)^2\) 列方程。</li>
+<li><b>一元二次方程求解与根的取舍</b>：得到 \(4r^2-68r+145=0\)，因式分解 \((2r-5)(2r-29)=0\)，舍去不合实际的 \(r=\frac{29}{2}\)。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead>
+<tr><th>《高考评价体系》能力维度</th><th>在本体中的具体体现</th></tr>
+</thead>
+<tbody>
+<tr><td>空间想象能力</td><td>将"圆柱内两球"的三维布局在脑中翻转，并正确画出轴截面矩形与两圆</td></tr>
+<tr><td>抽象概括能力</td><td>从实际情境（铁球、容器）抽象出"矩形内放两个等圆使其半径最大"的纯几何模型</td></tr>
+<tr><td>推理论证能力</td><td>论证"最大时必相切"，并区分竖直、水平、斜向三种排布，比较得到最大值</td></tr>
+<tr><td>运算求解能力</td><td>正确展开平方项、合并同类项、因式分解并合理舍去增根</td></tr>
+<tr><td>探索创新能力</td><td>突破"竖直叠放"的直觉定势，想到斜向错开可使半径更大（\(2.5&gt;\frac{9}{4}\)）</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead>
+<tr><th>核心素养</th><th>星级</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>直观想象</td><td><span class="star">★★★★★</span></td><td>本题第一素养，能否"看到"轴截面直接决定成败</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★☆</span></td><td>平方展开与二次方程求解，运算量适中但需细心</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★☆</span></td><td>"最大必相切"+三种排布比较的论证链条</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★☆☆</span></td><td>实物情境→几何模型</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★☆☆☆</span></td><td>建立圆心距约束方程</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>涉及较少</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<blockquote>命题导向：以"圆柱内放两球"这一生活化、可操作的情境切入，考查圆柱与球的基本概念和几何性质，突出空间想象能力，体现高考评价体系的<b>基础性、综合性、创新性</b>。</blockquote>
+
+<p>本题有四个鲜明的命题特征：</p>
+
+<ul>
+<li><b>情境朴素、入口低</b>：容器与铁球人人见过，无需专业背景，体现"基础性"。</li>
+<li><b>降维是关键认知入口</b>：题目不提供图形，学生必须自己想到"轴截面"——把立体问题压成平面矩形内放两圆，这一步是区分高低分的水岭。</li>
+<li><b>去套路化、反机械训练</b>：若只会"竖直叠放"，得出 \(\frac{9}{4}=2.25\) 便止步；真正满分需要比较多种排布，体现"创新性"与思维深度。</li>
+<li><b>区分度设计精巧</b>：答案 \(2.5\) 与直觉值 \(2.25\) 只差一点，恰好让"想不全"的学生拿不到满分，又能让空间想象强的学生稳定拿分。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 几何模型（轴截面降维）</h3>
+
+<p>过圆柱轴线作轴截面，得到矩形 \(ABCD\)，其中 \(AB=2R=8\ \mathrm{cm}\)（宽），\(BC=H=9\ \mathrm{cm}\)（高）。两个铁球的轴截面是两个半径均为 \(r\) 的等大圆。原问题等价于：<b>在 \(8\times 9\) 的矩形内放置两个半径最大的等圆，求 \(r\) 的最大值</b>。</p>
+
+<p>当且仅当半径最大时，两球（圆）彼此外切，且每球同时与圆柱壁、与一底面相切，两球心沿轴截面"斜向错开"。设两球心为 \(O_1,O_2\)：</p>
+
+<ul>
+<li>\(O_1\) 切左壁与下底面，故 \(O_1\) 到左壁、下底面距离均为 \(r\)；</li>
+<li>\(O_2\) 切右壁与上底面，故 \(O_2\) 到右壁、上底面距离均为 \(r\)；</li>
+<li>两圆外切，故圆心距 \(|O_1O_2|=2r\)。</li>
+</ul>
+
+<p>于是两球心的水平错开量为 \(8-2r\)，竖直错开量为 \(9-2r\)。由勾股定理：</p>
+
+<div class="formula">
+\[
+(2r)^2=(8-2r)^2+(9-2r)^2
+\]
+</div>
+
+<p>展开化简：</p>
+
+<div class="formula">
+\[
+4r^2=(64-32r+4r^2)+(81-36r+4r^2)=145-68r+8r^2
+\]
+\[
+4r^2-68r+145=0
+\]
+\[
+(2r-5)(2r-29)=0
+\]
+</div>
+
+<p>解得 \(r=\dfrac{5}{2}=2.5\) 或 \(r=\dfrac{29}{2}=14.5\)（舍去，超过容器尺寸）。</p>
+
+<p>故铁球半径的最大值为 \(\boxed{\dfrac{5}{2}\ \mathrm{cm}}\)。</p>
+
+<div class="note">验证：当 \(r=2.5\) 时，水平错开 \(8-2r=3\)，竖直错开 \(9-2r=4\)，圆心距 \(\sqrt{3^2+4^2}=5=2r\)，恰外切；两球心到轴线距离各为 \(4-r=1.5\)，加上半径 \(2.5\) 恰等于容器半径 \(4\)，确与壁相切。几何自洽。</div>
+
+<h3>7.2 三种排布比较法（更稳健的分类论证）</h3>
+
+<p>为严谨说明"为何斜向排布最大"，可枚举两球在圆柱内的相对位置：</p>
+
+<ul>
+<li><b>情形一·竖直排列</b>：两球沿轴线上下叠放，各切一底面且彼此相切，则 \(4r\leqslant 9\)，得 \(r\leqslant \dfrac{9}{4}=2.25\)。</li>
+<li><b>情形二·水平并排</b>：两球在同一高度并排，各切圆柱壁且彼此相切，则 \(4r\leqslant 8\)，得 \(r\leqslant 2\)。</li>
+<li><b>情形三·斜向错开</b>：如上 7.1，列得 \((2r)^2=(8-2r)^2+(9-2r)^2\)，解得 \(r=2.5\)。</li>
+</ul>
+
+<p>比较三种上界：\(2.5&gt;2.25&gt;2\)，故最大值为 \(2.5\ \mathrm{cm}\)。该分类法能有效防止"只想到竖直叠放"的漏解。</p>
+
+<h3>7.3 轴截面示意图</h3>
+
+<p>下图即圆柱轴截面（矩形 \(ABCD\)，宽 \(8\)、高 \(9\)）与两球大圆（半径 \(r\)）的最优排布：</p>
+
+<svg viewBox="0 0 360 380" width="100%" style="max-width:420px;display:block;margin:14px auto;" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">
+  <rect x="20" y="20" width="320" height="360" fill="#f7f8fa" stroke="#1e3a8a" stroke-width="2.5"/>
+  <circle cx="120" cy="280" r="100" fill="#fff7ed" fill-opacity="0.6" stroke="#b91c1c" stroke-width="2.5"/>
+  <circle cx="240" cy="120" r="100" fill="#fff7ed" fill-opacity="0.6" stroke="#b91c1c" stroke-width="2.5"/>
+  <line x1="120" y1="280" x2="240" y2="120" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="20" y1="280" x2="120" y2="280" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="240" y1="20" x2="240" y2="120" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="65" y="300" fill="#b91c1c" font-size="15">r</text>
+  <text x="255" y="70" fill="#b91c1c" font-size="15">r</text>
+  <text x="160" y="210" fill="#1e3a8a" font-size="15" text-anchor="middle">2r</text>
+  <text x="180" y="372" fill="#1e3a8a" font-size="15" text-anchor="middle">8 = 2R</text>
+  <text x="8" y="200" fill="#1e3a8a" font-size="15" text-anchor="middle" transform="rotate(-90 8 200)">9 = H</text>
+  <text x="120" y="300" fill="#1e3a8a" font-size="14" text-anchor="middle">O₁</text>
+  <text x="240" y="100" fill="#1e3a8a" font-size="14" text-anchor="middle">O₂</text>
+  <text x="20" y="14" fill="#1e3a8a" font-size="14" text-anchor="start">A</text>
+  <text x="340" y="14" fill="#1e3a8a" font-size="14" text-anchor="end">B</text>
+  <text x="340" y="388" fill="#1e3a8a" font-size="14" text-anchor="end">C</text>
+  <text x="20" y="388" fill="#1e3a8a" font-size="14" text-anchor="start">D</text>
+</svg>
+
+<p class="kw">图：轴截面矩形 \(ABCD\)（宽 8、高 9）；两圆（半径 \(r\)）外切，\(O_1\) 切左壁与下底，\(O_2\) 切右壁与上底；圆心距 \(O_1O_2=2r\)，水平投影 \(8-2r\)、竖直投影 \(9-2r\)。</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>技巧一·先画轴截面</b>：遇到"圆柱/棱柱内放球/切球"类题，第一反应就是作轴截面，把三维变二维，瞬间化归为"矩形内放圆"。</li>
+<li><b>技巧二·"最大必相切"原则</b>：求容纳物体的最大尺度时，极值往往在"边界全接触"时取得——两球外切、球与壁相切、球与底相切同时成立。</li>
+<li><b>技巧三·分类比较防漏解</b>：当排布方式不唯一时（竖直/水平/斜向），逐类求上界再取最大，比单凭直觉更稳妥，也便于阅卷得分点完整。</li>
+<li><b>技巧四·勾股而非坐标</b>：本题用"水平错开量 \(8-2r\)、竖直错开量 \(9-2r\)"直接勾股，比建系更简洁，不易在坐标符号上出错。</li>
+<li><b>点睛之笔</b>：记住结论——当矩形长宽差较小时，两等圆斜向错开比竖直叠放更优；本题正是 \(2.5&gt;\frac{9}{4}\) 这"半厘米"的差距拉开区分度。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>趋势一·"无图"立体几何填空常态化</b>：不附图、考查自主空间想象，将成为中档填空题的常规形态（轴截面、截面法是必备工具）。</li>
+<li><b>趋势二·多物体最值问题升温</b>：从"单球切圆柱"升级为"两球/多球""球与锥/柱组合"的容纳、相切、最值，强化综合推理。</li>
+<li><b>趋势三·情境更加生活化</b>：容器、包装、堆放等真实情境入题，强调数学建模与几何直观的结合。</li>
+<li><b>趋势四·运算适度、思维为重</b>：像本题一样，计算只是二次方程，真正的区分在"能否想到轴截面与斜向排布"，符合"反刷题"导向。</li>
+<li><b>趋势五·与球内切外接、组合体体积表面积联动</b>：未来可能把"最大半径"进一步延展到求剩余空隙体积、装水容积等，形成多问递进。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>障碍一·想不到轴截面</b>：约半数学生会卡在"三维放球"的想象上，无从下手；这是首要失分点。</li>
+<li><b>失误二·漏掉斜向排布，答 \(\frac{9}{4}\)</b>：只做竖直叠放得到 \(2.25\)，误以为最大，与满分擦肩（网传此为最常见错误答案）。</li>
+<li><b>失误三·水平投影写错</b>：把"水平错开量"误写成 \(4-r\) 或 \(8-r\)，导致方程列错；正确应为 \(8-2r\)（两球心到两侧壁各留 \(r\)）。</li>
+<li><b>失误四·忘舍去增根</b>：解出 \(r=\frac{29}{2}=14.5\) 后未检验实际意义，直接双解或错选大根。</li>
+<li><b>失误五·单位与表达</b>：漏写单位 \(\mathrm{cm}\)，或写成小数 \(2.5\) 而题目更欢迎分数 \(\frac{5}{2}\)（两种均给分，但分数更规范）。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题为 2025 年新高考Ⅱ卷真题，公开资料丰富，教研界与考生讨论高度一致：</p>
+
+<ul>
+<li><b>官方/机构答案</b>：锦宏高考发布的参考答案、21 世纪教育网真题分类汇编均给出答案 \(\frac{5}{2}\)（2.5），并采用"三种排布比较"或"轴截面 + 勾股"两种主流解法（来源：jhgk.cn 参考答案 PDF、mip.21cnjy.com）。</li>
+<li><b>教师评析共识</b>：多份备课助手资料（ima 知识库）指出，本题考查"圆柱与球的基本概念和几何性质，突出空间想象能力，体现基础性、综合性、创新性"，并强调"当两球球心不在竖直方向、斜向错开时半径最大"这一关键认知（来源：ima.qq.com 高中数学备课助手）。</li>
+<li><b>数学社群解法</b>：Math173（lanqi.org）以"每日一题[3887]双球"给出轴截面直角三角形 \(O_1GO_2\) 的简洁解法，与本文 7.1 一致，结论 \(\frac{5}{2}\)（来源：lanqi.org/everyday/38029）。</li>
+<li><b>考生反馈</b>：社交平台普遍反映"题面友好但容易只想到叠放"，"想到轴截面就很简单，没想到就空白"，印证其良好的区分度设计。</li>
+<li><b>分歧点</b>：少数资料直接用"轴截面内两等圆"默认斜向最优，未分类比较；严谨教学仍建议补充"三种排布比较"以堵住漏解漏洞。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>把"轴截面"训练成条件反射</b>：在圆柱、圆锥、圆台相关的最值、相切、体积问题中，反复强化"过轴作截面"的降维意识，配大量画图练习。</li>
+<li><b>专题突破"多物体容纳最值"</b>：归纳"最大必相切""分类比较上界"的通用策略，用本题作范例，再迁移到球内切外接、组合体等。</li>
+<li><b>强化根的取舍与实际检验</b>：借 \(r=\frac{29}{2}\) 这一增根，训练学生"解必验实际意义"的习惯。</li>
+<li><b>板书示范标准表达</b>：从"设参→列约束→化简→求解→取舍→作答"全流程规范，尤其写清 \(8-2r\)、\(9-2r\) 的几何来源。</li>
+<li><b>分层设计</b>：基础层确保"竖直叠放得 2.25"不丢基本分；提高层追求"斜向得 2.5"满分，照顾不同层次学生。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>2025 年全国统一高考数学试卷（新高考Ⅱ）参考答案，锦宏高考，https://jhgk.cn/upload/file/20250611/1749606902734089600.pdf</li>
+<li>7.1 空间几何体的结构特征、表面积和体积（解析版）——2026 版十年高考数学真题分类汇编，21 世纪教育网，https://mip.21cnjy.com/P/23597753.html</li>
+<li>每日一题[3887]双球，Math173（lanqi.org），http://lanqi.org/everyday/38029</li>
+<li>2025 年普通高等学校招生全国统一考试数学（全国二卷）试题评析与备考助手，ima 知识库（高中数学备课助手），https://ima.qq.com/</li>
+</ul>
+
+
+</div>
+</body>
+</html>

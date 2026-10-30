@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年高考数学全国一卷第 14 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2026 年高考数学全国一卷第 14 题研究报告</h1>
+  <div class="lead">研究对象：数列前 3n 项和与连续 9 项等比子列的公比上确界　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>设实数 \(q\) 满足：存在数列 \(\{a_n\}\)，使得对于任意 \(n\in\mathbf{N}^*\)，均有</p>
+
+<div class="formula">
+\[
+a_1+a_2+\cdots+a_{3n}=n^2+n,
+\]
+</div>
+
+<p>且 \(\{a_n\}\) 中有某连续 \(9\) 项 \(a_k,a_{k+1},\cdots,a_{k+8}\) 是公比为 \(q\) 的等比数列，则 \(q\) 的最大值为 ______。</p>
+
+<blockquote>题型定位：填空题（压轴），分值 \(5\) 分。条件以"前 \(3n\) 项和"隐式定义数列，再叠加"存在连续 \(9\) 项等比子列"的存在性约束，求公比 \(q\) 的上确界。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2026 年高考数学全国一卷（新高考Ⅰ卷）</td></tr>
+<tr><td>题号与位置</td><td>第 14 题，填空题第 3 小题（填空压轴）</td></tr>
+<tr><td>题型 / 分值</td><td>填空题 / 5 分</td></tr>
+<tr><td>考查模块</td><td>数列（分组求和、三项和规律）+ 等比数列性质 + 存在性与上确界</td></tr>
+<tr><td>难度（自评）</td><td>★★★★☆（填空压轴，区分度显著）</td></tr>
+<tr><td>实测数据</td><td>暂无官方单题得分率公布；据一线教师评析，多数考生在此题失分或弃答，属典型"过程曲折、答案不美"的拉分题。</td></tr>
+<tr><td>官方答案</td><td>\(\displaystyle q_{\max}=\sqrt[3]{\frac{3}{2}}\)</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>分组求和与"三项和"规律</b>：由 \(S_{3n}=n^2+n\) 推出每连续三项之和 \(B_m=a_{3m-2}+a_{3m-1}+a_{3m}=2m\)，这是破题的核心第一步，把"下标 3 的倍数"的前 \(n\) 项和转化为"每块 3 项"的块和规律。</li>
+<li><b>等比数列的分段和比性质</b>：若一段连续项成等比（公比 \(q\)），则每间隔相同项数取出的等长片段，其和也成等比，比值为 \(q^{\text{间隔}}\) 。本题利用"三个连续块"的和之比等于 \(q^3\)。</li>
+<li><b>按起始位置模 3 分类讨论</b>：连续 9 项的起点 \(k\) 模 3 只有三种余数，决定它覆盖"完整三项组"的个数与位置，是存在性论证的结构基础。</li>
+<li><b>上确界与构造验证</b>：先由必要条件给出 \(q\) 的上界 \(\sqrt[3]{3/2}\)，再用具体构造说明该值"可达"，从而确认最大值（而非仅上界）。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>《中国高考评价体系》能力</th><th>本题中的体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>从 \(S_{3n}=n^2+n\) 这一"非标准"条件中提取可用信息，识别"每 3 项一块"的分组结构。</td></tr>
+<tr><td>抽象概括</td><td>将前 \(3n\) 项和条件抽象为"第 \(m\) 块三项和 \(B_m=2m\)"的规律，把数列问题转化为块和与等比片段的关系。</td></tr>
+<tr><td>推理论证</td><td>用模 3 分类穷尽起点位置，排除"含三个完整块"的不可行情形，并严格推导 \(q^3=(m+2)/(m+1)\)。</td></tr>
+<tr><td>运算求解</td><td>处理比值 \((m+2)/(m+1)=1+1/(m+1)\) 的单调性与取最大，最终锁定 \(m=1\) 给出 \(q^3\le 3/2\)。</td></tr>
+<tr><td>探索创新</td><td>"存在性 + 上确界"的设问是新高考数列题的典型创新方向，需主动构造反例/实例来验证界的可达性。</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>星级</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学运算</td><td><span class="star">★★★★★</span></td><td>三项和推导、块和比值化简、单调性分析，全程运算。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>模 3 分类、排除矛盾、上界到最大值的逻辑闭环。</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★★☆</span></td><td>把"前 3n 项和"抽象为"块和等差数列"。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★☆☆☆☆</span></td><td>对"9 项如何落进三项组"的排布需空间直觉，但无图形。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>不涉及统计数据分析。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★☆☆☆</span></td><td>存在性约束下的参数上界模型。</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题是 2026 全国一卷填空题的压轴，命题者意在以"小巧灵活、拒绝死算"的方式考查学生真正的数列素养，而非套路化的求和求通项。其设计要点如下：</p>
+
+<ul>
+<li><b>隐式定义 + 存在性</b>：不直接给 \(\{a_n\}\) 的通项或递推，而是用 \(S_{3n}=n^2+n\) 间接约束，并叠加"存在某连续 9 项成等比"的软条件，求参数上确界。这类"存在即合理、越界即矛盾"的命题，逼迫学生从必要条件出发反向逼近。</li>
+<li><b>认知入口平易、纵深陡峭</b>：第一步"三项和成等差"几乎人人能想到；但要把 9 项等比与三项和规律对接，并进行严谨的模 3 分类，需要较强的结构洞察，区分度由此拉开。</li>
+<li><b>答案"不美"是刻意设计</b>：最终答案为 \(\sqrt[3]{3/2}\)，一个非常规的立方根根式。命题者通过"答案不漂亮"制造心理压力，检验学生是否敢于在逻辑严密时落笔，而非因形式陌生而放弃。</li>
+<li><b>去套路化</b>：回避了"求通项、错位相减"等传统热点，转向"分组块和 + 等比片段 + 极值"，呼应新高考强调的"关键能力"。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第一步：把前 \(3n\) 项和转化为"三项和"规律</h3>
+
+<p>记前 \(m\) 项和为 \(S_m\)。由题设</p>
+
+<div class="formula">
+\[
+S_{3n}=n^2+n\qquad(n\in\mathbf{N}^*).
+\]
+</div>
+
+<p>考察"第 \(m\) 个三项组"的和</p>
+
+<div class="formula">
+\[
+B_m=a_{3m-2}+a_{3m-1}+a_{3m}=S_{3m}-S_{3(m-1)}.
+\]
+</div>
+
+<p>代入条件（注意 \(S_0=0\)）：</p>
+
+<div class="formula">
+\[
+B_m=(m^2+m)-\bigl((m-1)^2+(m-1)\bigr)=(m^2+m)-(m^2-m)=2m.
+\]
+</div>
+
+<p>于是每连续三项的和构成首项 \(2\)、公差 \(2\) 的等差数列：</p>
+
+<div class="formula">
+\[
+B_1=2,\; B_2=4,\; B_3=6,\; B_4=8,\;\cdots,\; B_m=2m.
+\]
+</div>
+
+<p class="kw">要点：除三项组内部外，单个 \(a_i\) 并不唯一；给定块和 \(B_m=2m\) 后，块内三项可自由调配，只要块和满足即可。这是后续"构造存在性"的自由度来源。</p>
+
+<h3>7.2 第二步：连续 9 项等比块与完整三项组的关系</h3>
+
+<p>设连续 9 项 \(a_k,a_{k+1},\ldots,a_{k+8}\) 成等比数列，公比 \(q\)，记 \(a_k=A\)，则</p>
+
+<div class="formula">
+\[
+a_{k+j}=Aq^{\,j}\qquad(j=0,1,\ldots,8).
+\]
+</div>
+
+<p>任意连续 3 项（下标相邻）的和，在等比段中等于"首项和 \(\times(1+q+q^2)\) 乘以相应幂次"。由于 \(1+q+q^2&gt;0\) 对任意实数 \(q\) 恒成立（判别式 \(1-4&lt;0\)），故块和之比完全由 \(q\) 决定。下面按起点 \(k\) 模 3 分类。</p>
+
+<h3>7.3 第三步：模 3 分类讨论</h3>
+
+<p><b>情形 I　\(k\equiv 1\pmod 3\)</b>。此时 9 项恰好覆盖三个完整三项组 \(B_m,B_{m+1},B_{m+2}\)。它们的块和分别为</p>
+
+<div class="formula">
+\[
+A(1+q+q^2),\quad Aq^3(1+q+q^2),\quad Aq^6(1+q+q^2),
+\]
+</div>
+
+<p>应分别等于 \(2m,\,2(m+1),\,2(m+2)\)。于是</p>
+
+<div class="formula">
+\[
+q^3=\frac{2(m+1)}{2m}=\frac{m+1}{m},\qquad q^3=\frac{2(m+2)}{2(m+1)}=\frac{m+2}{m+1}.
+\]
+</div>
+
+<p>联立得 \((m+1)^2=m(m+2)\Rightarrow m^2+2m+1=m^2+2m\Rightarrow 1=0\)，矛盾。故<b>情形 I 不可能</b>。</p>
+
+<p><b>情形 II　\(k\equiv 2\pmod 3\)</b>。令 \(k=3m-1\ (m\ge 1)\)。9 项 = \(\{a_{3m-1},a_{3m}\}\)（\(B_m\) 的后两项）\(\cup\,B_{m+1}\cup B_{m+2}\cup\{a_{3m+7}\}\)（\(B_{m+3}\) 的首项）。其中完整覆盖的是 \(B_{m+1},B_{m+2}\)：</p>
+
+<div class="formula">
+\[
+B_{m+1}=Aq^2(1+q+q^2)=2(m+1),\qquad B_{m+2}=Aq^5(1+q+q^2)=2(m+2).
+\]
+</div>
+
+<p>两式相除：</p>
+
+<div class="formula">
+\[
+q^3=\frac{2(m+2)}{2(m+1)}=\frac{m+2}{m+1}.
+\]
+</div>
+
+<p>两端的残缺块 \(B_m,B_{m+3}\) 可由块外的自由项补足，不附加新限制。</p>
+
+<p><b>情形 III　\(k\equiv 0\pmod 3\)</b>。令 \(k=3m\ (m\ge 1)\)。9 项 = \(\{a_{3m}\}\)（\(B_m\) 的首项）\(\cup\,B_{m+1}\cup B_{m+2}\cup\{a_{3m+7},a_{3m+8}\}\)（\(B_{m+3}\) 的前两项）。完整覆盖的仍是 \(B_{m+1},B_{m+2}\)：</p>
+
+<div class="formula">
+\[
+B_{m+1}=Aq(1+q+q^2)=2(m+1),\qquad B_{m+2}=Aq^4(1+q+q^2)=2(m+2),
+\]
+\[
+\Rightarrow\quad q^3=\frac{m+2}{m+1}.
+\]
+</div>
+
+<p>综上，所有可行情形都给出</p>
+
+<div class="formula">
+\[
+q^3=\frac{m+2}{m+1}=1+\frac{1}{m+1}\qquad(m\ge 1).
+\]
+</div>
+
+<p>该函数随 \(m\) 增大而减小，故 \(q^3\) 在 \(m=1\) 时取最大：</p>
+
+<div class="formula">
+\[
+q^3\le\frac{1+2}{1+1}=\frac{3}{2}\quad\Longrightarrow\quad q\le\sqrt[3]{\frac{3}{2}}.
+\]
+</div>
+
+<h3>7.4 第四步：构造验证"可达性"</h3>
+
+<p>取 \(m=1\)、\(k=2\)（情形 II），令 \(q=\sqrt[3]{3/2}\)，并取</p>
+
+<div class="formula">
+\[
+A=\frac{2(m+1)}{q^2(1+q+q^2)}=\frac{4}{q^2(1+q+q^2)}.
+\]
+</div>
+
+<p>令 \(a_2=A,\ a_3=Aq,\ a_4=Aq^2,\ldots,a_{10}=Aq^8\)。由构造保证 \(B_2=4,\ B_3=6\)。再令</p>
+
+<div class="formula">
+\[
+a_1=2-A-Aq\quad(\text{使 }B_1=2),\qquad a_{11}+a_{12}=8-a_{10}\quad(\text{使 }B_4=8),
+\]
+</div>
+
+<p>其余块 \(B_j\ (j\ge 5)\) 任意取和为 \(2j\) 的三项。这样得到的数列满足 \(S_{3n}=n^2+n\)，且含连续 9 项等比子列（公比 \(q=\sqrt[3]{3/2}\)）。故上界可达，确认为最大值。</p>
+
+<div class="note"><b>结论：</b>\(\displaystyle q_{\max}=\sqrt[3]{\frac{3}{2}}\)。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>第一招·"三项和"切块</b>：看到 \(S_{3n}\)、\(S_{2n}\) 这类"每若干项一组"的条件，立即想到考察"第 \(m\) 组的和"，把全局约束转成局部规律。本题 \(B_m=S_{3m}-S_{3(m-1)}=2m\) 是全部推理的起点。</li>
+<li><b>第二招·等比片段等比</b>：连续成等比的段中，等间隔抽取的等长片段其和仍成等比，比值 \(q^{\text{间隔}}\)。本题"隔 3 项抽一组"→比值为 \(q^3\)，是连接块和与公比的桥梁。</li>
+<li><b>第三招·模 3 分类穷尽起点</b>：连续 9 项相对三项组的落位只取决于起点 \(k\bmod 3\)，仅 3 种情况，逐一排除即可。切忌"想当然认为含两个完整块"而漏掉"含三个块"的矛盾情形。</li>
+<li><b>第四招·上界更要"构造可达"</b>：求出 \(q^3\le 3/2\) 后，必须给出一组具体数列证明 \(\sqrt[3]{3/2}\) 真能取到，否则只能说"上界"而非"最大值"。这是压轴填空题拿满分的关键一步。</li>
+<li><b>点睛之笔</b>：块和 \(B_m=2m&gt;0\) 且 \(1+q+q^2&gt;0\) 恒成立，因此 \(q^3&gt;0\)、\(q&gt;0\)，最大值问题只需在正实数范围内比较，简化了分类。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>数列从"求通项求和"转向"存在性 + 极值"</b>：新高考更愿考"满足某条件时参数能取到多大/多小"，强调论证与上确界思想，而非机械运算。</li>
+<li><b>隐式/间接定义成为常态</b>：用 \(S_{kn}\)、分段、递推不等式而非直接通项来定义数列，考查学生"从约束中提炼规律"的抽象能力。</li>
+<li><b>跨模块融合加深</b>：数列与不等式（单调性求极值）、函数（放缩）、组合（分类讨论）的交叉会越来越常见。</li>
+<li><b>分类讨论结构化</b>："按模 \(k\) 分类""按起点/奇偶分类"等结构化枚举，将继续作为压轴填空/选择的区分手段。</li>
+<li><b>"答案不美"的心理战</b>：命题者倾向用带根号、对数、反三角等"不漂亮"的答案为压轴，考查学生在逻辑正确时是否敢于落笔。</li>
+<li><b>构造验证常态化</b>：存在性结论往往需要"先证上界、再构造实例"，这一范式会向更多题型渗透。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>障碍 1·误读条件为"求单项"</b>：不少学生把 \(S_{3n}=n^2+n\) 当成求 \(a_{3n}\)，未意识到应考察"三项和"，导致后续无从下手。</li>
+<li><b>障碍 2·等比分段性质不清</b>：不会用"隔 3 项抽一组、和之比 \(q^3\)"，转而试图写 9 项的通项去硬凑，陷入繁琐且易错。</li>
+<li><b>障碍 3·分类讨论不全</b>：只考虑了"含两个完整三项组"，漏掉"含三个完整三项组"的矛盾情形（情形 I），或起点模 3 的三种余数未穷尽，结论不严谨。</li>
+<li><b>障碍 4·"上界"当"最大值"</b>：算出 \(q^3\le 3/2\) 就停笔，未构造实例证明可达，在存在性命题中扣掉关键的"等号可取"步骤。</li>
+<li><b>障碍 5·答案不美导致自我否定</b>：得出 \(\sqrt[3]{3/2}\) 后怀疑自己算错（"怎么是个立方根"），临场改答或留空——这正是命题者设计的心理陷阱。</li>
+<li><b>典型误传</b>：少数非权威自媒体流传"\(q_{\max}=4\)"等错误结论，系对三项和规律与等比分段性质双重误读所致，教学时可作为"反例辨析"素材，提醒学生以严格推导而非"答案像不像"为准。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题作为 2026 全国一卷填空压轴，在网络教研圈讨论集中，共识与分歧如下：</p>
+
+<ul>
+<li><b>共识（权威来源一致）</b>：21 世纪教育网（zy.21cnjy.com/25912080）、教习网（m.51jiaoxi.com《十年高考分类训练·专题 08 数列小题综合》）以及"数学元年·张影老师"专栏均给出标准解法：三项和 \(B_m=2m\)，按起点模 3 分类，得 \(q^3=(m+2)/(m+1)\)，取 \(m=1\) 得 \(q_{\max}=\sqrt[3]{3/2}\)。各源在分类与推导细节上表述略有差异，但最终答案与关键不等式完全一致。</li>
+<li><b>分歧 / 误传</b>：个别自媒体速记稿（如头条某聚合帖）误将答案写作 \(4\)，属未经验证的错误结论；另有部分讨论把"含三个完整块"情形误认为可行。教学中应以严格分类（情形 I 推出 \(1=0\) 矛盾）澄清。</li>
+<li><b>评价风向</b>：一线教师普遍称本题"小巧灵活、拒绝死算"，认为它区分的是<b>真正的数列结构洞察力</b>而非计算量；同时提醒，答案形式特殊（立方根根式）会放大考场的心理波动，需在平时训练学生的"敢于落笔"心理素质。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>强化"分组求和"专题</b>：专门训练 \(S_{kn}\)、按奇偶/按模分组、隔项求和等"非标准前 \(n\) 项和"的转化意识，把全局条件落成局部规律。</li>
+<li><b>讲透等比"片段等比"性质</b>：用"等间隔抽等长片段，和之比 \(q^{\text{间隔}}\)"的通式，配多组例题，让学生形成条件反射。</li>
+<li><b>结构化分类讨论训练</b>：以"起点模 3"为模板，训练"枚举—排除—结论"的完整闭环，特别强调"反例（含三个块）也要讨论并排除"。</li>
+<li><b>存在性命题的"两步法"</b>：明确"先证必要条件给出上界 → 再构造实例证可达"，把"最大值/上确界"的严谨性内化为习惯。</li>
+<li><b>心理建设与答案审美</b>：用本题作案例，告知学生"答案不美≠算错"，凡推导严密就应大胆填答，减少考场上因形式陌生而弃题。</li>
+<li><b>错题辨析</b>：把网络流传的错误答案（如 \(4\)）搬进课堂，让学生当"阅卷人"找出错误，反向巩固正确逻辑。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>2026 年高考数学全国一卷真题（含解析），21 世纪教育网，zy.21cnjy.com/25912080</li>
+<li>2026 年全国统一高考数学试卷（新高考Ⅰ卷）原卷版+解析版，教习网，m.51jiaoxi.com/doc-18457904.html</li>
+<li>十年(2017-2026)高考数学试题分类训练·专题 08 数列小题综合，教习网，m.51jiaoxi.com/doc-18787679.html</li>
+<li>《"小巧灵活、拒绝死算"——2026 年高考数学一卷填空题剖析》，今日头条，www.toutiao.com/a7667064129764590090</li>
+<li>2026 年数学全国新高考 I 卷填空题、多选题和选择题详细解答（数学元年·张影老师），今日头条，www.toutiao.com/article/7661064453680677428/</li>
+</ol>
+
+
+</div>
+</body>
+</html>

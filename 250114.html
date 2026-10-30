@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年高考数学全国一卷第 14 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 年高考数学全国一卷第 14 题研究报告</h1>
+  <div class="lead">研究对象：有放回抽样下的覆盖种类数期望　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+<blockquote>
+一个箱子里有 \(5\) 个球，分别以 \(1\sim 5\) 标号，若有放回地取三次，记至少取出一次的球的个数为 \(X\)，则 \(E(X)=\) _____ ．
+</blockquote>
+<p class="kw">题源：2025 年普通高等学校招生全国统一考试（全国一卷 / 新高考Ⅰ卷）填空题第 14 题。</p>
+
+<h2>二、试题定位与基本信息</h2>
+<table>
+  <tr><th>项目</th><th>内容</th></tr>
+  <tr><td>卷型</td><td>2025 全国一卷（新高考Ⅰ卷）</td></tr>
+  <tr><td>题号</td><td>第 14 题（填空题第 3 小题）</td></tr>
+  <tr><td>题型</td><td>填空题（单空）</td></tr>
+  <tr><td>分值</td><td>5 分</td></tr>
+  <tr><td>考查模块</td><td>概率与统计 —— 离散型随机变量及其分布列、数学期望</td></tr>
+  <tr><td>难度定位</td><td>中档题（高考直通车点评"中档题"）</td></tr>
+  <tr><td>核心考点</td><td>古典概型计数、对立事件概率、随机变量期望的两种求法（分布列法 / 指示变量法）</td></tr>
+  <tr><td>实测数据</td><td>暂无权威全省平均分公开；据一线教师评析，本题区分度中等，难度约 \(0.55\sim0.65\)，是填空题后段的主要拉分点之一</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+<ul>
+  <li><b>离散型随机变量及其分布列</b>：先确定 \(X\) 的可能取值 \(\{1,2,3\}\)，再逐一求概率，构成分布列。</li>
+  <li><b>古典概型与计数原理</b>：有放回抽取三次，样本空间大小为 \(5^3=125\)；计数时用分步乘法、排列数 \(A_5^3\)、组合数等。</li>
+  <li><b>对立事件与独立事件概率</b>：单次未取到某球的概率为 \(\frac{4}{5}\)，三次独立则"从未取出"的概率为 \(\left(\frac{4}{5}\right)^3\)，从而"至少一次"用对立事件求。</li>
+  <li><b>数学期望的定义与线性性质</b>：\(\displaystyle E(X)=\sum x_kP(X=x_k)\)；更关键的是 <b>期望的线性性质</b>——无论随机变量是否独立，都有 \(E\!\left(\sum I_i\right)=\sum E(I_i)\)，这是"指示变量法"的理论基础。</li>
+  <li><b>0-1 指示变量（Indicator Variable）</b>：用 \(I_i\in\{0,1\}\) 标记"球 \(i\) 是否至少出现一次"，把"种类计数"转化为"若干个 0-1 变量之和"。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+<table>
+  <tr><th>《中国高考评价体系》能力</th><th>在本题中的体现</th></tr>
+  <tr><td>信息获取</td><td>从"有放回地取三次""至少取出一次的球的个数"中准确提取样本空间与随机变量定义。</td></tr>
+  <tr><td>抽象概括</td><td>把"5 个球取 3 次"抽象为"从 5 个元素中有放回抽样 3 次、求覆盖种类数的期望"，可推广到一般 \(m,n\)。</td></tr>
+  <tr><td>推理论证</td><td>两种解法的逻辑自洽：分布列法需严格枚举不重不漏；指示变量法依赖期望线性性质与对称性论证。</td></tr>
+  <tr><td>运算求解</td><td>完成 \(5^3=125\)、\(\left(\frac45\right)^3=\frac{64}{125}\)、分数期望 \(\frac{61}{25}\) 等运算并化简。</td></tr>
+  <tr><td>数学建模</td><td>将"至少取出一次的球的个数"建模为指示变量之和，是高阶的模型化思维。</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+<table>
+  <tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+  <tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>把具体情境抽象为随机变量 \(X\) 及其期望问题。</td></tr>
+  <tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>分布列枚举的完备性与指示变量法的逻辑链。</td></tr>
+  <tr><td>数学运算</td><td><span class="star">★★★</span></td><td>计数与分数运算的准确度为得分关键。</td></tr>
+  <tr><td>数据分析</td><td><span class="star">★★</span></td><td>对"覆盖种类数"的概率结构进行分析。</td></tr>
+  <tr><td>数学建模</td><td><span class="star">★★</span></td><td>指示变量建模体现模型化思想。</td></tr>
+  <tr><td>直观想象</td><td><span class="star">★</span></td><td>本题几乎不涉及图形直观，要求较低。</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+<ul>
+  <li><b>去情境化、重本质</b>：题干几乎没有生活包装，直接考查概率与期望的内核，符合近年"反套路、重本质"的命题导向。</li>
+  <li><b>小计数空间承载完整链条</b>：以 \(5^3=125\) 这个可控的计数规模，串起"样本空间 → 分布列 → 期望"的完整过程，计算量适中而区分度良好。</li>
+  <li><b>双路径考查</b>：题目不限定方法，既可用"先求分布列"的常规路径，也可用"指示变量 + 期望线性性质"的更优路径。能否想到后者，正是区分中上水平学生的关键。</li>
+  <li><b>变量界定是入口门槛</b>："至少取出一次的球的个数"是"品种/种类计数"，而非"某个指定球的频数"，能否正确界定 \(X\) 是解题第一关。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 审题与变量界定</h3>
+<p>有放回抽取三次，每次 5 种等可能结果，故样本点总数为 \(5^3=125\)（有序三元组，顺序重要）。</p>
+<p>"至少取出一次的球的个数 \(X\)" 表示：在 5 个编号的球中，被抽到过至少一次的编号有多少个。由于只抽 3 次，最多出现 3 个不同编号，最少 1 个（三次都抽同一个），故</p>
+<div class="formula">\[ X\in\{1,\,2,\,3\}. \]</div>
+
+<h3>7.2 法一：先求分布列，再求期望</h3>
+<p><b>（1）\(X=1\)</b>：三次抽到同一个球。先选这个球的编号，有 \(5\) 种；三次结果全部固定。故</p>
+<div class="formula">\[ P(X=1)=\frac{5}{125}=\frac{1}{25}. \]</div>
+<p><b>（2）\(X=2\)</b>：恰好两种不同球被取出，即"一球出现 2 次、另一球出现 1 次"。选出现 2 次的球有 \(5\) 种，选出现 1 次的球有 \(4\) 种，选"出现 1 次的球"所在位置有 \(C_3^1=3\) 种，共</p>
+<div class="formula">\[ 5\times 4\times 3=60\text{ 种},\qquad P(X=2)=\frac{60}{125}=\frac{12}{25}. \]</div>
+<p><b>（3）\(X=3\)</b>：三次取出三个不同球。从 5 个球中选 3 个并排列，有</p>
+<div class="formula">\[ A_5^3=5\times4\times3=60\text{ 种},\qquad P(X=3)=\frac{60}{125}=\frac{12}{25}. \]</div>
+<p><b>验算</b>：计数之和 \(5+60+60=125\)；概率和 \(\frac{1}{25}+\frac{12}{25}+\frac{12}{25}=1\)，无误。</p>
+<p>由期望定义：</p>
+<div class="formula">\[ E(X)=1\cdot\frac{1}{25}+2\cdot\frac{12}{25}+3\cdot\frac{12}{25}=\frac{1+24+36}{25}=\frac{61}{25}=2.44. \]</div>
+
+<h3>7.3 法二：指示变量法（更优）</h3>
+<p>对每个 \(i=1,2,3,4,5\)，定义</p>
+<div class="formula">\[ I_i=\begin{cases}1,&\text{球 }i\text{ 至少被取出一次},\\ 0,&\text{否则}.\end{cases} \]</div>
+<p>则 \(X=I_1+I_2+I_3+I_4+I_5\)。由期望的线性性质（<b>不要求独立性</b>）：</p>
+<div class="formula">\[ E(X)=\sum_{i=1}^{5}E(I_i)=5\,E(I_1)\quad(\text{由对称性}). \]</div>
+<p>单次抽取未取到球 1 的概率为 \(\frac{4}{5}\)，三次独立，故球 1 一次都没取出的概率为 \(\left(\frac{4}{5}\right)^3=\frac{64}{125}\)。于是</p>
+<div class="formula">\[ P(I_1=1)=1-\frac{64}{125}=\frac{61}{125},\qquad E(I_1)=\frac{61}{125}. \]</div>
+<p>因此</p>
+<div class="formula">\[ E(X)=5\times\frac{61}{125}=\frac{61}{25}=2.44. \]</div>
+<div class="note">两种解法结果一致，均得 \(\displaystyle E(X)=\frac{61}{25}\)。指示变量法绕开了繁琐的分布列计数，是本类"覆盖种类数"期望问题的通法。</div>
+
+<h2>八、解答技巧</h2>
+<ul>
+  <li><b>点睛之笔——优先指示变量法</b>：凡涉及"出现的<b>种类/个数</b>"的期望，先用 0-1 指示变量分解，再套用期望线性性质，往往免去寻找分布列。</li>
+  <li><b>务必分清两种计数</b>："至少取出一次的球的个数"（品种数，取值 \(1,2,3\)）≠"某个指定球被抽到的次数"（频数，取值 \(0,1,2,3\)）。</li>
+  <li><b>明确样本空间</b>：有放回且记录每次结果，样本点按有序三元组计，总数为 \(5^3\)；不要误除以排列数。</li>
+  <li><b>强制验算</b>：分布列法务必核对"计数和 = 总样本点数"且"概率和 = 1"，可即时发现计数错误。</li>
+  <li><b>推广公式</b>：\(m\) 个球有放回取 \(n\) 次，"至少出现一次的球的个数"的期望为 \(\displaystyle m\left[1-\left(1-\frac1m\right)^n\right]\)；本题即 \(5\left[1-\left(\frac45\right)^3\right]=\frac{61}{25}\)。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+<ul>
+  <li><b>从"给分布列求期望"转向"先构造随机变量再求期望"</b>，更强调对期望线性性质的灵活使用。</li>
+  <li><b>指示变量（0-1 变量）成为高频技巧</b>，常与"覆盖 / 命中 / 出现次数"类问题结合，建议作为二轮复习重点。</li>
+  <li><b>去情境化、反套路</b>：题干直接考查概率内核，减少生活包装，检验学生对概念本质的掌握。</li>
+  <li><b>计数与概率深度融合</b>：以较小计数空间承载"分布列 + 期望"完整链条，计算可控但区分度高。</li>
+  <li><b>模型识别优先于套公式</b>：能否把问题识别为"优惠券收集 / 覆盖问题"的简化版，决定解题速度与正确率。</li>
+  <li><b>可拓展到更一般参数</b>：命题可能把 \(5,3\) 改为一般 \(m,n\)，甚至引入"无放回""至少 k 次"等变式。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+<ul>
+  <li><b>误读变量</b>：把 \(X\) 理解为"某个指定球被取出的次数"（应为 \(0,1,2,3\)），或误以为是"抽取总次数 3"。</li>
+  <li><b>计数遗漏 / 重复</b>：求 \(P(X=2)\) 时漏掉"单球所在位置有 3 种"，或把两种球的角色固定导致少算一倍；混淆 \(A_5^3\) 与 \(C_5^3\)。</li>
+  <li><b>顺序争议</b>：误以为 \(5^3\) 应再除以某排列数，导致分母取错。</li>
+  <li><b>不会用指示变量</b>：硬求分布列，计算易错且耗时，考场上时间压力大。</li>
+  <li><b>线性性质适用范围不清</b>：担心 \(I_i\) 之间不独立而不敢相加——其实期望线性性质<b>不需要独立性</b>。</li>
+  <li><b>运算失误</b>：算错 \(\left(\frac45\right)^3\) 或最后分数化简出错。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+<ul>
+  <li><b>参考答案高度一致</b>：高考直通车、学科网、优途升等多家机构给出的答案均为 \(\frac{61}{25}\)（≈2.44）。</li>
+  <li><b>解法两派并存</b>：分布列法（Lambdark、高考直通车等）与指示变量法（部分解析称"法二"，利用对称性与独立事件）均被广泛采用。</li>
+  <li><b>官方 / 机构点评</b>：高考直通车将本题评为"中档题"，考查离散型随机变量的数学期望。</li>
+  <li><b>一线教师共识</b>：普遍强调指示变量法是"秒杀"路径，建议在二轮复习重点训练，并指出本题是"优惠券收集问题（coupon collector）"的简化版（\(m=5,n=3\)）。</li>
+  <li><b>细微分歧</b>：部分网传解析在 \(P(X=2)\) 的计数写法上略有差异（\(C_5^2\cdot C_2^1\cdot C_3^1\) 与 \(5\times4\times3\) 等价），本质一致，不影响结果。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+<ul>
+  <li><b>强化期望线性性质</b>：尤其是指示变量法的训练，突破"必须求分布列"的思维定势。</li>
+  <li><b>审题专项</b>：区分"种类数 / 品种数"与"频数"，可用小例子（如 \(m=3,n=2\)）让学生枚举体会。</li>
+  <li><b>计数规范</b>：明确"有序 vs 无序""可重复 vs 不重复"，先定样本空间再计数。</li>
+  <li><b>验算习惯</b>：分布列概率和必为 1，计数和必为总样本点数，作为强制检查项。</li>
+  <li><b>适度拓展</b>：引入"优惠券收集问题"作为进阶模型，提升学生的模型识别能力。</li>
+  <li><b>错题归因</b>：把"误读变量"与"计数重复 / 遗漏"作为高频错因单独归类讲评。</li>
+</ul>
+
+<h2>参考文献</h2>
+<ol>
+  <li>高考直通车. 2025 年普通高等学校招生全国统一考试 数学（全国一卷）含解析 PDF.</li>
+  <li>优途升学生涯规划平台. 2025 年高考全国一卷（数学）—概率. <a href="https://news.ytowin.com/2025/820/16/4b3c170c7cf85c.html">链接</a></li>
+  <li>Lambdark. 2025 高考数学全国一卷部分题目解答. <a href="https://www.lambdark.com/posts/gaokao-math-2025-i">链接</a></li>
+  <li>yogor.cn. 2025 年新高考一卷数学含解析 PDF.</li>
+  <li>高考数学命题逻辑解密·高效提分密库（ima.qq.com）.</li>
+</ol>
+
+
+</div>
+</body>
+</html>

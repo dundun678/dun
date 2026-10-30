@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年高考数学新课标Ⅰ卷第 19 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年高考数学新课标Ⅰ卷第 19 题研究报告</h1>
+  <div class="lead">研究对象：可分数列（新定义压轴题）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p><strong>原题（17 分）</strong>　设 \(m\) 为正整数，数列 \(a_1,a_2,\cdots,a_{4m+2}\) 是公差不为 \(0\) 的等差数列。若从中删去两项 \(a_i\) 和 \(a_j\ (i&lt;j)\) 后，剩余的 \(4m\) 项可被平均分为 \(m\) 组，且每组的 \(4\) 个数都能构成等差数列，则称数列 \(a_1,a_2,\cdots,a_{4m+2}\) 是 <strong>\((i,j)\)-可分数列</strong>。</p>
+
+<ol>
+<li>写出所有的 \((i,j)\)，\(1\leqslant i&lt;j\leqslant 6\)，使得数列 \(a_1,a_2,\cdots,a_6\) 是 \((i,j)\)-可分数列；</li>
+<li>当 \(m\geqslant 3\) 时，证明：数列 \(a_1,a_2,\cdots,a_{4m+2}\) 是 \((2,13)\)-可分数列；</li>
+<li>从 \(1,2,\cdots,4m+2\) 中一次任取两个数 \(i\) 和 \(j\ (i&lt;j)\)，记数列 \(a_1,a_2,\cdots,a_{4m+2}\) 是 \((i,j)\)-可分数列的概率为 \(P_m\)，证明：\(P_m&gt;\dfrac18\)。</li>
+</ol>
+
+<div class="note">
+<strong>核心定义（务必吃透）</strong>：所谓"可分数列"，就是"删掉某两项后，剩下的 \(4m\) 个数能拼成 \(m\) 组，每组 4 个数自己排成一列仍是等差数列"。注意：每组内部是等差数列，组与组之间、组与顺序无关，只要求存在一个"划分"。
+</div>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2024 年普通高校招生全国统一考试 · 新课标Ⅰ卷（新高考Ⅰ卷）</td></tr>
+<tr><td>题号 / 位置</td><td>第 19 题（解答题末题 / 压轴题）</td></tr>
+<tr><td>分值</td><td>17 分</td></tr>
+<tr><td>题型</td><td>新定义解答题（定义型压轴）</td></tr>
+<tr><td>考查模块</td><td>数列（等差数列）＋ 组合计数 ＋ 古典概型；本质是"数列壳 + 组合核"</td></tr>
+<tr><td>难度</td><td>★★★★★（极难，全卷区分度最高的一题）</td></tr>
+<tr><td>实测 / 评价</td><td>据一线评析与媒体解读：第 (1) 问易上手、第 (2) 问偏难、第 (3) 问极难，想拿满分需要较强的组合构造与分类讨论功底，部分教师认为"冲击 140 分以上（清北层次）需一定竞赛组合背景"</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>等差数列的概念与通项</strong>：设公差 \(d\neq 0\)，则 \(a_k=a_1+(k-1)d\)；一组数成等差的充要条件是其下标（在等距意义下）成等差。</li>
+<li><strong>仿射不变性（关键技巧）</strong>：数列各项同加一常数、或同乘一非零常数后是否成等差不变。因此可不妨设 \(a_k=k\)，把"数列问题"转化为"下标集合的划分问题"。</li>
+<li><strong>组合计数与古典概型</strong>：总取法数 \(\binom{4m+2}{2}\)，计数"好对"个数再作比值。</li>
+<li><strong>分组 / 构造思想</strong>：把 \(4m\) 个剩余项按"下标"重新拼成 \(m\) 个 4 项等差组。</li>
+<li><strong>从特殊到一般</strong>：第 (1) 问的 \(m=1\) 是 (2)(3) 的"探路石"，(2) 先证 \(m=3\) 再递推到一般 \(m\)。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>《中国高考评价体系》能力</th><th>在本題中的体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>读懂并内化"\((i,j)\)-可分数列"这一自创定义，把文字转化为可操作的数学条件</td></tr>
+<tr><td>抽象概括</td><td>由具体下标归纳出"等距 4 元组"的共性，提炼仿射不变性</td></tr>
+<tr><td>推理论证</td><td>(2) 的构造性证明、(3) 的下界不等式证明，均要求严密的逻辑链</td></tr>
+<tr><td>运算求解</td><td>组合数计算、不等式 \(8(m+1)(m+2)-(2m+1)(4m+1)=18m+15&gt;0\) 的化简</td></tr>
+<tr><td>探索创新</td><td>面对全新定义，需自行设计分组方案与计数策略，无现成套路可循</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学抽象</td><td><span class="star">★★★★★</span></td><td>把生活化陈述"可分数列"抽象为集合划分问题</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>(2)(3) 的证明全程依赖构造与推理</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★☆☆</span></td><td>组合数与不等式运算量适中但需细心</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★☆☆☆</span></td><td>对下标"断点—补块"的直觉（无明显图形）</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★★☆☆</span></td><td>将概率问题建模为"好对计数 / 总对计数"</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>不直接涉及统计数据分析</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><strong>反套路、重素养</strong>：2024 新课标Ⅰ卷整体"去偏怪、去死记"，但压轴题以全新定义考查学生"当场学、当场用"的自学能力，呼应教材"从特殊到一般、从具体到抽象"的编写思想。</li>
+<li><strong>数列为壳、组合为核</strong>：题干披着等差数列外衣，真正考察的是组合划分与计数，是典型的"跨模块交汇"命题，打破了"数列压轴必求导/放缩"的套路预期。</li>
+<li><strong>递进式设问、强提示性</strong>：(1) 用最小情形 \(m=1\) 让学生直观摸到"连续 4 项"的规律；(2) 指定 \((2,13)\) 给一个具体可构造的特例，并暗中提示"先小后大、递推添加"的思路；(3) 把 (2) 的构造上升为概率下界，要求考生能归纳出一类可分数对的通用计数。</li>
+<li><strong>区分度设计</strong>：第 (1) 问大面积得分，(2) 卡住中等生，(3) 仅筛选顶尖学生，实现了"压轴题应有的选拔功效"。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第 (1) 问</h3>
+
+<p><strong>思路</strong>：由仿射不变性，不妨设 \(a_k=k\)（公差 \(d=1\)）。删去两项后剩下 4 个下标须成等差数列，而 \(\{1,2,3,4,5,6\}\) 中能成等差的 4 元组只能是"连续 4 个整数"（间距为 1；间距 ≥2 需要跨度 ≥7，超出范围）。</p>
+
+<p><strong>解答</strong>：剩余 4 项成等差只可能是
+\[
+\{1,2,3,4\},\quad \{2,3,4,5\},\quad \{3,4,5,6\}.
+\]
+对应删去的两项下标分别为 \((5,6),\ (1,6),\ (1,2)\)。故所有满足条件的数对为
+\[
+(i,j)\in\{(1,2),\ (1,6),\ (5,6)\}.
+\]
+
+<h3>7.2 第 (2) 问</h3>
+
+<p><strong>思路</strong>：先证最小的 \(m=3\)（此时共 \(4m+2=14\) 项），给出一组显式构造；再利用"\(m\) 增大 1，数列只多出连续 4 项"的递推结构，把一般情形归结为 \(m=3\) 加尾。</p>
+
+<p><strong>解答</strong>：设公差为 \(d\neq 0\)，删去下标 \(2,13\)。当 \(m=3\) 时，剩余 12 项下标为
+\[
+\{1,3,4,5,6,7,8,9,10,11,12,14\},
+\]
+按下标分成三组：
+\[
+G_1=\{1,4,7,10\},\quad G_2=\{3,6,9,12\},\quad G_3=\{5,8,11,14\}.
+\]
+每组下标公差均为 \(3\)，故对应的数列项分别成公差为 \(3d\) 的等差数列，满足定义，所以 \(m=3\) 时成立。</p>
+
+<p>当 \(m&gt;3\) 时，对前 14 项仍按上面 \(G_1,G_2,G_3\) 三组处理（恰好覆盖删去 \(a_2,a_{13}\) 后前 14 项中的剩余 12 项）；再把
+\[
+a_{15},a_{16},\ldots,a_{4m+2}
+\]
+每连续 4 项分为一组：
+\[
+\{a_{15},a_{16},a_{17},a_{18}\},\ \ldots,\ \{a_{4m-1},a_{4m},a_{4m+1},a_{4m+2}\},
+\]
+每组下标连续，成公差为 \(d\) 的等差数列。总组数为 \(3+(m-3)=m\)，故对任意 \(m\geqslant 3\)，数列是 \((2,13)\)-可分数列。证毕。</p>
+
+<h3>7.3 第 (3) 问</h3>
+
+<p><strong>思路</strong>：只需构造一族"足够多"的可分数对，证明它的个数占全部 \(\binom{4m+2}{2}\) 的比例大于 \(\dfrac18\) 即可（不必枚举所有好对）。</p>
+
+<p><strong>解答</strong>：由仿射不变性设 \(a_k=k\)，问题化为下标集合 \(T=\{1,2,\ldots,4m+2\}\) 的划分。</p>
+
+<p>取任意整数对 \((k,r)\) 满足 \(0\leqslant k\leqslant r\leqslant m\)，令
+\[
+i=4k+1,\qquad j=4r+2.
+\]
+显然 \(1\leqslant i&lt;j\leqslant 4m+2\)。从 \(T\) 中删去 \(i,j\) 后，剩余下标被自然分成三段连续整数：
+</p>
+<div class="formula">
+\[
+\{1,2,\ldots,4k\}\ \text{（长度 }4k\text{）},\qquad
+\{4k+2,\ldots,4r+1\}\ \text{（长度 }4(r-k)\text{）},\qquad
+\{4r+3,\ldots,4m+2\}\ \text{（长度 }4(m-r)\text{）}.
+\]
+</div>
+<p>三段长度均为 \(4\) 的倍数，每段再顺次每 \(4\) 个连续整数并为一组（每组成公差为 \(d\) 的等差），总组数
+\[
+k+(r-k)+(m-r)=m.
+\]
+因此所有形如 \((i,j)=(4k+1,4r+2)\)（\(0\leqslant k\leqslant r\leqslant m\)）的数对都是可分数对。这类对的个数为
+\[
+N=|\{(k,r):0\leqslant k\leqslant r\leqslant m\}|=\binom{m+2}{2}=\frac{(m+1)(m+2)}{2}.
+\]
+总取法数为
+\[
+\binom{4m+2}{2}=\frac{(4m+2)(4m+1)}{2}=(2m+1)(4m+1).
+\]
+于是
+\[
+P_m\geqslant \frac{N}{\binom{4m+2}{2}}
+=\frac{(m+1)(m+2)}{(2m+1)(4m+1)}.
+\]
+只需证右端 \(&gt;\dfrac18\)：
+\[
+8(m+1)(m+2)-(2m+1)(4m+1)
+=8(m^2+3m+2)-(8m^2+6m+1)
+=18m+15&gt;0.
+\]
+故对任意正整数 \(m\)，均有
+\[
+P_m&gt;\frac18.
+\]
+证毕。</p>
+
+<div class="note">
+<strong>校验与提醒</strong>：上述构造给出的只是"好对"的一个下界族，真实可分数对远比这更多，故 \(P_m\) 实际值更大，题目只要求证 \(&gt;\dfrac18\)，下界已足够。需特别警惕：网上部分解析声称还存在"对称的另一族"使好对总数达 \((m+1)^2\)，但该族中如 \(m=2\) 时的 \((2,5)\) 经逐一验证<b>并非</b>可分数对（剩余下标 \(\{1,3,4,6,7,8,9,10\}\) 无法划分为两个 4 项等差组），因此严谨证法应以本文给出的 \((4k+1,4r+2)\) 族为准。
+</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>第 (1) 问</strong>：一眼"连续 4 项"。想清"4 项成等差且来自 6 个连续下标"只能是连续 4 个，立刻得三组答案，几乎送分。</li>
+<li><strong>第 (2) 问点睛</strong>：① 先拿最小 \(m=3\) 试构造，不要一上来就对付一般 \(m\)；② 构造"等距下标组"\(\{1,4,7,10\}\) 这类跨块分组，比死磕连续块更顺；③ 想到"\(m\) 每加 1，多连续 4 项"，即可把一般情形归约到 \(m=3\) 加尾——这是递推思想的妙用。</li>
+<li><strong>第 (3) 问点睛</strong>：① <b>仿射不变性</b>是降维神器，设 \(a_k=k\) 把数列题变集合题；② 不要企图数"全部好对"，<b>只构造一个易数、且足够大的下界族</b>即可；③ 把删去 \((4k+1,4r+2)\) 后剩余下标按"断点"切成三段，发现三段长度恰好都是 4 的倍数，于是直接顺切——这个"断点—补块"观察是证明的核心。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><strong>新定义题常态化、且压轴化</strong>：以 2024 为标志，压轴题越来越倾向"当场给定义、当场研究"，重在自学与迁移，套模板时代结束。</li>
+<li><strong>跨模块交汇加深</strong>：数列 + 组合、函数 + 概率、解析几何 + 代数等"杂交"题型会成为压轴主流，单一知识点难以撑起区分度。</li>
+<li><strong>从"算"到"构"</strong>：相比传统运算碾压，未来更看重"构造性证明 / 存在性论证 / 下界估计"等离散数学能力。</li>
+<li><strong>特殊到一般、归纳递推成标配</strong>：多问递进（小情形 → 一般证明 → 概率/推广）的设问结构会延续，第 (1) 问必是后两问的"脚手架"。</li>
+<li><strong>概率与计数上压轴</strong>：古典概型、组合计数与代数/数列的结合（如本题第 (3) 问）是值得重点训练的方向。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>读不懂定义就动笔</strong>：把"\((i,j)\)-可分数列"误解为"删两项后整体成等差"，而非"分成 \(m\) 组、每组内部成等差"，方向性错误导致全盘皆输。</li>
+<li><strong>第 (1) 问漏解</strong>：只想到删头尾 \((1,2),(5,6)\)，漏掉删首尾 \((1,6)\)。</li>
+<li><strong>第 (2) 问卡在一般构造</strong>：不少学生能凑出 \(m=3\) 的分组，却不会用"递推加尾"把 \(m&gt;3\) 也说圆，或把分组写成不成立的非等差组。</li>
+<li><strong>第 (3) 问两大坑</strong>：① 没想到用仿射不变性降维，在一般等差数列上硬算；② 企图穷举所有好对而陷入组合泥潭，或在计数不等式上算错符号；③ 把"下界族"误当成"全部好对"，给出错误等号。</li>
+<li><strong>书写逻辑链断裂</strong>：构造分组时只写结果不写"每组为何成等差、共几组"，被扣过程分。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<ul>
+<li><strong>一致好评"素养导向"</strong>：多地教研文章（如《张体华高中数学讲堂》头条号、新湖南《独家 2024 高考试卷难点解析》）均指出本题"无任何题基、不超纲、不偏怪"，但充分显示选拔功效，考察自学与研究能力。</li>
+<li><strong>"竞赛组合味"争议</strong>：部分教师与自媒体认为第 (3) 问偏组合数学竞赛风格，"无竞赛背景看到新定义可能完全不能动笔"；亦有观点称"得其中 10 分以上不成问题"，分歧主要在满分难度。</li>
+<li><strong>教材溯源</strong>：多家解析把本题思想溯源于人教 A 版选择性必修第三册第六章小结"从特殊到一般、从具体到抽象"的编写寄语，认为这是教材思想的忠实体现。</li>
+<li><strong>解法多样化</strong>：网上出现多种证法（直接枚举、仿射归一、按奇偶/按模 4 分类计数等），但以"先 \(m=3\) 构造 + 递推"和"仿射归一 + 下界族计数"最为通行。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>新定义题专项训练</strong>：平时让学生练"读定义—翻译条件—小例子试算—归纳规律"的完整链路，本题就是范本。</li>
+<li><strong>强化"仿射不变性 / 归一化"意识</strong>：遇到等差数列新定义，先教学生"设 \(a_k=k\) 简化"，把数列问题转化为整数集合问题。</li>
+<li><strong>狠抓递进设问的"脚手架"用法</strong>：明确告诉学生，第 (1) 问的小情形就是后两问的探路石，务必先在小情形里找到模式。</li>
+<li><strong>培养构造与下界思维</strong>：对"证明概率大于某常数"类问题，训练"只构造一个易数且足够大的子集"的思路，避免穷举。</li>
+<li><strong>规范证明书写</strong>：构造分组时必须写明"每组下标/项成等差、公差是多少、共分几组"，过程分不能丢。</li>
+<li><strong>组合与概率适度前置拔高</strong>：为冲击高分，可在高三复习中补充古典概型 + 组合计数的交汇题，弥补竞赛组合短板。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>2024 年高考数学新课标Ⅰ卷真题及官方答案（第 18、19 题），教习网 / 21 世纪教育网精品解析。</li>
+<li>《2024 年高考数学新课标 1 卷压轴题之第 19 题简评及解析》，张体华高中数学讲堂（今日头条）。</li>
+<li>《独家｜2024 年高考试卷（新课标 I 卷）数学难点解析》，新湖南。</li>
+<li>《2024 年高考数学新高考Ⅰ-19》解析，91apu 打印页。</li>
+<li>《2026 年高考数学真题追踪索源·专题 23 数列综合与递推问题习题（全国通用）（解析版）》，教习网。</li>
+<li>学科网组卷网《第 43 天 概率与数列的结合问题》《第 59 天 攻克 4 类交汇命题新定义题 3——与概率有关的交汇新定义》。</li>
+</ul>
+
+
+</div>
+</body>
+</html>

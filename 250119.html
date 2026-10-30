@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年高考数学全国一卷（新高考Ⅰ卷）第 19 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 年高考数学全国一卷（新高考Ⅰ卷）第 19 题研究报告</h1>
+  <div class="lead">研究对象：三角函数压轴题（存在性证明 + 含参两层最值）　题型定位：解答题第 19 题（压轴，17 分）　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p><b>（2025 年普通高等学校招生全国统一考试·全国一卷 / 新高考Ⅰ卷 第 19 题，17 分）</b></p>
+
+<p>(1) 求函数 \(f(x)=5\cos x-\cos 5x\) 在 \(\left[0,\dfrac{\pi}{4}\right]\) 上的最大值。</p>
+
+<p>(2) 给定 \(\theta\in(0,\pi)\)，设 \(a\) 为实数，证明：存在 \(y\in[a-\theta,a+\theta]\)，使得 \(\cos y\leqslant\cos\theta\)。</p>
+
+<p>(3) 设 \(b\in\mathbf{R}\)，若存在 \(\varphi\in\mathbf{R}\)，使得 \(5\cos x-\cos(5x+\varphi)\leqslant b\) 对任意 \(x\in\mathbf{R}\) 恒成立，求 \(b\) 的最小值。</p>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>卷型</td><td>2025 年高考数学全国一卷（新高考Ⅰ卷，适用河南、河北、山东、广东、湖北、湖南、福建、江苏、江西、安徽、浙江等）</td></tr>
+<tr><td>题号 / 位置</td><td>解答题第 19 题（全卷压轴，最后一道）</td></tr>
+<tr><td>分值</td><td>17 分（压轴解答题最高分值档）</td></tr>
+<tr><td>考查模块</td><td>三角函数（含和差化积、五倍角）、导数与单调性、存在性证明、含参两层最值</td></tr>
+<tr><td>题型定位</td><td>"新情境 + 递进式设问" 压轴题；第(2)问为存在性证明，第(3)问为"先 \(x\) 后 \(\varphi\)"的两层最值</td></tr>
+<tr><td>难度</td><td>高（压轴，区分顶端考生）</td></tr>
+<tr><td>实测数据</td><td>据多家教育机构与一线教师评析，本题"全省平均完成度不足 30%"；相关教研文献指出此类综合问题推理链平均长度约 6 个环节，学生完整完成率仅约 34%</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>和差化积与诱导公式</b>：用于第(1)问快速求导 \(f'(x)=10\cos 3x\sin 2x\)，避免暴力展开 \(\cos 5x\)。</li>
+<li><b>五倍角公式 / Chebyshev 多项式</b>：\(\cos 5x=16\cos^5 x-20\cos^3 x+5\cos x\)，是第(3)问 \(\varphi=0\) 时把函数整体化为单变量多项式的"杀手锏"。</li>
+<li><b>导数与单调性、极值</b>：驻点法求闭区间最大值；第(3)问用二阶导数判别临界点是极大还是极小。</li>
+<li><b>三角函数的周期性与对称性</b>：\(\sin A=\sin B\) 的两类通解（\(A=B+2k\pi\) 或 \(A=\pi-B+2k\pi\)），是分解临界点的核心。</li>
+<li><b>存在性证明</b>：反证法、图象法、区间长度（"峰宽"）法，第(2)问的典型工具。</li>
+<li><b>含参最值（两层最值）</b>：第(3)问"先固定 \(\varphi\) 求 \(\max_x g(x)\)，再对 \(\varphi\) 求最小"，是本题的思维高峰。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<tr><th>《中国高考评价体系》能力</th><th>在本題中的体现</th></tr>
+<tr><td>信息获取</td><td>读懂"存在 \(y\in[a-\theta,a+\theta]\)"与"存在 \(\varphi\) 使不等式恒成立"两层存在量词结构</td></tr>
+<tr><td>抽象概括</td><td>把第(2)问的几何事实概括为"余弦峰宽恰为 \(2\theta\)"；把第(3)问抽象为两层最值模型</td></tr>
+<tr><td>推理论证</td><td>第(2)问存在性证明的严密演绎；第(3)问下界证明（对任意 \(\varphi\) 都 \(\geqslant 3\sqrt{3}\)）</td></tr>
+<tr><td>运算求解</td><td>和差化积、求导、解方程 \(\sin(5x+\varphi)=\sin x\)、多项式求导与极值</td></tr>
+<tr><td>探索创新</td><td>在陌生设问中自主构造证明路径，将"峰宽"直觉转化为严格论证</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<tr><th>核心素养</th><th>星级</th><th>说明</th></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★★★</span></td><td>将文字条件转化为函数与最值问题</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>存在性证明与下界论证的严密链条</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★★☆</span></td><td>余弦图象"峰宽"的几何直觉支撑第(2)(3)问</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★☆</span></td><td>三角恒等变换与导数运算</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★★☆☆</span></td><td>两层最值模型的建立</td></tr>
+<tr><td>数据分析</td><td><span class="star">★★☆☆☆</span></td><td>本题直接涉及较少，但命题以实测数据反馈为导向</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题是 2025 年新高考Ⅰ卷的"压轴亮点"，命题导向鲜明：</p>
+
+<ol>
+<li><b>去套路化、重思维</b>：第(1)问看似常规求导，第(2)问突然转向存在性证明，第(3)问再升级为含参两层最值，三问层层递进，无法用单一模板套完。</li>
+<li><b>新情境、低入口</b>：以普通三角函数 \(5\cos x-\cos 5x\) 为载体，不涉及"抽象代数结构"等吓人外壳，但设问角度新颖，被部分媒体误读为"新定义题"。</li>
+<li><b>思维铺垫设计</b>：第(2)问"任意长度为 \(2\theta\) 的闭区间内必有 \(\cos\) 值不大于 \(\cos\theta\)"，其本质是<b>余弦"峰"的宽度恰为 \(2\theta\)</b>；这一几何直觉正是第(3)问下界证明的"暗线"——第(3)问中一类临界点的值恰为 \(6\cos x_0\)，而这些临界点以 \(\pi/3\) 为间隔分布，"最近的峰"决定了全局下界。</li>
+<li><b>强区分度</b>：第(1)问保底送分，第(2)问筛选"会证明"的学生，第(3)问的两层最值与下界论证精准区分顶尖考生。</li>
+</ol>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问</h3>
+
+<p><b>思路</b>：在闭区间上求最值，先求导找驻点，再比较驻点与端点。和差化积是捷径。</p>
+
+<div class="formula">
+\[
+f'(x)=-5\sin x+5\sin 5x=5(\sin 5x-\sin x)=10\cos 3x\sin 2x.
+\]
+</div>
+
+<p>当 \(x\in\left[0,\dfrac{\pi}{4}\right]\) 时，\(\sin 2x\geqslant 0\)（因 \(2x\in[0,\pi/2]\)）。而 \(\cos 3x\) 的符号：</p>
+
+<ul>
+<li>\(x\in\left[0,\dfrac{\pi}{6}\right)\) 时 \(3x\in[0,\pi/2)\)，\(\cos 3x>0\)，故 \(f'(x)\geqslant 0\)；</li>
+<li>\(x=\dfrac{\pi}{6}\) 时 \(\cos 3x=0\)，\(f'(x)=0\)；</li>
+<li>\(x\in\left(\dfrac{\pi}{6},\dfrac{\pi}{4}\right]\) 时 \(3x\in(\pi/2,3\pi/4]\)，\(\cos 3x<0\)，故 \(f'(x)<0\)。</li>
+</ul>
+
+<p>所以 \(f(x)\) 在 \(\left[0,\dfrac{\pi}{6}\right]\) 单调递增，在 \(\left[\dfrac{\pi}{6},\dfrac{\pi}{4}\right]\) 单调递减，最大值在 \(x=\dfrac{\pi}{6}\) 处取得：</p>
+
+<div class="formula">
+\[
+f\!\left(\frac{\pi}{6}\right)=5\cos\frac{\pi}{6}-\cos\frac{5\pi}{6}
+=5\cdot\frac{\sqrt{3}}{2}-\left(-\frac{\sqrt{3}}{2}\right)
+=3\sqrt{3}.
+\]
+</div>
+
+<p>验证端点：\(f(0)=5-1=4\)，\(f\!\left(\dfrac{\pi}{4}\right)=3\sqrt{2}<3\sqrt{3}\)。故最大值为 <b>\(3\sqrt{3}\)</b>。</p>
+
+<h3>7.2 第(2)问</h3>
+
+<p><b>思路</b>：要证"存在 \(y\in[a-\theta,a+\theta]\) 使 \(\cos y\leqslant\cos\theta\)"，等价于证闭区间 \([a-\theta,a+\theta]\) 不能整体落入集合 \(\{y:\cos y>\cos\theta\}\)。下面给出最干脆的<b>区间长度（峰宽）法</b>。</p>
+
+<p>因为 \(\theta\in(0,\pi)\)，所以 \(\cos\theta\in(-1,1)\)。由余弦的偶性与在 \([0,\pi]\) 上递减可知</p>
+
+<div class="formula">
+\[
+\{y\in\mathbf{R}:\cos y>\cos\theta\}
+=\bigcup_{k\in\mathbf{Z}}\bigl(2k\pi-\theta,\;2k\pi+\theta\bigr).
+\]
+</div>
+
+<p>每个构成区间都是<b>开区间</b>，长度恰为 \(2\theta\)。而目标区间 \(I=[a-\theta,a+\theta]\) 是<b>闭区间</b>，长度也是 \(2\theta\)。一个长度为 \(2\theta\) 的闭区间不可能包含于一个长度同为 \(2\theta\) 的开区间内（闭区间的两端必须严格落在开区间内部，但开区间长度不允许多出余量）。因此 \(I\not\subseteq\{y:\cos y>\cos\theta\}\)，即存在 \(y\in I\) 使 \(\cos y\leqslant\cos\theta\)。证毕。</p>
+
+<blockquote>
+<b>另两种常见路径（供教学参考）</b>：① <b>图象法</b>——直接在余弦曲线上观察"每个高于 \(\cos\theta\) 的峰宽都是 \(2\theta\)，闭区间 \(I\) 放不下"；② <b>反证 + 等分点法</b>——反设 \(\forall y\in I\) 都有 \(\cos y>\cos\theta\)，则 \(I\) 必整体落在某个 \((2k\pi-\theta,2k\pi+\theta)\) 中，与长度矛盾。
+</blockquote>
+
+<h3>7.3 第(3)问</h3>
+
+<p><b>思路</b>：所求即 \(\displaystyle b_{\min}=\min_{\varphi\in\mathbf{R}}\;\max_{x\in\mathbf{R}}\bigl[5\cos x-\cos(5x+\varphi)\bigr]\)。采用"<b>先固定 \(\varphi\) 对 \(x\) 求最大值，再对 \(\varphi\) 求最小</b>"的两层最值策略。</p>
+
+<p>记 \(g(x)=5\cos x-\cos(5x+\varphi)\)，则</p>
+
+<div class="formula">
+\[
+g'(x)=-5\sin x+5\sin(5x+\varphi).
+\]
+</div>
+
+<p>令 \(g'(x)=0\)，即 \(\sin(5x+\varphi)=\sin x\)，其通解为两类：</p>
+
+<ul>
+<li>类型Ⅰ：\(5x+\varphi=x+2k\pi\;\Rightarrow\;x=\dfrac{-\varphi+2k\pi}{4}\)；</li>
+<li>类型Ⅱ：\(5x+\varphi=\pi-x+2k\pi\;\Rightarrow\;x=\dfrac{\pi-\varphi+2k\pi}{6}\)。</li>
+</ul>
+
+<p>分别代入求临界点处的函数值：</p>
+
+<ul>
+<li>类型Ⅰ处 \(\cos(5x+\varphi)=\cos x\)，故 \(g(x)=5\cos x-\cos x=4\cos x\)。</li>
+<li>类型Ⅱ处 \(\cos(5x+\varphi)=\cos(\pi-x)=-\cos x\)，故 \(g(x)=5\cos x-(-\cos x)=6\cos x\)。</li>
+</ul>
+
+<p>再看二阶导 \(g''(x)=-5\cos x+25\cos(5x+\varphi)\)：</p>
+
+<ul>
+<li>类型Ⅰ：\(g''=20\cos x\)，当 \(\cos x<0\) 时为极大值，但此时值 \(4\cos x<0\)，对全局最大值无贡献；</li>
+<li>类型Ⅱ：\(g''=-30\cos x\)，当 \(\cos x>0\) 时为极大值，值为 \(6\cos x\)。</li>
+</ul>
+
+<p>于是 \(g(x)\) 的全局最大值总出现在类型Ⅱ的某临界点处，且形式为 \(6\cos x_0\)（其中 \(\cos x_0>0\)）。</p>
+
+<p><b>下界（对任意 \(\varphi\) 都成立）</b>：类型Ⅱ的 6 个临界点</p>
+
+<div class="formula">
+\[
+x_k=\frac{\pi-\varphi}{6}+k\frac{\pi}{3}\qquad(k=0,1,\dots,5)
+\]
+</div>
+
+<p>在圆周上以步长 \(\dfrac{\pi}{3}\) 均匀分布。由鸽笼原理，其中必有某个点距 \(0\)（模 \(2\pi\)）不超过 \(\dfrac{\pi}{6}\)，记其为 \(x_*\)，则 \(\cos x_*\geqslant\cos\dfrac{\pi}{6}=\dfrac{\sqrt{3}}{2}>0\)，它恰是 \(g\) 的极大值点，且</p>
+
+<div class="formula">
+\[
+g(x_*)=6\cos x_*\geqslant 6\cdot\frac{\sqrt{3}}{2}=3\sqrt{3}.
+\]
+</div>
+
+<p>故对<b>任意</b> \(\varphi\)，都有 \(\max_x g(x)\geqslant 3\sqrt{3}\)。这说明 \(b\) 不可能小于 \(3\sqrt{3}\)。</p>
+
+<p><b>上界（取 \(\varphi=0\) 即可达到）</b>：当 \(\varphi=0\) 时，</p>
+
+<div class="formula">
+\[
+g(x)=5\cos x-\cos 5x.
+\]
+</div>
+
+<p>利用五倍角公式 \(\cos 5x=16\cos^5 x-20\cos^3 x+5\cos x\)，令 \(t=\cos x\in[-1,1]\)，得</p>
+
+<div class="formula">
+\[
+g(x)=20t^3-16t^5=4t^3(5-4t^2)\equiv h(t).
+\]
+</div>
+
+<p>求导：\(h'(t)=60t^2-80t^4=20t^2(3-4t^2)\)，驻点 \(t=0,\;t=\pm\dfrac{\sqrt{3}}{2}\)。计算</p>
+
+<div class="formula">
+\[
+h\!\left(\frac{\sqrt{3}}{2}\right)=3\sqrt{3},\quad h(1)=4,\quad h(-1)=-4,\quad h(0)=0.
+\]
+</div>
+
+<p>故 \(g(x)\leqslant 3\sqrt{3}\) 对一切 \(x\) 成立，且当 \(\cos x=\dfrac{\sqrt{3}}{2}\)（如 \(x=\dfrac{\pi}{6}\)）时取等号。即取 \(\varphi=0\)，不等式 \(5\cos x-\cos 5x\leqslant 3\sqrt{3}\) 恒成立。</p>
+
+<p>综上，<b>\(b\) 的最小值为 \(3\sqrt{3}\)</b>（在 \(\varphi=0\)，即 \(\varphi=2k\pi\) 时取得）。</p>
+
+<div class="note">
+<b>点睛</b>：第(1)问与第(3)问的答案同为 \(3\sqrt{3}\)，并非巧合——第(3)问在 \(\varphi=0\) 时退化为第(1)问的函数，而 \([0,\pi/4]\) 上 \(\pi/6\) 处的峰值正是全局最大峰。第(2)问的"峰宽 \(2\theta\)"思想，则在第三问下界论证中以"类型Ⅱ临界点步长 \(\pi/3\)、最近峰距 \(0\) 不超 \(\pi/6\)"的形式精确兑现。三问一脉相承。
+</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>第(1)问</b>：见到 \(\cos x\) 与 \(\cos 5x\) 混求最值，优先用和差化积把导数写成 \(10\cos 3x\sin 2x\)，符号一眼可分；若直接展开 \(\cos 5x\) 易出错且繁琐。</li>
+<li><b>第(2)问</b>：把"存在 \(y\) 使 \(\cos y\leqslant\cos\theta\)"翻转为"区间 \(I\) 能否整体落入余弦峰"，再用"<b>闭区间长 \(2\theta\) 装不进开区间长 \(2\theta\)</b>"一击制胜，比硬凑反证更清爽。</li>
+<li><b>第(3)问</b>：① 两层最值牢记"先 \(x\) 后 \(\varphi\)"；② 用 \(\sin A=\sin B\) 两类解把临界点值统一为 \(4\cos x\) 或 \(6\cos x\)，极大简化；③ 下界不必"解出最优 \(\varphi\)"，只需对任意 \(\varphi\) 证 \(\geqslant 3\sqrt{3}\)（用临界点均匀分布），上界只需构造一个 \(\varphi=0\) 达到——两者夹出最小。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ol>
+<li><b>三角函数重返压轴</b>：继 2024 年多卷以三角/数列压轴后，2025 Ⅰ卷再次把三角作为第 19 题载体，预计三角函数与导数、不等式的"跨模块综合"仍将是压轴热门。</li>
+<li><b>存在性 / 任意性量词成为常态</b>："存在 \(\varphi\)""对任意 \(x\) 恒成立"类两层量词，考查逻辑结构与最值转化，会继续出现在压轴设问中。</li>
+<li><b>递进式三问、低入口高出口</b>：第(1)问常规化保底，第(2)(3)问逐步拔高，形成"思维楼梯"，区分度设计更精细。</li>
+<li><b>弱化套路、强化几何直觉</b>：如本题"峰宽"思想，未来会更强调用图象/对称性等直观支撑严格论证。</li>
+<li><b>两层最值模型（先固定参数求最值，再对参数求最值）</b>：与含参不等式、恒成立问题结合，是值得专项训练的高频模型。</li>
+<li><b>真实情境适度回归</b>：2025 卷整体"基础题稳中有升、压轴创新增强"，情境题比重可控，但思维深度持续加码。</li>
+</ol>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>第(1)问</b>：和差化积公式生疏，强行展开 \(\cos 5x\) 导致计算崩溃；或只比较端点忘比较驻点，漏掉 \(x=\pi/6\) 这一峰值。</li>
+<li><b>第(2)问</b>：面对"存在性证明"无从下手，硬凑反例；未注意 \(\theta\in(0,\pi)\) 才保证 \(\cos\theta<1\)（若 \(\theta=0\) 命题失效）；也有人把闭区间与开区间混为一谈，论证不严。</li>
+<li><b>第(3)问（失分重灾区）</b>：① 两层变量 \(x,\varphi\) 角色混淆，不知道"先 \(x\) 后 \(\varphi\)"；② 不会把临界点值化简为 \(4\cos x\) / \(6\cos x\)，陷入多变量泥潭；③ <b>只证了 \(\varphi=0\) 时上界为 \(3\sqrt{3}\)，就直接断言最小值</b>，缺失"对任意 \(\varphi\) 下界 \(\geqslant 3\sqrt{3}\)"这一最关键的一步；④ 五倍角公式不熟，\(\varphi=0\) 时也化不开。</li>
+<li><b>实测反馈</b>：据评析，全省平均完成度不足 30%；教研文献显示此类综合题推理链约 6 环节，学生完整完成率仅约 34%，主要卡在"函数性质向实际应用（最值/证明）转化"的第 3–4 环节。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题在考后引发广泛教研讨论，共识与分歧如下：</p>
+
+<ul>
+<li><b>答案共识</b>：第(1)问最大值 \(3\sqrt{3}\)、第(3)问 \(b_{\min}=3\sqrt{3}\) 已成为各解析版本的一致结论；第(2)问的多解（图象法、反证法、区间长度法）被广泛展示。</li>
+<li><b>解法争鸣</b>：《中学生数学》（2026 年 2 月上半月，张君《破解高考三角函数压轴题——2025 年新课标Ⅰ卷第 19 题的多角度解析》）系统给出第(2)问"三种路径"；《数学通讯》（2026 年 3 月）以例 5 形式给出第(3)问"先求 \(h(\varphi)=\max_x g(x)\) 再求 \(\min h(\varphi)\)"的标准导数解法，与本报告思路一致。</li>
+<li><b>难度与评价</b>：多家机构（35 教育网、今日头条考生/专家访谈）指出本题"全省平均完成度不足 30%"，并强调全卷"基础题占比约 40%、压轴创新增强、思维为王"的导向；有考生把它误称为"抽象代数新定义题"，其实质是三角 + 导数 + 存在性证明。</li>
+<li><b>教学价值</b>：龙源期刊网相关教研论文把本题作为"逻辑推理链分析"范例，指出其构建了"函数性质分析→导数应用→不等式证明/最值求解"的完整推理链条，对教学具示范意义。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ol>
+<li><b>补强"小工具"</b>：和差化积、五倍角/Chebyshev 代换、\(\sin A=\sin B\) 两类解，是破解此类题的"四两拨千斤"利器，应在高三复习中专项强化。</li>
+<li><b>存在性证明多路径训练</b>：图象法、反证法、区间长度（峰宽）法三者都要让学生见惯，培养"把存在量词翻译成几何事实"的直觉。</li>
+<li><b>两层最值模型专题</b>："先固定参数求最值、再对参数求最值"是压轴高频模型，需配合"下界用任意性、上界用构造"的夹逼意识。</li>
+<li><b>重视下界论证</b>：学生常只会证上界就下结论，要专门训练"对任意参数都 \(\geqslant C\)"的普遍性论证（如临界点均匀分布思想）。</li>
+<li><b>用"峰宽"等几何直觉搭桥</b>：引导学生从余弦图象读出"峰宽=2θ"，把抽象不等式与直观图象打通，降低压轴畏难情绪。</li>
+<li><b>慢做完整推理链</b>：针对"第 3–4 环节转化困难"，平时练习重过程、重逻辑链条的完整性，而非只求答案。</li>
+</ol>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>张君. 破解高考三角函数压轴题——2025 年新课标Ⅰ卷第 19 题的多角度解析[J]. 中学生数学, 2026(2 上半月). （腾讯 ima 知识库分享）</li>
+<li>数学通讯编辑部. 例 5（2025 年高考全国Ⅰ卷第 19 题节选）[J]. 数学通讯, 2026(3). （腾讯 ima 知识库分享）</li>
+<li>2025 高考数学难吗·新高考一卷[EB/OL]. 35 教育网, 2025. https://www.35shipin.com/92373.html</li>
+<li>2025 高考数学考完吵翻！有人"稳了"有人哭晕，到底难不难？[EB/OL]. 今日头条, 2025-06-08. https://www.toutiao.com/article/7513397378369356288</li>
+<li>今年高考数学难吗？考生与专家解读：分层明显，思维为王[EB/OL]. 今日头条, 2025-06-08. https://www.toutiao.com/article/7513467055614591524/</li>
+<li>2025 年高考数学试题的逻辑推理链分析与教学对策[EB/OL]. 龙源期刊网. http://xueshu.qikan.com.cn/preview/1/322/5406518</li>
+</ol>
+
+
+</div>
+</body>
+</html>

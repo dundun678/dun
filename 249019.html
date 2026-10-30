@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024年九省联考数学第19题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024年九省联考数学第19题研究报告</h1>
+  <div class="lead">研究对象：离散对数（密码学新定义压轴）　·　题型定位：第19题（17分）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<blockquote>
+<p>离散对数在密码学中有重要的应用。设 \(p\) 是素数，集合 \(X=\{1,2,\cdots,p-1\}\)。若 \(u,v\in X\)，\(m\in\mathbf{N}\)，记 \(u\otimes v\) 为 \(uv\) 除以 \(p\) 的余数，\(u^{m,\otimes}\) 为 \(u^m\) 除以 \(p\) 的余数；设 \(a\in X\)，\(1,a,a^{2,\otimes},\cdots,a^{p-2,\otimes}\) 两两不同，若 \(a^{n,\otimes}=b\ (n\in\{0,1,\cdots,p-2\})\)，则称 \(n\) 是以 \(a\) 为底 \(b\) 的离散对数，记为 \(n=\log_{(p)_a} b\)。</p>
+<p>(1) 若 \(p=11\)，\(a=2\)，求 \(a^{p-1,\otimes}\)；</p>
+<p>(2) 对 \(m_1,m_2\in\{0,1,\cdots,p-2\}\)，记 \(m_1\oplus m_2\) 为 \(m_1+m_2\) 除以 \(p-1\) 的余数（当 \(m_1+m_2\) 能被 \(p-1\) 整除时，\(m_1\oplus m_2=0\)）。证明：\(\log_{(p)_a}(b\otimes c)=\log_{(p)_a} b\oplus\log_{(p)_a} c\)，其中 \(b,c\in X\)；</p>
+<p>(3) 已知 \(n=\log_{(p)_a} b\)。对 \(x\in X\)，\(k\in\{1,2,\cdots,p-2\}\)，令 \(y_1=a^{k,\otimes}\)，\(y_2=x\otimes b^{k,\otimes}\)。证明：\(x=y_2\otimes y_1^{n(p-2),\otimes}\)。</p>
+</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>卷型</td><td>2024 年 1 月新高考改革适应性测试（俗称"九省联考"）数学卷</td></tr>
+<tr><td>题号 / 位置</td><td>第 19 题（全卷最后一题，解答题压轴）</td></tr>
+<tr><td>分值</td><td>17 分（(1) 约 3 分，(2)(3) 各约 7 分）</td></tr>
+<tr><td>题型</td><td>新定义型解答题（阅读—理解—探究—证明）</td></tr>
+<tr><td>考查模块</td><td>同余与余数运算、指数与对数的互逆、模幂与"阶"、代数恒等变换</td></tr>
+<tr><td>真实情境</td><td>密码学中的 ElGamal（盖莫尔）公钥密码体制</td></tr>
+<tr><td>难度</td><td>★★★★★（压轴，区分度极高；第(1)问入门，第(3)问极难）</td></tr>
+<tr><td>实测数据</td><td>据一线教师评析与网传，本题全省（多省）得分率极低，满分人数极少，主要区分顶尖学生</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>同余与余数运算</b>：\(\otimes\) 与 \((\cdot)^{m,\otimes}\) 本质上就是模 \(p\) 乘法与模 \(p\) 幂；所有等式都应在"模 \(p\) 同余"的意义下理解。</li>
+<li><b>费马小定理 / 群的阶</b>：由条件"\(1,a,a^{2,\otimes},\cdots,a^{p-2,\otimes}\) 两两不同"可知 \(a\) 的阶恰为 \(p-1\)，从而 \(a^{p-1}\equiv 1\pmod p\)。这是全题的"发动机"，第(1)问已给出提示。</li>
+<li><b>指数与对数的互逆</b>：离散对数把"模 \(p\) 乘法"映到"模 \(p-1\) 加法"，这正是普通对数 \(\log(bc)=\log b+\log c\) 在离散情形的类比。</li>
+<li><b>模幂的代数变形</b>：第(3)问核心在于利用 \(a^{p-1}\equiv 1\) 化简指数，把 \(y_1^{n(p-2)}\) 转化为"逆元"\(a^{-kn}\)。</li>
+<li><b>反证 / 分类讨论</b>：第(2)问按 \(s+t\) 是否越界分类，是标准的同余指数处理。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<tr><th>《高考评价体系》能力</th><th>在本題中的体现</th></tr>
+<tr><td>信息获取</td><td>从一大段新定义（\(\otimes\)、\((\cdot)^{m,\otimes}\)、\(\log_{(p)_a}\)、\(\oplus\)）中准确提取运算规则</td></tr>
+<tr><td>抽象概括</td><td>把"离散对数"概括为普通对数的模运算类比对象，举一反三</td></tr>
+<tr><td>推理论证</td><td>第(2)(3)问均为严谨的证明，需写清同余逻辑链与"阶为 \(p-1\)"的依据</td></tr>
+<tr><td>运算求解</td><td>第(1)问直接计算 \(2^{10}\bmod 11\)；第(3)问模幂指数化简</td></tr>
+<tr><td>探索创新</td><td>在从未学过的密码学情境中，调动已有知识独立构造证明路径</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★★★</span></td><td>新定义符号体系的高度抽象与形式化理解</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>两道证明题的核心，同余推理链必须严密</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★☆</span></td><td>模幂化简与指数运算</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★★☆☆</span></td><td>体会密码学加密—解密的数学模型</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★☆☆☆</span></td><td>无图形，弱相关</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>基本不涉及</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><b>真实情境驱动</b>：以密码学 ElGamal 体制为背景，试题情境在大数据时代具有现实意义，体现"应用性、创新性"。</li>
+<li><b>新定义认知入口</b>：用小学就学过的"余数"替代抽象的同余语言，降低陌生感；用"\(1,a,\dots,a^{p-2,\otimes}\) 两两不同"这一限制替代一般形式的费马小定理，简化了叙述。</li>
+<li><b>递进式设问</b>：(1) 熟悉离散指数概念 → (2) 类比普通对数运算律 \(\log(bc)=\log b+\log c\) → (3) 探究离散对数的一个解密性质。三问台阶分明，入口低、出口高。</li>
+<li><b>区分度设计</b>：第(1)问送分让全体考生"读得懂"；第(3)问需要洞察 \(a^{p-1}\equiv 1\) 与指数化简，仅顶尖学生可得满分，精准服务于拔尖创新人才选拔。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问</h3>
+
+<p><b>思路</b>：直接计算 \(2^{10}\) 除以 11 的余数，或由"阶为 \(p-1\)"直接得 \(a^{p-1,\otimes}=1\)。</p>
+
+<p><b>解答</b>：由条件知 \(a\) 的阶为 \(p-1=10\)，故 \(a^{10}\equiv 1\pmod{11}\)。直接计算验证：</p>
+
+<div class="formula">\[2^{10}=1024=93\times 11+1\]</div>
+
+<p>所以 \(2^{10}\) 除以 11 的余数为 1，即</p>
+
+<div class="formula">\[a^{p-1,\otimes}=1.\]</div>
+
+<h3>7.2 第(2)问</h3>
+
+<p><b>思路</b>：设 \(s=\log_{(p)_a}b\)，\(t=\log_{(p)_a}c\)，则 \(b\equiv a^s\pmod p\)，\(c\equiv a^t\pmod p\)。把 \(b\otimes c\) 写成 \(a\) 的幂，再看其指数模 \(p-1\) 的余数。</p>
+
+<p><b>证明</b>：设</p>
+
+<div class="formula">\[b\equiv a^{s}\pmod p,\qquad c\equiv a^{t}\pmod p,\qquad s,t\in\{0,1,\dots,p-2\}.\]</div>
+
+<p>则</p>
+
+<div class="formula">\[b\otimes c\equiv bc\equiv a^{s}a^{t}=a^{s+t}\pmod p.\]</div>
+
+<p>由已知条件，\(1,a,a^{2,\otimes},\dots,a^{p-2,\otimes}\) 恰为 \(X\) 的全部 \(p-1\) 个互异元素，故 \(a\) 的阶恰为 \(p-1\)，从而</p>
+
+<div class="formula">\[a^{r}\equiv a^{r'}\pmod p\iff r\equiv r'\pmod{p-1}.\]</div>
+
+<p>记 \(S=s+t\)。分两种情形：</p>
+
+<p>(i) 若 \(S\le p-2\)，则 \(m_1\oplus m_2=S\)，且 \(a^S\pmod p\) 的指数 \(S\in\{0,\dots,p-2\}\)，故 \(\log_{(p)_a}(b\otimes c)=S=s\oplus t\)。</p>
+
+<p>(ii) 若 \(S\ge p-1\)，设 \(S=(p-1)+r\)，其中 \(r=S-(p-1)\in\{0,1,\dots,p-2\}\)。则</p>
+
+<div class="formula">\[a^{S}=a^{p-1}\cdot a^{r}\equiv 1\cdot a^{r}=a^{r}\pmod p\]</div>
+
+<p>（此处用到 \(a^{p-1,\otimes}=1\)）。此时 \(S\) 除以 \(p-1\) 的余数正是 \(r\)（当 \(S=p-1\) 时 \(r=0\)，恰合题设 \(m_1\oplus m_2=0\) 的约定），故 \(\log_{(p)_a}(b\otimes c)=r=s\oplus t\)。</p>
+
+<p>综上，</p>
+
+<div class="formula">\[\log_{(p)_a}(b\otimes c)=\log_{(p)_a}b\oplus\log_{(p)_a}c.\]</div>
+
+<h3>7.3 第(3)问</h3>
+
+<p><b>思路</b>：由 \(n=\log_{(p)_a}b\) 知 \(b\equiv a^n\pmod p\)。把 \(y_1,y_2\) 用 \(a\) 的幂表示，再展开右边 \(y_2\otimes y_1^{n(p-2),\otimes}\)，利用 \(a^{p-1}\equiv 1\) 化简指数即可。</p>
+
+<p><b>证明</b>：由定义</p>
+
+<div class="formula">\[y_1=a^{k,\otimes}\equiv a^{k}\pmod p,\qquad y_2=x\otimes b^{k,\otimes}\equiv x\cdot b^{k}\pmod p.\]</p>
+
+<p>因为 \(b\equiv a^{n}\pmod p\)，所以 \(b^{k}\equiv a^{nk}\pmod p\)。于是</p>
+
+<div class="formula">\[y_2\equiv x\cdot a^{nk}\pmod p.\]</div>
+
+<p>考察要证的右边：</p>
+
+<div class="formula">\[y_2\otimes y_1^{n(p-2),\otimes}\equiv y_2\cdot y_1^{n(p-2)}\equiv x\cdot a^{nk}\cdot (a^{k})^{n(p-2)}\pmod p\]</div>
+
+<div class="formula">\[=x\cdot a^{nk}\cdot a^{kn(p-2)}=x\cdot a^{nk+kn(p-2)}=x\cdot a^{kn(1+p-2)}=x\cdot a^{kn(p-1)}.\]</div>
+
+<p>由于 \(a\) 的阶为 \(p-1\)，有 \(a^{p-1}\equiv 1\pmod p\)，故</p>
+
+<div class="formula">\[a^{kn(p-1)}=(a^{p-1})^{kn}\equiv 1^{kn}=1\pmod p.\]</div>
+
+<p>因此</p>
+
+<div class="formula">\[y_2\otimes y_1^{n(p-2),\otimes}\equiv x\cdot 1=x\pmod p,\]</div>
+
+<p>即</p>
+
+<div class="formula">\[x=y_2\otimes y_1^{n(p-2),\otimes}.\]</div>
+
+<p>证毕。</p>
+
+<div class="note"><b>点睛</b>：第(3)问的本质是 ElGamal 解密公式。因为 \(y_1^{p-2}\equiv y_1^{-1}\pmod p\)（由 \(y_1^{p-1}\equiv 1\) 立得），所以 \(y_1^{n(p-2)}\equiv y_1^{-n}\)，于是 \(x\equiv y_2\cdot y_1^{-n}\equiv y_2\cdot (y_1^{n})^{-1}\)，正是"用逆元消去 \(b^k\)"的解密运算。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>(1) 入口技巧</b>：先算几步 \(2^1,2^2,\dots\) 找周期，或直接套费马小定理 \(2^{10}\equiv 1\pmod{11}\)。</li>
+<li><b>(2) 翻译技巧</b>：把"离散对数"全部翻译成"\(a\) 的幂 + 模 \(p-1\) 指数"，问题立刻变成普通对数的翻版。</li>
+<li><b>(2) 分类技巧</b>：指数和 \(S\) 是否越过 \(p-1\) 决定余数，分类讨论要写清"当 \(S=p-1\) 时余数为 0"的约定。</li>
+<li><b>(3) 化简技巧</b>：认出 \(a^{p-1}\equiv 1\)，则任何指数都可整体减去 \(p-1\) 的整数倍；\(n(p-2)\) 这一"怪指数"正是为了凑出 \(-n\)（因 \(p-2\equiv -1\pmod{p-1}\)）。</li>
+<li><b>通用点睛</b>：新定义题"不怕新、怕不翻译"——把新符号逐字翻译成已学知识（这里就是同余/模幂），题目的"神秘感"就消失了。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>新定义压轴常态化</b>：九省联考确立了"全卷 19 题、压轴为新定义/新情境"的结构，2024 新高考 I、II 卷第 19 题均延续此走向。</li>
+<li><b>跨学科真实情境</b>：信息（密码学、编码）、生物（种群）、经济等情境将更频繁进入压轴，强调"数学阅读 + 建模"。</li>
+<li><b>弱化套路、强化推理</b>：单纯刷题、背题型难以应对；题目更看重"在陌生定义下独立推理"的能力。</li>
+<li><b>代数与数论元素升温</b>：模运算、同余、群/环初步思想可能以"隐藏"形式出现在解答题中。</li>
+<li><b>设问更细腻</b>：多呈现"(1) 理解概念 → (2) 类比性质 → (3) 探究证明"的坡度，兼顾区分度与可入手性。</li>
+<li><b>过程赋分更重</b>：压轴证明强调逻辑链完整，步骤分价值高，"写出合理方向"也能得分。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>读不懂定义</b>：被 \(\otimes\)、\((\cdot)^{m,\otimes}\)、\(\log_{(p)_a}\)、\(\oplus\) 一串新符号吓退，连题面都翻译不出。</li>
+<li><b>忽略"阶为 \(p-1\)"</b>：不利用 \(a^{p-1}\equiv 1\)，导致第(2)(3)问无法化简，陷入无数次展开。</li>
+<li><b>第(2)问缺分类</b>：直接写 \(\log(b\otimes c)=s+t\)，忘记 \(s+t\) 可能 \(\ge p-1\) 需取余，逻辑不严密被扣分。</li>
+<li><b>第(3)问指数放错</b>：把 \(y_1^{n(p-2)}\) 误算为 \(a^{kn(p-2)}\) 后不会结合 \(a^{p-1}\equiv 1\) 整体化简，或遗漏 \(b\equiv a^n\) 的代换。</li>
+<li><b>同余语言混乱</b>：把"\(\equiv\)"与"\(=\)"混用，或把模 \(p\) 与模 \(p-1\) 两套同余张冠李戴。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题作为 2024 新高考改革适应性测试的压轴，引发了广泛讨论，主流观点高度一致：</p>
+
+<ul>
+<li><b>官方/专家定调（高考直通车、gaokzx 专家点评）</b>：第 19 题情境为 ElGamal 公钥密码体制——\(x\) 为明文，\(p,a,b\) 为公钥，离散对数 \(n\) 为密钥，\((y_1,y_2)\) 为密文；解密即由 \((y_1,y_2)\) 还原 \(x\)。其安全性建立在"求解离散对数困难、而其逆运算（离散指数）可快速计算"之上。命题仅用"余数"而非"同余"、用"\(1,a,\dots,a^{p-2,\otimes}\) 两两不同"替代一般费马小定理，符合考生认知水平。</li>
+<li><b>学者视角（北航 李尚志《新定义指挥旧公式》）</b>：强调本题是"用新定义指挥旧公式"，考查的仍是指数与对数的互逆等基础运算，新瓶装的仍是旧酒，关键在于能否把新符号翻译成旧知识。</li>
+<li><b>教研视角（南京 渠东剑等）</b>：指出本题"曾引来江湖乱象一片"，提醒师生防止被别有用心的解读误导；强调这类题面向顶尖学生，优秀学生可做题型研究但不能依赖题型覆盖，多数考生更需提升审题能力。</li>
+<li><b>共识与分歧</b>：共识是"新定义压轴"成为新高考范式；分歧主要在备考策略——是专攻数论/群论初步，还是回归"阅读理解 + 通性通法"。主流意见倾向于后者。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>狠抓"数学阅读"</b>：平时训练学生逐字翻译新定义、新符号，把陌生对象转化为已知结构。</li>
+<li><b>回归通性通法</b>：本题不需要超纲的数论知识，核心是模运算与指数对数互逆；教学应重思想、轻题型。</li>
+<li><b>强化推理表达</b>：证明题要写清"为什么 \(a^{p-1}\equiv 1\)""为什么指数要分类"，训练严密的逻辑链。</li>
+<li><b>适度渗透数学文化</b>：可结合中国剩余定理、ElGamal 等介绍同余的应用价值，提升兴趣与素养。</li>
+<li><b>分层备考</b>：对多数学生保住第(1)问及第(2)问的"翻译—分类"基本分；对尖子生再拔高第(3)问的构造与化简。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>2024 新高考适应性演练（九省联考）数学试卷专家点评，高考直通车，<code>https://app.gaokaozhitongche.com/news/h/QOgEdAY2</code></li>
+<li>2024 新高考七省联考（九省联考）数学试卷专家点评，<code>https://www.gaokzx.com/c/202401/89334.html</code></li>
+<li>李尚志《新定义指挥旧公式——九省联考压轴题的启示》，蜜蜂周报</li>
+<li>渠东剑等《模式渗透还是情境转化——2024 九省联考第 19 题评析》</li>
+<li>2024 年九省联考数学压轴题解答分析，<code>http://www.zhaoyang0618.cn/2024/01/21/2024年九省联考数学压轴题解答分析</code></li>
+<li>2024 年 1 月"九省联考"数学试题备考启示（每道试题解读），<code>https://www.yeyulingfeng.com/wendang/254382.html</code></li>
+</ol>
+
+
+</div>
+</body>
+</html>

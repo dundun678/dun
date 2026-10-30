@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年高考数学全国二卷（新高考Ⅱ卷）第 19 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 年高考数学全国二卷（新高考Ⅱ卷）第 19 题研究报告</h1>
+  <div class="lead">研究对象：乒乓球练习概率模型（随机游走 / 二项分布 / 递推不等式）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>本题为新高考Ⅱ卷（全国二卷）2025 年数学试卷第 19 题，满分 <strong>17 分</strong>，属于解答题压轴题。</p>
+
+<blockquote>
+甲、乙两人进行乒乓球练习，每个球胜者得 1 分，负者得 0 分。设每个球甲胜的概率为 \(p\;\left(\tfrac12 &lt; p &lt; 1\right)\)，乙胜的概率为 \(q\)，\(p+q=1\)，且各球的胜负相互独立。对正整数 \(k\ge 2\)，记 \(p_k\) 为打完 \(k\) 个球后甲比乙至少多得 2 分的概率，\(q_k\) 为打完 \(k\) 个球后乙比甲至少多得 2 分的概率。
+</blockquote>
+
+<ol>
+<li>求 \(p_3,\;p_4\)（用 \(p\) 表示）；</li>
+<li>若 \(\dfrac{p_4-p_3}{\,q_4-q_3\,}=4\)，求 \(p\)；</li>
+<li>证明：对任意正整数 \(m\)，\(p_{2m+1}-q_{2m+1}&lt;p_{2m}-q_{2m}&lt;p_{2m+2}-q_{2m+2}\)。</li>
+</ol>
+
+<div class="note">
+<strong>建模要点（关键审题）</strong>：\(p_k\) 是「打完 \(k\) 个球后的<em>最终比分差</em>」事件概率，即 \(p_k=P(X_k\ge 2)\)、\(q_k=P(X_k\le -2)\)，其中 \(X_k\) 为甲净胜分，<u>并非</u>「过程中首次领先 2 分」的首达概率。把现实规则准确转译为数学事件，是本题第一道门槛。
+</div>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead>
+<tr><th>项目</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>卷型</td><td>2025 年普通高校招生全国统一考试 · 新高考Ⅱ卷（全国二卷）</td></tr>
+<tr><td>题号与位置</td><td>第 19 题（全卷最后一题，解答题压轴）</td></tr>
+<tr><td>分值</td><td>17 分</td></tr>
+<tr><td>题型</td><td>解答题（含计算、解方程、不等式证明，多问递进）</td></tr>
+<tr><td>考查模块</td><td>概率统计（二项分布、独立重复试验）＋数列递推＋不等式证明</td></tr>
+<tr><td>情境载体</td><td>乒乓球练习计分（熟悉生活情境，但加工成新定义概率模型）</td></tr>
+<tr><td>难度估计</td><td>困难（学科网组卷标注难度系数约 0.4；第(3)问大面积空白）</td></tr>
+<tr><td>实测反馈</td><td>据一线教师与自媒体评析，整题均分极低，被戏称为「失分黑洞」</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>二项分布与独立重复试验</strong>：每球甲胜概率 \(p\)、乙胜概率 \(q\)，共 \(k\) 球相互独立，甲胜 \(r\) 球的概率为 \(\mathrm{C}_k^r p^r q^{k-r}\)。第(1)问直接由此枚举。</li>
+<li><strong>得分差随机游走模型</strong>：令 \(X_k=\) 甲胜局数 \(-\) 乙胜局数，则每步以概率 \(p\) 增 1、以概率 \(q\) 减 1，是带正漂移（\(p&gt;q\)）的一维随机游走。</li>
+<li><strong>奇偶性与对称性</strong>：\(X_k\) 与 \(k\) 同奇偶；将 \(p\leftrightarrow q\) 互换即把「甲领先」与「乙领先」对调，得到 \(p_k\) 与 \(q_k\) 表达式的轮换对称关系，第(2)问直接套用。</li>
+<li><strong>全概率 / 状态转移递推</strong>：由 \(X_{k+1}=X_k\pm 1\) 推出相邻轮次概率的差量关系，是攻克第(3)问的核心工具。</li>
+<li><strong>组合数性质与不等式放缩</strong>：\(\mathrm{C}_{2m}^{m-1}&lt;\mathrm{C}_{2m}^{m}\)，结合 \(p&gt;q\) 完成单调性的严格证明。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead>
+<tr><th>《中国高考评价体系》能力</th><th>在本题中的体现</th></tr>
+</thead>
+<tbody>
+<tr><td>信息获取</td><td>从较长的文字情境中准确提取「得分规则、独立、\(p_k/q_k\) 定义、\(k\ge 2\)」等条件。</td></tr>
+<tr><td>抽象概括</td><td>把乒乓球计分转译为「净胜分随机游走」这一数学模型（\(X_k\) 状态变量）。</td></tr>
+<tr><td>推理论证</td><td>第(3)问需构造 \(D_k=p_k-q_k\)，用递推差量严格证明奇偶分段单调不等式。</td></tr>
+<tr><td>运算求解</td><td>第(1)(2)问的二项概率计算、\(\frac{p_4-p_3}{q_4-q_3}=4\) 的代数化简与求解。</td></tr>
+<tr><td>探索创新</td><td>在未见过的「递推不等式」结构中自行发现 \(p_{2m}\) 与 \(p_{2m+1}/p_{2m+2}\) 的关系。</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead>
+<tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>建立净胜分 \(X_k\) 状态模型，将情境抽象为随机游走。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>第(3)问递推关系的发现与不等式链的严密推导。</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★</span></td><td>组合概率计算、对称性代换、多项式化简。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★</span></td><td>把比赛规则转化为可计算的概率模型（含状态转移）。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★</span></td><td>在数轴上想象得分差随球数的「锯齿状」漂移轨迹。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★</span></td><td>理解长期趋势（\(p&gt;q\) 导致甲领先概率差随偶数轮递增）。</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题是 2025 年新高考「反套路、重素养」命题导向的典型代表，设计上有四个鲜明特征：</p>
+
+<ul>
+<li><strong>情境创新、低起点</strong>：以乒乓球练习计分入题，贴近生活，第(1)问仅需枚举「3 球全胜」「4 球胜 3 负 1 / 全胜」即可得分，照顾全体考生，起到「破冰」与「方法暗示」作用。</li>
+<li><strong>知识交叉、强综合</strong>：将独立重复试验、二项分布、递推数列、不等式证明熔于一炉，超越传统「套公式」概率题，要求动态刻画概率演化。</li>
+<li><strong>递进式设问、自然铺垫</strong>：第(1)问给出 \(p_3,p_4\) 的具体结构；第(2)问借轮换对称求出 \(p=\tfrac23\)，为第(3)问「\(p&gt;q\)」的放缩提供前提；三问环环相扣。</li>
+<li><strong>区分度设计、压轴跃升</strong>：第(3)问思维量陡增，需自行构造相邻轮次递推关系再放缩，是选拔高阶思维的关键区分点，也导致整题成为年度最大失分点。</li>
+</ul>
+
+<div class="note">
+命题本质上刻画了「带正漂移随机游走」的领先概率差 \(D_k=p_k-q_k\) 随轮次的演化规律：偶数轮间单调递增、奇数轮插入其间下探。这一结构在高等概率论（马尔可夫链、随机游走）中有其雏形，体现了高考对高阶思维的选拔功能。
+</div>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问</h3>
+
+<p><strong>思路</strong>：设打完 \(k\) 个球后甲胜 \(r\) 球、乙胜 \(k-r\) 球，则净胜分 \(X_k=2r-k\)。\(p_k=P(X_k\ge 2)\)，\(q_k=P(X_k\le -2)\)。直接按二项分布枚举。</p>
+
+<p><strong>解</strong>：记甲在 \(k\) 个球中胜 \(r\) 个，则 \(X_k=2r-k\)。</p>
+
+<p>当 \(k=3\) 时，\(X_3\in\{-3,-1,1,3\}\)，\(X_3\ge 2\) 当且仅当 \(X_3=3\)（即甲全胜），故</p>
+<div class="formula">\[p_3=\mathrm{C}_3^3\,p^3=p^3.\]</div>
+
+<p>当 \(k=4\) 时，\(X_4\in\{-4,-2,0,2,4\}\)，\(X_4\ge 2\) 等价于 \(X_4=2\) 或 \(X_4=4\)：</p>
+<div class="formula">\[p_4=\mathrm{C}_4^4 p^4+\mathrm{C}_4^3 p^3 q=p^4+4p^3(1-p)=p^3(4-3p).\]</div>
+
+<p>由轮换对称性（将 \(p\leftrightarrow q\) 互换即可把「甲领先」转为「乙领先」），得</p>
+<div class="formula">\[q_3=q^3,\qquad q_4=q^3(4-3q).\]</div>
+
+<h3>7.2 第(2)问</h3>
+
+<p><strong>思路</strong>：利用(1)结果计算差量并化简。</p>
+
+<p><strong>解</strong>：</p>
+<div class="formula">\[p_4-p_3=p^3(4-3p)-p^3=3p^3(1-p)=3p^3 q,\]</div>
+<div class="formula">\[q_4-q_3=q^3(4-3q)-q^3=3q^3(1-q)=3q^3 p.\]</div>
+
+<p>代入条件</p>
+<div class="formula">\[\frac{p_4-p_3}{q_4-q_3}=\frac{3p^3 q}{3q^3 p}=\left(\frac{p}{q}\right)^2=4.\]</div>
+
+<p>因 \(p,q&gt;0\)，故 \(\frac{p}{q}=2\)，结合 \(p+q=1\) 得 \(p=2q=2(1-p)\)，解得</p>
+<div class="formula">\[p=\frac23\quad\left(q=\frac13\right).\]</div>
+
+<p>验证 \(\tfrac12&lt;p&lt;1\) 成立，故所求 \(p=\dfrac23\)。</p>
+
+<h3>7.3 第(3)问</h3>
+
+<p><strong>思路</strong>：令 \(D_k=p_k-q_k\)，目标是证 \(D_{2m+1}&lt;D_{2m}&lt;D_{2m+2}\)。利用状态转移：\(X_{k+1}=X_k\pm 1\)，由全概率思想推导相邻轮次的概率差量，再分类 \(k\) 的奇偶性放缩。</p>
+
+<p><strong>证明</strong>：设 \(F_k(x)=P(X_k=x)\)。由 \(X_{k+1}=X_k+Y\)（\(Y=+1\) 概率 \(p\)，\(Y=-1\) 概率 \(q\)），有</p>
+<div class="formula">\[P(X_{k+1}\ge 2)=p\,P(X_k\ge 1)+q\,P(X_k\ge 3).\]</div>
+
+<p>当 \(k=2m\) 为偶数时，\(X_{2m}\) 取偶数值，故 \(P(X_{2m}\ge 1)=P(X_{2m}\ge 2)=p_{2m}\)，\(P(X_{2m}\ge 3)=P(X_{2m}\ge 4)=p_{2m}-F_{2m}(2)\)。于是</p>
+<div class="formula">\[p_{2m+1}=p\cdot p_{2m}+q\bigl(p_{2m}-F_{2m}(2)\bigr)=p_{2m}-q\,F_{2m}(2),\]</div>
+<p>即</p>
+<div class="formula">\[p_{2m}-p_{2m+1}=q\,F_{2m}(2)=q\cdot\mathrm{C}_{2m}^{m-1}p^{m+1}q^{m-1}=\mathrm{C}_{2m}^{m-1}p^{m+1}q^{m}.\]</div>
+
+<p>由对称性（\(p\leftrightarrow q\)），</p>
+<div class="formula">\[q_{2m}-q_{2m+1}=\mathrm{C}_{2m}^{m-1}q^{m+1}p^{m}.\]</div>
+
+<p>两式相减得</p>
+<div class="formula">\[(p_{2m}-p_{2m+1})-(q_{2m}-q_{2m+1})=\mathrm{C}_{2m}^{m-1}p^m q^m(p-q).\]</div>
+
+<p>即</p>
+<div class="formula">\[D_{2m+1}-D_{2m}=-\mathrm{C}_{2m}^{m-1}p^m q^m(p-q).\]</div>
+
+<p>因 \(\tfrac12&lt;p&lt;1\) 故 \(p&gt;q&gt;0\)，上式严格小于 0，得</p>
+<div class="formula">\[D_{2m+1}&lt;D_{2m}\quad\text{（不等式左半得证）}.\]</div>
+
+<p>再考虑偶数轮之间的跃升。同样由状态转移，可得</p>
+<div class="formula">\[D_{2m+2}-D_{2m}=(p-q)\,F_{2m}(0)=(p-q)\,\mathrm{C}_{2m}^{m}p^m q^m.\]</div>
+
+<p>（推导要点：把 \(D_{2m+2}-D_{2m}\) 展开为两步行进，含 \(F_{2m}(2),F_{2m}(-2),F_{2m}(0)\) 三项，其中 \(p^2F_{2m}(-2)-q^2F_{2m}(2)=0\) 恰好抵消，仅余 \((p-q)F_{2m}(0)\)。）因 \(p-q&gt;0\)、\(\mathrm{C}_{2m}^{m}p^m q^m&gt;0\)，故</p>
+<div class="formula">\[D_{2m+2}-D_{2m}&gt;0,\]</div>
+<p>即</p>
+<div class="formula">\[D_{2m}&lt;D_{2m+2}\quad\text{（不等式右半得证）}.\]</div>
+
+<p>综上，对任意正整数 \(m\)，</p>
+<div class="formula">\[p_{2m+1}-q_{2m+1}&lt;p_{2m}-q_{2m}&lt;p_{2m+2}-q_{2m+2}.\]</div>
+
+<p>证毕。</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>第(1)问·事件分解枚举法</strong>：把「至少多 2 分」按净胜分取值拆成「恰好多 2 分 / 多 4 分…」，直接套二项分布。注意 \(k\) 的奇偶性决定 \(X_k\) 的可能取值（偶数轮只取偶数）。</li>
+<li><strong>第(2)问·轮换对称法</strong>：观察到 \(q_k\) 与 \(p_k\) 表达式仅 \(p\leftrightarrow q\) 互换，无需重算即可写出 \(q_3,q_4\)，大幅降低运算量。前提是第(1)问结果正确。</li>
+<li><strong>第(3)问·递推差量法（点睛之笔）</strong>：不硬求 \(p_{2m}\) 的通式，而是比较相邻轮次差 \(p_{2m}-p_{2m+1}\)、\(D_{2m+2}-D_{2m}\)。关键两步：① 用「前 \(2m\) 球状态 + 第 \(2m+1\) 球胜负」分类，把 \(p_{2m+1}\) 用 \(p_{2m}\) 与 \(F_{2m}(2)\) 表示；② 利用组合恒等式 \(\mathrm{C}_{2m}^{m-1}p^{m+1}q^{m-1}\) 与 \(\mathrm{C}_{2m}^{m}p^m q^m\) 的结构，配合 \(p&gt;q\) 放缩。</li>
+<li><strong>奇偶分段</strong>：\(X_k\) 与 \(k\) 同奇偶是整个证明的骨架，所有分类讨论都围绕它展开，务必在草稿上先列清各轮次可取状态。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ol>
+<li><strong>概率与数列/不等式深度交叉</strong>：单纯「套二项分布求概率」的考题减少，转向「建递推—证不等式—研究单调性」的综合题，本题是风向标。</li>
+<li><strong>状态转移 / 随机游走模型升温</strong>：以马尔可夫链、随机游走的雏形（如「质点左右移动」「通道游戏」）为背景的题增多，教材（人教 A 版选择性必修三 P81 随机游走）成为命题溯源点。</li>
+<li><strong>新定义 + 多问递进</strong>：给出一个自创记号族（如本题 \(p_k,q_k\)），第(1)问低起点破冰、后问层层加码，区分度由「能否自己发现递推关系」决定。</li>
+<li><strong>强调数学建模与探索创新</strong>：评分更看重「从情境抽象出状态变量 \(X_k\)」的建模过程，而非单纯算对数值。</li>
+<li><strong>对称性思想常态化</strong>：轮换对称、图形对称等「结构对称」将成为解答压轴题的常用捷径，需在平时强化。</li>
+<li><strong>长文字情境的信息提取</strong>：题干更长、情境更生活化，考查在信息噪声中精准锁定数学条件的能力。</li>
+</ol>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>情境陌生、建模困难</strong>：不少考生读完题未能把「累计得分差 \(\ge 2\)」转译为 \(X_k\ge 2\) 的事件，卡在「题都读不懂」。</li>
+<li><strong>知识跨界、模型不熟</strong>：只会背「二项分布 / 超几何」模板，一遇「独立试验 → 状态分类 → 相邻轮次递推 → 不等式证明」的链条就全盘卡死。</li>
+<li><strong>第(3)问断崖式跃升</strong>：第(1)(2)问尚可枚举/对称求解，第(3)问需自行构造递推再放缩，思维量陡增，考场时间耗尽，大面积留白。</li>
+<li><strong>符号多、代数耐心不足</strong>：多下标 \(p_{2m},p_{2m+1}\)、条件概率、分类分支多，稍一慌就代错状态，后续全崩。</li>
+<li><strong>压轴放弃预设</strong>：一看「最后一题」中等生直接跳过，即便能拿第(1)(2)问基础分，也因心理预设主动零分。</li>
+<li><strong>实测数据</strong>：据一线教师与自媒体（今日头条等）评析，本题整题均分极低，第(3)问得分率接近 0，被公认为 2025 年度最大失分点（「失分黑洞」）。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<ul>
+<li><strong>官方/机构标准答案（21 世纪教育网 zy.21cnjy.com）</strong>：给出 \(p_3=p^3,\;p_4=p^3(4-3p),\;q_3=q^3,\;q_4=q^3(4-3q)\)；第(2)问由 \((p/q)^2=4\) 得 \(p=\tfrac23\)；第(3)问用 \(p_{2m}-p_{2m+1}=\mathrm{C}_{2m}^{m-1}p^{m+1}q^{m-1}\) 与 \(p_{2m+2}-p_{2m}=p^m q^m(p-q)\mathrm{C}_{2m}^{m}\) 完成放缩，思路与本报告一致。</li>
+<li><strong>学科网（zujuan.xkw.com）「一题多解 / 深度探索二项分布」专辑</strong>：标注难度 0.4，归纳三种解法入口——事件分解递推法、二项式展开代数法、全概率公式递推法，并指出本题与「质点随机游走」「通道游戏」同宗。</li>
+<li><strong>《数学教学》2025 年第 12 期·张君（四川省温江中学）</strong>：《概率模型中的递推构造与不等式证明——2025 年全国高考数学Ⅱ卷第 19 题的多解探析与教学启示》，系统给出三大核心解法并配原创变式（参数分析、双向不等式、存在性问题）。</li>
+<li><strong>自媒体讨论（今日头条等）</strong>：多篇文章以「为什么成了失分黑洞」为题，复盘失分原因（情境陌生、第(3)问断崖、压轴心理），与一线阅卷反馈吻合。</li>
+<li><strong>共识与分歧</strong>：共识是第(1)(2)问友好、第(3)问极难、整题区分度极高；分歧主要在「第(3)问最优解法」——教材溯源派主张全概率递推，代数派主张二项展开直接比较，本质等价。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>教材溯源、夯实模型</strong>：以人教 A 版选择性必修三 P81「随机游走」为起点，讲清「质点左右移动 ↔ 比分差演化」的同构关系，让新情境有根可寻。</li>
+<li><strong>强化递推思想</strong>：在概率复习中专门训练「由当前状态概率推导下一状态」的递推建模，而非止步于一次性求概率。</li>
+<li><strong>多解法对比训练</strong>：同一道题同时练「事件枚举」「对称代换」「全概率递推」「二项展开」，培养结构洞察力与代数耐心。</li>
+<li><strong>奇偶性与对称性专题</strong>：把「\(X_k\) 与 \(k\) 同奇偶」「\(p\leftrightarrow q\) 轮换对称」作为压轴概率题的通用工具箱提前储备。</li>
+<li><strong>压轴题心理与策略</strong>：训练学生「先拿第(1)(2)问保底分、再攻第(3)问」的节奏，破除「最后一题必放弃」的心理预设；强调书写「建模过程」也能获步骤分。</li>
+<li><strong>长情境阅读训练</strong>：日常用生活化、文字量大的题练「信息提取—条件锁定—数学转译」，提升抗干扰能力。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>21 世纪教育网．2025 年普通高等学校招生全国统一考试（新高考Ⅱ卷）数学试题（含解析）．https://zy.21cnjy.com/23176839</li>
+<li>学科网．新课标 2 卷第 19 题 深度探索二项分布的概率问题（一题多解）．https://zujuan.xkw.com/thematiclist/11pt6351ct19987n644735.html</li>
+<li>张君．概率模型中的递推构造与不等式证明——2025 年全国高考数学Ⅱ卷第 19 题的多解探析与教学启示．《数学教学》2025 年第 12 期．</li>
+<li>今日头条．2025 新高考Ⅱ卷 · 第 19 题：为什么成了「失分黑洞」？https://www.toutiao.com/w/1867349248948488</li>
+<li>四川省情网．2025 年全国二卷数学高考真题带答案带解析带分值文字版．https://scdfz.sc.gov.cn/scyx/scgkt/2000nyh/wksx/content_178423</li>
+</ol>
+
+
+</div>
+</body>
+</html>

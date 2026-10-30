@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年高考数学新课标Ⅱ卷第 8 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年高考数学新课标Ⅱ卷第 8 题研究报告</h1>
+  <div class="lead">研究对象：f(x)=(x+a)ln(x+b) 恒成立下 a²+b² 的最小值（单选）　·　题型定位：单项选择题（单选压轴）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>设函数 <span class="math">\(f(x)=(x+a)\ln(x+b)\)</span>。若 <span class="math">\(f(x)\geqslant 0\)</span>，则 <span class="math">\(a^{2}+b^{2}\)</span> 的最小值为（&nbsp;&nbsp;）</p>
+
+<div class="opts">
+<div class="opt">A. <span class="math">\(\dfrac{1}{8}\)</span></div>
+<div class="opt">B. <span class="math">\(\dfrac{1}{4}\)</span></div>
+<div class="opt">C. <span class="math">\(\dfrac{1}{2}\)</span></div>
+<div class="opt">D. 1</div>
+</div>
+
+<p class="note">（题源：2024 年普通高等学校招生全国统一考试数学·新课标Ⅱ卷，第 8 题，单项选择题。）</p>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2024 新课标Ⅱ卷（全国二卷）</td></tr>
+<tr><td>题号 / 题型</td><td>第 8 题 / 单项选择题（单选题压轴）</td></tr>
+<tr><td>分值</td><td>5 分</td></tr>
+<tr><td>考查模块</td><td>函数性质（对数）· 恒成立问题 · 二元最值</td></tr>
+<tr><td>正确选项</td><td><strong>C</strong>（最小值为 <span class="math">\(\dfrac{1}{2}\)</span>）</td></tr>
+<tr><td>难度</td><td>中偏难（区分"机械运算"与"结构洞察"）</td></tr>
+<tr><td>核心素养重心</td><td>数学运算、逻辑推理、数学抽象</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>对数函数的符号性质</strong>：<span class="math">\(\ln u\)</span> 在 <span class="math">\(u\in(0,1)\)</span> 时为负、<span class="math">\(u=1\)</span> 时为零、<span class="math">\(u&gt;1\)</span> 时为正；其唯一零点为 <span class="math">\(u=1\)</span>。这是本题"判定两因子必须同号变号"的根据。</li>
+<li><strong>函数恒成立问题的转化</strong>：<span class="math">\(f(x)\geqslant 0\)</span> 在定义域内恒成立，等价于对定义域中<em>任意</em> <span class="math">\(x\)</span> 不等式都成立——这是题目隐含的全程量词，是解题的出发点。</li>
+<li><strong>一元二次式的最值（配方法）</strong>：将约束代入后用完全平方公式求最小值，是最直接的通法。</li>
+<li><strong>几何视角（点到直线距离）或柯西不等式</strong>：把 <span class="math">\(a^{2}+b^{2}\)</span> 看作平面点到原点距离的平方，约束 <span class="math">\(b=a+1\)</span> 是一条直线，最小值即原点到该直线距离的平方。</li>
+<li><strong>换元与降维思想</strong>：令 <span class="math">\(t=x+b\)</span> 可消去对数内的平移，把双参数结构降为单参数 <span class="math">\(c=a-b\)</span>，使逻辑更清晰。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>《高考评价体系》能力</th><th>本题体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>从题面提取"函数形式 + 恒成立条件 + 目标最值"三层信息</td></tr>
+<tr><td>抽象概括</td><td>将"乘积恒非负"概括为"两因子变号点必须重合"的结构规律</td></tr>
+<tr><td>推理论证</td><td>严格证明 <span class="math">\(-a=1-b\)</span>，排除约束为区间的误判</td></tr>
+<tr><td>运算求解</td><td>代入约束、配方或判别式求 <span class="math">\(a^{2}+b^{2}\)</span> 最小值</td></tr>
+<tr><td>直观想象</td><td>把代数最值转化为"原点到直线距离"的几何图景</td></tr>
+<tr><td>探索创新</td><td>在一题多解（配方 / 判别式 / 几何）间选择最简路径</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学运算</td><td>★★★</td><td>恒成立推导 + 二次式最值运算</td></tr>
+<tr><td>逻辑推理</td><td>★★★</td><td>由符号分析严格推出等式约束</td></tr>
+<tr><td>数学抽象</td><td>★★</td><td>将具体函数抽象为"零点对齐"结构</td></tr>
+<tr><td>直观想象</td><td>★★</td><td>点到直线距离的几何解释</td></tr>
+<tr><td>数学建模</td><td>★</td><td>双参数约束下的最值建模</td></tr>
+<tr><td>数据分析</td><td>—</td><td>本题不涉及</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>本题以"<strong>恒成立 → 结构强制对齐 → 求二元最值</strong>"为内核，设计精妙：</p>
+
+<ul>
+<li><strong>恒成立作为隐形筛子</strong>：表面是求最值，实际必须先由 <span class="math">\(f(x)\geqslant 0\)</span> 恒成立反推出 <span class="math">\(a,b\)</span> 之间的<em>精确等式</em>约束，而非区间约束。这一步是区分度所在。</li>
+<li><strong>零点绑定设计</strong>：<span class="math">\(\ln(x+b)\)</span> 的唯一零点 <span class="math">\(x=1-b\)</span> 与线性因子 <span class="math">\(x+a\)</span> 的零点 <span class="math">\(x=-a\)</span> 必须重合，才能保证二者在定义域上处处同号。命题人把"最值"挂靠在这种隐蔽的等式上，既考运算也考洞察。</li>
+<li><strong>去套路化</strong>：直接计算导数或分区间讨论极易陷入繁琐；真正的解法依赖对对数符号与乘积符号的敏锐把握，是典型的"想清楚比算得多更重要"的题。</li>
+<li><strong>区分度</strong>：中等偏难，能区分出"只会硬算"与"能抓住结构"的两类考生，且误选 B（<span class="math">\(1/4\)</span>）往往是把约束当区间后得到的错误最值。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 确定定义域与两个因子的零点</h3>
+
+<p>函数 <span class="math">\(f(x)=(x+a)\ln(x+b)\)</span> 的定义域由对数决定：<span class="math">\(x+b&gt;0\)</span>，即 <span class="math">\(x&gt;-b\)</span>。</p>
+
+<p>两个因子各自的零点：</p>
+<ul>
+<li>线性因子 <span class="math">\(x+a=0\ \Rightarrow\ x=-a\)</span>；</li>
+<li>对数因子 <span class="math">\(\ln(x+b)=0\ \Rightarrow\ x+b=1\ \Rightarrow\ x=1-b\)</span>。</li>
+</ul>
+
+<h3>7.2 由 <span class="math">\(f(x)\geqslant 0\)</span> 恒成立推出 <span class="math">\(a,b\)</span> 的约束</h3>
+
+<p>以 <span class="math">\(x=1-b\)</span> 为界将定义域分两段：</p>
+
+<ul>
+<li>当 <span class="math">\(x\in(-b,\,1-b)\)</span> 时，<span class="math">\(0&lt;x+b&lt;1\)</span>，故 <span class="math">\(\ln(x+b)&lt;0\)</span>。要使乘积 <span class="math">\(f(x)\geqslant 0\)</span>，必须有 <span class="math">\(x+a\leqslant 0\)</span>。特别地，当 <span class="math">\(x\to(1-b)^{-}\)</span> 时，得 <span class="math">\((1-b)+a\leqslant 0\)</span>。</li>
+<li>当 <span class="math">\(x\in(1-b,\,+\infty)\)</span> 时，<span class="math">\(x+b&gt;1\)</span>，故 <span class="math">\(\ln(x+b)&gt;0\)</span>。要使乘积 <span class="math">\(f(x)\geqslant 0\)</span>，必须有 <span class="math">\(x+a\geqslant 0\)</span>。特别地，当 <span class="math">\(x\to(1-b)^{+}\)</span> 时，得 <span class="math">\((1-b)+a\geqslant 0\)</span>。</li>
+</ul>
+
+<p>两式联立，必须有 <span class="math">\((1-b)+a=0\)</span>，即</p>
+
+<div class="block">\[
+a-b+1=0\quad\Longrightarrow\quad b=a+1.
+\]</div>
+
+<p class="note">等价表述：对数因子的唯一零点 <span class="math">\(x=1-b\)</span> 必须等于线性因子的零点 <span class="math">\(x=-a\)</span>，即 <span class="math">\(-a=1-b\)</span>，同样得到 <span class="math">\(b=a+1\)</span>。也可用换元 <span class="math">\(t=x+b&gt;0\)</span>：<span class="math">\(f=(t+a-b)\ln t\)</span>，由 <span class="math">\(\ln t\)</span> 在 <span class="math">\(t=1\)</span> 变号，迫使 <span class="math">\(t+(a-b)\)</span> 也在 <span class="math">\(t=1\)</span> 变号，故 <span class="math">\(1+(a-b)=0\)</span>，即 <span class="math">\(a-b=-1\)</span>。</p>
+
+<h3>7.3 求 <span class="math">\(a^{2}+b^{2}\)</span> 的最小值（三种方法）</h3>
+
+<p><strong>方法一（配方法）</strong>：将 <span class="math">\(b=a+1\)</span> 代入，</p>
+
+<div class="block">\[
+a^{2}+b^{2}=a^{2}+(a+1)^{2}=2a^{2}+2a+1=2\!\left(a+\tfrac{1}{2}\right)^{2}+\tfrac{1}{2}\geqslant \tfrac{1}{2}.
+\]</div>
+
+<p>当且仅当 <span class="math">\(a=-\tfrac{1}{2}\)</span>、<span class="math">\(b=\tfrac{1}{2}\)</span> 时取等号。故最小值为 <span class="math">\(\tfrac{1}{2}\)</span>。</p>
+
+<p><strong>方法二（判别式法）</strong>：设 <span class="math">\(a^{2}+b^{2}=t\)</span>，代入 <span class="math">\(b=a+1\)</span> 得 <span class="math">\(a^{2}+(a+1)^{2}=t\)</span>，即 <span class="math">\(2a^{2}+2a+1-t=0\)</span>。关于 <span class="math">\(a\)</span> 的方程有实根，故判别式</p>
+
+<div class="block">\[
+\Delta=2^{2}-4\cdot 2\cdot(1-t)=4-8+8t=8t-4\geqslant 0\quad\Longrightarrow\quad t\geqslant\tfrac{1}{2}.
+\]</div>
+
+<p>当 <span class="math">\(t=\tfrac{1}{2}\)</span> 时 <span class="math">\(a=-\tfrac{1}{2}\)</span>、<span class="math">\(b=\tfrac{1}{2}\)</span>。最小值 <span class="math">\(\tfrac{1}{2}\)</span>。</p>
+
+<p><strong>方法三（几何法 / 柯西不等式）</strong>：目标 <span class="math">\(a^{2}+b^{2}\)</span> 是点 <span class="math">\((a,b)\)</span> 到原点距离的平方；约束 <span class="math">\(b=a+1\)</span> 即直线 <span class="math">\(a-b+1=0\)</span>。原点到该直线的距离平方为</p>
+
+<div class="block">\[
+d^{2}=\frac{|\,0-0+1\,|^{2}}{1^{2}+(-1)^{2}}=\frac{1}{2}.
+\]</div>
+
+<p>故 <span class="math">\(a^{2}+b^{2}\)</span> 的最小值为 <span class="math">\(\tfrac{1}{2}\)</span>（亦可由柯西：<span class="math">\((a^{2}+b^{2})[1^{2}+(-1)^{2}]\geqslant(a-b)^{2}=(-1)^{2}=1\)</span>，得 <span class="math">\(a^{2}+b^{2}\geqslant\tfrac{1}{2}\)</span>）。</p>
+
+<h3>7.4 结论与选项对应</h3>
+
+<p>综上，<span class="math">\(a^{2}+b^{2}\)</span> 的最小值为 <span class="math">\(\dfrac{1}{2}\)</span>，对应选项 <strong>C</strong>。</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>点睛之笔——"两因子同号变号点必须重合"</strong>：看到 <span class="math">\((x+a)\ln(x+b)\geqslant 0\)</span> 恒成立，立刻想到对数零点 <span class="math">\(x=1-b\)</span> 应等于线性零点 <span class="math">\(x=-a\)</span>。这是本题最省力的突破口，可跳过繁琐的分段讨论。</li>
+<li><strong>换元消平移</strong>：令 <span class="math">\(t=x+b\)</span> 把结构标准化为 <span class="math">\((t+c)\ln t\)</span>，<span class="math">\(c=a-b\)</span>，一眼看出"在 <span class="math">\(t=1\)</span> 处同时变号"的必然性。</li>
+<li><strong>最值三法择一</strong>：配方法最稳；判别式法适合"设 <span class="math">\(a^{2}+b^{2}=t\)</span> 反求范围"的套路；几何法 / 柯西最直观，且不容易算错。考场建议用配方法或柯西，速度快、容错高。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><strong>"恒成立 + 最值"的结构对齐类题目将持续出现</strong>：通过乘积 / 分式恒非负，逼迫多个因子的零点或变号点对齐，再把参数最值挂靠其上。</li>
+<li><strong>双参数 + 几何距离</strong>：越来越倾向于把 <span class="math">\(a^{2}+b^{2}\)</span>、<span class="math">\(|a|+|b|\)</span> 等目标与"点到直线 / 点到点距离"结合，考查几何直观。</li>
+<li><strong>对数 / 指对混合的恒成立</strong>：在保留本题内核的同时，可能升级为 <span class="math">\(\mathrm{e}^{x}\)</span> 与多项式、或双对数因子的组合，增加运算层次。</li>
+<li><strong>反套路、重洞察</strong>：新高考强调"多想少算"，此类"结构识别先于运算"的题会保持中高难度定位。</li>
+<li><strong>多选化可能</strong>：不排除把"约束条件 + 最值 + 取等参数"拆分为多项选择题，分别设问。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>忽略"恒成立"的全程量词</strong>：只验证了某个特殊点（如端点、零点）非负，就误以为条件已满足，导致漏掉约束。</li>
+<li><strong>误把约束当区间</strong>：由分段不等式得到 "<span class="math">\(a-b+1\leqslant 0\)</span> 且 <span class="math">\(\geqslant 0\)</span>" 后，未意识到必须同时取等，从而把约束错当成 <span class="math">\(a-b=-1\)</span> 附近的"带状区域"，进而求出错误的更大 / 更小最值（常见误选 B：<span class="math">\(1/4\)</span>）。</li>
+<li><strong>不会对齐零点</strong>：盲目求导或分段列表，陷入对 <span class="math">\(f(x)\)</span> 单调性的繁琐讨论，时间耗尽仍无果。</li>
+<li><strong>最值运算出错</strong>：代入后配方 / 判别式计算失误，或把 <span class="math">\(a^{2}+b^{2}\)</span> 的最小值错算成 <span class="math">\(1/4\)</span>、<span class="math">\(1/8\)</span> 等。</li>
+<li><strong>几何法叙述不规范</strong>：知道"点到直线距离"却写不清直线方程为 <span class="math">\(a-b+1=0\)</span>，导致距离公式代入错误。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<ul>
+<li><strong>《数学通讯》2025 年第 5 期</strong>：以本题为例，介绍"<span class="math">\(x+a\)</span> 与 <span class="math">\(\ln(x+b)\)</span> 符号完全一致 ⇒ <span class="math">\(-a=1-b\)</span>"的识别，并采用<em>判别式法</em>求最值（设 <span class="math">\(a^{2}+b^{2}=t\)</span>，由方程有实根得 <span class="math">\(\Delta\geqslant 0\)</span> 推出 <span class="math">\(t\geqslant 1/2\)</span>），认为该法"思路单一、无需配凑"。</li>
+<li><strong>《高中数理天地》2024 年高考数学评析</strong>：采用<em>符号分析 + 配方法</em>，先由定义域分段得 <span class="math">\(1-b+a=0\)</span>，再配方 <span class="math">\(a^{2}+(a+1)^{2}=2(a+1/2)^{2}+1/2\geqslant 1/2\)</span>，结论一致。</li>
+<li><strong>共识</strong>：各机构答案统一为 <strong>C（<span class="math">\(1/2\)</span>）</strong>，取等参数 <span class="math">\((a,b)=(-1/2,\,1/2)\)</span>。分歧仅在于最值手段（配方 / 判别式 / 几何），无实质争议。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>强化"恒成立"意识训练</strong>：让学生明确"恒"字意味着对定义域内任意 <span class="math">\(x\)</span> 成立，必须通过边界 / 极限取等来锁定精确约束，而非粗略估计。</li>
+<li><strong>建立"乘积恒非负 ⇒ 零点对齐"的模型认知</strong>：把本题提炼为可迁移的题型模板，遇到 <span class="math">\(g(x)\cdot h(x)\geqslant 0\)</span> 恒成立且两因子各仅一个零点时，立即检查零点是否重合。</li>
+<li><strong>一题多解对比，突出几何直观</strong>：配方法（代数）、判别式法（方程思想）、柯西 / 距离法（几何）三法并讲，培养学生根据题型选最优解的习惯，也降低运算失误率。</li>
+<li><strong>重视换元降维</strong>：对数内带平移时，优先令 <span class="math">\(t=x+b\)</span> 标准化，把"双参数 + 平移"简化为"单参数 + 标准对数"，提升解题清晰度。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>《数学通讯》编辑部. 借助一元二次方程判别式求最值的一类题型（含 2024 新课标Ⅱ卷第 8 题）[J]. 数学通讯，2025(5).（来源：ima 知识库文献）</li>
+<li>《高中数理天地》. 2024 年高考数学全国 II 卷试题呈现及解析（第 8 题）[J]. 高中数理天地，2024.（来源：ima 知识库文献）</li>
+</ol>
+
+
+</div>
+</body>
+</html>

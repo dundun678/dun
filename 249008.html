@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年九省联考数学第 8 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年九省联考数学第 8 题研究报告</h1>
+  <div class="lead">研究对象：双曲线离心率单选题（对称·向量·余弦）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>设双曲线 <span class="math">\(C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a&gt;0,b&gt;0)\)</span> 的左、右焦点分别为 <span class="math">\(F_1\)</span>，<span class="math">\(F_2\)</span>，过坐标原点的直线与 <span class="math">\(C\)</span> 交于 <span class="math">\(A\)</span>，<span class="math">\(B\)</span> 两点，<span class="math">\(|F_1B|=2|F_1A|\)</span>，<span class="math">\(\overrightarrow{F_2A}\cdot\overrightarrow{F_2B}=4a^2\)</span>，则 <span class="math">\(C\)</span> 的离心率为</p>
+
+<p>
+A. <span class="math">\(\sqrt{2}\)</span><br>
+B. <span class="math">\(2\)</span><br>
+C. <span class="math">\(\sqrt{5}\)</span><br>
+D. <span class="math">\(\sqrt{7}\)</span>
+</p>
+
+<blockquote>题源：2024 年 1 月普通高等学校招生全国统一考试适应性测试（九省联考 / 新高考 19 题结构首演）数学试卷，单选题第 8 题（单选压轴），5 分。官方答案：<b>D（\(\sqrt{7}\)）</b>。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead>
+<tr><th>项目</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>卷型</td><td>2024 九省联考（河南、安徽、江西、吉林、黑龙江、广西、贵州、甘肃、新疆九省适应性演练）</td></tr>
+<tr><td>题号 / 题型</td><td>第 8 题 / 单项选择题（单选压轴）</td></tr>
+<tr><td>分值</td><td>5 分</td></tr>
+<tr><td>考查模块</td><td>解析几何（圆锥曲线 · 双曲线）、平面向量</td></tr>
+<tr><td>核心方法</td><td>中心对称性 → 平行四边形 → 双曲线定义（焦半径差 <span class="math">\(2a\)</span>）→ 向量点积求角 → 余弦定理求离心率</td></tr>
+<tr><td>难度预估</td><td><b>中上偏难</b>（单选压轴，需多步几何推理）</td></tr>
+<tr><td>实测数据</td><td>据一线教师评析：第 8 题作为单选题压轴，综合对称性与双曲线定义，不少考生因不会构造平行四边形、找不到角的关系而失分；暂无权威分题得分率公开数据。</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>双曲线的定义（焦半径差）</b>：双曲线上任意一点到两焦点距离之差的绝对值为 <span class="math">\(2a\)</span>，即 <span class="math">\(\bigl||PF_1|-|PF_2|\bigr|=2a\)</span>；左支点到 <span class="math">\(F_1\)</span> 更近（<span class="math">\(|PF_2|-|PF_1|=2a\)</span>），右支反之。本题据此把未知焦半径化为 <span class="math">\(a\)</span> 的倍数。</li>
+<li><b>中心对称性</b>：双曲线关于原点中心对称，过原点的弦两端点 <span class="math">\(A,B\)</span> 互为对称点，从而 <span class="math">\(|F_1A|=|F_2B|\)</span>、<span class="math">\(|F_1B|=|F_2A|\)</span>。</li>
+<li><b>平行四边形的识别与性质</b>：两组对边分别相等的四边形为平行四边形（本题 <span class="math">\(AF_1BF_2\)</span>）；邻角互补是后续求 <span class="math">\(\angle F_1BF_2\)</span> 的关键。</li>
+<li><b>向量数量积与夹角</b>：<span class="math">\(\vec{u}\cdot\vec{v}=|\vec{u}||\vec{v}|\cos\theta\)</span>，由点积与模长反求夹角余弦。</li>
+<li><b>余弦定理</b>：在 <span class="math">\(\triangle F_1BF_2\)</span> 中用两边及夹角求对边（焦距 <span class="math">\(2c\)</span>），建立 <span class="math">\(a,c\)</span> 齐次式。</li>
+<li><b>离心率</b>：<span class="math">\(e=\dfrac{c}{a}\;(e&gt;1)\)</span>，最终化为 <span class="math">\(e^2\)</span> 的方程求解。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead>
+<tr><th>《高考评价体系》能力</th><th>本题中的体现</th></tr>
+</thead>
+<tbody>
+<tr><td>信息获取与识别</td><td>读取"过原点""<span class="math">\(|F_1B|=2|F_1A|\)</span>""点积为 <span class="math">\(4a^2\)</span>"三组条件，并识别其几何含义。</td></tr>
+<tr><td>抽象概括</td><td>把"对称 + 等线段"概括为一个平行四边形模型，把离散条件编织成统一几何结构。</td></tr>
+<tr><td>推理论证</td><td>由对称性 → 平行四边形 → 定义求 <span class="math">\(m\)</span> → 点积求角 → 余弦求 <span class="math">\(e\)</span>，逻辑链条完整严谨。</td></tr>
+<tr><td>运算求解</td><td>处理齐次式 <span class="math">\(\dfrac{20a^2-4c^2}{16a^2}=-\dfrac12\)</span>，解出 <span class="math">\(e^2=7\)</span>。</td></tr>
+<tr><td>探索创新</td><td>"以几何法（平行四边形 + 余弦定理）替代坐标硬算"的巧思，体现几何直观的价值。</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead>
+<tr><th>核心素养</th><th>星级</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>直观想象</td><td><span class="star">★★★★★</span></td><td>作图识别对称点、平行四边形、三角形中的角关系，是破题的核心素养。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>对称性、定义、点积、余弦四步环环相扣，推理要求高。</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★☆</span></td><td>齐次式化简与方程求解，运算量适中但需准确。</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★☆☆</span></td><td>把具体几何条件抽象为焦半径与角度的代数关系。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★☆☆☆</span></td><td>平行四边形模型是一种轻量几何建模。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>本题不直接涉及。</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<p>第 8 题是九省联考单选题的压轴，体现了新高考解析几何"重几何直观、轻套路运算"的命题导向：</p>
+<ul>
+<li><b>经典载体 + 新颖设问</b>：以双曲线离心率这一经典考点为载体，但通过"过原点弦 + 焦半径比例 + 向量点积"三重条件叠加，增加辨识难度。</li>
+<li><b>几何法优先</b>：题目本身"暗示"几何结构（对称、平行四边形），若考生只会建系硬算易陷入繁冗；命题意在引导回归几何直观。</li>
+<li><b>多知识点融合</b>：单题串联对称性、双曲线定义、向量数量积、余弦定理、离心率，考查知识网络而非单一考点。</li>
+<li><b>区分度设计</b>：第一步"识别平行四边形"即分出层次；后续角关系与齐次式是中等难度，整体形成"入口易、做全难"的压轴格局。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 解题思路概述</h3>
+
+<p>本题最自然的路径是<b>几何法</b>：利用双曲线关于原点的中心对称性，把过原点弦的两端 <span class="math">\(A,B\)</span> 视为对称点，结合焦半径比例与双曲线定义求出各焦半径（用 <span class="math">\(a\)</span> 表示），再由向量点积求出夹角，最后在三角形中用余弦定理建立 <span class="math">\(a,c\)</span> 齐次式解出离心率。</p>
+
+<h3>7.2 利用对称性构造平行四边形</h3>
+
+<p>双曲线 <span class="math">\(C\)</span> 关于原点中心对称，且直线 <span class="math">\(AB\)</span> 过原点，故 <span class="math">\(A,B\)</span> 关于原点对称，即 <span class="math">\(B=-A\)</span>。原点对称同时交换两焦点：<span class="math">\(F_1\leftrightarrow F_2\)</span>。于是</p>
+
+<div class="formula">
+<span class="math">\(|F_1A|=|F_2B|,\qquad |F_1B|=|F_2A|\)</span>，
+</div>
+
+<p>从而四边形 <span class="math">\(AF_1BF_2\)</span> 两组对边分别相等，是<b>平行四边形</b>。</p>
+
+<h3>7.3 用双曲线定义求焦半径</h3>
+
+<p>设 <span class="math">\(|F_1A|=|F_2B|=m\)</span>。由已知 <span class="math">\(|F_1B|=2|F_1A|\)</span> 得</p>
+
+<div class="formula">
+<span class="math">\(|F_1B|=|F_2A|=2m\)</span>。
+</div>
+
+<p>因 <span class="math">\(|F_2A|=2m&gt;m=|F_1A|\)</span>，点 <span class="math">\(A\)</span> 到右焦点更远，故 <span class="math">\(A\)</span> 在<b>左支</b>，满足</p>
+
+<div class="formula">
+<span class="math">\(|F_2A|-|F_1A|=2a\quad\Rightarrow\quad 2m-m=2a\quad\Rightarrow\quad m=2a\)</span>。
+</div>
+
+<p>于是</p>
+
+<div class="formula">
+<span class="math">\(|F_1A|=|F_2B|=2a,\qquad |F_1B|=|F_2A|=4a\)</span>。
+</div>
+
+<h3>7.4 由向量点积求夹角</h3>
+
+<p>在 <span class="math">\(\overrightarrow{F_2A}\cdot\overrightarrow{F_2B}=4a^2\)</span> 中，用数量积定义：</p>
+
+<div class="formula">
+<span class="math">\(\overrightarrow{F_2A}\cdot\overrightarrow{F_2B}=|\overrightarrow{F_2A}|\,|\overrightarrow{F_2B}|\cos\angle AF_2B=4a\cdot 2a\cos\angle AF_2B=4a^2\)</span>，
+</div>
+
+<p>故</p>
+
+<div class="formula">
+<span class="math">\(\cos\angle AF_2B=\dfrac12\quad\Rightarrow\quad \angle AF_2B=\dfrac{\pi}{3}\)</span>。
+</div>
+
+<h3>7.5 余弦定理求离心率</h3>
+
+<p>平行四边形 <span class="math">\(AF_1BF_2\)</span> 邻角互补，故</p>
+
+<div class="formula">
+<span class="math">\(\angle F_1BF_2=\pi-\dfrac{\pi}{3}=\dfrac{2\pi}{3}\)</span>。
+</div>
+
+<p>在 <span class="math">\(\triangle F_1BF_2\)</span> 中，<span class="math">\(|F_1B|=4a\)</span>，<span class="math">\(|F_2B|=2a\)</span>，<span class="math">\(|F_1F_2|=2c\)</span>，由余弦定理：</p>
+
+<div class="formula">
+<span class="math">\(\cos\angle F_1BF_2=\dfrac{(4a)^2+(2a)^2-(2c)^2}{2\cdot 4a\cdot 2a}=\dfrac{20a^2-4c^2}{16a^2}=-\dfrac12\)</span>。
+</div>
+
+<p>解得</p>
+
+<div class="formula">
+<span class="math">\(20a^2-4c^2=-8a^2\;\Rightarrow\;4c^2=28a^2\;\Rightarrow\;e^2=\dfrac{c^2}{a^2}=7\)</span>，
+</div>
+
+<p>因 <span class="math">\(e&gt;1\)</span>，得</p>
+
+<div class="formula">
+<span class="math">\(e=\boxed{\sqrt{7}}\)</span>。
+</div>
+
+<h3>7.6 结论</h3>
+
+<p>双曲线的离心率为 <span class="math">\(\sqrt{7}\)</span>，对应选项 <b>D</b>。</p>
+
+<div class="note"><b>备选视角（坐标法）</b>：也可设 <span class="math">\(A(x_0,y_0)\)</span>、<span class="math">\(B(-x_0,-y_0)\)</span>，由点积得 <span class="math">\(x_0^2+y_0^2=c^2-4a^2\)</span>，由 <span class="math">\(|F_1A|=2a\)</span> 得 <span class="math">\(x_0=\frac{4a^2-c^2}{c}\)</span>，再代入双曲线方程，会得到 <span class="math">\(e^2=3\)</span> 或 <span class="math">\(7\)</span> 的二次式；其中 <span class="math">\(e^2=3\)</span> 会使 <span class="math">\(x_0&gt;0\)</span>（点 <span class="math">\(A\)</span> 落到右支），与"左支"判定矛盾，须舍去。坐标法易产生增根，更凸显几何法之妙。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>先画图的直觉</b>：过原点弦 + 双曲线 → 立刻想到"两端点关于原点对称"，这是所有后续推理的地基。</li>
+<li><b>对称即平行四边形</b>：记住"<span class="math">\(|F_1A|=|F_2B|\)</span> 且 <span class="math">\(|F_1B|=|F_2A|\)</span> ⇒ 平行四边形"，把焦点三角形问题转化为平行四边形 + 三角形问题。</li>
+<li><b>定义定分支</b>：用 <span class="math">\(|F_2A|\)</span> 与 <span class="math">\(|F_1A|\)</span> 的大小判定 <span class="math">\(A\)</span> 在左支还是右支，从而正确选用 <span class="math">\(|F_2A|-|F_1A|=2a\)</span>。</li>
+<li><b>点积求角、余弦求边</b>：数量积给出夹角余弦，平行四边形邻角互补给出目标角，再余弦定理建立 <span class="math">\(a,c\)</span> 齐次式——"齐次式"意味着直接得到 <span class="math">\(e^2\)</span>。</li>
+<li><b>警惕增根</b>：若用坐标法，二次方程可能给出 <span class="math">\(e^2=3\)</span> 的伪根，必须用"点所在支 / 坐标符号"排除。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>解析几何"几何化"回归</b>：命题将继续弱化"狂算"，强化对称性、定义、几何性质的直接运用，引导学生画图思考。</li>
+<li><b>圆锥曲线多性质融合</b>：单题融合定义、离心率、焦点三角形、向量数量积、极坐标/参数方程等，考查知识网络。</li>
+<li><b>向量与解析几何深度结合</b>：以向量点积 / 叉积 / 共线条件包装几何约束，成为高频命题方式。</li>
+<li><b>离心率仍为核心考点</b>：双曲线、椭圆的离心率（及取值范围）是压轴常客，常与"齐次式"技巧绑定。</li>
+<li><b>"设而不求 / 整体代换"受青睐</b>：命题倾向让学生用整体关系（如本题的 <span class="math">\(m=2a\)</span>）而非逐个求坐标，降低运算量、抬高思维量。</li>
+<li><b>选择题压轴综合化</b>：新结构下单选仅 8 道，第 8 题思维量向小解答题靠拢，可能出现"多步几何推理才能锁定单选项"的格局。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>不会用对称性构造平行四边形</b>：这是最高频卡点——看不出 <span class="math">\(AF_1BF_2\)</span> 是平行四边形，后续推理无从展开。</li>
+<li><b>分支判定错误</b>：混淆左右支的焦半径差符号（<span class="math">\(|PF_1|-|PF_2|=2a\)</span> 还是反过来），导致 <span class="math">\(m\)</span> 求错。</li>
+<li><b>角关系搞混</b>：误把 <span class="math">\(\angle AF_2B\)</span> 当作 <span class="math">\(\angle F_1BF_2\)</span>，或忘记平行四边形邻角互补，余弦定理用错角。</li>
+<li><b>向量点积方向不清</b>：分不清 <span class="math">\(\overrightarrow{F_2A}\)</span> 与 <span class="math">\(\overrightarrow{F_2B}\)</span> 的夹角，误用 <span class="math">\(\angle AF_2B\)</span> 的补角。</li>
+<li><b>坐标法陷入繁算或增根</b>：建系后算到二次方程，漏排 <span class="math">\(e^2=3\)</span> 的伪根，或运算出错。</li>
+<li><b>齐次式化简失误</b>：余弦定理得到分式后，不会直接约去 <span class="math">\(a^2\)</span> 得到 <span class="math">\(e^2\)</span>，或符号算反。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>九省联考作为新高考 19 题结构的"首演"，第 8 题（双曲线离心率）是一线教师与平台解析的重点例题之一：</p>
+<ul>
+<li><b>官方 / 主流解法一致</b>：高考直通车、学科网、21 世纪教育网、人人文档等来源均给出"对称性 → 平行四边形 → 双曲线定义求 <span class="math">\(m=2a\)</span> → 点积求 <span class="math">\(\angle AF_2B=\pi/3\)</span> → 余弦定理得 <span class="math">\(e^2=7\)</span>"的标准几何法，答案统一为 <b>D（\(\sqrt{7}\)）</b>。</li>
+<li><b>教学共识</b>：教师普遍将本题作为"几何法优于坐标法"的范例，强调"先识图、再构造平行四边形、用定义代换"，并提醒学生警惕角关系与增根。</li>
+<li><b>命题评价</b>：评析文章指出，本题与第 11、14 题共同体现九省联考"小切口、深思维、重素养、反套路"的导向，解析几何压轴从"算"转向"想"。</li>
+<li><b>分歧 / 存疑点</b>：个别早期流传解析在同卷其他题上有笔误，但第 8 题答案 <span class="math">\(\sqrt{7}\)</span> 与解法在各权威来源间高度一致，无误。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>强化"几何直观优先"意识</b>：训练学生面对解析几何题先画图、先找对称 / 定义 / 几何性质，再决定是否建系。</li>
+<li><b>系统梳理圆锥曲线定义与性质</b>：把"焦半径差 <span class="math">\(2a\)</span>"、"焦点三角形"、"离心率齐次式"做成专题，形成条件反射。</li>
+<li><b>平行四边形模型专项</b>：讲清"对称中心 + 两焦点"如何自然生成平行四边形，及其角度、边长关系在解题中的用法。</li>
+<li><b>向量与解析几何联训</b>：加强"点积 ⇄ 夹角""共线 ⇄ 比例"的互译训练，提升向量条件的几何转译能力。</li>
+<li><b>增根意识培养</b>：对坐标法产生的代数解，要求学生结合几何意义（支、符号、范围）检验取舍，杜绝"算出来就填"。</li>
+<li><b>齐次式技巧固化</b>：明确"见到 <span class="math">\(a,c\)</span> 关系求 <span class="math">\(e\)</span>，就把式子化为 <span class="math">\(e^2\)</span> 的方程"的操作流程。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>2024 年 1 月普通高等学校招生全国统一考试适应性测试（九省联考）数学试题（含解析）—— 高考直通车 / 学科网 / 21 世纪教育网（zy.21cnjy.com）等平台，第 8 题答案为 D（\(\sqrt{7}\)）。</li>
+<li>《2024 九省联考数学试题解析版》（学科网 / 人人文档 renrendoc.com 等转载），给出标准几何法解答。</li>
+<li>2024 九省联考数学试题官方答案（renrendoc.com 等转载版），单选题第 1–8 题含第 8 题 D。</li>
+</ol>
+
+<footer>研究报告由高中数学教师教研视角生成 · 公式经 MathJax 渲染 · 数据来源见参考文献，部分评析为一线教师共识性观点。</footer>
+
+
+</div>
+</body>
+</html>

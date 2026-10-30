@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年高考数学全国一卷第 11 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2026 年高考数学全国一卷第 11 题研究报告</h1>
+  <div class="lead">研究对象：三圆与直线截得弦长的多重判断（多选题压轴）　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>已知圆 \(C_1:(x+1)^2+y^2=1\)，圆 \(C_2:(x-1)^2+y^2=1\)，圆 \(C_3:x^2+(y-\sqrt3)^2=1\)。直线 \(l:y=kx+b\) 与 \(C_1,C_2,C_3\) 均有两个交点。记 \(l\) 被 \(C_1,C_2,C_3\) 截得的弦长分别为 \(s_1,s_2,s_3\)，则（　）</p>
+
+<table>
+<thead><tr><th>选项</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>\(k\) 可以取任意实数</td></tr>
+<tr><td>B</td><td>满足 \(s_1=s_2=s_3\) 的直线 \(l\) 共有 \(3\) 条</td></tr>
+<tr><td>C</td><td>满足 \(s_1+s_2+s_3=3\) 的直线 \(l\) 多于 \(3\) 条</td></tr>
+<tr><td>D</td><td>当 \(b=0\) 时，\(s_1+s_2+s_3\) 的最大值为 \(\dfrac{2\sqrt{21}}{3}\)</td></tr>
+</tbody>
+</table>
+
+<p>三个圆均为单位圆（半径 \(1\)），圆心分别为 \(O_1(-1,0)\)、\(O_2(1,0)\)、\(O_3(0,\sqrt3)\)，两两圆心距均为 \(2\)，故三圆<b>两两外切</b>，圆心构成边长为 \(2\) 的等边三角形。下方示意图给出三圆位置及三条"等弦长线"（对应选项 B）：</p>
+
+<svg viewBox="0 0 360 300" width="360" height="300" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:14px auto;max-width:100%;">
+  <line x1="60" y1="230" x2="280" y2="230" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="60" y1="230" x2="170" y2="39.5" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="280" y1="230" x2="170" y2="39.5" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <circle cx="60" cy="230" r="110" fill="#fff7ed" stroke="#b91c1c" stroke-width="2"/>
+  <circle cx="280" cy="230" r="110" fill="#eff6ff" stroke="#1e3a8a" stroke-width="2"/>
+  <circle cx="170" cy="39.5" r="110" fill="#f0fdf4" stroke="#15803d" stroke-width="2"/>
+  <line x1="38" y1="134.7" x2="302" y2="134.7" stroke="#7c3aed" stroke-width="1.6"/>
+  <line x1="137" y1="287" x2="203" y2="173" stroke="#7c3aed" stroke-width="1.6"/>
+  <line x1="137" y1="173" x2="203" y2="287" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="60" y="248" font-size="12" fill="#b91c1c" text-anchor="middle">O₁</text>
+  <text x="280" y="248" font-size="12" fill="#1e3a8a" text-anchor="middle">O₂</text>
+  <text x="170" y="30" font-size="12" fill="#15803d" text-anchor="middle">O₃</text>
+</svg>
+
+<blockquote>题型定位：多选题（压轴），分值 \(6\) 分。以"直线与三圆的位置关系 + 弦长"为载体，综合考查数形结合、对称性与函数最值，区分度极高。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2026 年高考数学全国一卷（新高考Ⅰ卷）</td></tr>
+<tr><td>题号与位置</td><td>第 11 题，多选题第 3 小题（多选压轴）</td></tr>
+<tr><td>题型 / 分值</td><td>多选题 / 6 分（全对 6 分，部分对得部分分，有错 0 分）</td></tr>
+<tr><td>考查模块</td><td>直线与圆（弦长公式、圆心到直线距离）+ 等边三角形对称性 + 函数求导求最值</td></tr>
+<tr><td>难度（自评）</td><td>★★★★★（多选压轴，需逐项独立论证）</td></tr>
+<tr><td>实测数据</td><td>暂无官方单题得分率公布；据一线教师评析，多数考生在 A、C 两项犹豫，易漏选或错选。</td></tr>
+<tr><td>官方答案</td><td><b>BCD</b></td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>弦长与圆心到直线距离的关系</b>：单位圆被直线截得的弦长 \(s=2\sqrt{1-d^2}\)，其中 \(d\) 为圆心到直线的距离。这是把"弦长"问题统一转化为"点到直线距离"的关键公式。</li>
+<li><b>点到直线距离公式</b>：直线 \(kx-y+b=0\)，点 \((x_0,y_0)\) 到它的距离 \(d=\dfrac{|kx_0-y_0+b|}{\sqrt{k^2+1}}\)。本题三圆心代入得 \(d_1=\dfrac{|b-k|}{q},\ d_2=\dfrac{|b+k|}{q},\ d_3=\dfrac{|b-\sqrt3|}{q}\)（记 \(q=\sqrt{k^2+1}\)）。</li>
+<li><b>"两交点"的等价条件</b>：直线与圆有两个交点 \(\iff d&lt;1\)（严格小于半径）。这是判断可行性的基础不等式。</li>
+<li><b>等边三角形的对称性与中位线</b>：三个圆心构成等边三角形，"到三顶点等距的直线"恰为其三条中位线所在的直线（平行各边、过对边中点），共 \(3\) 条。</li>
+<li><b>函数最值与方程求根</b>：在 \(b=0\) 时把弦长和写成单变量 \(t=\sqrt{k^2+1}\) 的函数，求导得最值，解方程 \(F(t)=3\) 判断解的个数。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>《中国高考评价体系》能力</th><th>本题中的体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>从三个圆的方程提取圆心、半径，识别"两两外切 + 等边中心"的几何结构。</td></tr>
+<tr><td>抽象概括</td><td>把"弦长"抽象为"圆心到直线距离"的函数 \(s=2\sqrt{1-d^2}\)，统一处理四个选项。</td></tr>
+<tr><td>推理论证</td><td>逐项严格论证：A 用区间交集反例，B 用等距线几何，C 用连续函数介值，D 用求导。</td></tr>
+<tr><td>运算求解</td><td>处理 \(F(t)=(4+2\sqrt{t^2-3})/t\) 的求导与极值，以及方程 \(F(t)=3\) 的求解。</td></tr>
+<tr><td>探索创新</td><td>多选题要求对每个选项独立探索真假，综合运用数形结合与代数推理。</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>星级</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学运算</td><td><span class="star">★★★★★</span></td><td>距离公式、求导、解方程，全程运算密集。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>四项逐一论证，尤其 A 的反例与 C 的存在性推理。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★★☆</span></td><td>三圆外切与等边中心的空间想象，等距中位线的几何直觉。</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★★☆</span></td><td>弦长→距离的函数化抽象。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★☆☆☆☆</span></td><td>不涉及统计数据分析。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★★☆☆</span></td><td>几何约束→代数函数模型。</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><b>以"圆"为载体、以"多选"为形式</b>：把传统单一的直线与圆位置关系题升级为四项独立判断的多选压轴，既考通性通法，又考严谨辨析。</li>
+<li><b>数形结合的典范</b>：图形（三圆外切、等边中心）一眼可见对称，但每个选项都要回到代数（距离公式、函数）才能定论，杜绝"凭图感秒选"。</li>
+<li><b>递进式区分</b>：A 考察对"斜率可任意"的警惕（一个反例即破）；B 考察对称中等距线的几何；C 考察连续性与解的个数；D 考察函数最值。四项难度梯度明显，区分不同层次考生。</li>
+<li><b>反套路</b>：表面是几何，实则每个选项都需要代数工具（不等式、方程、导数），呼应新高考"无价值不入题、无思维不命题、无情境不成题"。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 几何刻画与统一工具</h3>
+
+<p>三圆均为单位圆，圆心 \(O_1(-1,0),O_2(1,0),O_3(0,\sqrt3)\)，且 \(O_1O_2=O_1O_3=O_2O_3=2\)，故三圆两两外切，圆心构成边长为 \(2\) 的等边三角形。</p>
+
+<p>直线 \(l:kx-y+b=0\)。单位圆弦长公式：圆心到直线距离 \(d\)，则弦长 \(s=2\sqrt{1-d^2}\)（\(0\le d&lt;1\)）。于是</p>
+
+<div class="formula">
+\[
+d_1=\frac{|b-k|}{\sqrt{k^2+1}},\quad d_2=\frac{|b+k|}{\sqrt{k^2+1}},\quad d_3=\frac{|b-\sqrt3|}{\sqrt{k^2+1}}.
+\]
+</div>
+
+<p>"\(l\) 与三圆均有两个交点"等价于 \(d_1,d_2,d_3&lt;1\)。</p>
+
+<h3>7.2 选项 A：\(k\) 可以取任意实数？（错误）</h3>
+
+<p>固定 \(k\)，需存在 \(b\) 使三个距离均小于 \(1\)，即</p>
+
+<div class="formula">
+\[
+|b-k|&lt;\sqrt{k^2+1},\quad |b+k|&lt;\sqrt{k^2+1},\quad |b-\sqrt3|&lt;\sqrt{k^2+1}.
+\]
+</div>
+
+<p>记 \(q=\sqrt{k^2+1}\)。前两式给出 \(b\in(k-q,-k+q)\)（\(k\ge0\) 时取交集），第三式给出 \(b\in(\sqrt3-q,\sqrt3+q)\)。两区间有公共部分当且仅当</p>
+
+<div class="formula">
+\[
+\sqrt3-k&lt;-k+q\quad\text{且}\quad k-q&lt;\sqrt3+q
+\;\Longleftrightarrow\; \sqrt3+k&lt;2\sqrt{k^2+1}.
+\]
+</div>
+
+<p>平方（两边正）得 \(3+2\sqrt3\,k+k^2&lt;4k^2+4\)，即 \(3k^2-2\sqrt3\,k+1&gt;0\)，亦即 \((\sqrt3\,k-1)^2&gt;0\)。当 \(k=\dfrac{1}{\sqrt3}\)（及由对称性 \(k=-\dfrac{1}{\sqrt3}\)）时等号成立，区间退化为一点，对应的 \(b\) 使某一圆恰相切（非两交点）。故 <b>\(k\) 不能取任意实数，A 错误</b>。</p>
+
+<h3>7.3 选项 B：满足 \(s_1=s_2=s_3\) 的直线共有 3 条？（正确）</h3>
+
+<p>因为 \(s=2\sqrt{1-d^2}\) 在 \([0,1)\) 上严格递减，故 \(s_1=s_2=s_3\iff d_1=d_2=d_3\)。而"到等边三角形三顶点距离相等的直线"恰为平行于三边、过对边中点的三条中位线。</p>
+
+<p>代数上：\(d_1=d_2\Rightarrow |b-k|=|b+k|\Rightarrow b=0\) 或 \(k=0\)。</p>
+<ul>
+<li>若 \(b=0\)，则 \(d_1=d_2=\dfrac{|k|}{q}\)，\(d_3=\dfrac{\sqrt3}{q}\)。令相等得 \(|k|=\sqrt3\)，即 \(k=\pm\sqrt3\)，此时 \(d=\dfrac{\sqrt3}{2}&lt;1\)，得直线 \(y=\sqrt3\,x\)、\(y=-\sqrt3\,x\)（\(2\) 条）。</li>
+<li>若 \(k=0\)，则 \(d_1=d_2=|b|\)，\(d_3=|b-\sqrt3|\)。令相等得 \(b=\dfrac{\sqrt3}{2}\)，此时 \(d=\dfrac{\sqrt3}{2}&lt;1\)，得直线 \(y=\dfrac{\sqrt3}{2}\)（\(1\) 条）。</li>
+</ul>
+<p>共 <b>\(3\) 条</b>，B 正确。</p>
+
+<h3>7.4 选项 C：满足 \(s_1+s_2+s_3=3\) 的直线多于 3 条？（正确）</h3>
+
+<p>在上述三条等弦长线上，\(d=\dfrac{\sqrt3}{2}\)，每条弦长 \(s=2\sqrt{1-\frac34}=1\)，故三线和均为 \(3\)——这已给出 \(3\) 条。</p>
+
+<p>再看 \(b=0\) 的情形：此时</p>
+
+<div class="formula">
+\[
+s_1+s_2+s_3=\frac{4}{\sqrt{k^2+1}}+2\sqrt{1-\frac{3}{k^2+1}}.
+\]
+</div>
+
+<p>令 \(t=\sqrt{k^2+1}\;(t&gt;\sqrt3)\)，则 \(F(t)=\dfrac{4+2\sqrt{t^2-3}}{t}\)。解方程 \(F(t)=3\)：</p>
+
+<div class="formula">
+\[
+4+2\sqrt{t^2-3}=3t\;\Longrightarrow\;2\sqrt{t^2-3}=3t-4\;\Longrightarrow\;4(t^2-3)=9t^2-24t+16,
+\]
+\[
+5t^2-24t+28=0\;\Longrightarrow\; t=\frac{24\pm4}{10}=2\ \text{或}\ \frac{14}{5}.
+\]
+</div>
+
+<p>\(t=2\) 对应 \(k=\pm\sqrt3\)（即两条对角等弦长线）；\(t=\dfrac{14}{5}\) 对应 \(k=\pm\sqrt{\frac{171}{25}}\)（两条新直线，且此时 \(k^2&gt;2\) 保证 \(s_3\) 有意义）。仅 \(b=0\) 一支就已得到 \(4\) 条，加上水平线 \(y=\dfrac{\sqrt3}{2}\) 至少 \(5\) 条。故满足条件的直线<b>多于 \(3\) 条，C 正确</b>。</p>
+
+<h3>7.5 选项 D：当 \(b=0\) 时，\(s_1+s_2+s_3\) 的最大值为 \(\dfrac{2\sqrt{21}}{3}\)？（正确）</h3>
+
+<p>沿用 \(b=0,\ t=\sqrt{k^2+1}&gt;\sqrt3\)，求 \(F(t)=\dfrac{4+2\sqrt{t^2-3}}{t}\) 的最大值。设 \(u=\sqrt{t^2-3}\;(u&gt;0)\)，则 \(t=\sqrt{u^2+3}\)，</p>
+
+<div class="formula">
+\[
+F=\frac{4+2u}{\sqrt{u^2+3}}.
+\]
+</div>
+
+<p>求导（或令导数为零）：</p>
+
+<div class="formula">
+\[
+F'(u)=0\ \Longleftrightarrow\ \frac{2\sqrt{u^2+3}-(4+2u)\cdot\frac{u}{\sqrt{u^2+3}}}{u^2+3}=0
+\ \Longleftrightarrow\ 2(u^2+3)-u(4+2u)=0,
+\]
+\[
+2u^2+6-4u-2u^2=0\ \Longleftrightarrow\ 6-4u=0\ \Longleftrightarrow\ u=\frac{3}{2}.
+\]
+</div>
+
+<p>此时 \(t=\sqrt{\frac94+3}=\sqrt{\frac{21}{4}}=\dfrac{\sqrt{21}}{2}\)，最大值</p>
+
+<div class="formula">
+\[
+F_{\max}=\frac{4+2\cdot\frac32}{\frac{\sqrt{21}}{2}}=\frac{7}{\frac{\sqrt{21}}{2}}=\frac{14}{\sqrt{21}}=\frac{2\sqrt{21}}{3}.
+\]
+</div>
+
+<p>故 <b>D 正确</b>。</p>
+
+<div class="note"><b>结论：</b>正确选项为 <b>BCD</b>。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>第一招·弦长先转"距离"</b>：见到圆被直线截弦长，第一反应写 \(s=2\sqrt{r^2-d^2}\)，把几何量统一成"圆心到直线距离"，化归代数。</li>
+<li><b>第二招·A 项用"反例"破</b>：不必穷举，只需找到使可行区间退化的 \(k=\pm1/\sqrt3\) 即可否定"任意实数"，省时。</li>
+<li><b>第三招·B 项靠"对称"</b>：等弦长⇔等距离，等边三角形的"到三顶点等距直线"就是三条中位线，几何直观直接给出 \(3\) 条。</li>
+<li><b>第四招·C、D 用"单变量化"</b>：对 \(b=0\) 特例令 \(t=\sqrt{k^2+1}\)，把和写成 \(F(t)\)，C 解 \(F(t)=3\)、D 求 \(F(t)\) 极值，计算干净。</li>
+<li><b>点睛之笔</b>：多选题务必逐项独立判断，不能"看顺眼就选"；尤其 C 的"多于 3 条"靠连续函数的介值/多解来证，而非数出恰好几条。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>多选压轴常态化</b>：以"圆/圆锥曲线 + 多选判断"作为选择压轴，综合考查数形结合与逐项论证，将继续高频出现。</li>
+<li><b>几何代数化</b>：图形只是背景，实质每个选项都要代数落地（距离、方程、导数），"凭图感"越来越不可靠。</li>
+<li><b>对称性深度挖掘</b>：等边三角形、正多边形、圆锥曲线对称轴等对称性，仍是命题者设置"等距/等长"选项的富矿。</li>
+<li><b>函数最值与存在性</b>：将几何量表为参数函数后求最值、判解数，是连接解析几何与微积分（求导）的常考交汇点。</li>
+<li><b>反例意识</b>：A 类"是否任意/是否恒成立"选项，训练学生用反例或充要条件精准否定，是区分度关键。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>障碍 1·"弦长"不转距离</b>：直接在图上量、凭感觉判断，导致 A、C 误判；正确做法是统一用 \(s=2\sqrt{1-d^2}\)。</li>
+<li><b>障碍 2·A 项误以为真</b>：看图觉得"调斜率总能穿过三圆"，忽略 \(k=\pm1/\sqrt3\) 处区间退化的反例，错选 A。</li>
+<li><b>障碍 3·B 项漏数或多数</b>：未利用"等弦长⇔等距离"的单调递减性质，或漏掉水平中位线，把 \(3\) 条数错。</li>
+<li><b>障碍 4·C 项不敢判"多于 3"</b>：只找到 3 条等弦长线就停手，未进一步解方程 \(F(t)=3\) 发现还有 \(t=14/5\) 两支，从而漏选 C。</li>
+<li><b>障碍 5·D 项计算失误</b>：求导或换元 \(u=\sqrt{t^2-3}\) 时符号/代数出错，得到错误最值；或忽略 \(t&gt;\sqrt3\) 的定义域。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<ul>
+<li><b>共识（权威来源一致）</b>：21 世纪教育网（zy.21cnjy.com/25912080、25923186）、高考真题 PDF（static-gkcx.gaokao.cn）、四季读书网（sjds.net/737551.html）均给出答案 <b>BCD</b>，并一致采用"弦长→圆心到直线距离"的统一解法；D 项最值均算得 \(\dfrac{2\sqrt{21}}{3}\)。</li>
+<li><b>分歧 / 误传</b>：个别非权威转录稿（如某教习网页面）出现"答案 BC"或把 A 项理由写反等讹误，属排版/转录错误；其逐项论证自相矛盾，不应采信。教学中应以官方真题与主流解析平台的 BCD 为准。</li>
+<li><b>评价风向</b>：一线教师称本题"不能只凭图感"，强调弦长问题的第一反应应是"圆心到直线距离"；同时指出 A 项专门考查"斜率不能任意"的警惕性，是区分中上层次考生的关键。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>固化解题"第一反应"</b>：直线与圆相交/弦长问题，强制训练写 \(d\)（圆心到直线距离）→ \(s=2\sqrt{r^2-d^2}\)，形成肌肉记忆。</li>
+<li><b>强化"数形结合"的代数落地</b>：看图获得直觉后，必须回到距离公式与方程验证，避免"图感误判"。</li>
+<li><b>对称性的系统梳理</b>：系统复习等边三角形、正多边形、圆锥曲线的对称性，训练"到多点等距的直线有哪些"的几何结论。</li>
+<li><b>单变量化与求导最值</b>：对含参数的几何和/最值，训练令 \(t=\sqrt{k^2+1}\) 等换元，转化为一元函数求导，减少运算错误。</li>
+<li><b>多选题策略</b>：逐项独立判断、用反例否定、用构造/方程肯定；特别训练"多于 N 条"类存在性选项的论证（连续性、多解）。</li>
+<li><b>错题辨析</b>：把 A 项反例 \(k=\pm1/\sqrt3\)、C 项 \(t=14/5\) 两支作为典型，反向巩固正确逻辑。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ol>
+<li>2026 年高考数学全国一卷真题（含解析），21 世纪教育网，zy.21cnjy.com/25912080</li>
+<li>2026 年全国一卷数学卷高考真题与解析，21 世纪教育网，zy.21cnjy.com/25923186</li>
+<li>2026 年普通高等学校招生全国统一考试数学试题全国Ⅰ卷含解析（高考真题），高考网 PDF，static-gkcx.gaokao.cn/upload/zhenti/20260608/1780882894_8535.pdf</li>
+<li>2026 年高考数学真题 1 卷解析版，四季读书网，sjds.net/737551.html</li>
+<li>2026 年全国一卷数学卷高考真题（附答案带解析），深圳本地宝，sz.bendibao.com/edu/202669/1005149.shtm</li>
+</ol>
+
+
+</div>
+</body>
+</html>

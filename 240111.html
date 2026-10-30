@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年高考数学全国一卷（新高考Ⅰ卷）第 11 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年高考数学全国一卷（新高考Ⅰ卷）第 11 题研究报告</h1>
+  <div class="lead">研究对象：丝带曲线（笛卡尔卵形线型）多选题　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>设计一条美丽的丝带，其造型可以看作图中的曲线 <span class="formula">\(C\)</span> 的一部分。已知 <span class="formula">\(C\)</span> 过坐标原点 <span class="formula">\(O\)</span>，且 <span class="formula">\(C\)</span> 上的点满足：横坐标大于 <span class="formula">\(-2\)</span>；到点 <span class="formula">\(F(2,0)\)</span> 的距离与到定直线 <span class="formula">\(x=a\ (a&lt;0)\)</span> 的距离之积为 <span class="formula">\(4\)</span>。则</p>
+
+<table>
+<thead><tr><th>选项</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>A</td><td><span class="formula">\(a=-2\)</span></td></tr>
+<tr><td>B</td><td>点 <span class="formula">\((2\sqrt{2},0)\)</span> 在 <span class="formula">\(C\)</span> 上</td></tr>
+<tr><td>C</td><td><span class="formula">\(C\)</span> 在第一象限的点的纵坐标的最大值为 <span class="formula">\(1\)</span></td></tr>
+<tr><td>D</td><td>当点 <span class="formula">\((x_{0},y_{0})\)</span> 在 <span class="formula">\(C\)</span> 上时，<span class="formula">\(y_{0}\leqslant\dfrac{4}{x_{0}+2}\)</span></td></tr>
+</tbody>
+</table>
+
+<blockquote>参考答案：<b>A、B、D</b>（C 错误）。本题为多项选择题，全部选对得 6 分，部分选对得部分分，有选错得 0 分。</blockquote>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2024 年普通高考数学（新高考Ⅰ卷 / 全国一卷）</td></tr>
+<tr><td>题号</td><td>第 11 题（多项选择题第 3 小题）</td></tr>
+<tr><td>题型与分值</td><td>多选题，6 分</td></tr>
+<tr><td>所属模块</td><td>解析几何·曲线与方程（求轨迹方程、据方程研曲线性质）</td></tr>
+<tr><td>难度定位</td><td>较难题（多选题压轴之一，综合"求参 + 点在曲线上 + 最值 + 不等式"）</td></tr>
+<tr><td>实测数据</td><td>暂无官方公开的省级得分率；据一线教师评析，本题区分度良好，C 选项极易被误判为正确，是主要失分点</td></tr>
+<tr><td>考查目标</td><td>运算求解能力，数形结合、化归与转化的思想</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>曲线与方程</b>：由几何条件建立动点方程；"点在曲线上 ⇔ 坐标满足方程"是判定 B、C 的基础。</li>
+<li><b>两点间距离公式与点到直线距离公式</b>：<span class="formula">\(d(M,F)=\sqrt{(x-2)^{2}+y^{2}}\)</span>，到直线 <span class="formula">\(x=a\)</span> 的距离为 <span class="formula">\(|x-a|\)</span>。</li>
+<li><b>待定系数/代入求参</b>：利用曲线过原点 <span class="formula">\(O(0,0)\)</span> 代入，唯一确定 <span class="formula">\(a=-2\)</span>（判 A）。</li>
+<li><b>不等式性质</b>：由 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\geqslant |y|\)</span> 直接推出 D，无需求最值。</li>
+<li><b>函数最值（导数/单调性）</b>：将第一象限纵坐标平方视为 <span class="formula">\(x\)</span> 的函数，用导数或特例法判断最大值是否等于 1（判 C）。</li>
+<li><b>特例法（举反例）</b>：要证 C 错，只需举出一个第一象限点使 <span class="formula">\(y&gt;1\)</span> 即可，比严格求最值更省时。</li>
+<li><b>对称性</b>：方程只含 <span class="formula">\(y^{2}\)</span>，曲线关于 <span class="formula">\(x\)</span> 轴对称，利于整体把握形状。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>能力维度（高考评价体系）</th><th>本题落点</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>把"距离之积为 4、横坐标大于 -2"准确翻译成代数方程，并识别出 <span class="formula">\(x&gt;-2\)</span> 使 <span class="formula">\(|x+2|=x+2\)</span></td></tr>
+<tr><td>抽象概括</td><td>将"丝带造型"这一几何情境抽象为笛卡尔卵形线型的曲线方程</td></tr>
+<tr><td>推理论证</td><td>逐项逻辑判定：代入求参、坐标代入检验、不等式放缩、反例构造</td></tr>
+<tr><td>运算求解</td><td>原点代入解 <span class="formula">\(a\)</span>；代入 <span class="formula">\((2\sqrt{2},0)\)</span> 验算；对 <span class="formula">\(y^{2}\)</span> 函数求导或取特例</td></tr>
+<tr><td>探索创新</td><td>在四个异质选项间灵活切换方法（求参/检验/反例/放缩），体现解题策略的多样性</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>几何条件 → 代数方程</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>逐项判定与反例构造</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★</span></td><td>代入、化简、求导</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★</span></td><td>想象丝带（曲线）形状、对称性、最值位置</td></tr>
+<tr><td>数据分析</td><td><span class="star">★</span></td><td>本题无数据统计分析</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★</span></td><td>用曲线方程刻画几何对象</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><b>情境美学化、去模板化</b>：以"设计一条美丽的丝带"为情境，弱化了传统解析几何的"直线与圆锥曲线联立"套路，转向"依定义建方程、据方程研性质"。</li>
+<li><b>新定义曲线（笛卡尔卵形线型）</b>：以"到定点与到定直线的距离之积为常数"定义曲线，既贴近圆锥曲线"到定点与定直线距离之比为常数"的经典定义，又做了变式，考查迁移能力。</li>
+<li><b>四选项异质、综合区分</b>：A 考"求参"、B 考"点在曲线上"、C 考"最值/反例"、D 考"不等式放缩"，四个考点层层递进，覆盖曲线与方程的完整研究链条。</li>
+<li><b>C 是精心设计的陷阱</b>：学生易凭直觉或粗略估算认为第一象限最高点是 <span class="formula">\((2,1)\)</span>（确实 <span class="formula">\((2,1)\)</span> 在曲线上且 <span class="formula">\(y=1\)</span>），从而误判 C 正确；实则曲线在 <span class="formula">\(x\approx1.67\)</span> 处纵坐标略高于 1。</li>
+<li><b>区分度良好</b>：能否正确排除 C、并用放缩简洁证明 D，是区分中上水平与顶尖水平考生的关键。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 建立曲线方程并判定 A</h3>
+
+<p>设 <span class="formula">\(M(x,y)\)</span> 为 <span class="formula">\(C\)</span> 上任意一点，则</p>
+<p class="formula">\[d(M,F)=\sqrt{(x-2)^{2}+y^{2}},\qquad d(M,\,x=a)=|x-a|.\]</p>
+<p>由题意 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\cdot |x-a|=4\)</span>，且 <span class="formula">\(x&gt;-2\)</span>。</p>
+<p>因 <span class="formula">\(C\)</span> 过原点 <span class="formula">\(O(0,0)\)</span>，代入得</p>
+<p class="formula">\[\sqrt{(0-2)^{2}+0}\cdot |0-a|=2\cdot(-a)=4\quad(\text{因 }a&lt;0,\ |a|=-a),\]</p>
+<p>故 <span class="formula">\(-a=2\)</span>，即 <span class="formula">\(a=-2\)</span>。<b>A 正确。</b></p>
+<p>于是点到直线的距离化为 <span class="formula">\(|x+2|\)</span>，结合 <span class="formula">\(x&gt;-2\)</span> 得 <span class="formula">\(|x+2|=x+2\)</span>，曲线方程为</p>
+<p class="formula">\[\sqrt{(x-2)^{2}+y^{2}}\,(x+2)=4,\qquad x&gt;-2.\]</p>
+<p>即</p>
+<p class="formula">\[y^{2}=\frac{16}{(x+2)^{2}}-(x-2)^{2}.\tag{1}\]</p>
+
+<h3>7.2 判定 B</h3>
+
+<p>检验点 <span class="formula">\((2\sqrt{2},0)\)</span>：代入 (1) 右端，</p>
+<p class="formula">\[\frac{16}{(2\sqrt{2}+2)^{2}}-(2\sqrt{2}-2)^{2}
+=\frac{16}{4(\sqrt{2}+1)^{2}}-4(\sqrt{2}-1)^{2}.\]</p>
+<p>其中 <span class="formula">\((\sqrt{2}+1)^{2}=3+2\sqrt{2}\)</span>，故第一项 <span class="formula">\(\dfrac{4}{3+2\sqrt{2}}=4(3-2\sqrt{2})=12-8\sqrt{2}\)</span>；第二项 <span class="formula">\(4(3-2\sqrt{2})=12-8\sqrt{2}\)</span>。两者相等，右端为 <span class="formula">\(0\)</span>，即 <span class="formula">\(y^{2}=0\)</span>。</p>
+<p>故 <span class="formula">\((2\sqrt{2},0)\)</span> 满足曲线方程，<b>B 正确。</b>（注：它正是第一象限弧与 <span class="formula">\(x\)</span> 轴的右端交点。）</p>
+
+<h3>7.3 判定 C（错误）</h3>
+
+<p><b>举反例（特例法）</b>：取第一象限点 <span class="formula">\(x=\dfrac{3}{2}\)</span>，由 (1) 得</p>
+<p class="formula">\[y^{2}=\frac{16}{\left(\frac{7}{2}\right)^{2}}-\left(-\frac{1}{2}\right)^{2}
+=\frac{64}{49}-\frac{1}{4}=\frac{256-49}{196}=\frac{207}{196}&gt;1.\]</p>
+<p>故 <span class="formula">\(y=\dfrac{\sqrt{207}}{14}\approx1.028&gt;1\)</span>，即存在第一象限点其纵坐标大于 1，因此"纵坐标最大值为 1"不成立。<b>C 错误。</b></p>
+
+<p><b>补充（精确最大值）</b>：在第一象限 <span class="formula">\(x\in(0,2\sqrt{2})\)</span> 上，令 <span class="formula">\(f(x)=\dfrac{16}{(x+2)^{2}}-(x-2)^{2}\)</span>。求导</p>
+<p class="formula">\[f'(x)=-\frac{32}{(x+2)^{3}}-2(x-2).\]</p>
+<p>令 <span class="formula">\(f'(x)=0\)</span>，即 <span class="formula">\(\dfrac{16}{(x+2)^{3}}=2-x\)</span>，整理为 <span class="formula">\((x+2)^{3}(2-x)=16\)</span>。除 <span class="formula">\(x=0\)</span>（对应原点，<span class="formula">\(y=0\)</span>）外，另一根约为 <span class="formula">\(x\approx1.672\)</span>，此时 <span class="formula">\(y_{\max}\approx1.048&gt;1\)</span>。进一步可算得 <span class="formula">\(y_{\max}^{2}=-2(u-2)(u-4)\)</span>（其中 <span class="formula">\(u=x+2\)</span> 满足 <span class="formula">\(u^{3}(4-u)=16\)</span>），确严格大于 1。</p>
+
+<h3>7.4 判定 D</h3>
+
+<p>由曲线方程 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\,(x+2)=4\)</span> 且 <span class="formula">\(x+2&gt;0\)</span>，得</p>
+<p class="formula">\[\sqrt{(x-2)^{2}+y^{2}}=\frac{4}{x+2}.\]</p>
+<p>由于 <span class="formula">\((x-2)^{2}\geqslant0\)</span>，有 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\geqslant\sqrt{y^{2}}=|y|\)</span>，于是</p>
+<p class="formula">\[\frac{4}{x+2}\geqslant |y|\geqslant y.\]</p>
+<p>即对任意曲线上的点 <span class="formula">\((x_{0},y_{0})\)</span>，恒有 <span class="formula">\(y_{0}\leqslant\dfrac{4}{x_{0}+2}\)</span>（当 <span class="formula">\(y_{0}&lt;0\)</span> 时更显然成立）。<b>D 正确。</b></p>
+
+<p>综上，正确选项为 <b>A、B、D</b>。</p>
+
+<div class="note"><b>易错提醒：</b>判定 C 时，若仅注意到点 <span class="formula">\((2,1)\)</span> 在曲线上（代入 (1)：<span class="formula">\(16/16-0=1\)</span>，确有 <span class="formula">\(y=1\)</span>），便草率认定"最大值=1"，就会误选 C。必须意识到曲线在 <span class="formula">\((2,1)\)</span> 附近仍向上鼓起，最高点位于 <span class="formula">\(x\approx1.67\)</span> 处。考场上用"举反例"最稳妥：只要找到一个 <span class="formula">\(y&gt;1\)</span> 的第一象限点即可否决 C。</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>先求方程再判性质</b>：拿到"曲线与方程"类题，第一步务必把几何语言译成代数方程（本题关键是 <span class="formula">\(x&gt;-2\Rightarrow |x+2|=x+2\)</span> 去掉绝对值）。</li>
+<li><b>原点是天然的"求参钥匙"</b>：A 这类"确定参数"选项，直接代入已知过点最快捷。</li>
+<li><b>B 用代入检验</b>：判断点是否在曲线上，只需代坐标验方程，配合有理化化简。</li>
+<li><b>C 用反例而非硬求最值</b>：多选题只需证伪，取 <span class="formula">\(x=3/2\)</span> 即可见 <span class="formula">\(y^{2}=207/196&gt;1\)</span>，比完整求导省时；若想求精确最值，再上导数。</li>
+<li><b>D 用放缩秒杀</b>：<span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\geqslant|y|\)</span> 一步到位，无需展开，体现"不等式性质"的威力。</li>
+<li><b>数形结合辅助</b>：由对称性（只含 <span class="formula">\(y^{2}\)</span>）与几个关键点 <span class="formula">\((0,0),(2,1),(2\sqrt{2},0)\)</span> 大致描出丝带形状，有助于预判最值位置。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>曲线与方程重回压轴多选</b>：在圆锥曲线大题前置、模块整合背景下，以"新定义曲线"考查建方程与研性质，成为多选压轴的高频形态。</li>
+<li><b>定义变式化</b>：在经典圆锥曲线定义（到定点/定直线距离之比为常数）基础上，做"积/和/差为常数""到两点/点到线"等变式，考查迁移。</li>
+<li><b>四选项异质综合</b>：一道题内同时覆盖求参、点在曲线、最值、不等式、对称性等多个子考点，强调研究的完整性。</li>
+<li><b>陷阱选项（如 C）常态化</b>：用"看似端点最值"误导学生，考查严谨性与反例意识。</li>
+<li><b>轻联立、重分析</b>：弱化传统联立运算，强化对方程结构的理解与不等式放缩，呼应"反套路、考素养"导向。</li>
+<li><b>情境更贴近应用与美学</b>：丝带、光路、轨迹设计等生活/工程情境将持续出现。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>误判 C 为正确</b>：最普遍错误。被 <span class="formula">\((2,1)\)</span> 这一"看起来像顶点"的点误导，未验证曲线在该点附近是否更高，从而漏掉对 C 的反例检验。</li>
+<li><b>绝对值处理错误</b>：未利用 <span class="formula">\(x&gt;-2\)</span> 将 <span class="formula">\(|x+2|\)</span> 化为 <span class="formula">\(x+2\)</span>，导致方程带绝对值、后续判定 B、D 受阻。</li>
+<li><b>建方程不严谨</b>：把"距离之积"误写成"距离之和"或比例，得到错误曲线方程。</li>
+<li><b>最值求错或不敢用反例</b>：硬求导时算错 <span class="formula">\(f'(x)\)</span>，或没想到用特例法快速否决 C，在考场上耗费过多时间。</li>
+<li><b>D 想复杂</b>：试图代入 (1) 配方求上界，而未用 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\geqslant|y|\)</span> 一步放缩，容易出错或漏掉 <span class="formula">\(y&lt;0\)</span> 情形。</li>
+<li><b>多选策略失误</b>：因 C 拿不准而连带漏选 B 或 D，损失部分分。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题作为 2024 新高考Ⅰ卷多选题压轴之一，网络教研资料充分，主流共识如下：</p>
+
+<ul>
+<li><b>答案高度一致</b>：腾讯 ima 知识库、教习网、优途升学网等多家解析均给出参考答案 <b>ABD</b>，与本文独立推导吻合。</li>
+<li><b>标准解析思路统一</b>：① 将原点代入曲线方程求 <span class="formula">\(a=-2\)</span>（判 A）；② 化简得方程后代入 <span class="formula">\((2\sqrt{2},0)\)</span> 检验（判 B）；③ 利用特例法（取某 <span class="formula">\(x\)</span> 使 <span class="formula">\(y&gt;1\)</span>）判定 C 错；④ 由 <span class="formula">\(\sqrt{(x-2)^{2}+y^{2}}\geqslant|y|\)</span> 结合方程放缩判 D 正确。</li>
+<li><b>对 C 的讨论最集中</b>：几乎所有评析都强调 C 是"易错陷阱"，指出很多考生凭直觉选了 C；正确做法是用反例或求真正最大值（约 1.05）来否决。</li>
+<li><b>教学评价</b>：普遍认为本题"形在美学、实在方程"，是检验学生是否真正掌握"由几何条件建方程、据方程研性质"全流程的优质题，区分度好、导向正。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>强化"曲线与方程"全流程训练</b>：从建系、设点、列式、化简到据方程研性质，形成闭环，避免只会联立不会建方程。</li>
+<li><b>狠抓绝对值与隐含条件</b>：遇到"横坐标大于某值"要立即转化为去绝对值、定定义域，这是本题建模的第一道关。</li>
+<li><b>培养反例意识</b>：多选题的"错误项"往往用举反例最快否决，训练学生"先试特殊值、再决定是否硬算"。</li>
+<li><b>不等式放缩要敏感</b>：遇到 <span class="formula">\(\sqrt{A^{2}+B^{2}}\)</span> 类结构，自然联想 <span class="formula">\(\geqslant|A|,|B|\)</span>，用于快速证明 D 类结论。</li>
+<li><b>数形结合预判</b>：动手前先用对称性、关键点粗略勾勒曲线形状，帮助定位最值与陷阱。</li>
+<li><b>规范多选策略</b>：对拿不准的选项宁可观望，确保已确认项得分；对 C 类陷阱要"宁可信其错，举反例验证"。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>腾讯 ima 知识库．2024 年高考数学（新课标 I 卷）第 11 题（参考答案 ABD）．https://ima.qq.com/wiki/?shareId=42d6c1d380869074fa08f2250314105778e875d5e1ace1726bc6f63c13883af1</li>
+<li>优途升学网．2024 年高考新高考 I 卷（数学）-曲线方程（第 11 题解析）．https://news.ytowin.com/2024/1224/11/4804337affe8a5.html</li>
+<li>教习网．2024 年高考真题——数学（新高考Ⅰ卷）Word 版含解析（第 11 题）．https://www.51jiaoxi.com/doc-15850410.html</li>
+</ul>
+
+
+</div>
+</body>
+</html>

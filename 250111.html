@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年高考数学全国一卷第 11 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 年高考数学全国一卷第 11 题研究报告</h1>
+  <div class="lead">研究对象：三角恒等变换与解三角形综合（多选题压轴）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+<blockquote>
+已知 \(\triangle ABC\) 的面积为 \(\dfrac14\)，若 \(\cos 2A+\cos 2B+2\sin C=2\)，\(\cos A\cos B\sin C=\dfrac14\)，则（　　）
+<p>
+A. \(\sin C=\sin^{2}A+\sin^{2}B\)<br>
+B. \(AB=\sqrt{2}\)<br>
+C. \(\sin A+\sin B=\dfrac{\sqrt{6}}{2}\)<br>
+D. \(AC^{2}+BC^{2}=3\)
+</p>
+</blockquote>
+<p class="kw">题源：2025 年普通高等学校招生全国统一考试（全国一卷 / 新高考Ⅰ卷）第 11 题，<b>多选题</b>（多项选择题），6 分，全部选对得 6 分，部分选对得部分分，有选错得 0 分。</p>
+
+<h2>二、试题定位与基本信息</h2>
+<table>
+  <tr><th>项目</th><th>内容</th></tr>
+  <tr><td>卷型</td><td>2025 全国一卷（新高考Ⅰ卷）</td></tr>
+  <tr><td>题号</td><td>第 11 题（多项选择题，选择题第二部分压轴）</td></tr>
+  <tr><td>题型</td><td>多选题（四选多，不定项）</td></tr>
+  <tr><td>分值</td><td>6 分</td></tr>
+  <tr><td>考查模块</td><td>三角函数与解三角形 —— 三角恒等变换 + 解三角形</td></tr>
+  <tr><td>难度定位</td><td>较难（多选题压轴，综合性与区分度高）</td></tr>
+  <tr><td>核心考点</td><td>二倍角公式、三角形形状判定（证直角）、正弦定理、面积公式、和差化积</td></tr>
+  <tr><td>标准答案</td><td><b>A、B、C</b>（据 21 世纪教育网、教习网、高考真题文献库等一致确认）</td></tr>
+  <tr><td>实测数据</td><td>暂无权威全省均分公开；据一线教师评析，本题为选择部分主要拉分题，满分率低、区分度强</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+<ul>
+  <li><b>二倍角公式</b>：\(\cos 2\theta=1-2\sin^{2}\theta\)，用于将第一式化为正弦平方关系，直接得到选项 A。</li>
+  <li><b>三角形内角和与诱导</b>：\(\sin C=\sin(A+B)\)，且 \(A+B=\pi-C\)，是"形状判定"的桥梁。</li>
+  <li><b>两角和正弦</b>：\(\sin(A+B)=\sin A\cos B+\cos A\sin B\)，用于与第一式变形对比。</li>
+  <li><b>正弦定理与外接圆</b>：\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R\)，其中 \(c=AB\)，\(a=BC\)，\(b=AC\)。</li>
+  <li><b>三角形面积公式</b>：\(S=\dfrac12ab\sin C=\dfrac{abc}{4R}\)，本题 \(S=\dfrac14\) 用于定量求边长。</li>
+  <li><b>直角三角形性质</b>：当 \(C=\dfrac{\pi}{2}\) 时，\(\sin C=1\)，\(a=c\sin A\)，\(b=c\sin B\)，勾股定理 \(a^{2}+b^{2}=c^{2}\)。</li>
+  <li><b>分类讨论 / 反证思想</b>：通过讨论 \(C\) 与 \(\dfrac{\pi}{2}\) 的大小关系排除非直角情形。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+<table>
+  <tr><th>《中国高考评价体系》能力</th><th>在本题中的体现</th></tr>
+  <tr><td>信息获取</td><td>从两个条件等式与面积条件中提取可操作信息（二倍角、乘积结构、面积）。</td></tr>
+  <tr><td>抽象概括</td><td>将零散三角条件抽象为"判定三角形形状 + 定量计算"的结构化问题。</td></tr>
+  <tr><td>推理论证</td><td>严格证明 \(C=\dfrac{\pi}{2}\)（分类讨论/反证），是本题逻辑核心。</td></tr>
+  <tr><td>运算求解</td><td>由 \(\sin 2A=\dfrac12\) 求 \(A,B\)，用和差化积算 \(\sin A+\sin B\)，用面积求 \(c\)。运算链长但可控。</td></tr>
+  <tr><td>探索创新</td><td>需主动"先定性再定量"：先证直角再代入，体现解题策略的选择。</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+<table>
+  <tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+  <tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>把条件抽象为角关系与形状判定问题。</td></tr>
+  <tr><td>逻辑推理</td><td><span class="star">★★★</span></td><td>证直角的分类讨论链条是得分关键。</td></tr>
+  <tr><td>数学运算</td><td><span class="star">★★★</span></td><td>三角求值与边长计算要求准确。</td></tr>
+  <tr><td>直观想象</td><td><span class="star">★★</span></td><td>对"三角形形状"的几何直觉辅助判断。</td></tr>
+  <tr><td>数据分析</td><td><span class="star">★</span></td><td>本题以解析为主，数据分析要求较低。</td></tr>
+  <tr><td>数学建模</td><td><span class="star">★</span></td><td>以几何/代数模型求解，建模色彩较弱。</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+<ul>
+  <li><b>多选题压轴，综合性强</b>：将三角恒等变换与解三角形融合，既考变形又考判定与计算。</li>
+  <li><b>破题关键在"形状判定"</b>：题目并未直接给出角的值，而是给出两个三角等式，要求考生先推导出 \(\triangle ABC\) 为直角三角形（直角在 \(C\)），属于"由条件反推图形性质"的考查。</li>
+  <li><b>先定性、后定量</b>：定性得到 \(C=\dfrac{\pi}{2}\) 与 \(A,B\) 的具体值后，定量判定 B、C、D 才有抓手，体现"策略选择"的区分度。</li>
+  <li><b>分类讨论制造区分</b>：能否严谨排除 \(C\neq\dfrac{\pi}{2}\) 的情形，是中等生与优等生的分水岭。</li>
+  <li><b>与经典题型一脉相承但包装更新</b>：本质是"由三角恒等式判定三角形形状"这一经典母题的现代化呈现。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 判定选项 A（直接化简）</h3>
+<p>由二倍角公式 \(\cos 2\theta=1-2\sin^{2}\theta\)，代入第一式：</p>
+<div class="formula">\[ (1-2\sin^{2}A)+(1-2\sin^{2}B)+2\sin C=2 \;\Longrightarrow\; 2-2(\sin^{2}A+\sin^{2}B)+2\sin C=2, \]</div>
+<p>化简得</p>
+<div class="formula">\[ \sin C=\sin^{2}A+\sin^{2}B. \]</div>
+<p>这正是选项 A，故 <b>A 正确</b>。</p>
+
+<h3>7.2 核心突破：证明 \(\triangle ABC\) 为直角三角形（\(C=\dfrac{\pi}{2}\)）</h3>
+<p>由 7.1 得 \(\sin C=\sin^{2}A+\sin^{2}B\)。又 \(\sin C=\sin(A+B)=\sin A\cos B+\cos A\sin B\)，故</p>
+<div class="formula">\[ \sin^{2}A+\sin^{2}B=\sin A\cos B+\cos A\sin B, \]</div>
+<p>移项整理为</p>
+<div class="formula">\[ \sin A(\sin A-\cos B)+\sin B(\sin B-\cos A)=0. \tag{★} \]</div>
+<p>注意到 \(\cos B=\sin\!\left(\dfrac{\pi}{2}-B\right)\)，\(\cos A=\sin\!\left(\dfrac{\pi}{2}-A\right)\)，且 \(A+B=\pi-C\)。</p>
+<ul>
+  <li>若 \(C&lt;\dfrac{\pi}{2}\)，则 \(A+B&gt;\dfrac{\pi}{2}\)，于是 \(A&gt;\dfrac{\pi}{2}-B\)，故 \(\sin A&gt;\cos B\)，同理 \(\sin B&gt;\cos A\)，(★) 左式 \(&gt;0\)，矛盾；</li>
+  <li>若 \(C&gt;\dfrac{\pi}{2}\)，则 \(A+B&lt;\dfrac{\pi}{2}\)，于是 \(A&lt;\dfrac{\pi}{2}-B\)，故 \(\sin A&lt;\cos B\)，同理 \(\sin B&lt;\cos A\)，(★) 左式 \(&lt;0\)，矛盾。</li>
+</ul>
+<p>因此只能 \(C=\dfrac{\pi}{2}\)，即 \(\triangle ABC\) 为直角三角形，直角在 \(C\)。<span class="note">另法（文献常见）：由 \(\sin^{2}A+\sin^{2}B=1+\cos C\cos(A-B)\) 与 \(\cos A\cos B\sin C=\dfrac14&gt;0\) 知 \(A,B\) 均为锐角，再结合 \(\sin C-\cos C\cos(A-B)=1\) 亦可推得 \(C=\dfrac{\pi}{2}\)。</span></p>
+
+<h3>7.3 定量计算：判定 B、C</h3>
+<p>由 \(C=\dfrac{\pi}{2}\) 得 \(\sin C=1\)，且 \(B=\dfrac{\pi}{2}-A\)。代入第二式：</p>
+<div class="formula">\[ \cos A\cos B\sin C=\cos A\sin A=\frac12\sin 2A=\frac14 \;\Longrightarrow\; \sin 2A=\frac12. \]</div>
+<p>因 \(A\) 为锐角，得 \(2A=\dfrac{\pi}{6}\) 或 \(\dfrac{5\pi}{6}\)，即 \(A=\dfrac{\pi}{12}\) 或 \(\dfrac{5\pi}{12}\)，相应 \(B=\dfrac{5\pi}{12}\) 或 \(\dfrac{\pi}{12}\)。故 \(\{A,B\}=\left\{\dfrac{\pi}{12},\dfrac{5\pi}{12}\right\}\)。</p>
+<p><b>判定 B</b>：面积 \(S=\dfrac14=\dfrac12ab\sin C=\dfrac12ab\)，故 \(ab=\dfrac12\)。又直角三角形中 \(a=c\sin A\)，\(b=c\sin B\)，于是</p>
+<div class="formula">\[ ab=c^{2}\sin A\sin B=c^{2}\cdot\frac12\sin 2A=c^{2}\cdot\frac14=\frac12 \;\Longrightarrow\; c^{2}=2,\; c=\sqrt{2}. \]</div>
+<p>而 \(c=AB\)，故 \(AB=\sqrt{2}\)，<b>B 正确</b>。</p>
+<p><b>判定 C</b>：由和差化积，</p>
+<div class="formula">\[ \sin A+\sin B=2\sin\frac{A+B}{2}\cos\frac{A-B}{2}=2\sin\frac{\pi}{4}\cos\!\left(-\frac{\pi}{6}\right)=2\cdot\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}=\frac{\sqrt6}{2}. \]</div>
+<p>故 <b>C 正确</b>。</p>
+
+<h3>7.4 判定 D（排除）</h3>
+<p>\(AC=b\)，\(BC=a\)，在直角三角形中由勾股定理</p>
+<div class="formula">\[ AC^{2}+BC^{2}=b^{2}+a^{2}=c^{2}=2\neq 3. \]</div>
+<p>故 <b>D 错误</b>。</p>
+<div class="note">综上，正确选项为 <b>A、B、C</b>。</div>
+
+<h2>八、解答技巧</h2>
+<ul>
+  <li><b>看到二倍角先化为单角平方</b>：\(\cos 2\theta=1-2\sin^{2}\theta\) 是打开第一式的钥匙，立得选项 A。</li>
+  <li><b>"形状判定"套路</b>：把条件统一成同角同名函数后，通过 \(\sin A-\cos B\)、\(\sin B-\cos A\) 的符号做分类讨论，是证明直角的标准手法。</li>
+  <li><b>多选题先定"必真项"</b>：A 几乎白送，先拿下；再集中火力攻难点（证直角）。</li>
+  <li><b>直角设定下的边角换算</b>：善用 \(a=c\sin A\)、\(b=c\sin B\) 与 \(ab=c^{2}\sin A\sin B\)，可快速由面积得出 \(c\)。</li>
+  <li><b>和差化积算 \(\sin A+\sin B\)</b>：避免分别求 \(\sin\dfrac{\pi}{12}\)、\(\sin\dfrac{5\pi}{12}\) 再相加，更稳更快。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+<ul>
+  <li><b>多选题继续承担压轴区分功能</b>：三角函数与解三角形仍是高频综合载体。</li>
+  <li><b>"先定性后定量"成为常态</b>：不直接给角给边，而给等式让考生反推图形性质。</li>
+  <li><b>三角恒等变换与解三角形深度融合</b>：单靠套公式无法完成，需变形 + 判定 + 计算三步联动。</li>
+  <li><b>分类讨论 / 反证法回归</b>：对"为何是直角而非钝角/锐角"的严谨论证将更受重视。</li>
+  <li><b>运算链加长但可控</b>：如本题需连续完成二倍角、形状判定、正弦定理、和差化积，考查运算耐力。</li>
+  <li><b>评分向"过程"倾斜</b>：多选题部分选对得部分分，鼓励考生写出可判定项。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+<ul>
+  <li><b>卡在"如何证明 \(C=\dfrac{\pi}{2}\)"</b>：只会代特例验证，缺乏严格的分类讨论/反证，导致无法推进 B、C、D。</li>
+  <li><b>忽略严谨性</b>：用"看起来像直角"代替证明，过程不完整，即便结果对也丢步骤分。</li>
+  <li><b>漏判 D</b>：想当然认为 \(a^{2}+b^{2}=3\)，未用勾股定理核对。</li>
+  <li><b>特殊角求值出错</b>：\(\sin\dfrac{\pi}{12}\)、\(\sin\dfrac{5\pi}{12}\) 记忆或计算错误，连带 B、C 错判。</li>
+  <li><b>多选题策略失误</b>：对拿不准的项不敢选，或盲目多选导致"有选错得 0 分"。</li>
+  <li><b>符号与边角对应混乱</b>：把 \(AB\)、\(AC\)、\(BC\) 与 \(a,b,c\) 的对应关系搞反。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+<ul>
+  <li><b>答案高度一致</b>：21 世纪教育网、教习网、高考真题文献库、ima 题库等均给出标准答案 <b>ABC</b>。</li>
+  <li><b>定位评价</b>：高考真题文献库称本题为"多选题的压轴题，综合性极强，通过复杂的三角恒等式推导出三角形的形状（直角三角形）是破题关键，随后联立面积与边角关系进行定量计算"。</li>
+  <li><b>主流解法</b>：21 世纪教育网先用二倍角公式判 A，再推 \(C=\dfrac{\pi}{2}\)，结合面积求外接圆/边长判 B、C；教习网则补充多种"证直角"路径（反证、和差关系、边长代数消元）。</li>
+  <li><b>一线教师共识</b>：本题区分度强，是"解三角形 + 三角恒等变换"的综合考查，重在考查转化与化归、分类讨论思想；建议二轮复习强化"由三角恒等式判定三角形形状"的专题训练。</li>
+  <li><b>分歧点</b>：各教辅在"证直角"的具体路径上略有差异（分类讨论 vs 代数消元），但结论与最终选项完全一致。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+<ul>
+  <li><b>强化"形状判定"专题</b>：系统训练"由三角条件判定三角形形状"，重点掌握分类讨论与反证两种论证方式。</li>
+  <li><b>夯实二倍角与和差公式</b>：本题起点即二倍角变形，基础公式必须熟练到"条件反射"。</li>
+  <li><b>培养"先定性后定量"的解题策略</b>：引导学生先确定图形性质，再代入计算，避免盲目硬算。</li>
+  <li><b>多选题应试指导</b>：讲清"全部选对/部分选对/有选错"的得分规则，训练"先拿稳必真项、再攻难点"的答题节奏。</li>
+  <li><b>边角对应关系专项</b>：反复强调 \(a=BC\)、\(b=AC\)、\(c=AB\) 的对应，杜绝符号混乱。</li>
+  <li><b>特殊角求值规范化</b>：将 \(\dfrac{\pi}{12}\)、\(\dfrac{5\pi}{12}\) 等半角/和差角的求值纳入常规训练。</li>
+</ul>
+
+<h2>参考文献</h2>
+<ol>
+  <li>21 世纪教育网. 【精品解析】2025 年普通高等学校招生全国统一考试（新高考Ⅰ卷）数学试卷（第 11 题）. <a href="https://mip.21cnjy.com/P/23228057.html">链接</a></li>
+  <li>教习网. 2025 年高考数学真题完全解读（全国一卷）. <a href="https://www.51jiaoxi.com/doc-17164079.html">链接</a></li>
+  <li>高考真题文献库. 2025-新高考I卷-11 多-三角恒等变换. <a href="http://www.gaokaodb.com/%E5%8E%86%E5%B9%B4%E7%9C%9F%E9%A2%98/2025%E5%B9%B4/2025%E5%B9%B4%E6%96%B0%E9%AB%98%E8%80%83I%E5%8D%B7/2025-%E6%96%B0%E9%AB%98%E8%80%83I%E5%8D%B7-11-%E5%A4%9A-%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%8F%98%E6%8D%A2">链接</a></li>
+  <li>ima 题库. 2025 年高考数学（全国一卷）第 11 题（含参考答案 ABC）.</li>
+  <li>广东省教育高考网. 2025 年新高考数学新课标全国Ⅰ卷真题答案 PDF.</li>
+</ol>
+
+
+</div>
+</body>
+</html>

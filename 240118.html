@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年新高考Ⅰ卷（全国一卷）第 18 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年新高考Ⅰ卷（全国一卷）第 18 题研究报告</h1>
+  <div class="lead">研究对象：f(x)=ln(x/(2-x))+ax+b(x-1)³（17 分）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>已知函数 \(f(x)=\ln\dfrac{x}{2-x}+ax+b(x-1)^{3}\)。</p>
+
+<ol>
+  <li>若 \(b=0\)，且 \(f'(x)\geqslant 0\)，求 \(a\) 的最小值；</li>
+  <li>证明：曲线 \(y=f(x)\) 是中心对称图形；</li>
+  <li>若 \(f(x)&gt;-2\) 当且仅当 \(1&lt;x&lt;2\)，求 \(b\) 的取值范围。</li>
+</ol>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+  <tr><th>项目</th><th>内容</th></tr>
+  <tr><td>卷型</td><td>2024 年新高考Ⅰ卷（新课标Ⅰ卷，俗称"全国一卷"）</td></tr>
+  <tr><td>题号</td><td>第 18 题</td></tr>
+  <tr><td>分值</td><td>17 分</td></tr>
+  <tr><td>题型</td><td>函数与导数解答题（本卷第 4 道解答题，压轴档）</td></tr>
+  <tr><td>考查模块</td><td>函数定义域、导数与单调性、不等式恒成立、中心对称（奇偶性平移）、逻辑推理</td></tr>
+  <tr><td>难度（估算）</td><td>中高档（约 0.45~0.55，据一线教师评析）</td></tr>
+  <tr><td>实测数据</td><td>2024 新高考Ⅰ卷整体偏难，数学平均分较往年明显下滑；第 18 题因涉及"当且仅当"的充要逻辑与对称中心判定，区分度高，多数学生能拿到第(1)问，第(3)问得分率偏低</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+<ul>
+  <li>复合函数求导与对数型函数导数：\(\left[\ln\dfrac{x}{2-x}\right]'=\dfrac{2}{x(2-x)}\)。</li>
+  <li>基本不等式 / 二次函数最值：利用 \(x(2-x)\leqslant 1\)（当 \(x=1\) 取等）求下界。</li>
+  <li>中心对称（图形）的代数判定：曲线 \(y=f(x)\) 关于点 \((c,d)\) 中心对称 \(\iff f(c+t)+f(c-t)=2d\) 对定义域内所有 \(t\) 成立；等价于 \(g(x)=f(x+c)-d\) 为奇函数。</li>
+  <li>恒成立问题的等价转化：含参不等式在开区间恒成立 \(\iff\) 参数不小于（或不大于）某函数的最值。</li>
+  <li>充要条件"当且仅当"的严格解读：既要证充分性也要证必要性；本题要求 \(f(x)&gt;-2\) 的解集恰为 \((1,2)\)。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+<table>
+  <tr><th>能力维度</th><th>在本题的体现</th></tr>
+  <tr><td>信息获取</td><td>从题面准确提取定义域 \((0,2)\)、对称中心线索 \(x=1\)、充要条件边界</td></tr>
+  <tr><td>抽象概括</td><td>把"曲线中心对称"抽象为 \(f(x)+f(2-x)=2a\) 的代数关系</td></tr>
+  <tr><td>推理论证</td><td>第(2)问对称性的代数证明；第(3)问由充要条件反推 \(a=-2\) 及 \(b\) 的范围</td></tr>
+  <tr><td>运算求解</td><td>求导、最值计算、不等式放缩、构造辅助函数</td></tr>
+  <tr><td>探索创新</td><td>第(3)问需识别"中心对称轴 \(x=1\)"与"变换 \(g(x)=f(x)+2\) 的奇性"，并用导数单调性完成范围判定</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+<table>
+  <tr><th>素养</th><th>体现</th><th>评级</th></tr>
+  <tr><td>数学抽象</td><td>将几何对称转化为代数等式</td><td><span class="star">★★★★</span></td></tr>
+  <tr><td>逻辑推理</td><td>充要条件的双向论证、对称性证明</td><td><span class="star">★★★★★</span></td></tr>
+  <tr><td>数学运算</td><td>导数运算与最值、不等式放缩</td><td><span class="star">★★★★</span></td></tr>
+  <tr><td>直观想象</td><td>中心对称图形的几何直观、函数单调性图像</td><td><span class="star">★★★</span></td></tr>
+  <tr><td>数学建模</td><td>—（本题偏纯函数推理）</td><td><span class="star">★</span></td></tr>
+  <tr><td>数据分析</td><td>—</td><td>—</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+<ul>
+  <li>情境：无实际情境，纯函数背景，突出"数学内部逻辑"。</li>
+  <li>结构递进：第(1)问导数与最值（基础），第(2)问对称性（承上启下，揭示对称中心 \((1,a)\)），第(3)问把对称中心与"充要条件解集"结合，是真正的难点。</li>
+  <li>设计巧思：第(3)问的常数 \(-2\) 正是第(1)问得到的最小值 \(-2\) 的呼应——当 \(a=-2\) 时函数关于 \((1,-2)\) 对称，且 \(-2\) 恰为对称轴处的函数值；三问之间暗藏"参数联动"。</li>
+  <li>区分度：第(3)问"\(f(x)&gt;-2\) 当且仅当 \(1&lt;x&lt;2\)"要求学生把"解集恰为某区间"翻译成对函数单调性与边界值的双重约束，能考出真正的逻辑推理能力，而非套模板。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问</h3>
+<p><b>思路：</b>先求定义域，再求导，利用 \(x(2-x)\) 最值把"恒成立"转为"参数不小于某最值"。</p>
+<p><b>解答：</b>由 \(\dfrac{x}{2-x}&gt;0\) 得定义域为 \((0,2)\)。当 \(b=0\) 时，</p>
+<div class="formula">\[f(x)=\ln\dfrac{x}{2-x}+ax=\ln x-\ln(2-x)+ax,\]</div>
+<div class="formula">\[f'(x)=\frac{1}{x}+\frac{1}{2-x}+a=\frac{2}{x(2-x)}+a.\]</div>
+<p>由 \(f'(x)\geqslant 0\) 对 \(x\in(0,2)\) 恒成立，得</p>
+<div class="formula">\[a\geqslant -\frac{2}{x(2-x)}\quad(\forall x\in(0,2)).\]</div>
+<p>因为 \(x(2-x)=2x-x^{2}=1-(x-1)^{2}\leqslant 1\)，当且仅当 \(x=1\) 取等号，所以 \(\dfrac{2}{x(2-x)}\geqslant 2\)，从而 \(-\dfrac{2}{x(2-x)}\leqslant -2\)。故</p>
+<div class="formula">\[a\geqslant -2.\]</div>
+<p>所以 \(a\) 的最小值为 \(-2\)。</p>
+
+<h3>7.2 第(2)问</h3>
+<p><b>思路：</b>验证 \(f(x)+f(2-x)=2a\)（或验证平移后为奇函数）。</p>
+<p><b>解答（法一·直接验证）：</b>对任意 \(x\in(0,2)\)，</p>
+<div class="formula">\[
+\begin{aligned}
+f(2-x)&=\ln\frac{2-x}{x}+a(2-x)+b(1-x)^{3}\\
+&=-\ln\frac{x}{2-x}+2a-ax-b(x-1)^{3}\\
+&=-\left[\ln\frac{x}{2-x}+ax+b(x-1)^{3}\right]+2a\\
+&=-f(x)+2a.
+\end{aligned}
+\]</div>
+<p>即 \(f(x)+f(2-x)=2a=2f(1)\)。又 \(f(1)=\ln1+a+0=a\)，故曲线 \(y=f(x)\) 关于点 \((1,a)\) 成中心对称。</p>
+<p><b>解答（法二·平移法）：</b>令 \(F(t)=f(1+t)=\ln\dfrac{1+t}{1-t}+a(1+t)+bt^{3}\)，定义域 \(t\in(-1,1)\)。则</p>
+<div class="formula">\[F(-t)=\ln\frac{1-t}{1+t}+a(1-t)-bt^{3}=-\ln\frac{1+t}{1-t}+a-at-bt^{3},\]</div>
+<p>故 \(F(t)+F(-t)=2a\)，即 \(F(t)-a\) 为奇函数，从而 \(f(x)\) 关于点 \((1,a)\) 中心对称。</p>
+
+<h3>7.3 第(3)问</h3>
+<p><b>思路：</b>设 \(g(x)=f(x)+2\)，题设等价于 \(g(x)&gt;0\iff x\in(1,2)\)。先由边界确定 \(a=-2\)，再用导数（或奇性+不等式）确定 \(b\) 的范围。</p>
+<p><b>解答：</b></p>
+<p><b>第一步，确定 \(a\)。</b>由 \(g(x)&gt;0\iff x\in(1,2)\)，得 \(x=1\) 不在解集内，故 \(g(1)\leqslant 0\)，即 \(f(1)+2\leqslant 0\)，\(a\leqslant -2\)。</p>
+<p>若 \(g(1)&lt;0\)（即 \(a&lt;-2\)），而由对称性知对 \(x&gt;1\) 有 \(g(x)&gt;0\)，于是 \(g(1)&lt;0&lt;g(x)\) 在 \(x&gt;1\) 处成立，由连续函数的零点存在定理，存在 \(x_{0}\in(1,2)\) 使 \(g(x_{0})=0\)，与"\(g(x)&gt;0\) 仅在 \((1,2)\) 严格成立"矛盾（该零点 \(x_{0}&lt;2\) 落在 \((1,2)\) 内却不满足 \(g(x)&gt;0\)）。故必有 \(g(1)=0\)，即 \(a=-2\)。</p>
+<div class="note">更简洁的论证：由 \(g(x)&gt;0\iff x&gt;1\)，取极限 \(x\to1^{+}\) 得 \(g(1)\geqslant 0\)；结合 \(g(1)\leqslant 0\) 直接得 \(g(1)=0\)，即 \(a=-2\)。</div>
+<p><b>第二步，求 \(b\)。</b>此时 \(a=-2\)，</p>
+<div class="formula">\[f(x)=\ln\frac{x}{2-x}-2x+b(x-1)^{3},\qquad f'(x)=\frac{2}{x(2-x)}-2+3b(x-1)^{2}.\]</div>
+<p>注意到</p>
+<div class="formula">\[\frac{2}{x(2-x)}-2=\frac{2-2x(2-x)}{x(2-x)}=\frac{2(x-1)^{2}}{x(2-x)},\]</div>
+<p>故</p>
+<div class="formula">\[f'(x)=(x-1)^{2}\left(\frac{2}{x(2-x)}+3b\right).\]</div>
+<p>只需考查 \(x\in(1,2)\)（由对称性，负侧自动满足）：令 \(h(x)=\dfrac{2}{x(2-x)}+3b\)。在 \((1,2)\) 上 \(x(2-x)\) 递减，故 \(h(x)\) 严格递增，且 \(h(1)=2+3b\)。</p>
+<ul>
+  <li>若 \(b&lt;-\dfrac{2}{3}\)，则 \(h(1)&lt;0\)，因 \(h\) 递增，存在 \(x_{0}\in(1,2)\) 使 \(h(x_{0})=0\)，当 \(x\in(1,x_{0})\) 时 \(h(x)&lt;0\)，从而 \(f'(x)&lt;0\)，\(f\) 在 \((1,x_{0})\) 单调递减，于是 \(f(x)&lt;f(1)=-2\)，与"\(x\in(1,2)\) 时 \(f(x)&gt;-2\)"矛盾。</li>
+  <li>若 \(b\geqslant-\dfrac{2}{3}\)，则对 \(x\in(1,2)\) 有 \(h(x)&gt;h(1)\geqslant 0\)，从而 \(f'(x)\geqslant 0\)（仅在 \(x=1\) 取等），\(f\) 在 \([1,2)\) 单调递增，故 \(x&gt;1\) 时 \(f(x)&gt;f(1)=-2\) 成立。再结合关于 \((1,-2)\) 的中心对称，对 \(x&lt;1\) 有 \(f(x)&lt;-2\)，即 \(f(x)&gt;-2\iff 1&lt;x&lt;2\) 成立。</li>
+</ul>
+<p>综上，\(b\) 的取值范围是 \(\left[-\dfrac{2}{3},+\infty\right)\)。</p>
+
+<h3>另解（不等式放缩法）</h3>
+<p>确定 \(a=-2\) 后，令 \(t=x-1\in(0,1)\)，则条件化为</p>
+<div class="formula">\[g(t)=\ln\frac{1+t}{1-t}-2t+bt^{3}&gt;0\quad(t\in(0,1)).\]</div>
+<p>由 \(\ln\dfrac{1+t}{1-t}=2\left(t+\dfrac{t^{3}}{3}+\dfrac{t^{5}}{5}+\cdots\right)\)，得</p>
+<div class="formula">\[\ln\frac{1+t}{1-t}-2t=\frac{2t^{3}}{3}+\frac{2t^{5}}{5}+\cdots&gt;\frac{2}{3}t^{3}\quad(t&gt;0).\]</div>
+<p>于是当 \(b\geqslant-\dfrac{2}{3}\) 时，\(g(t)&gt;\dfrac{2}{3}t^{3}+bt^{3}=\left(\dfrac{2}{3}+b\right)t^{3}\geqslant 0\)（\(b=-\frac{2}{3}\) 时为严格大于，因漏项为正）；当 \(b&lt;-\frac{2}{3}\) 时，取充分小 \(t&gt;0\)，\(\ln\frac{1+t}{1-t}-2t\sim\frac{2}{3}t^{3}\)，使 \(g(t)&lt;0\)，矛盾。同样得 \(b\in\left[-\frac{2}{3},+\infty\right)\)。</p>
+
+<h2>八、解答技巧</h2>
+<ul>
+  <li>第(1)问"点睛"：遇到 \(f'(x)\geqslant0\) 恒成立，并非直接令 \(f'(x)_{\min}\geqslant0\)，而是反解参数 \(a\geqslant(\text{某式})_{\max}\)；本题核心是放缩 \(\dfrac{2}{x(2-x)}\geqslant2\)。</li>
+  <li>第(2)问"点睛"：看到 \(\ln\dfrac{x}{2-x}\)（形如 \(\ln\dfrac{1+x}{1-x}\) 的奇函数结构）加 \((x-1)\) 的奇次幂，立刻联想到"关于 \(x=1\) 对称"；优先用 \(f(x)+f(2-x)\) 验证，比平移法更直接。</li>
+  <li>第(3)问"点睛"：把"当且仅当"拆成"解集恰为 \((1,2)\)"——边界点 \(x=1\) 必是 \(f=-2\) 的点（确定 \(a\)），再利用关于 \((1,-2)\) 的中心对称，把双侧问题降为单侧单调性问题；导数中提出 \((x-1)^{2}\) 是关键化简。</li>
+  <li>通法：涉及"解集为某区间"+对称中心的题，先定中心参数，再用单调性/最值锁范围。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+<ol>
+  <li>导数题继续"去套路化"：不再单纯求极值最值，而把单调性作为工具去证明不等式或确定参数范围（如本题第(3)问）。</li>
+  <li>对称性（中心对称/轴对称）成为高频考点，常与奇偶性平移、恒成立结合，考查代数表达与几何直观的转换。</li>
+  <li>"充要条件/当且仅当"类表述增多，强调逻辑严谨性，要求学生双向论证而非只证充分性。</li>
+  <li>多问之间参数联动（第(1)问的 \(-2\) 暗示第(3)问的对称中心纵坐标），引导整体而非割裂地看题。</li>
+  <li>函数背景更"干净"（少实际情境），回归数学内部逻辑与推理，符合新高考"反机械刷题"导向。</li>
+  <li>运算量与思维量并重：第(3)问需要对导数表达式做因式分解级化简（提出 \((x-1)^2\)），计算准确度要求高。</li>
+</ol>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+<ul>
+  <li>障碍1：第(1)问把 \(f'(x)\geqslant0\) 恒成立错解为 \(f'(x)_{\min}\geqslant0\) 但求最值时误用 \(x(2-x)\geqslant1\)（方向弄反），或忘记先求定义域。</li>
+  <li>障碍2：第(2)问不知"中心对称"的代数判定式，或写成 \(f(x)=f(2-x)\)（那是轴对称！），混淆中心对称与轴对称。</li>
+  <li>障碍3：第(3)问读不懂"当且仅当 \(1&lt;x&lt;2\)"，误以为只要 \(x\in(1,2)\) 时 \(f(x)&gt;-2\) 即可，忽略对 \(x\in(0,1]\) 必须 \(f(x)\leqslant-2\) 的约束，从而漏求 \(a=-2\)、漏判 \(b\) 下界。</li>
+  <li>障碍4：第(3)问不会由边界反推 \(a=-2\)，或知道 \(a=-2\) 后不会对 \(f'(x)\) 做"提出 \((x-1)^2\)"的化简，陷入复杂通分。</li>
+  <li>障碍5：使用导数法时，在 \(x\in(1,2)\) 上 \(f'(x)\) 含 \((x-1)^2\)（恒非负），误以为 \(f'(x)\geqslant0\) 恒成立而忽略内部可能先负后正，未检验 \(h(1)=2+3b\) 符号。</li>
+  <li>典型得分：多数学生第(1)(2)问可得满分（约 10 分），第(3)问常只得"定出 \(a=-2\)"的 2~3 分，完整求出 \(b\) 范围者少。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+<ul>
+  <li>共识：本题是 2024 新高考Ⅰ卷函数题的代表，被多家教辅（如《试题调研》第1辑、各类"高中数学备课助手"解析）收录，标准答案均给出 \(a_{\min}=-2\)、对称中心 \((1,a)\)、\(b\in[-2/3,+\infty)\)。</li>
+  <li>命题评价：一线教师普遍认为第(3)问"当且仅当"设计精妙，把对称中心与充要逻辑结合，区分度好；同时指出其与第(1)问最小值 \(-2\) 的呼应体现了"参数联动"的命题美学。</li>
+  <li>解法分歧：第(3)问主流有两法——①导数单调性法（构造 \(h(x)=\frac{2}{x(2-x)}+3b\)，由 \(h(1)\) 符号分类）；②不等式放缩法（展开 \(\ln\frac{1+t}{1-t}\) 为幂级数，比较 \(t^{3}\) 系数）。两者结果一致，前者更"通法"，后者更"巧妙"。</li>
+  <li>难度反馈：2024 新高考Ⅰ卷数学整体偏难（网传平均分较往年大幅下滑），第 18 题处于试卷中后段，多数考生在此题消耗大量时间，是"压垮时间分配"的关键题之一。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+<ol>
+  <li>强化"中心对称代数判定"：明确 \(f(x)+f(2a-x)=2b\iff\) 关于 \((a,b)\) 对称，并与"平移成奇函数"对照训练，杜绝与轴对称混淆。</li>
+  <li>训练"恒成立问题"的反解参数套路：把 \(f'(x)\geqslant0\) 恒等变形为先求最值再解不等式，强调定义域优先。</li>
+  <li>狠抓"充要条件/当且仅当"的语言转化：让学生习惯把"\(P\iff Q\)"拆成充分、必要两向，并把"解集恰为区间"翻译为"边界点取等 + 区间内单调/恒正"。</li>
+  <li>培养"参数联动"的整体观：引导学生注意多问之间常数/参数的呼应（如本题 \(-2\) 的三处出现），避免割裂解题。</li>
+  <li>提升导数化简能力：遇到含 \((x-a)^{k}\) 结构的导函数，优先尝试因式分解/提出公因式，化繁为简。</li>
+  <li>模拟训练中加入"时间分配"意识：此类中后段难题若 8 分钟无突破应果断转向，保住前几问分数。</li>
+</ol>
+
+<h2>参考文献</h2>
+<ol>
+  <li>《试题调研》第1辑（高考超重点），调研9：2024 新课标Ⅰ卷第18题。https://ima.qq.com/wiki/?shareId=2d3706a1182dcfae58613386c3824e2c98d60899dc2c3481ed8052bc7a1c97b0</li>
+  <li>高中数理天地，基于教育目标分类理论的真题研究（2024 新高考Ⅰ卷第18题）。https://ima.qq.com/wiki/?shareId=be4f4807ab96bf1521f51b18bd30628008b8eadf6fba307704aad4d003e67053</li>
+  <li>Guo 高中数学备课助手，2024年新课标全国卷解析（第18题）。https://ima.qq.com/wiki/?shareId=cb4732c1ecb3199996bc9a9781a052ac02b7d0222f9adb0704f574630b118924</li>
+</ol>
+
+
+</div>
+</body>
+</html>

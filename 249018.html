@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年九省联考数学第 18 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024 年九省联考数学第 18 题研究报告</h1>
+  <div class="lead">研究对象：抛物线 y^2=4x 焦点弦中点与垂直弦交点的定点·最值问题　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>已知抛物线 \(C:y^2=4x\) 的焦点为 \(F\)，过 \(F\) 的直线 \(l\) 交 \(C\) 于 \(A,B\) 两点，过 \(F\) 与 \(l\) 垂直的直线交 \(C\) 于 \(D,E\) 两点，其中 \(B,D\) 在 \(x\) 轴上方，\(M,N\) 分别为 \(AB,DE\) 的中点。</p>
+
+<p><strong>(1)</strong> 证明：直线 \(MN\) 过定点；</p>
+
+<p><strong>(2)</strong> 设 \(G\) 为直线 \(AE\) 与直线 \(BD\) 的交点，求 \(\triangle GMN\) 面积的最小值。</p>
+
+<p class="note">（题源：2024 年 1 月高考综合改革适应性测试·"九省联考"，教育部命题，解答题第 18 题，满分 17 分。）</p>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>试卷 / 卷型</td><td>2024 年"九省联考"（第四批高考综合改革省份适应性演练），教育部命题</td></tr>
+<tr><td>题号与位置</td><td>第 18 题（解答题第 4 题，位于第 19 题"离散对数"之前）</td></tr>
+<tr><td>分值</td><td>17 分</td></tr>
+<tr><td>考查模块</td><td>解析几何——圆锥曲线（抛物线）的定点、定值与最值</td></tr>
+<tr><td>难度预估</td><td>中等偏难（压轴梯队）；第(1)问常规可控，第(2)问区分度大</td></tr>
+<tr><td>实测 / 评析</td><td>据一线教师评析，第(1)问多数考生可入手得分；第(2)问因运算量与思路双重门槛，得分率明显回落，是本题真正的选拔点</td></tr>
+<tr><td>核心素养侧重</td><td>数学运算、逻辑推理、直观想象</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>抛物线的标准方程与几何性质</strong>：\(y^2=4x\) 中 \(p=1\)，焦点 \(F(1,0)\)，准线 \(x=-1\)。</li>
+<li><strong>直线与抛物线相交的联立与韦达定理</strong>：尤其要熟记"过焦点弦"的纵坐标特征 \(y_1y_2=-p^2=-4\)、横坐标特征 \(x_1x_2=1\)。</li>
+<li><strong>弦中点坐标公式</strong>：中点坐标由两端点纵坐标之和（或横坐标之和）直接给出。</li>
+<li><strong>直线方程的优化设法</strong>：横截式 \(x=my+1\) 可同时避开"斜率不存在"与"斜率为 0"两类退化讨论，是本题首选设法。</li>
+<li><strong>抛物线两点弦方程</strong>：过 \(P_1(x_1,y_1),P_2(x_2,y_2)\) 的弦可写为 \((y_1+y_2)y=4x+y_1y_2\)（由 \(x=\frac{y^2}{4}\) 推出），用于快速求交点 \(G\)。</li>
+<li><strong>两直线交点、点到直线的距离、两点间距离、三角形面积公式</strong> \(S=\frac12|MN|\cdot d\)。</li>
+<li><strong>基本不等式（均值不等式）</strong>：\(a+\frac1a\geq 2\ (a&gt;0)\)，用于最值。</li>
+<li><strong>"设而不求"与整体代换</strong>：避免逐个求出 \(A,B,D,E\) 的显式坐标。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>关键能力（高考评价体系）</th><th>在本题中的具体体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>从"两垂直焦点弦 + 中点 + 交叉连线交点"的复杂图形中，提取可参数化的几何条件</td></tr>
+<tr><td>抽象概括</td><td>将"过定点""面积最小"翻译成直线方程与代数式的最值问题</td></tr>
+<tr><td>推理论证</td><td>证明 \(MN\) 恒过 \((3,0)\)；证明 \(G\) 恒在准线 \(x=-1\) 上</td></tr>
+<tr><td>运算求解</td><td>联立、韦达、交点、距离、面积表达式的代数化简，直至可用均值不等式收口</td></tr>
+<tr><td>探索创新</td><td>第(2)问若"停一停想一想"，可绕过巨量运算，借面积等价转化（\(S_{\triangle GMN}=S_{\text{四边形}ADMN}\)）或准线不变量巧解</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>数学抽象</td><td>★★★</td><td>把几何位置关系抽象为带参直线方程与代数约束</td></tr>
+<tr><td>逻辑推理</td><td>★★★★</td><td>定点与准线不变量的推导、面积关系的等价转化</td></tr>
+<tr><td>直观想象</td><td>★★★★</td><td>预判 \(MN\) 所过定点在 \(x\) 轴上、\(G\) 落在准线上，明确运算方向</td></tr>
+<tr><td>数学运算</td><td>★★★★★</td><td>本题核心素养，长链条代数化简与不等式收口</td></tr>
+<tr><td>数学建模</td><td>★</td><td>不突出</td></tr>
+<tr><td>数据分析</td><td>★</td><td>不突出</td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><strong>构造精巧、双弦耦合</strong>：以两条互相垂直的焦点弦 \(AB,DE\) 为骨架，自然引出中点 \(M,N\) 与交叉连线交点 \(G\)，结构对称而内涵丰富。</li>
+<li><strong>递进式设问</strong>：第(1)问"证明过定点"是常规入口，通性通法即可得分；第(2)问"求面积最小值"陡然提升，区分"机械刷题"与"真正理解"。</li>
+<li><strong>去套路化、倡导"多想少算"</strong>：若沿用第(1)问思路硬算四点坐标再求面积，运算量极大、极易半途而废；命题者意在引导考生借助几何直观（\(G\) 在准线上、面积等价转化）减少运算。</li>
+<li><strong>区分度设计</strong>：第(1)问保底，第(2)问拉开档次，使本题成为全卷重要的选拔题。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问：证明 \(MN\) 过定点</h3>
+
+<p><strong>思路</strong>：两条弦都不能水平或竖直——若 \(l\) 水平（\(y=0\)），只与抛物线交于顶点一点；若 \(l\) 竖直（\(x=1\)），则与之垂直的 \(DE\) 水平，同样只交于一点，均不构成题设的"两点"。故两弦斜率均存在且非零，统一用横截式处理。</p>
+
+<p>设直线 \(l: x=my+1\ (m\neq 0)\)，代入 \(y^2=4x\) 得</p>
+<p>\[y^2-4my-4=0.\]</p>
+<p>设 \(A(x_1,y_1),B(x_2,y_2)\)，则 \(y_1+y_2=4m,\ y_1y_2=-4\)。中点</p>
+<p>\[M\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)=(2m^2+1,\,2m).\]</p>
+
+<p>与 \(l\) 垂直的直线 \(DE\) 斜率为 \(-m\)，写成 \(x=-\frac1m y+1\)（即 \(x=ny+1\)，其中 \(n=-\frac1m\)）。同理可得</p>
+<p>\[N\left(2n^2+1,\,2n\right)=\left(\frac{2}{m^2}+1,\,-\frac{2}{m}\right).\]</p>
+
+<p>直线 \(MN\) 的方程（两点式化简）为</p>
+<p>\[mx-(m^2-1)y-3m=0.\]</p>
+<p>令 \(y=0\)，得 \(mx-3m=0\)，即 \(x=3\)。故直线 \(MN\) 恒过定点 \((3,0)\)。</p>
+
+<p class="note">补充：当 \(m=0\) 或 \(l\) 竖直时，另一条弦退化，不构成两交点情形，故上述参数化已覆盖全部有效情形；极限情形同样趋于 \((3,0)\)。</p>
+
+<h3>7.2 第(2)问：求 \(\triangle GMN\) 面积的最小值</h3>
+
+<p><strong>思路 A（通性通法，坐标化简）</strong>：利用抛物线两点弦方程 \((y_i+y_j)y=4x+y_iy_j\) 求 \(AE\) 与 \(BD\) 的交点 \(G\)，再算面积。</p>
+
+<p>记 \(A,B\) 在 \(l\) 上、\(D,E\) 在 \(DE\) 上，且 \(B,D\) 在 \(x\) 轴上方。由 \(y_1y_2=-4\)、\(y_3y_4=-4\)（焦点弦性质），可写出</p>
+<p>直线 \(AE:\ (y_1+y_4)y=4x+y_1y_4,\qquad\) 直线 \(BD:\ (y_2+y_3)y=4x+y_2y_3.\)</p>
+<p>联立两式解得交点 \(G\) 的<strong>横坐标恒为 \(-1\)</strong>（与参数无关），即 \(G\) 始终落在准线 \(x=-1\) 上；其纵坐标为</p>
+<p>\[y_G=\frac{2(m-1)}{m+1}\quad(m&gt;0\text{ 时}).\]</p>
+<p>于是 \(G\left(-1,\ \frac{2(m-1)}{m+1}\right)\)。</p>
+
+<p>由第(1)问，直线 \(MN: mx-(m^2-1)y-3m=0\)，且</p>
+<p>\[M(2m^2+1,2m),\quad N\left(\frac{2}{m^2}+1,-\frac{2}{m}\right).\]</p>
+
+<p>点 \(G\) 到直线 \(MN\) 的距离</p>
+<p>\[d=\frac{|m(-1)-(m^2-1)\cdot\frac{2(m-1)}{m+1}-3m|}{\sqrt{m^2+(m^2-1)^2}}
+=\frac{2(m^2+1)}{\sqrt{m^4-m^2+1}}.\]</p>
+<p>弦长</p>
+<p>\[|MN|=\sqrt{\left(2m^2-\frac{2}{m^2}\right)^2+\left(2m+\frac{2}{m}\right)^2}.\]</p>
+<p>故</p>
+<p>\[S_{\triangle GMN}=\frac12|MN|\cdot d
+=\frac{2(m^2+1)^2}{m^2}
+=2\left(m+\frac1m\right)^2.\]</p>
+
+<p>由均值不等式，\(m+\frac1m\geq 2\ (m&gt;0)\)，故</p>
+<p>\[S_{\triangle GMN}=2\left(m+\frac1m\right)^2\geq 2\cdot 2^2=8.\]</p>
+<p>当 \(m=1\)（即 \(l\) 与 \(DE\) 斜率分别为 \(\pm1\)，两弦与 \(x\) 轴成 \(45^\circ\)）时取等号。</p>
+
+<p class="note"><strong>结论</strong>：\(\triangle GMN\) 面积的最小值为 \(\boxed{8}\)。</p>
+
+<p><strong>思路 B（几何巧解，"多想少算"）</strong>：由 \(G\) 在准线 \(x=-1\) 上，可证明面积恒等式 \(S_{\triangle GMN}=S_{\text{四边形}ADMN}\)（这是本题最漂亮的等价转化——交叉连线把三角形面积"搬移"为四边形面积）；再结合 \(M,N\) 均在抛物线 \(y^2=2(x-1)\) 上、\(MN\) 过 \((3,0)\) 等不变量，即得上述同一表达式。该思路运算量最小，是命题者期望的"想得到"的解法。</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>设线优先选 \(x=my+1\)</strong>：一次性规避"斜率不存在 / 为零"两类退化讨论，且焦点弦的纵坐标韦达 \(y_1y_2=-4\) 极为简洁。</li>
+<li><strong>熟记焦点弦特征</strong>：对 \(y^2=2px\)，过焦点弦满足 \(y_1y_2=-p^2,\ x_1x_2=\frac{p^2}{4}\)；本题 \(p=1\) 即 \(y_1y_2=-4,\ x_1x_2=1\)。</li>
+<li><strong>两点弦方程</strong>：\((y_1+y_2)y=4x+y_1y_2\) 是求 \(G\) 的利器，避免逐个解四点坐标。</li>
+<li><strong>认准不变量</strong>：\(MN\) 过 \((3,0)\)、\(G\) 在准线 \(x=-1\) 上——这两个"恒成立"结论大幅简化运算。</li>
+<li><strong>面积公式选 \(S=\frac12|MN|\cdot d\)</strong>，或直接用面积等价转化为四边形。</li>
+<li><strong>最值收口用均值不等式</strong>：出现 \(m+\frac1m\) 形式时优先 AM–GM，而非求导。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><strong>圆锥曲线继续"降算提思"</strong>：单纯堆运算的解析几何题减少，"几何直观 + 少量运算"的题增多。</li>
+<li><strong>焦点弦、定点定值仍是高频考点</strong>：抛物线、椭圆、双曲线中关于焦点弦中点、垂直弦、弦中点轨迹的构造会持续出现。</li>
+<li><strong>"双弦 / 垂直 / 中点"类对称构造受欢迎</strong>：本题的"两垂直焦点弦 + 中点 + 交叉交点"是典型范式，可迁移到椭圆、双曲线（已有教研文章将其推广）。</li>
+<li><strong>强调"多想少算"</strong>：命题会刻意设置"硬算极繁、巧思极简"的落差，考查思维而非熟练度。</li>
+<li><strong>与向量、几何性质的融合</strong>：面积转化、共线、准线 / 定义等几何性质与代数运算的结合会更紧密。</li>
+<li><strong>一题多解成为命题与教学的共同追求</strong>：鼓励从参数法、定义法、面积分割、直线参数方程等多角度切入。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>设线不当</strong>：用 \(y=k(x-1)\) 后未妥善处理 \(k=0\) 与 \(k\) 不存在，或忽略"两弦均不能水平 / 竖直"这一隐含条件。</li>
+<li><strong>第(2)问直接硬算四点坐标</strong>：先求 \(A,B,D,E\) 显式坐标，再写 \(AE,BD\)、求 \(G\)、写面积——运算爆炸、时间耗尽、半途而废，这是最大失分点。</li>
+<li><strong>不会用两点弦方程</strong>：交点 \(G\) 的求解绕远路甚至算错。</li>
+<li><strong>未发现 \(G\) 在准线上</strong>：缺少"\(x_G\equiv-1\)"这一关键不变量，面积公式混乱。</li>
+<li><strong>最值方法选择错</strong>：对 \(m+\frac1m\) 形式使用求导而非均值不等式，或忽略 \(m\) 可取负值导致讨论不全。</li>
+<li><strong>定点算错</strong>：第(1)问把定点算成其他值（符号错、漏令 \(y=0\)），连带影响后续。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<ul>
+<li><strong>教育部命题专家点评</strong>（见腾讯搜一搜 / 光明日报等转载）：第(1)问略显常规，主要考查抛物线基本知识与运算素养；第(2)问"设计巧妙、很有技术含量，'想得到'与'想不到'计算量相差悬殊"。若考生"停一停、想一想"，借平面几何中三角形面积的性质做等量代换（\(S_{\triangle GMN}=S_{\text{四边形}ADMN}\)），即可较轻松完成；否则运算量"居高不下"。命题明确昭示：高考选拔"会动脑"的考生，靠刷题备考越来越难拿高分。</li>
+<li><strong>王思俭《2024 年九省联考解析几何试题解法深度探究》</strong>（看刊宝 / 今日头条，2024-07）：给出本题 8 种解法。解法 1、2 为基本通法（点斜式 / 横截式），解法 7、8（从倾斜角 + 抛物线定义、直线参数方程 + 面积分割）运算量最小，属"最优解法"；强调一题多解、多想少算。</li>
+<li><strong>《2024 届高三九省联考第 18 题的探究推广》</strong>（看刊宝，2024-06）：将定点 \((3,0)\) 推广到一般抛物线 \(y^2=2px\)，并类比发现椭圆、双曲线中也有类似结论，体现本题的方法论价值。</li>
+<li><strong>一线教师共识</strong>：入口宽（第(1)问通性通法可得），区分度好；第(2)问是真正的选拔点，得分率与"是否想到面积转化 / 准线不变量"高度相关。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>强化优化设法训练</strong>：把"遇焦点弦优先设 \(x=my+1\)"变成学生的肌肉记忆，减少退化讨论。</li>
+<li><strong>落实焦点弦性质</strong>：要求学生熟记 \(y_1y_2=-p^2,\ x_1x_2=\frac{p^2}{4}\) 及两点弦方程 \((y_1+y_2)y=4x+y_1y_2\)，提升解题速度。</li>
+<li><strong>培养"停一停想一想"的几何直觉</strong>：在解析几何教学中，引导学生先观察不变量（定点、准线、共线），再做运算；面积转化、图形"搬移"是值得专项训练的技巧。</li>
+<li><strong>一题多解、多想少算</strong>：以本题为例，对比"硬算"与"巧解"的运算量落差，让学生体会思维的价值。</li>
+<li><strong>最值模型熟练化</strong>：对 \(a+\frac1a\)、\(\frac{(q+1)^2}{q}\) 等形式，确保第一时间联想到均值不等式。</li>
+<li><strong>重视推广与变式</strong>：把本题推广到椭圆、双曲线，训练学生的类比与命题鉴赏能力。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>2024 年九省联考数学试题官方答案（人人文库）：<code>https://www.renrendoc.com/paper/501775660.html</code></li>
+<li>王思俭. 2024 年九省联考解析几何试题解法深度探究（看刊宝）：<code>https://www.fx361.com/page/2024/0610/24163882.shtml</code></li>
+<li>2024 届高三九省联考第 18 题的探究推广（看刊宝）：<code>https://www.fx361.com/page/2024/0610/24161113.shtml</code></li>
+<li>2024 九省联考数学（教育部命题）试题卷专家点评（腾讯搜一搜）：<code>https://so.html5.qq.com/page/real/search_news?docid=70000021_82965aa816025052</code></li>
+<li>【一题多解】定点最值 代数几何（学科网）：<code>https://zujuan.xkw.com/thematiclist/11pt4269ct12683n374946.html</code></li>
+</ul>
+
+
+</div>
+</body>
+</html>

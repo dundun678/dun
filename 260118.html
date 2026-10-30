@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年高考数学全国一卷第 18 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2026 年高考数学全国一卷第 18 题研究报告</h1>
+  <div class="lead">研究对象：椭圆解析几何综合题（17 分）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p><b>第 18 题（17 分）</b>　已知椭圆 \(C:\ \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a&gt;b&gt;0)\) 的左焦点为 \(F(-1,0)\)，离心率为 \(\dfrac12\)。</p>
+
+<p>(1) 求 \(C\) 的方程；</p>
+
+<p>(2) 设 \(O\) 为坐标原点，过 \(F\) 且斜率大于 \(0\) 的动直线 \(l\) 与 \(C\) 交于 \(P,\ Q\) 两点，其中 \(Q\) 在第三象限，直线 \(PO\) 与 \(C\) 的另一个交点为 \(R\)。</p>
+
+<p style="padding-left:24px;">(i) 若 \(\triangle PQR\) 的面积是 \(\triangle PFO\) 面积的 \(3\) 倍，求 \(l\) 的方程；</p>
+<p style="padding-left:24px;">(ii) 求 \(\tan\angle PQR\) 的最小值。</p>
+
+<div class="note">说明：本题为解析几何综合题。关键观察是椭圆关于原点中心对称，故 \(R\) 恰为 \(P\) 关于原点的对称点 \(R(-x_P,-y_P)\)，即 \(O\) 是线段 \(PR\) 的中点。这一性质贯穿 (i)(ii) 两问。</div>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>卷型 / 题号</td><td>2026 年高考数学全国一卷（新高考Ⅰ卷）第 18 题</td></tr>
+<tr><td>题型</td><td>解答题（解析几何综合）</td></tr>
+<tr><td>分值</td><td>17 分（压轴 19 题之前最后一档大题）</td></tr>
+<tr><td>考查模块</td><td>圆锥曲线（椭圆）、直线与圆锥曲线位置关系、三角形面积、两直线夹角、基本不等式</td></tr>
+<tr><td>难度（自估）</td><td>(1) 易；(2)(i) 中；(2)(ii) 偏难　整体 ★★★☆</td></tr>
+<tr><td>实测 / 网评</td><td>据一线教师评析与网络讨论，今年 18 题"回归传统解析几何"，比去年新题型更易上手；(2)(ii) 因依赖两直线夹角公式（部分教材已淡化）与最值组合，区分度较高。具体省份得分数据暂无官方公布，标"据网传/一线评析"。</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><b>椭圆基本量关系</b>：由左焦点 \(F(-1,0)\) 得 \(c=1\)；离心率 \(e=\dfrac ca=\dfrac12\Rightarrow a=2\)；\(b^2=a^2-c^2=3\)。直接给出 (1) 答案 \(\dfrac{x^2}{4}+\dfrac{y^2}{3}=1\)。</li>
+<li><b>直线与椭圆联立 + 韦达定理</b>：设 \(l:\ y=k(x+1)\ (k&gt;0)\)，代入椭圆得 \((3+4k^2)x^2+8k^2x+(4k^2-12)=0\)，由韦达定理得到 \(P,Q\) 横坐标的和与积，是 (i)(ii) 的代数基础。</li>
+<li><b>椭圆中心对称性质</b>：椭圆关于原点中心对称 \(\Rightarrow\) 若 \(P\) 在椭圆上，则 \(-P\) 也在椭圆上，且直线 \(PO\) 过原点，故另一交点 \(R(-x_P,-y_P)\)。这是本题最关键的"降维"观察，避免了对 \(R\) 的二次联立。</li>
+<li><b>三角形面积的坐标 / 底高法</b>：(i) 用坐标面积公式（或"共角两边积之比"）把面积比转化为线段比；(ii) 用 \(|QR|\) 到直线两侧高之比理解。</li>
+<li><b>两直线夹角正切公式</b>：\(\tan\theta=\left|\dfrac{k_2-k_1}{1+k_1k_2}\right|\)，用于 (ii) 把 \(\tan\angle PQR\) 表达为斜率 \(k\) 的函数。</li>
+<li><b>基本不等式（均值不等式）</b>：\(4k+\dfrac3k\ge 2\sqrt{4k\cdot\dfrac3k}=4\sqrt3\)，用于 (ii) 求最小值并取等。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<tr><th>关键能力（高考评价体系）</th><th>本题的具体体现</th></tr>
+<tr><td>信息获取</td><td>准确提取"左焦点 \(F(-1,0)\)""离心率 \(\frac12\)""\(Q\) 在第三象限（\(x&lt;0,\ y&lt;0\)）""斜率大于 \(0\)"等约束，并据 \(Q\) 所在象限判定根的大小顺序 \(x_P&gt;x_Q\)。</td></tr>
+<tr><td>抽象概括</td><td>把"面积比为 3""夹角正切最小"等几何目标，抽象为关于 \(k\) 的代数方程与函数最值问题。</td></tr>
+<tr><td>推理论证</td><td>由中心对称严谨推出 \(R=-P\)；在 (ii) 中须论证 \(\angle PQR\) 恒为锐角，以保证夹角公式给出的是原角正切而非其补角正切。</td></tr>
+<tr><td>运算求解</td><td>联立消元、韦达定理、解关于 \(u=k^2\) 的方程；利用斜率构造 \(4k+\frac3k\) 并用基本不等式求最值。</td></tr>
+<tr><td>探索创新</td><td>(i) 的"定比分点"思想（由面积比导出 \(|PF|:|QF|=2\)）；(ii) 把动态的几何角转化为单变量函数求最值。</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<tr><th>核心素养</th><th>水平</th><th>说明</th></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★★</span></td><td>联立、韦达、代数变形与不等式求最值，运算量最大。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★</span></td><td>中心对称推理、锐角验证保证公式合法使用。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★★</span></td><td>借助草图理解 \(Q\) 在第三象限、\(O\) 为 \(PR\) 中点、面积比与线段比关系。</td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>将几何条件抽象为参数 \(k\) 的方程/函数。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★★</span></td><td>以斜率 \(k\) 为自变量的函数建模，相对次要。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★</span></td><td>本题几乎不涉及数据。</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><b>回归传统，稳中求进</b>：多位一线教师（如"高中数学 Lee"）指出，今年 18 题不像去年部分新颖设问，而是"回归传统解析几何、可借二级结论顺畅解决"，但仍在设问组织上保持区分度。</li>
+<li><b>巧设对称结构</b>：引入 \(R\) 为 \(PO\) 与椭圆的另一交点，本质就是 \(-P\)。命题者借此把"三点构成三角形"与"中心对称"结合，考生若看穿 \(R=-P\)，(i)(ii) 都大幅简化；若看不穿，则需二次联立，计算量陡增。</li>
+<li><b>递进式设问、分层区分</b>：(1) 送分（基本量）；(2)(i) 中等（面积比 \(\rightarrow\) 线段比 \(\rightarrow\) 韦达解 \(k\)）；(2)(ii) 偏难（夹角公式 \(\rightarrow\) 函数 \(\rightarrow\) 基本不等式），三档难度梯度明显，利于区分不同层次考生。</li>
+<li><b>对公式熟练度的隐性考查</b>：(ii) 依赖两直线夹角正切公式（部分新教材已淡化）与"锐角验证"的严密性，既考能力也考知识面的完整性。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第 (1) 问</h3>
+
+<p>由左焦点 \(F(-1,0)\) 知 \(c=1\)。离心率 \(e=\dfrac ca=\dfrac12\)，故 \(a=2\)。于是</p>
+<div class="formula">\[b^2=a^2-c^2=4-1=3,\]</div>
+<p>所以椭圆方程为</p>
+<div class="formula">\[\boxed{\dfrac{x^2}{4}+\dfrac{y^2}{3}=1}.\]</div>
+
+<h3>7.2 第 (2)(i) 问</h3>
+
+<p>设直线 \(l:\ y=k(x+1)\ (k&gt;0)\)。设 \(P(x_1,y_1),\ Q(x_2,y_2)\)，且因 \(Q\) 在第三象限并位于 \(F\) 左下方，有 \(x_1&gt;x_2\)（\(x_1\) 对应上方交点，\(x_2&lt;-1\)）。</p>
+
+<p>联立</p>
+<div class="formula">\[\begin{cases}y=k(x+1)\\[2pt]\dfrac{x^2}{4}+\dfrac{y^2}{3}=1\end{cases}\quad\Longrightarrow\quad (3+4k^2)x^2+8k^2x+(4k^2-12)=0.\]</div>
+<p>由韦达定理</p>
+<div class="formula">\[x_1+x_2=-\frac{8k^2}{3+4k^2},\qquad x_1x_2=\frac{4k^2-12}{3+4k^2}.\]</div>
+
+<p><b>关键观察</b>：椭圆关于原点中心对称，故 \(R(-x_1,-y_1)\)，且 \(y_i=k(x_i+1)\ (i=1,2)\)。</p>
+
+<p><b>面积计算</b>。利用坐标面积公式（或直接用向量叉积），对 \(\triangle PQR\)（顶点 \(P,Q,R=-P\)）有</p>
+<div class="formula">\[S_{\triangle PQR}=k(x_1-x_2)\quad (x_1&gt;x_2).\]</div>
+<p>而对 \(\triangle PFO\)（顶点 \(P,F(-1,0),O(0,0)\)）：</p>
+<div class="formula">\[S_{\triangle PFO}=\frac12|y_1|=\frac12\,y_1=\frac12\,k(x_1+1).\]</div>
+
+<p>由条件 \(S_{\triangle PQR}=3S_{\triangle PFO}\)：</p>
+<div class="formula">\[k(x_1-x_2)=3\cdot\frac12 k(x_1+1)\quad\Longrightarrow\quad 2(x_1-x_2)=3(x_1+1).\]</div>
+<p>化简得</p>
+<div class="formula">\[x_1+2x_2=-3.\tag{★}\]</div>
+
+<p>令 \(u=k^2\)，结合 \(x_1+x_2=-\dfrac{8u}{3+4u}\) 与 (★) 解得</p>
+<div class="formula">\[x_1=\frac{9-4u}{3+4u},\qquad x_2=\frac{-9-4u}{3+4u}.\]</div>
+<p>代入 \(x_1x_2=\dfrac{4u-12}{3+4u}\)：</p>
+<div class="formula">\[\frac{(9-4u)(-9-4u)}{(3+4u)^2}=\frac{4u-12}{3+4u}\;\Longrightarrow\;16u^2-81=(4u-12)(3+4u)=16u^2-36u-36.\]</div>
+<p>于是 \(-81=-36u-36\)，得 \(u=\dfrac{45}{36}=\dfrac54\)，即 \(k^2=\dfrac54\)。由 \(k&gt;0\) 得</p>
+<div class="formula">\[k=\frac{\sqrt5}{2}.\]</div>
+<p>故直线 \(l\) 的方程为</p>
+<div class="formula">\[\boxed{y=\frac{\sqrt5}{2}(x+1)}\quad\text{或}\quad\boxed{\sqrt5\,x-2y+\sqrt5=0}.\]</div>
+
+<div class="note">另解（绍兴陈波，共角法）：因 \(O\) 为 \(PR\) 中点，\(\triangle PQR\) 与 \(\triangle PFO\) 共用 \(\angle QPR\)，故
+\(\dfrac{S_{\triangle PQR}}{S_{\triangle PFO}}=\dfrac{|PQ|\cdot|PR|}{|PF|\cdot|PO|}=2\dfrac{|PQ|}{|PF|}=3\Rightarrow |PQ|=\frac32|PF|\)，又 \(|PQ|=|PF|+|FQ|\)，得 \(|PF|:|FQ|=2:1\)，再据此定比分点求 \(k\)，结果一致。</div>
+
+<h3>7.3 第 (2)(ii) 问</h3>
+
+<p>直线 \(QP\) 即直线 \(l\)，斜率 \(k_{QP}=k\)。由对称性 \(R(-x_1,-y_1)\)，直线 \(QR\) 的斜率为</p>
+<div class="formula">\[k_{QR}=\frac{-y_1-y_2}{-x_1-x_2}=\frac{y_1+y_2}{x_1+x_2}.\]</div>
+<p>而 \(y_1+y_2=k(x_1+x_2+2)\)，代入 \(x_1+x_2=S=-\dfrac{8k^2}{3+4k^2}\) 可得</p>
+<div class="formula">\[k_{QR}=k\frac{S+2}{S}=k\left(1+\frac{2}{S}\right)=-\frac{3}{4k}.\]</div>
+
+<p>\(\angle PQR\) 为直线 \(QP\) 与 \(QR\) 的夹角，由夹角正切公式</p>
+<div class="formula">\[\tan\angle PQR=\left|\frac{k_{QR}-k_{QP}}{1+k_{QP}k_{QR}}\right|
+=\left|\frac{-\frac{3}{4k}-k}{1+k\left(-\frac{3}{4k}\right)}\right|
+=\frac{k+\frac{3}{4k}}{1-\frac34}
+=4\left(k+\frac{3}{4k}\right)=4k+\frac{3}{k}.\]</div>
+
+<p><b>锐角验证（必要一步）</b>：夹角公式给出的是两直线的"锐角夹角"正切；须确认 \(\angle PQR\) 本身为锐角，公式才等于原角正切。取向量 \(\overrightarrow{QP}=(x_1-x_2)(1,k)\)，\(\overrightarrow{QR}=(-S,\,-k(S+2))\)，计算点积</p>
+<div class="formula">\[\overrightarrow{QP}\cdot\overrightarrow{QR}=(x_1-x_2)\big[-(1+k^2)S-2k^2\big]=\frac{2k^2(x_1-x_2)}{3+4k^2}&gt;0\quad(k&gt;0).\]</div>
+<p>故 \(\angle PQR\) 对任意 \(k&gt;0\) 均为锐角，上述 \(\tan\) 表达式有效。</p>
+
+<p>由基本不等式（\(k&gt;0\)）：</p>
+<div class="formula">\[4k+\frac{3}{k}\ge 2\sqrt{4k\cdot\frac{3}{k}}=2\sqrt{12}=4\sqrt3,\]</div>
+<p>当且仅当 \(4k=\dfrac3k\)，即 \(k^2=\dfrac34\)、\(k=\dfrac{\sqrt3}{2}\) 时取等号。因此</p>
+<div class="formula">\[\boxed{\big(\tan\angle PQR\big)_{\min}=4\sqrt3}.\]</div>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><b>(1) 看穿中心对称</b>：一眼认出 \(R=-P\)（\(O\) 为 \(PR\) 中点），是整题提速的核心。建议在草稿上明确写出 \(R(-x_1,-y_1)\)。</li>
+<li><b>(i) 用"面积比 \(\rightarrow\) 线段比"</b>：共角法（\(2|PQ|/|PF|=3\)）可直接得到 \(|PF|:|FQ|=2:1\)，比纯坐标代入更省算；若用坐标法，则牢记结论 \(S_{\triangle PQR}=k|x_1-x_2|\)、\(S_{\triangle PFO}=y_1/2\) 可秒列方程。</li>
+<li><b>(ii) 斜率代换技巧</b>：把 \(k_{QR}\) 表成 \(-\dfrac{3}{4k}\) 后，夹角公式分母恰好 \(1-\frac34=\frac14\)，整体化简为 \(4k+\frac3k\)，非常干净。这一步的"巧合"来源于椭圆的 \(a^2=4,\ b^2=3\) 固定比例。</li>
+<li><b>(ii) 务必验证锐角</b>：这是阅卷与严谨性的得分点。用向量点积正定即可，约三行。</li>
+<li><b>解方程用 \(u=k^2\)</b>：避免根号，韦达代入后解一元二次方程，注意验根 \(k&gt;0\)。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><b>解析几何仍是压轴前的"计算+逻辑"主战场</b>，但设问更强调"几何性质先行、代数运算跟进"，单纯套路的收益下降。</li>
+<li><b>中心对称 / 共轭直径 / 极点极线等"结构对称性"会持续成为命题富矿</b>，考生应训练"先识结构、再算"的直觉。</li>
+<li><b>最值问题从"导数法"扩展到"不等式法、参数方程法"多元并存</b>，基本不等式、柯西不等式在解析几何最值中出场频率上升。</li>
+<li><b>对"公式完整性"的隐性考查回归</b>：如本题的夹角公式、17 题涉及的贝叶斯/条件概率，提示新教材淡化但高考仍可能考，复习须查漏补缺。</li>
+<li><b>多问递进、低起点高落点</b>：第 (1) 问普遍送分，后两问逐级抬升，利于区分；预计此模式延续。</li>
+<li><b>运算量的"可控化"</b>：命题趋向于"巧妙结构降低总运算量"，但要求看出结构，对思维要求更高。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><b>未能识破 \(R=-P\)</b>：大量考生对 \(R\) 再次联立求坐标，陷入冗长计算甚至算错；这是 (i)(ii) 失分的主因。</li>
+<li><b>(ii) 忘记验证 \(\angle PQR\) 为锐角</b>：直接套用夹角公式，忽略"公式给锐角夹角"的前提；虽本题恰为锐角，但省略验证在严密作答中会被扣分，且换题易错。</li>
+<li><b>夹角公式遗忘或误用</b>：两直线夹角正切 \(\left|\dfrac{k_2-k_1}{1+k_1k_2}\right|\) 记成 \(\dfrac{k_2-k_1}{1-k_1k_2}\) 等，导致符号/分母错误。</li>
+<li><b>根的大小与象限判断失误</b>：未利用"\(Q\) 在第三象限"判定 \(x_1&gt;x_2\) 与 \(x_2&lt;-1\)，面积式正负、韦达代入方向出错。</li>
+<li><b>基本不等式取等条件遗漏</b>：只写出 \(4k+\frac3k\ge4\sqrt3\)，忘记说明等号在 \(k=\frac{\sqrt3}{2}\) 取得，最值结论不完整。</li>
+<li><b>计算细节崩盘</b>：(i) 中由 \(S_{\triangle PQR}=3S_{\triangle PFO}\) 化简到 \(x_1+2x_2=-3\) 的步骤符号易错，进而解 \(u\) 出错。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>本题公开讨论较多，主要观点如下：</p>
+
+<ul>
+<li><b>"回归传统、可二级结论解"</b>：微信公众号"高中数学 Lee"（2026-06-12）撰文《原来可以这么优雅解 2026 年新高考 1 卷第 18 题》，认为今年 18 题"回归传统解析几何，而且可以用二级结论顺利解决"，比去年部分新颖设问更易下手。</li>
+<li><b>共角面积比法</b>：由 ima 多元共享资源库收录的"绍兴陈波"解析，利用 \(\triangle PQR\) 与 \(\triangle PFO\) 共 \(\angle QPR\)，一步得到 \(|PF|:|FQ|=2:1\)，被赞"简洁优雅"。</li>
+<li><b>夹角公式的教材争议</b>：B 站专栏（cv50483336《2026 高考数学全国 1 卷解答题 18 解析》）指出"求直线夹角的正切值有个经典公式，现在的教材貌似删掉了"，并提醒"只有当 \(\angle PQR\) 为锐角时，夹角公式计算值才是真 \(\angle PQR\) 正切值"，须验证锐角；该文同时指出 17 题浅涉贝叶斯公式，体现本套题的"革新之处"。</li>
+<li><b>标准坐标韦达解</b>：教习网（51jiaoxi.com）、人人文库（renrendoc.com）等给出的标准解法与上述坐标法一致，均得 \(k=\frac{\sqrt5}{2}\)、\(\tan\angle PQR\) 最小值为 \(4\sqrt3\)。</li>
+<li><b>直线法向量新视角</b>：临沂秦庆尧撰文"用直线的法向量解答 2026 年新高考卷 1 第 18 题"，主张用直线法向量求夹角余弦再推 \(\tan\)，同样得到 \(4\sqrt3\)，并呼吁重视法向量工具、不必拘泥于课本未列的夹角公式。</li>
+</ul>
+
+<p>共识：答案高度一致——(1) \(\frac{x^2}{4}+\frac{y^2}{3}=1\)；(2)(i) \(y=\frac{\sqrt5}{2}(x+1)\)；(2)(ii) 最小值 \(4\sqrt3\)。分歧主要在 (ii) 的工具选择（夹角公式 vs 向量/法向量）与对教材删减内容的态度。</p>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><b>强化"结构优先"的审题训练</b>：遇到"过中心的弦的另一端点""对称点"等表述，第一时间联想到中心对称、共轭直径，先画结构再计算。</li>
+<li><b>补全"教材淡化但高考可能考"的公式</b>：两直线夹角正切、点到直线距离变式、条件概率/贝叶斯等，应作为"查漏清单"常态复习。</li>
+<li><b>把"验证锐角"养成习惯</b>：凡用夹角公式，必先判断角的锐钝，用向量点积一句话即可，避免"公式套了但前提不符"的隐性失分。</li>
+<li><b>基本不等式取等必须落地</b>：最值题要写"当且仅当……取等"，并与题设范围（本题 \(k&gt;0\)）核对。</li>
+<li><b>运算"换元降次"</b>：涉及 \(k^2\) 的韦达问题，统一令 \(u=k^2\) 减少根号、降低出错。</li>
+<li><b>一题多解对照</b>：本课可对比"共角面积比法 / 坐标法""夹角公式 / 向量法 / 法向量法"，提升学生方法迁移能力。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>绍兴陈波 解析（ima 多元共享资源库）：https://ima.qq.com/wiki/?shareId=9372d67cfee749b62123029ab8658f3d1843bbd8fe15b221c684016631fa8848</li>
+<li>高中数学 Lee《原来可以这么优雅解 2026 年新高考 1 卷第 18 题》（微信公众号，2026-06-12）：https://ima.qq.com/wiki/?shareId=104b7b93cf86027b813649bdebee27a323cbde430bd8929e89de34cbb6fa09ff</li>
+<li>B 站专栏 cv50483336《2026 高考数学全国 1 卷解答题 18 解析》：https://www.bilibili.com/read/cv50483336</li>
+<li>教习网《2026 年普通高等学校招生全国统一考试数学试题全国Ⅰ卷含解析》：https://www.51jiaoxi.com/doc-18449302.html</li>
+<li>人人文库《2026 年新高考 I 卷数学解析》：https://m.renrendoc.com/paper/526703080.html</li>
+<li>临沂秦庆尧《用直线的法向量解答 2026 年新高考卷 1 第 18 题》（网络文章，2026-06-08）</li>
+</ul>
+
+
+</div>
+</body>
+</html>

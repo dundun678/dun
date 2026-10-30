@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年高考数学全国二卷第 18 题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 年高考数学全国二卷第 18 题研究报告</h1>
+  <div class="lead">研究对象：函数 f(x)=ln(1+x)-x+1/2 x^2-kx^3（0&lt;k&lt;1/3）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>（17 分）已知函数 \(f(x)=\ln(1+x)-x+\dfrac{1}{2}x^2-kx^3\)，其中 \(0&lt;k&lt;\dfrac{1}{3}\)。</p>
+
+<p>(1) 证明：\(f(x)\) 在区间 \((0,+\infty)\) 上存在唯一的极值点和唯一的零点。</p>
+
+<p>(2) 设 \(x_1,x_2\) 分别为 \(f(x)\) 在区间 \((0,+\infty)\) 上的极值点和零点。</p>
+
+<p>（ⅰ）设函数 \(g(t)=f(x_1+t)-f(x_1-t)\)，证明 \(g(t)\) 在区间 \((0,x_1)\) 上单调递减；</p>
+
+<p>（ⅱ）比较 \(2x_1\) 与 \(x_2\) 的大小，并证明你的结论。</p>
+
+<div class="note">说明：本题为 2025 年高考数学<strong>全国二卷（新高考Ⅱ卷）</strong>第 18 题，属于解答题中档偏难的函数与导数综合题，分值 17 分。</div>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<tr><th>项目</th><th>内容</th></tr>
+<tr><td>卷型 / 年份</td><td>2025 年高考数学全国二卷（新高考Ⅱ卷）</td></tr>
+<tr><td>题号</td><td>第 18 题（解答题第 4 题）</td></tr>
+<tr><td>题型</td><td>函数与导数综合解答题（证明型）</td></tr>
+<tr><td>分值</td><td>17 分</td></tr>
+<tr><td>考查模块</td><td>导数及其应用（单调性、极值、零点、不等式证明）</td></tr>
+<tr><td>难度定位</td><td>中高档（压轴前序题，区分度集中在第(2)(ⅱ)问）</td></tr>
+<tr><td>核心方法</td><td>切线放缩、对称差函数构造（极值点偏移思想）</td></tr>
+</table>
+
+<h2>三、必备知识点</h2>
+
+<ul>
+<li><strong>复合函数求导</strong>：\(\bigl(\ln(1+x)\bigr)'=\dfrac{1}{1+x}\)，以及多项式求导；本题求导后需通分/因式分解。</li>
+<li><strong>用导数研究单调性与极值</strong>：由 \(f'(x)\) 的符号判定 \(f(x)\) 的增减区间，进而确定极值点。</li>
+<li><strong>零点存在性定理 + 单调性保证唯一性</strong>：先证 \(f(x_1)&gt;0\)（正段），再找一个使 \(f&lt;0\) 的点（负段），由连续性与严格单调性得到唯一零点。</li>
+<li><strong>切线放缩不等式</strong>：\(\ln(1+x)\le x\)（\(x&gt;-1\)，等号仅当 \(x=0\)）。这是构造"负值点"的关键工具。</li>
+<li><strong>对称差函数（极值点偏移核心手法）</strong>：构造 \(g(t)=f(x_1+t)-f(x_1-t)\)，通过其单调性把"函数值大小"翻译为"自变量大小"。</li>
+<li><strong>函数单调性与自变量大小的互译</strong>：已知 \(f\) 在 \((x_1,+\infty)\) 严格递减，则 \(f(a)&lt;f(b)\iff a&gt;b\)。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<tr><th>《中国高考评价体系》能力</th><th>在本題中的体现</th></tr>
+<tr><td>信息获取</td><td>从题干条件 \(0&lt;k&lt;\frac13\) 读出"极值点存在且为正"的隐含信息。</td></tr>
+<tr><td>抽象概括</td><td>将"唯一极值点""唯一零点"抽象为"单调性与符号变化"的判定问题。</td></tr>
+<tr><td>推理论证</td><td>全程严谨证明：极值唯一性、零点唯一性、\(g(t)\) 单调性、\(2x_1\) 与 \(x_2\) 大小关系。</td></tr>
+<tr><td>运算求解</td><td>准确求导、通分、代入 \(3k=\frac{1}{1+x_1}\) 化简对称表达式。</td></tr>
+<tr><td>探索创新</td><td>第(2)(ⅱ)需突破常规极值点偏移模板，灵活构造并用 \(g(x_1)=f(2x_1)\) 完成比较。</td></tr>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<tr><th>核心素养</th><th>星级</th><th>简要说明</th></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★</span></td><td>把文字条件抽象为函数性质与不等式关系。</td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★★</span></td><td>全题以证明链推进，是本题最核心素养。</td></tr>
+<tr><td>数学运算</td><td><span class="star">★★★★</span></td><td>求导、通分、代数化简的准确度要求高。</td></tr>
+<tr><td>直观想象</td><td><span class="star">★★★</span></td><td>借助 \(f(x)\) 图像理解极值、零点与 \(2x_1\) 的位置关系。</td></tr>
+<tr><td>数学建模</td><td><span class="star">★</span></td><td>本题偏纯数学证明，建模成分弱。</td></tr>
+<tr><td>数据分析</td><td><span class="star">★</span></td><td>基本不涉及真实数据。</td></tr>
+</table>
+
+<h2>六、命题思路</h2>
+
+<ul>
+<li><strong>载体选择</strong>：以"对数函数 + 幂函数"的标准组合 \(f(x)=\ln(1+x)-x+\frac12x^2-kx^3\) 为载体，结构干净、Taylor 展开友好。</li>
+<li><strong>参数设计</strong>：条件 \(0&lt;k&lt;\frac13\) 保证 \(\frac{1}{1+x}=3k\) 在 \((0,+\infty)\) 有唯一正解 \(x_1=\frac{1}{3k}-1\)，即极值点存在且为正。</li>
+<li><strong>递进式设问（搭梯子）</strong>：(1) 考查存在性与唯一性（基础）→ (2)(ⅰ) 构造对称差函数并证其单调性（技巧铺垫）→ (2)(ⅱ) 比较 \(2x_1\) 与 \(x_2\)（综合应用）。</li>
+<li><strong>去套路化</strong>：不同于常规极值点偏移"已知 \(f(x_1)=f(x_2)\) 证 \(x_1+x_2\) 与 \(2x_0\) 关系"，本题改用 \(g(t)\) 的单调性间接"翻译"大小关系，考查对底层原理的掌握。</li>
+<li><strong>区分度设计</strong>：第(1)问卡"切线放缩找负值点"；第(2)(ⅰ)卡"观察代入与计算"；第(2)(ⅱ)卡"极值点偏移思想"与"函数值→自变量"的转化，是区分尖子生的关键。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问：唯一极值点与唯一零点</h3>
+
+<p><strong>思路</strong>：先求导并通分，分析 \(f'(x)\) 在 \((0,+\infty)\) 的符号变化，得到唯一极大值点；再利用 \(f(0)=0\) 与切线放缩 \(\ln(1+x)&lt;x\) 分别说明函数先正后负，由连续性与严格单调性得到唯一零点。</p>
+
+<p><strong>解答</strong>：函数定义域为 \(x&gt;-1\)。对 \(x&gt;0\)，</p>
+
+<div class="formula">
+\[
+f'(x)=\frac{1}{1+x}-1+x-3kx^2
+= \frac{-x}{1+x}+x-3kx^2
+= \frac{x^2}{1+x}-3kx^2
+= \frac{x^2\bigl(1-3k-3kx\bigr)}{1+x}
+= \frac{x^2(-3kx+1-3k)}{1+x}.
+\]
+</div>
+
+<p>当 \(x&gt;0\) 时，\(x^2&gt;0\) 且 \(1+x&gt;0\)，故 \(f'(x)\) 的符号由 \(h(x)=-3kx+1-3k\) 决定。由于 \(0&lt;k&lt;\frac13\)，有 \(h(0)=1-3k&gt;0\)，且 \(h(x)\) 随 \(x\) 增大而严格减小并趋于 \(-\infty\)。因此存在<strong>唯一</strong>的 \(x_1&gt;0\) 使 \(h(x_1)=0\)，即</p>
+
+<div class="formula">
+\[
+x_1=\frac{1-3k}{3k}=\frac{1}{3k}-1&gt;0.
+\]
+</div>
+
+<ul>
+<li>当 \(0&lt;x&lt;x_1\) 时，\(h(x)&gt;0\)，故 \(f'(x)&gt;0\)，\(f(x)\) 单调递增；</li>
+<li>当 \(x&gt;x_1\) 时，\(h(x)&lt;0\)，故 \(f'(x)&lt;0\)，\(f(x)\) 单调递减。</li>
+</ul>
+
+<p>所以 \(x_1\) 是 \(f(x)\) 在 \((0,+\infty)\) 上的<strong>唯一极值点（极大值点）</strong>。✓</p>
+
+<p>再证唯一零点。由 \(f(0)=\ln 1-0+0-0=0\)，且 \(f\) 在 \((0,x_1]\) 严格递增，故对一切 \(x\in(0,x_1]\) 有 \(f(x)&gt;f(0)=0\)，即正段无零点。</p>
+
+<p>利用经典放缩：当 \(x&gt;0\) 时 \(\ln(1+x)&lt;x\)（即 \(\ln(1+x)-x&lt;0\)）。于是</p>
+
+<div class="formula">
+\[
+f(x)=\bigl[\ln(1+x)-x\bigr]+\frac{x^2}{2}-kx^3
+&lt; \frac{x^2}{2}-kx^3
+= x^2\left(\frac12-kx\right).
+\]
+</div>
+
+<p>取 \(x=\dfrac{1}{2k}\)（显然 \(&gt;0\)），则右端 \(=\left(\dfrac{1}{2k}\right)^2\!\left(\dfrac12-k\cdot\dfrac{1}{2k}\right)=0\)，故 \(f\!\left(\dfrac{1}{2k}\right)&lt;0\)。又</p>
+
+<div class="formula">
+\[
+\frac{1}{2k}-x_1=\frac{1}{2k}-\left(\frac{1}{3k}-1\right)=\frac{1}{6k}+1&gt;0,
+\]
+</div>
+
+<p>所以 \(\dfrac{1}{2k}&gt;x_1\)，该负值点位于递减区间内。由连续性，存在 \(x_2\in\left(x_1,\dfrac{1}{2k}\right)\subset(x_1,+\infty)\) 使 \(f(x_2)=0\)；又 \(f\) 在 \((x_1,+\infty)\) 严格递减，故该零点<strong>唯一</strong>。✓</p>
+
+<p>综上，\(f(x)\) 在 \((0,+\infty)\) 上存在唯一的极值点 \(x_1\) 和唯一的零点 \(x_2\)（且 \(x_2&gt;x_1\)）。</p>
+
+<h3>7.2 第(2)(ⅰ)问：\(g(t)\) 在 \((0,x_1)\) 单调递减</h3>
+
+<p><strong>思路</strong>：对 \(g(t)\) 求导，利用第(1)问得到的 \(3k=\dfrac{1}{1+x_1}\) 代入化简，把差值转化为一个严格递增辅助函数 \(\phi(s)=\dfrac{s^2}{1+s}\) 的比较。</p>
+
+<p><strong>解答</strong>：</p>
+
+<div class="formula">
+\[
+g'(t)=f'(x_1+t)\cdot 1-\bigl(-f'(x_1-t)\bigr)=f'(x_1+t)+f'(x_1-t).
+\]
+</div>
+
+<p>由 \(f'(x)=x^2\!\left(\dfrac{1}{1+x}-3k\right)\)，且 \(3k=\dfrac{1}{1+x_1}\)，得</p>
+
+<div class="formula">
+\[
+\begin{aligned}
+g'(t)&=(x_1+t)^2\left(\frac{1}{1+x_1+t}-\frac{1}{1+x_1}\right)
+      +(x_1-t)^2\left(\frac{1}{1+x_1-t}-\frac{1}{1+x_1}\right)\\[2mm]
+&=\frac{t}{1+x_1}\left[\frac{(x_1-t)^2}{1+x_1-t}-\frac{(x_1+t)^2}{1+x_1+t}\right].
+\end{aligned}
+\]
+</div>
+
+<p>令 \(\phi(s)=\dfrac{s^2}{1+s}\,(s&gt;0)\)，则 \(\phi'(s)=1-\dfrac{1}{(1+s)^2}=\dfrac{s(s+2)}{(1+s)^2}&gt;0\)，故 \(\phi\) 在 \((0,+\infty)\) 严格递增。当 \(0&lt;t&lt;x_1\) 时，\(0&lt;x_1-t&lt;x_1+t\)，于是 \(\phi(x_1-t)&lt;\phi(x_1+t)\)，方括号内为负；又 \(\dfrac{t}{1+x_1}&gt;0\)，故 \(g'(t)&lt;0\)。因此 \(g(t)\) 在 \((0,x_1)\) 上<strong>严格单调递减</strong>。✓</p>
+
+<h3>7.3 第(2)(ⅱ)问：比较 \(2x_1\) 与 \(x_2\) 的大小</h3>
+
+<p><strong>思路</strong>：由(ⅰ)知 \(g\) 在 \((0,x_1)\) 递减且 \(g(0)=0\)，故 \(g(x_1)=f(2x_1)-f(0)=f(2x_1)&lt;0\)。再结合 \(f\) 在 \((x_1,+\infty)\) 严格递减且 \(f(x_2)=0\)，即可把"函数值大小"翻译为"自变量大小"。</p>
+
+<p><strong>解答</strong>：由(ⅰ)，\(g(t)\) 在 \((0,x_1)\) 严格递减，且 \(g(0)=f(x_1)-f(x_1)=0\)，故对任意 \(t\in(0,x_1)\) 有 \(g(t)&lt;0\)。又 \(g\) 在 \(t=x_1\) 处左连续，且严格递减，故 \(g(x_1)&lt;g(t)&lt;0\)，即</p>
+
+<div class="formula">
+\[
+g(x_1)=f(2x_1)-f(0)=f(2x_1)&lt;0.
+\]
+</div>
+
+<p>已知 \(f(x_2)=0\) 且 \(x_2&gt;x_1\)，而 \(f\) 在 \((x_1,+\infty)\) 严格递减。由 \(f(2x_1)&lt;0=f(x_2)\) 及递减性（函数值越小，对应自变量越大）得</p>
+
+<div class="formula">
+\[
+2x_1&gt;x_2.
+\]
+</div>
+
+<p><strong>结论</strong>：\(2x_1&gt;x_2\)。✓</p>
+
+<h2>八、解答技巧</h2>
+
+<ul>
+<li><strong>(1) 求导后"提取公因式 + 通分"</strong>：把 \(f'(x)\) 整理成 \(\dfrac{x^2(\cdots)}{1+x}\)，由于 \(x^2,1+x&gt;0\)，只需讨论分子的线性部分，避免复杂讨论。</li>
+<li><strong>(1) 唯一零点的"先正后负"</strong>：正段由 \(f(0)=0\) 与递增性直接得到；负段取 \(\dfrac{1}{2k}\) 这个"放缩点"，利用 \(\ln(1+x)&lt;x\) 一击命中 \(f&lt;0\)。</li>
+<li><strong>(2)(ⅰ) 关键代入 \(3k=\dfrac{1}{1+x_1}\)</strong>：把含参的导数表达式化为纯对称的差式，再引入 \(\phi(s)=\dfrac{s^2}{1+s}\) 比大小，化繁为简。</li>
+<li><strong>(2)(ⅱ) "函数值大小 → 自变量大小"</strong>：这是极值点偏移题的通用收尾手法。由 \(g\) 递减推出 \(f(2x_1)&lt;0=f(x_2)\)，再借 \(f\) 在 \((x_1,+\infty)\) 的递减性得出 \(2x_1&gt;x_2\)。</li>
+<li><strong>点睛之笔</strong>：识别 \(g(x_1)=f(2x_1)\) 这一"端点代入"，把抽象的对称差函数与要比较的 \(2x_1\) 直接挂钩。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+
+<ul>
+<li><strong>极值点偏移"变形化"</strong>：不再直接给 \(f(x_1)=f(x_2)\)，而是以对称差函数、比值、差值等包装，考查对底层原理的理解。</li>
+<li><strong>参数范围与存在性结合</strong>：如本题用 \(0&lt;k&lt;\frac13\) 控制极值点位置，未来仍会保留"参数区间保证结构"的命制方式。</li>
+<li><strong>切线放缩仍是零点证明首选</strong>：\(\ln(1+x)\le x\)、\(e^x\ge x+1\)、\(\sin x\le x\) 等放缩不等式在"找负值点"中持续高频出现。</li>
+<li><strong>递进式"搭梯子"设问</strong>：前问为后问铺垫，鼓励"用已证结论解后续问题"，降低起步门槛、提高区分度。</li>
+<li><strong>减少纯计算套路，增加观察构造权重</strong>：评分更看重"关键一步的构造与观察"而非暴力展开。</li>
+<li><strong>情境化导数应用</strong>：在保持纯代数训练的同时，结合实际背景（增长率、最优化）的导数题会继续出现。</li>
+</ul>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+
+<ul>
+<li><strong>判号困难</strong>：第(1)问不少学生"不会判断 \(f'(x)\) 正负"，基本功不扎实，导致单调性与极值点全错。</li>
+<li><strong>找不到负值点</strong>：证明唯一零点时，想不到用 \(\ln(1+x)&lt;x\) 放缩取 \(x=\frac{1}{2k}\)，只能"凑数"或放弃。</li>
+<li><strong>链式法则符号错误</strong>：算 \(g'(t)\) 时，\(-f(x_1-t)\) 对 \(t\) 求导应为 \(+f'(x_1-t)\)，易错写成 \(-f'(x_1-t)\)。</li>
+<li><strong>不会代入消参</strong>：(2)(ⅰ)中未将 \(3k=\frac{1}{1+x_1}\) 代入，导致代数式极度臃肿、无法判号。</li>
+<li><strong>死记模板、忽视原理</strong>：(2)(ⅱ)套用"标准极值点偏移"框架却想不出用 \(g(x_1)=f(2x_1)\)，卡在最后一步。</li>
+<li><strong>实测反馈（据一线评析）</strong>：第(1)问难度其实不大、预计至少 5 分，但满分不易；第(2)问计算量大、需注意观察，计算能力跟不上的学生直接"懵"；(2)(ⅱ)需结合函数图像理解极值点偏移的底层原理，灵活性较强，是主要区分点。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+
+<p>主流来源对本题的评价高度一致，认为它是一道<strong>中高档函数与导数综合题</strong>，备考价值高：</p>
+
+<ul>
+<li><strong>官方参考答案（新高考Ⅱ卷）</strong>：给出完整评分结构，\(f'(x)=\dfrac{x^2(-3kx+1-3k)}{1+x}\)，并以 \(\ln(1+\frac{1}{2k})-\frac{1}{2k}&lt;0\) 完成负值点证明；第(2)(ⅱ)结论明确为 \(2x_1&gt;x_2\)。</li>
+<li><strong>21 世纪教育网（一轮复习大题规范解答）</strong>：提供逐分评分点——第(1)问求导 1 分、判定极值点 2 分、说明唯一零点 2 分；第(2)(ⅰ)求导 3 分、判号 2 分、单调性 1 分；第(2)(ⅱ)用单调性得 \(g(x_1)&lt;0\) 并下结论 \(2x_1&gt;x_2\) 计 2 分。</li>
+<li><strong>今日头条"逐题点评"</strong>：强调"第一问难度并不大但很多孩子不会判导数正负""第二问计算量大、有区分度""第三问需要理解极值点偏移底层原理，结合图像才能想到"。</li>
+<li><strong>简书等自媒体</strong>：专门梳理 \(\ln(1+x)\le x\) 切线放缩在本题(1)中的应用，视其为破题关键。</li>
+</ul>
+
+<p><strong>共识与分歧</strong>：解法主流高度统一（对称差函数法），分歧极少；主要差异在于(2)(ⅰ)的代数化简路径（有的写成 \(\dfrac{6kt^2(t^2-x_1^2-2x_1)}{(1+x_1)^2-t^2}\) 形式），但判号结论一致。</p>
+
+<h2>十二、教学启示</h2>
+
+<ul>
+<li><strong>夯实求导基本功</strong>：反复训练"求导→通分/因式分解→判号"的标准流程，确保单调性与极值点零失误。</li>
+<li><strong>系统梳理放缩不等式</strong>：把 \(\ln(1+x)\le x\)、\(e^x\ge x+1\)、\(\sin x\le x\) 等"切线放缩族"及其在零点证明中的用法做成专题。</li>
+<li><strong>讲透极值点偏移的"底层原理"</strong>：不让学生死记模板，而是训练"构造对称差函数 \(g(t)=f(x_0+t)-f(x_0-t)\)"这一通用手法，并强化"函数值大小 ↔ 自变量大小"的互译意识。</li>
+<li><strong>引导"用前问结论解后问"</strong>：递进式设问下，教会学生识别"梯子"——本题(2)(ⅱ)必须依赖(ⅰ)的单调性。</li>
+<li><strong>提升计算准确度与观察力</strong>：减少无意义暴力展开，鼓励先观察结构（如代入 \(3k=\frac{1}{1+x_1}\)）再动手。</li>
+<li><strong>结合图像教学</strong>：用 \(f(x)\) 草图直观呈现 \(x_1\)（峰值）、\(x_2\)（与横轴交点）及 \(2x_1\) 的位置，帮助学生建立"极值点偏移"的几何直觉。</li>
+</ul>
+
+<h2>参考文献</h2>
+
+<ul>
+<li>2025 年全国统一高考数学试卷(新高考Ⅱ) 参考答案（锦宏高考 PDF）：<code>https://jhgk.cn/upload/file/20250611/1749606902734089600.pdf</code></li>
+<li>21 世纪教育网《函数与导数大题规范解答（2027 届一轮复习）》：<code>https://zy.21cnjy.com/26462145</code></li>
+<li>今日头条《2025 年新高考全国卷二逐题点评》：<code>https://www.toutiao.com/article/7515682062527922703/</code></li>
+<li>简书《lnx&lt;ln(x+1)≦x 恒成立及其应用：2025 高考数学二卷第 18 题(1)》：<code>https://www3.jianshu.com/p/ca549aec16a5</code></li>
+<li>思悟教学《2025 年新高考全国Ⅰ卷 18 题》试题分析（ima 知识库）：<code>https://ima.qq.com</code></li>
+</ul>
+
+
+</div>
+</body>
+</html>

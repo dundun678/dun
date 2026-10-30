@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024年高考数学新课标Ⅱ卷第18题研究报告</title>
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'],['$','$']], displayMath: [['\\[','\\]'],['$$','$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1f2933; --sub:#52606d; --line:#e4e7eb;
+    --brand:#b91c1c; --brand2:#1e3a8a; --soft:#f7f8fa; --accent:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       line-height:1.85;font-size:16px;}
+  .wrap{max-width:920px;margin:0 auto;padding:40px 28px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:8px;}
+  h1{font-size:28px;margin:0 0 6px;color:var(--brand);}
+  .lead{color:var(--sub);font-size:15px;}
+  blockquote{margin:18px 0;padding:12px 18px;background:var(--accent);
+       border-left:4px solid var(--brand);border-radius:6px;color:var(--sub);}
+  h2{font-size:22px;margin:42px 0 12px;padding-left:12px;border-left:5px solid var(--brand2);color:var(--brand2);}
+  h3{font-size:18px;margin:26px 0 8px;color:var(--ink);}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0;padding-left:26px;}
+  li{margin:6px 0;}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);color:var(--brand2);font-weight:600;}
+  .formula{background:var(--soft);border:1px solid var(--line);border-radius:8px;
+       padding:10px 16px;margin:12px 0;overflow-x:auto;}
+  .note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 16px;margin:14px 0;color:#92400e;}
+  .star{color:#f59e0b;letter-spacing:2px;}
+  .kw{color:var(--sub);font-size:14px;margin-top:8px;}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--sub);font-size:13px;}
+  code{background:var(--soft);padding:1px 6px;border-radius:4px;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2024年高考数学新课标Ⅱ卷第18题研究报告</h1>
+  <div class="lead">研究对象：某投篮比赛两阶段概率与期望问题（决策型对比）　·　研究视角：高中数学教师教研</div>
+</header>
+
+<h2>一、试题呈现</h2>
+
+<p>某投篮比赛分为两个阶段，每个参赛队由两名队员组成。比赛具体规则如下：第一阶段由参赛队中一名队员投篮 3 次，若 3 次都未投中，则该队被淘汰，比赛成绩为 0 分；若至少投中 1 次，则该队进入第二阶段。第二阶段由该队的另一名队员投篮 3 次，每次投篮投中得 5 分，未投中得 0 分，该队的比赛成绩为第二阶段的得分总和。</p>
+
+<p>某参赛队由甲、乙两名队员组成，设甲每次投中的概率为 \(p\)，乙每次投中的概率为 \(q\)，各次投中与否相互独立。</p>
+
+<p>（1）若 \(p=0.4\)，\(q=0.5\)，甲参加第一阶段比赛，求甲、乙所在队的比赛成绩不少于 5 分的概率；</p>
+
+<p>（2）假设 \(0&lt;p&lt;q\)。</p>
+<ul>
+<li>（ⅰ）为使得甲、乙所在队的比赛成绩为 15 分的概率最大，应该由谁参加第一阶段比赛？</li>
+<li>（ⅱ）为使得甲、乙所在队的比赛成绩的数学期望最大，应该由谁参加第一阶段比赛？</li>
+</ul>
+
+<h2>二、试题定位与基本信息</h2>
+
+<table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>卷型</td><td>2024 年普通高等学校招生全国统一考试 数学（新课标Ⅱ卷 / 新高考Ⅱ卷）</td></tr>
+<tr><td>题号</td><td>第 18 题（解答题，倒数第二道大题）</td></tr>
+<tr><td>分值</td><td>17 分</td></tr>
+<tr><td>考查模块</td><td>概率与统计（计数原理、二项分布、随机变量及其分布、数学期望）</td></tr>
+<tr><td>题型特征</td><td>真实情境应用题 + 决策比较型设问（"该由谁先上场"）</td></tr>
+<tr><td>难度定位</td><td>中等（据一线教师评析，区分度良好；前两问易上手，第(2)问的代数比较是主要区分点）</td></tr>
+<tr><td>核心方法</td><td>对立事件转化、相互独立事件乘法公式、分布列与期望、作差因式分解比较</td></tr>
+</tbody>
+</table>
+
+<h2>三、必备知识点</h2>
+<ul>
+<li><b>独立重复试验与二项分布</b>：单名队员投篮 3 次相当于 \(n=3\) 的伯努利试验，命中次数服从 \(B(3,p)\)；"至少命中 1 次"用对立事件 \(1-(1-p)^3\) 计算最为简洁。</li>
+<li><b>对立事件与相互独立事件概率乘法公式</b>：第一阶段"晋级"（至少 1 中）与第二阶段"命中 \(k\) 次"相互独立，联合概率直接相乘。</li>
+<li><b>离散型随机变量及其分布列</b>：第(2)问需列出成绩 \(X\in\{0,5,10,15\}\) 的分布列，是求期望的基础。</li>
+<li><b>数学期望</b>：期望的线性性质使"总期望 = 晋级概率 × 第二阶段期望"，可整体拆解而无需逐项枚举。</li>
+<li><b>代数作差比较与因式分解</b>：在 \(0&lt;p&lt;q&lt;1\) 条件下比较两个表达式大小，需作差后因式分解，关键用到 \((3-p-q)&gt;0\) 与 \((p+q-pq)&gt;0\)。</li>
+</ul>
+
+<h2>四、关键能力</h2>
+
+<table>
+<thead><tr><th>关键能力（高考评价体系）</th><th>本题中的体现</th></tr></thead>
+<tbody>
+<tr><td>信息获取</td><td>从较长的规则文字中提取"晋级条件""计分方式""两人角色分工"三类关键信息</td></tr>
+<tr><td>抽象概括</td><td>将"比赛成绩不少于 5 分""成绩为 15 分""期望最大"分别抽象为事件与随机变量</td></tr>
+<tr><td>推理论证</td><td>第(2)问在含参条件下作差、因式分解、利用 \(0&lt;p&lt;q&lt;1\) 判定符号，完成严格论证</td></tr>
+<tr><td>运算求解</td><td>数值代入求概率、列分布列求期望、含参代数式变形</td></tr>
+<tr><td>探索创新</td><td>决策型设问要求学生在两个方案间比较择优，而非机械套公式</td></tr>
+</tbody>
+</table>
+
+<h2>五、核心素养</h2>
+
+<table>
+<thead><tr><th>核心素养</th><th>水平</th></tr></thead>
+<tbody>
+<tr><td>数学运算</td><td><span class="star">★★★★★</span></td></tr>
+<tr><td>数学建模</td><td><span class="star">★★★★☆</span></td></tr>
+<tr><td>逻辑推理</td><td><span class="star">★★★★☆</span></td></tr>
+<tr><td>数据分析</td><td><span class="star">★★★☆☆</span></td></tr>
+<tr><td>数学抽象</td><td><span class="star">★★★☆☆</span></td></tr>
+<tr><td>直观想象</td><td><span class="star">★☆☆☆☆</span></td></tr>
+</tbody>
+</table>
+
+<h2>六、命题思路</h2>
+<ul>
+<li><b>真实情境承载</b>：以"投篮比赛两阶段赛制"为素材，贴近体育竞技生活，落实"无情境不命题"的导向。</li>
+<li><b>去套路化、决策型设问</b>：传统概率大题多求某个具体概率或期望，本题却问"该由谁先上场"，把计算升格为"方案比较与策略选择"，考查学生的建模与论证能力。</li>
+<li><b>递进式、分层设问</b>：第(1)问代入具体数值（\(p=0.4,q=0.5\)）求概率，铺垫"晋级 × 第二阶段命中"的双层结构；第(2)问上升到含参比较，先比"满分概率"再比"期望"，思维层层递进。</li>
+<li><b>区分度设计巧妙</b>：结论"命中率较低者应先上场"反直觉，能有效区分"只会套公式"与"真正理解概率结构"的学生；代数证明中的因式分解是关键区分点。</li>
+</ul>
+
+<h2>七、解析思路与完整解答</h2>
+
+<h3>7.1 第(1)问</h3>
+<p><b>思路</b>："比赛成绩不少于 5 分"等价于"第一阶段至少投中 1 次 <b>且</b> 第二阶段至少投中 1 次"（因为第二阶段每中 1 次得 5 分，≥5 分意味着至少中 1 次）。两阶段独立，概率相乘。</p>
+<div class="formula">
+\[
+P(\text{甲晋级})=1-(1-0.4)^3=1-0.6^3=1-0.216=0.784
+\]
+\[
+P(\text{乙第二阶段至少中 1 次})=1-(1-0.5)^3=1-0.5^3=1-0.125=0.875
+\]
+\[
+P(X\geqslant 5)=0.784\times 0.875=0.686
+\]
+</div>
+<p><b>答</b>：比赛成绩不少于 5 分的概率为 <b>0.686</b>。</p>
+
+<h3>7.2 第(2)问</h3>
+<p>设 \(0&lt;p&lt;q\)。记 \(f(t)=1-(1-t)^3=3t-3t^2+t^3\)，即"命中率为 \(t\) 的队员在 3 次中至少命中 1 次"的概率。</p>
+
+<p><b>（ⅰ）比较"成绩为 15 分"的概率</b></p>
+<p>成绩为 15 分 ⟺ 第一阶段晋级 且 第二阶段 3 投全中。</p>
+<ul>
+<li>若<b>甲</b>参加第一阶段、乙参加第二阶段：\(\quad P_1=f(p)\cdot q^3\)。</li>
+<li>若<b>乙</b>参加第一阶段、甲参加第二阶段：\(\quad P_2=f(q)\cdot p^3\)。</li>
+</ul>
+<div class="formula">
+\[
+\begin{aligned}
+P_1-P_2&=(3p-3p^2+p^3)q^3-(3q-3q^2+q^3)p^3\\
+&=3pq^3-3p^2q^3+p^3q^3-3p^3q+3p^3q^2-p^3q^3\\
+&=3pq^3-3p^2q^3-3p^3q+3p^3q^2\\
+&=3pq\bigl(q^2-pq^2-p^2+p^2q\bigr)\\
+&=3pq\bigl[(1-p)q^2-(1-q)p^2\bigr]\\
+&=3pq(q-p)(p+q-pq)
+\end{aligned}
+\]
+</div>
+<p>因 \(0&lt;p&lt;q&lt;1\)，故 \(q-p&gt;0\)，且 \(p+q-pq=p+q(1-p)&gt;0\)。于是 \(P_1-P_2&gt;0\)，即 \(P_1&gt;P_2\)。</p>
+<p><b>答</b>：应安排<b>甲</b>（命中率较低者）参加第一阶段比赛，此时成绩为 15 分的概率最大。</p>
+
+<p><b>（ⅱ）比较"成绩的数学期望"</b></p>
+<p>第二阶段若进行，得分期望为 \(5\times 3\times(\text{命中率})=15\times(\text{命中率})\)；总期望 = 晋级概率 × 第二阶段期望（期望的线性性质，无需逐项枚举）。</p>
+<ul>
+<li>甲先上：\(\quad E_1=15q\cdot f(p)\)。</li>
+<li>乙先上：\(\quad E_2=15p\cdot f(q)\)。</li>
+</ul>
+<div class="formula">
+\[
+\begin{aligned}
+E_1-E_2&=15\bigl[q(3p-3p^2+p^3)-p(3q-3q^2+q^3)\bigr]\\
+&=15\bigl(3pq-3p^2q+p^3q-3pq+3pq^2-pq^3\bigr)\\
+&=15pq(-3p+p^2+3q-q^2)\\
+&=15pq\bigl[3(q-p)-(q^2-p^2)\bigr]\\
+&=15pq(q-p)(3-p-q)
+\end{aligned}
+\]
+</div>
+<p>因 \(0&lt;p&lt;q&lt;1\)，有 \(q-p&gt;0\)，且 \(p+q&lt;2&lt;3\)，故 \(3-p-q&gt;0\)。于是 \(E_1-E_2&gt;0\)，即 \(E_1&gt;E_2\)。</p>
+<p><b>答</b>：应安排<b>甲</b>（命中率较低者）参加第一阶段比赛，此时比赛成绩的数学期望最大。</p>
+
+<div class="note"><b>统一结论</b>：无论目标是"满分(15 分)概率最大"还是"期望最大"，都应让<b>命中率较低者先上第一阶段（晋级门槛）、命中率较高者后上第二阶段（直接得分）</b>。本质是：第一阶段只要求"至少 1 中"，有 3 次机会、门槛低，弱手也能大概率过关；而第二阶段每次命中都直接兑换成 5 分，理应由强手负责"变现"。</div>
+
+<h2>八、解答技巧</h2>
+<ul>
+<li><b>"至少 1 次"的逆向转化</b>：第一阶段晋级概率一律写成 \(1-(1-p)^3\)，避免枚举"中 1/2/3 次"的繁琐。</li>
+<li><b>期望的整体拆解</b>：利用期望线性性，\(E= P(\text{晋级})\times E(\text{阶段2}\mid\text{晋级}) = f(p)\times 15q\)，比列分布列再求和更快更稳。</li>
+<li><b>作差比较的两处"点睛"因式分解</b>：
+  <ul>
+    <li>概率差：\(P_1-P_2=3pq(q-p)(p+q-pq)\)，关键判据是 \(p+q-pq&gt;0\)；</li>
+    <li>期望差：\(E_1-E_2=15pq(q-p)(3-p-q)\)，关键判据是 \(3-p-q&gt;0\)（由 \(p,q&lt;1\) 即 \(p+q&lt;2\) 推出）。</li>
+  </ul>
+</li>
+<li><b>用单调性辅助理解</b>：令 \(\varphi(t)=\dfrac{1-(1-t)^3}{t^3}\)，可证 \(\varphi(t)\) 在 \((0,1)\) 单调递减，故 \(p&lt;q\Rightarrow \varphi(p)&gt;\varphi(q)\)，同样得到"弱手先上"更优，提供第二种论证视角。</li>
+</ul>
+
+<h2>九、未来命题趋势</h2>
+<ol>
+<li><b>决策比较型概率题将持续走热</b>：从"求概率"转向"比方案、选策略"，本题是典型范例，后续可能延伸到排队、抽检、投资等场景的择优。</li>
+<li><b>真实情境与跨学科融合加深</b>：赛事、医疗、生产、游戏化情境将成为概率统计大题的常态载体。</li>
+<li><b>弱化复杂数值运算，强化代数推理</b>：含参讨论 + 作差因式分解的"软计算、硬推理"模式，符合素养导向评价，值得重点关注。</li>
+<li><b>概率与期望的综合考查常态化</b>：单考分布列减少，分布列—期望—方案比较"三位一体"增多。</li>
+<li><b>反套路设问增多</b>：结论可能与直觉相悖（如"弱手先上"），考查学生是否真正理解概率结构而非死记模型。</li>
+<li><b>与新定义、数列、函数融合</b>：概率题可能与递推、数列、函数最值结合，提升综合度。</li>
+</ol>
+
+<h2>十、学生解答的最大障碍与典型失误</h2>
+<ul>
+<li><b>忽视"淘汰得 0 分"规则</b>：误以为成绩只取第二阶段 0/5/10/15，漏掉"第一阶段 3 投 0 中直接得 0 分"这一额外 0 分来源，导致分布列与期望错误。</li>
+<li><b>对"不少于 5 分"理解偏差</b>：误把"晋级后第二阶段≥1 中"与"晋级本身"混淆，或把淘汰(0 分)也算进"≥5 分"的反面。</li>
+<li><b>期望不会拆解</b>：硬列 4 项分布列再求和，过程冗长易错；未能用 \(E=P(\text{晋级})\times 15q\) 简洁处理。</li>
+<li><b>含参作差卡在因式分解</b>：展开后不会配凑出 \((q-p)\) 因子，或符号判定时未利用 \(p,q\in(0,1)\) 推出 \(3-p-q&gt;0\)、\(p+q-pq&gt;0\)。</li>
+<li><b>方向性直觉错误</b>：凭"强者先上"的想当然选乙先上，与正确答案相反；缺乏"用代数证明而非直觉"的意识。</li>
+<li><b>独立性把握不准</b>：将两阶段命中概率错误相加或漏乘晋级概率。</li>
+</ul>
+
+<h2>十一、互联网评价与讨论综述</h2>
+<p>本题为 2024 年新高考Ⅱ卷真题，公开解析资料丰富，主要共识与分歧如下：</p>
+<ul>
+<li><b>答案共识</b>：第(1)问 \(0.686\)；第(2)问两小问均答"甲（命中率低者）先参加第一阶段"。21 世纪教育网、优途升学网、百度题库等给出的标准答案一致。</li>
+<li><b>方法共识</b>：第(2)问主流解法是"分别计算两种排法的目标量 → 作差 → 因式分解比较"，关键因式分解结果为 \(3pq(q-p)(p+q-pq)\) 与 \(15pq(q-p)(3-p-q)\)。</li>
+<li><b>评价倾向</b>：一线教师普遍评价本题"情境新颖、设问反套路"，是当年概率大题中的"亮点题""创新题"；学生反馈"读得懂规则、算得出第(1)问，但第(2)问容易凭直觉选反"。</li>
+<li><b>分歧/补充</b>：部分解析在期望问上仍采用"列分布列逐项求和"，过程较长；亦有资料补充单调性法（\(\varphi(t)\) 递减）作为另一种论证，二者结论一致。</li>
+</ul>
+
+<h2>十二、教学启示</h2>
+<ul>
+<li><b>强化"至少一次"的逆向思维训练</b>：把 \(1-(1-p)^n\) 作为首选工具，减少枚举错误。</li>
+<li><b>突出期望的线性分解</b>：遇到"条件概率下的期望"，优先用 \(E=P(\text{条件})\times E(\text{后续})\) 拆解，提升效率与正确率。</li>
+<li><b>培养含参代数推理能力</b>：专门训练"作差 → 提取公因式(如 \(q-p\)) → 判符号"的完整链条，强调动用 \(0&lt;p,q&lt;1\) 这一隐藏条件。</li>
+<li><b>引导学生"用计算验证直觉"</b>：对"弱手先上"这类反直觉结论，要求学生以具体数值（如 \(p=0.4,q=0.5\)）代入对比，体会建模的严谨性。</li>
+<li><b>重视决策型问题</b>：在复习中增设"方案比较、策略选择"类练习，适应新高考去套路化趋势。</li>
+</ul>
+
+<h2>参考文献</h2>
+<ul>
+<li>2024年新课标全国Ⅱ卷数学高考真题(含答案) — 21世纪教育网：<code>https://zy.21cnjy.com/20561493</code></li>
+<li>【精品解析】【高考真题】2024年数学新课标Ⅱ卷 — 21世纪教育网：<code>https://zy.21cnjy.com/20593023</code></li>
+<li>2024年高考新高考II卷(数学)-概率 — 优途升学网：<code>https://news.ytowin.com/2025/211/17/4819225049d0bd.html</code></li>
+<li>2024年高考真题 数学（百度题库 第18题）：<code>https://tiku.baidu.com/web/quedetail/cce513176c85ec3a87c2c5ea</code></li>
+<li>2020—2025年新课标全国卷高考数学分类汇编——9.概率统计(含解析) — 21世纪教育网：<code>https://zy.21cnjy.com/23367591</code></li>
+</ul>
+
+
+</div>
+</body>
+</html>

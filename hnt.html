@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>汉诺塔益智游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            overflow-x: hidden;
+            padding: 8px;
+        }
+
+        h1 {
+            margin-top: 6px;
+            font-size: 1.6em;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .level-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 6px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .level-badge {
+            background: linear-gradient(135deg, #e94560, #c73e54);
+            padding: 4px 14px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+        }
+
+        .level-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .level-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .level-dot.completed {
+            background: #1dd1a1;
+            box-shadow: 0 0 8px rgba(29, 209, 161, 0.6);
+        }
+
+        .level-dot.current {
+            background: #feca57;
+            box-shadow: 0 0 8px rgba(254, 202, 87, 0.6);
+            animation: pulse 1.5s infinite;
+        }
+
+        .level-dot.locked {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .game-info {
+            display: flex;
+            gap: 12px;
+            margin: 4px 0;
+            font-size: 0.85em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-item span {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 8px;
+            margin: 6px 0;
+            padding: 4px;
+            position: relative;
+        }
+
+        .tower-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .tower-label {
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #e94560;
+            text-shadow: 0 0 6px rgba(233, 69, 96, 0.5);
+        }
+
+        .tower {
+            width: 95px;
+            height: 220px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding-bottom: 6px;
+        }
+
+        .tower:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tower.selected {
+            background: rgba(233, 69, 96, 0.2);
+            box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+        }
+
+        .tower.valid-target {
+            background: rgba(0, 255, 136, 0.15);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+        }
+
+        .tower.invalid-target {
+            background: rgba(255, 0, 0, 0.1);
+        }
+
+        .pole {
+            position: absolute;
+            bottom: 0;
+            width: 8px;
+            height: 190px;
+            background: linear-gradient(to top, #8b4513, #d2691e);
+            border-radius: 4px 4px 0 0;
+            box-shadow: 1px 0 3px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        .base {
+            width: 105px;
+            height: 12px;
+            background: linear-gradient(to bottom, #8b4513, #5d3a1a);
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            margin-top: -3px;
+            z-index: 2;
+        }
+
+        .disk {
+            height: 24px;
+            border-radius: 12px;
+            position: relative;
+            z-index: 3;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.75em;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.2);
+            margin-bottom: 1px;
+            user-select: none;
+        }
+
+        .disk:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.1);
+        }
+
+        .disk.selected-disk {
+            animation: float 1s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(255,255,255,0.4), 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .disk-1 { width: 36px; background: linear-gradient(135deg, #ff6b6b, #ee5a5a); }
+        .disk-2 { width: 48px; background: linear-gradient(135deg, #feca57, #ff9f43); }
+        .disk-3 { width: 60px; background: linear-gradient(135deg, #48dbfb, #0abde3); }
+        .disk-4 { width: 72px; background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+        .disk-5 { width: 84px; background: linear-gradient(135deg, #5f27cd, #341f97); }
+        .disk-6 { width: 90px; background: linear-gradient(135deg, #ff9ff3, #f368e0); }
+        .disk-7 { width: 94px; background: linear-gradient(135deg, #00d2d3, #01a3a4); }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 8px 0;
+            width: 100%;
+            max-width: 320px;
+            align-items: center;
+        }
+
+        .control-row {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 0.85em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            flex: 1;
+            max-width: 150px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #c73e54);
+            color: white;
+            box-shadow: 0 3px 10px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .btn-rules {
+            background: linear-gradient(135deg, #5f27cd, #341f97);
+            color: white;
+            box-shadow: 0 3px 10px rgba(95, 39, 205, 0.4);
+        }
+
+        .btn-rules:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(95, 39, 205, 0.6);
+        }
+
+        /* 规则弹窗 */
+        .rules-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+
+        .rules-overlay.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .rules-modal {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 2px solid rgba(233, 69, 96, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+            animation: popIn 0.4s ease;
+        }
+
+        .rules-modal h3 {
+            color: #e94560;
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .rules-modal ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.85em;
+            line-height: 1.8;
+        }
+
+        .rules-modal li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .rules-modal li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #e94560;
+        }
+
+        .rules-close {
+            display: block;
+            margin: 15px auto 0;
+            padding: 8px 30px;
+            background: linear-gradient(135deg, #e94560, #c73e54);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        /* 通关弹窗 */
+        .message-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .message-overlay.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .message-modal {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 2px solid #e94560;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 300px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(233, 69, 96, 0.5);
+            animation: popIn 0.5s ease;
+        }
+
+        .message-modal h2 {
+            color: #e94560;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .message-modal p {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .message-modal .stars {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .move-hint {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 255, 136, 0.9);
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: bold;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .tower.valid-target .move-hint {
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        /* 关卡选择弹窗 */
+        .level-select-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            backdrop-filter: blur(5px);
+        }
+
+        .level-select-overlay.show {
+            display: flex;
+        }
+
+        .level-select-modal {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 2px solid rgba(233, 69, 96, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 300px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .level-select-modal h2 {
+            color: #e94560;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .level-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .level-btn {
+            padding: 10px;
+            border-radius: 12px;
+            border: 2px solid;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .level-btn.unlocked {
+            background: rgba(29, 209, 161, 0.15);
+            border-color: #1dd1a1;
+            color: #1dd1a1;
+        }
+
+        .level-btn.unlocked:hover {
+            background: rgba(29, 209, 161, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .level-btn.current {
+            background: rgba(254, 202, 87, 0.15);
+            border-color: #feca57;
+            color: #feca57;
+            animation: pulse 1.5s infinite;
+        }
+
+        .level-btn.locked {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.4);
+            cursor: not-allowed;
+        }
+
+        .level-icon {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 360px) {
+            .tower { width: 85px; height: 200px; }
+            .pole { height: 170px; }
+            .base { width: 95px; }
+            .disk-1 { width: 32px; }
+            .disk-2 { width: 42px; }
+            .disk-3 { width: 52px; }
+            .disk-4 { width: 62px; }
+            .disk-5 { width: 72px; }
+            .disk-6 { width: 80px; }
+            .disk-7 { width: 84px; }
+            h1 { font-size: 1.4em; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🏛️ 汉诺塔</h1>
+
+    <div class="level-info">
+        <div class="level-badge" id="currentLevelBadge">第 1 关</div>
+        <div class="level-dots" id="levelDots">
+            <div class="level-dot current" data-level="1"></div>
+            <div class="level-dot locked" data-level="2"></div>
+            <div class="level-dot locked" data-level="3"></div>
+            <div class="level-dot locked" data-level="4"></div>
+            <div class="level-dot locked" data-level="5"></div>
+        </div>
+        <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.75em; max-width: 70px;" onclick="game.showLevelSelect()">选关</button>
+    </div>
+
+    <div class="game-info">
+        <div class="info-item">步数: <span id="moves">0</span></div>
+        <div class="info-item">最少: <span id="min-moves">7</span></div>
+        <div class="info-item">用时: <span id="timer">00:00</span></div>
+    </div>
+
+    <div class="game-container" id="gameContainer">
+        <div class="tower-wrapper">
+            <div class="tower-label">1号柱</div>
+            <div class="tower" id="tower-0" data-index="0">
+                <div class="pole"></div>
+                <div class="move-hint">可放</div>
+            </div>
+            <div class="base"></div>
+        </div>
+
+        <div class="tower-wrapper">
+            <div class="tower-label">2号柱</div>
+            <div class="tower" id="tower-1" data-index="1">
+                <div class="pole"></div>
+                <div class="move-hint">可放</div>
+            </div>
+            <div class="base"></div>
+        </div>
+
+        <div class="tower-wrapper">
+            <div class="tower-label">3号柱</div>
+            <div class="tower" id="tower-2" data-index="2">
+                <div class="pole"></div>
+                <div class="move-hint">可放</div>
+            </div>
+            <div class="base"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="control-row">
+            <button class="btn-primary" onclick="game.reset()">🔄 重新开始</button>
+            <button class="btn-secondary" onclick="game.undo()">↩️ 撤销</button>
+        </div>
+        <div class="control-row">
+            <button class="btn-secondary" onclick="game.showSolution()">💡 解法</button>
+            <button class="btn-rules" onclick="game.showRules()">📜 规则</button>
+        </div>
+    </div>
+
+    <!-- 规则弹窗 -->
+    <div class="rules-overlay" id="rulesOverlay" onclick="game.hideRules(event)">
+        <div class="rules-modal" onclick="event.stopPropagation()">
+            <h3>📜 游戏规则</h3>
+            <ul>
+                <li>点击柱子顶部的珠子选中，再次点击目标柱移动</li>
+                <li>每次只能移动最上面的一个珠子</li>
+                <li>大珠子不能放在小珠子上面</li>
+                <li>目标：将所有珠子从1号柱移动到3号柱</li>
+                <li>共5关，通过前一关才能解锁下一关</li>
+                <li>3珠最少7步，4珠15步，5珠31步，6珠63步，7珠127步</li>
+            </ul>
+            <button class="rules-close" onclick="game.hideRules()">知道了</button>
+        </div>
+    </div>
+
+    <!-- 通关弹窗 -->
+    <div class="message-overlay" id="winOverlay">
+        <div class="message-modal">
+            <h2>🎉 恭喜通关！</h2>
+            <div class="stars" id="winStars">⭐⭐⭐</div>
+            <p>第 <span id="winLevel">1</span> 关完成！</p>
+            <p>步数: <span id="finalMoves">0</span> / 最少 <span id="finalMinMoves">7</span></p>
+            <p>用时: <span id="finalTime">00:00</span></p>
+            <div class="control-row" style="margin-top: 15px;">
+                <button class="btn-secondary" onclick="game.reset(); game.hideWin()">重玩本关</button>
+                <button class="btn-primary" onclick="game.nextLevel()" id="nextLevelBtn">下一关 ➡️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关卡选择弹窗 -->
+    <div class="level-select-overlay" id="levelSelectOverlay" onclick="game.hideLevelSelect(event)">
+        <div class="level-select-modal" onclick="event.stopPropagation()">
+            <h2>🎯 选择关卡</h2>
+            <div class="level-buttons" id="levelButtons">
+                <div class="level-btn current" data-level="1">
+                    <span class="level-icon">🔓</span>
+                    <span>第 1 关 - 3个珠子</span>
+                </div>
+                <div class="level-btn locked" data-level="2">
+                    <span class="level-icon">🔒</span>
+                    <span>第 2 关 - 4个珠子</span>
+                </div>
+                <div class="level-btn locked" data-level="3">
+                    <span class="level-icon">🔒</span>
+                    <span>第 3 关 - 5个珠子</span>
+                </div>
+                <div class="level-btn locked" data-level="4">
+                    <span class="level-icon">🔒</span>
+                    <span>第 4 关 - 6个珠子</span>
+                </div>
+                <div class="level-btn locked" data-level="5">
+                    <span class="level-icon">🔒</span>
+                    <span>第 5 关 - 7个珠子</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class HanoiGame {
+            constructor() {
+                this.maxLevel = 5;
+                this.diskCounts = [3, 4, 5, 6, 7];
+                this.minMoves = [7, 15, 31, 63, 127];
+                this.unlockedLevel = parseInt(localStorage.getItem('hanoiUnlockedLevel')) || 1;
+                this.currentLevel = parseInt(localStorage.getItem('hanoiCurrentLevel')) || 1;
+                this.towers = [[], [], []];
+                this.selectedTower = null;
+                this.moves = 0;
+                this.moveHistory = [];
+                this.startTime = null;
+                this.timerInterval = null;
+                this.isAnimating = false;
+                this.init();
+            }
+
+            init() {
+                this.loadLevel(this.currentLevel);
+                this.updateLevelDisplay();
+            }
+
+            loadLevel(level) {
+                this.currentLevel = level;
+                localStorage.setItem('hanoiCurrentLevel', level);
+                const diskCount = this.diskCounts[level - 1];
+
+                this.towers = [[], [], []];
+                this.selectedTower = null;
+                this.moves = 0;
+                this.moveHistory = [];
+                this.stopTimer();
+                document.getElementById('timer').textContent = '00:00';
+
+                // 初始化珠子
+                for (let i = diskCount; i >= 1; i--) {
+                    this.towers[0].push(i);
+                }
+
+                document.getElementById('min-moves').textContent = this.minMoves[level - 1];
+                document.getElementById('currentLevelBadge').textContent = `第 ${level} 关`;
+                this.render();
+                this.startTimer();
+            }
+
+            render() {
+                document.querySelectorAll('.disk').forEach(d => d.remove());
+
+                this.towers.forEach((tower, towerIndex) => {
+                    const towerEl = document.getElementById(`tower-${towerIndex}`);
+                    tower.forEach((diskSize, diskIndex) => {
+                        const disk = document.createElement('div');
+                        disk.className = `disk disk-${diskSize}`;
+                        disk.textContent = diskSize;
+                        disk.dataset.size = diskSize;
+
+                        if (this.selectedTower === towerIndex && diskIndex === tower.length - 1) {
+                            disk.classList.add('selected-disk');
+                        }
+
+                        towerEl.appendChild(disk);
+                    });
+
+                    towerEl.classList.remove('selected', 'valid-target', 'invalid-target');
+                    if (this.selectedTower === towerIndex) {
+                        towerEl.classList.add('selected');
+                    } else if (this.selectedTower !== null) {
+                        const selectedDisk = this.towers[this.selectedTower][this.towers[this.selectedTower].length - 1];
+                        const targetTop = tower.length > 0 ? tower[tower.length - 1] : Infinity;
+                        if (selectedDisk < targetTop) {
+                            towerEl.classList.add('valid-target');
+                        } else {
+                            towerEl.classList.add('invalid-target');
+                        }
+                    }
+                });
+
+                document.getElementById('moves').textContent = this.moves;
+            }
+
+            handleTowerClick(towerIndex) {
+                if (this.isAnimating) return;
+
+                if (this.selectedTower === null) {
+                    if (this.towers[towerIndex].length === 0) return;
+                    this.selectedTower = towerIndex;
+                    this.render();
+                    return;
+                }
+
+                if (this.selectedTower === towerIndex) {
+                    this.selectedTower = null;
+                    this.render();
+                    return;
+                }
+
+                const fromTower = this.towers[this.selectedTower];
+                const toTower = this.towers[towerIndex];
+                const disk = fromTower[fromTower.length - 1];
+                const targetTop = toTower.length > 0 ? toTower[toTower.length - 1] : Infinity;
+
+                if (disk < targetTop) {
+                    this.moveHistory.push({
+                        from: this.selectedTower,
+                        to: towerIndex,
+                        disk: disk,
+                        towers: JSON.parse(JSON.stringify(this.towers))
+                    });
+
+                    fromTower.pop();
+                    toTower.push(disk);
+                    this.moves++;
+                    this.selectedTower = null;
+                    this.render();
+
+                    if (this.towers[2].length === this.diskCounts[this.currentLevel - 1]) {
+                        this.win();
+                    }
+                } else {
+                    const towerEl = document.getElementById(`tower-${towerIndex}`);
+                    towerEl.style.animation = 'shake 0.5s';
+                    setTimeout(() => { towerEl.style.animation = ''; }, 500);
+                    this.selectedTower = null;
+                    this.render();
+                }
+            }
+
+            win() {
+                this.stopTimer();
+                const minMove = this.minMoves[this.currentLevel - 1];
+                const stars = this.moves <= minMove ? '⭐⭐⭐' : this.moves <= minMove * 1.5 ? '⭐⭐' : '⭐';
+
+                document.getElementById('winStars').textContent = stars;
+                document.getElementById('winLevel').textContent = this.currentLevel;
+                document.getElementById('finalMoves').textContent = this.moves;
+                document.getElementById('finalMinMoves').textContent = minMove;
+                document.getElementById('finalTime').textContent = document.getElementById('timer').textContent;
+
+                const nextBtn = document.getElementById('nextLevelBtn');
+                if (this.currentLevel >= this.maxLevel) {
+                    nextBtn.textContent = '全部通关！🎊';
+                    nextBtn.onclick = () => { this.hideWin(); };
+                } else {
+                    nextBtn.textContent = '下一关 ➡️';
+                    nextBtn.onclick = () => { this.nextLevel(); };
+                }
+
+                document.getElementById('winOverlay').classList.add('show');
+
+                // 解锁下一关
+                if (this.currentLevel >= this.unlockedLevel && this.currentLevel < this.maxLevel) {
+                    this.unlockedLevel = this.currentLevel + 1;
+                    localStorage.setItem('hanoiUnlockedLevel', this.unlockedLevel);
+                    this.updateLevelDisplay();
+                }
+            }
+
+            nextLevel() {
+                if (this.currentLevel < this.maxLevel) {
+                    this.hideWin();
+                    this.loadLevel(this.currentLevel + 1);
+                }
+            }
+
+            reset() {
+                this.loadLevel(this.currentLevel);
+            }
+
+            undo() {
+                if (this.moveHistory.length === 0 || this.isAnimating) return;
+                const lastMove = this.moveHistory.pop();
+                this.towers = lastMove.towers;
+                this.moves = Math.max(0, this.moves - 1);
+                this.selectedTower = null;
+                this.render();
+            }
+
+            startTimer() {
+                this.startTime = Date.now();
+                this.timerInterval = setInterval(() => {
+                    const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
+                    const minutes = Math.floor(elapsed / 60).toString().padStart(2, '0');
+                    const seconds = (elapsed % 60).toString().padStart(2, '0');
+                    document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+                }, 1000);
+            }
+
+            stopTimer() {
+                if (this.timerInterval) {
+                    clearInterval(this.timerInterval);
+                    this.timerInterval = null;
+                }
+            }
+
+            showSolution() {
+                const level = this.currentLevel;
+                const min = this.minMoves[level - 1];
+                const strategies = [
+                    '3个珠子：将上面2个移到2号柱 → 最大移到3号柱 → 2个移到3号柱',
+                    '4个珠子：将上面3个移到2号柱 → 最大移到3号柱 → 3个移到3号柱',
+                    '5个珠子：将上面4个移到2号柱 → 最大移到3号柱 → 4个移到3号柱',
+                    '6个珠子：将上面5个移到2号柱 → 最大移到3号柱 → 5个移到3号柱',
+                    '7个珠子：将上面6个移到2号柱 → 最大移到3号柱 → 6个移到3号柱'
+                ];
+                alert(`第${level}关最优解法需要${min}步。\n\n策略：${strategies[level-1]}\n\n这是一个递归过程，每一步都遵循同样的逻辑！`);
+            }
+
+            showRules() {
+                document.getElementById('rulesOverlay').classList.add('show');
+            }
+
+            hideRules(event) {
+                if (!event || event.target === document.getElementById('rulesOverlay')) {
+                    document.getElementById('rulesOverlay').classList.remove('show');
+                }
+            }
+
+            hideWin() {
+                document.getElementById('winOverlay').classList.remove('show');
+            }
+
+            showLevelSelect() {
+                this.updateLevelButtons();
+                document.getElementById('levelSelectOverlay').classList.add('show');
+            }
+
+            hideLevelSelect(event) {
+                if (!event || event.target === document.getElementById('levelSelectOverlay')) {
+                    document.getElementById('levelSelectOverlay').classList.remove('show');
+                }
+            }
+
+            selectLevel(level) {
+                if (level > this.unlockedLevel) return;
+                this.hideLevelSelect();
+                this.loadLevel(level);
+            }
+
+            updateLevelDisplay() {
+                const dots = document.querySelectorAll('.level-dot');
+                dots.forEach((dot, index) => {
+                    const level = index + 1;
+                    dot.classList.remove('completed', 'current', 'locked');
+                    if (level < this.currentLevel) {
+                        dot.classList.add('completed');
+                    } else if (level === this.currentLevel) {
+                        dot.classList.add('current');
+                    } else if (level <= this.unlockedLevel) {
+                        dot.classList.add('completed');
+                    } else {
+                        dot.classList.add('locked');
+                    }
+                });
+            }
+
+            updateLevelButtons() {
+                const buttons = document.querySelectorAll('.level-btn');
+                buttons.forEach((btn, index) => {
+                    const level = index + 1;
+                    const icon = btn.querySelector('.level-icon');
+                    btn.classList.remove('unlocked', 'current', 'locked');
+                    btn.onclick = null;
+
+                    if (level === this.currentLevel) {
+                        btn.classList.add('current');
+                        icon.textContent = '🎯';
+                        btn.onclick = () => this.selectLevel(level);
+                    } else if (level <= this.unlockedLevel) {
+                        btn.classList.add('unlocked');
+                        icon.textContent = '✅';
+                        btn.onclick = () => this.selectLevel(level);
+                    } else {
+                        btn.classList.add('locked');
+                        icon.textContent = '🔒';
+                    }
+                });
+            }
+        }
+
+        const game = new HanoiGame();
+
+        document.querySelectorAll('.tower').forEach(tower => {
+            tower.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                game.handleTowerClick(index);
+            });
+        });
+    </script>
+</body>
+</html>

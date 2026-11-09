@@ -1,0 +1,3670 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>人教A版数学必修第一册 知识点总结</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  
+<script>
+window.MathJax = {
+  // mathparagraph 是部分 PDF/OCR 转换残留的伪宏（如「$<\mathparagraph 1$」本意为「$<1$」）。
+  // 定义为空可避免 MathJax 把它输出成红色未知宏文本；源 md 与正文 LaTeX 均保持原样。
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']], processEscapes: false,
+         macros: { mathparagraph: '' } },
+  svg: { fontCache: 'local' },
+  options: {
+    enableMenu: false,
+    skipHtmlTags: ['script','noscript','style','textarea','pre','code','option']
+  },
+  startup: { typeset: true }
+};
+</script>
+<script src="./mathjax.js" onerror="window.__mjLocalMissing=true"></script>
+<script>if(window.__mjLocalMissing){document.write('<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js" onerror="window.__mjCDN1Failed=true"><\/script>');}</script>
+<script>if(window.__mjCDN1Failed){document.write('<script src="https://unpkg.com/mathjax@3.2.1/es5/tex-svg.js"><\/script>');}</script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">人教A版数学必修第一册 知识点总结</h1>
+</header>
+<p>章第一章 集合与常用逻辑用语8 节 · 12 小节 · 74 知识点</p>
+<p>节1.1 集合的概念1 小节 · 10 知识点</p>
+<p>小节本节知识点节内直列10 条知识点</p>
+<p>定义概念（元素与集合）</p>
+<p>一般地，我们把研究对象统称为<strong>元素</strong>（element），把一些元素组成的总体叫做<strong>集合</strong>（set），简称集。</p>
+<p>要点元素的三大特性</p>
+<ul>
+<li><strong>确定性</strong>：给定一个集合，一个元素在或不在这个集合中就确定了。"1～10
+之间的所有偶数"构成集合（<span class="math inline">\(2,4,6,8,10\)</span>
+是元素，<span class="math inline">\(1,3,5,7,9\)</span>
+不是）；"较小的数"不能构成集合，因为组成它的元素不确定。</li>
+<li><strong>互异性</strong>：一个给定集合中的元素是互不相同的，即集合中的元素不重复出现。</li>
+<li><strong>无序性</strong>：元素完全相同的两个集合相等，与列举的顺序无关（如
+<span class="math inline">\(\{ 0,1,2,\cdots,9\} = \{
+9,8,\cdots,1,0\}\)</span>）。</li>
+</ul>
+<p>定义概念（集合相等）</p>
+<p>只要构成两个集合的元素是一样的，就称这两个集合<strong>相等</strong>。</p>
+<p>性质表示符号</p>
+<ul>
+<li>集合用大写拉丁字母 <span class="math inline">\(A,B,C,\cdots\)</span>
+表示，元素用小写拉丁字母 <span
+class="math inline">\(a,b,c,\cdots\)</span> 表示。</li>
+<li><span class="math inline">\(a\)</span> 是集合 <span
+class="math inline">\(A\)</span> 的元素，说 <span
+class="math inline">\(a\)</span> <strong>属于</strong>（belong to）集合
+<span class="math inline">\(A\)</span>，记作 <span
+class="math inline">\(a \in A\)</span>；<span
+class="math inline">\(a\)</span> 不是 <span
+class="math inline">\(A\)</span> 的元素，说 <span
+class="math inline">\(a\)</span> <strong>不属于</strong> <span
+class="math inline">\(A\)</span>，记作 <span class="math inline">\(a
+\notin A\)</span>。</li>
+</ul>
+<p>要点常用数集及其记法</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>数集</th>
+<th>记法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非负整数集（自然数集）</td>
+<td><span class="math inline">\(\mathbf{N}\)</span>​</td>
+</tr>
+<tr>
+<td>正整数集</td>
+<td><span class="math inline">\(\mathbf{N}^{*}\)</span> 或 <span
+class="math inline">\(\mathbf{N}_{+}\)</span></td>
+</tr>
+<tr>
+<td>整数集</td>
+<td><span class="math inline">\(\mathbf{Z}\)</span>​</td>
+</tr>
+<tr>
+<td>有理数集</td>
+<td><span class="math inline">\(\mathbf{Q}\)</span>​</td>
+</tr>
+<tr>
+<td>实数集</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<p>方法表示方法一：列举法</p>
+<p>把集合的所有元素一一列举出来，并用花括号"<span
+class="math inline">\(\{\
+\}\)</span>"括起来表示集合的方法，叫做<strong>列举法</strong>。如"地球上的四大洋"<span
+class="math inline">\(= \{\)</span>太平洋，大西洋，印度洋，北冰洋<span
+class="math inline">\(\}\)</span>；方程 <span
+class="math inline">\(x^{2} - 3x + 2 = 0\)</span> 的实数根集 <span
+class="math inline">\(= \{ 1,2\}\)</span>。</p>
+<p>方法表示方法二：描述法</p>
+<p>设 <span class="math inline">\(A\)</span> 是一个集合，把集合 <span
+class="math inline">\(A\)</span> 中所有具有共同特征 <span
+class="math inline">\(P(x)\)</span> 的元素 <span
+class="math inline">\(x\)</span> 所组成的集合表示为</p>
+<p><span class="math display">\[\{ x \in A \mid P(x)\},\]</span></p>
+<p>这种表示集合的方法称为**描述法**。有时也用冒号或分号代替竖线，写成
+<span class="math inline">\(\{ x \in A:P(x)\}\)</span> 或 <span
+class="math inline">\(\{ x \in A;P(x)\}\)</span>。</p>
+<ul>
+<li>例：<span class="math inline">\(\{ x \in \mathbf{R} \mid x &lt;
+10\}\)</span>；奇数集 <span class="math inline">\(\{ x \in \mathbf{Z}
+\mid x = 2k + 1,k \in \mathbf{Z}\}\)</span>；有理数集 <span
+class="math inline">\(\mathbf{Q} = \left\{ x \in \mathbf{R}\  \middle| \
+x = \frac{q}{p},\ p,q \in \mathbf{Z},\ p \neq 0 \right\}\)</span>。</li>
+<li>性质：对任何 <span class="math inline">\(y \in \{ x \in A \mid
+P(x)\}\)</span>，都有 <span class="math inline">\(y \in A\)</span> 且
+<span class="math inline">\(P(y)\)</span> 成立。</li>
+</ul>
+<p>要点省略约定</p>
+<p>若从上下文看 <span class="math inline">\(x \in
+\mathbf{R}\)</span>、<span class="math inline">\(x \in
+\mathbf{Z}\)</span> 是明确的，可省略不写，只写元素 <span
+class="math inline">\(x\)</span>。如 <span class="math inline">\(\{ x
+\in \mathbf{R} \mid x &lt; 10\}\)</span> 可写为 <span
+class="math inline">\(\{ x \mid x &lt; 10\}\)</span>。</p>
+<p>术语中英术语</p>
+<p>元素 element；集合 set；属于 belong to；列举法 listing method；描述法
+description method。</p>
+<p>性质关系·转化</p>
+<p>三种表示法各有特点——自然语言直观但冗长；列举法适合元素个数有限且较少的情形；描述法适合元素有共同特征、个数无限的情形。</p>
+<p>节1.2 集合间的基本关系1 小节 · 10 知识点</p>
+<p>小节本节知识点节内直列10 条知识点</p>
+<p>定义概念（子集）</p>
+<p>对于两个集合 <span class="math inline">\(A,B\)</span>，如果集合 <span
+class="math inline">\(A\)</span> 中<strong>任意一个</strong>元素都是集合
+<span class="math inline">\(B\)</span> 中的元素，就称集合 <span
+class="math inline">\(A\)</span> 为集合 <span
+class="math inline">\(B\)</span>
+的<strong>子集</strong>（subset），记作</p>
+<p><span class="math display">\[A \subseteq B\ (\text{或}\ B \supseteq
+A),\]</span></p>
+<p>读作"<span class="math inline">\(A\)</span> 包含于 <span
+class="math inline">\(B\)</span>"（或"<span
+class="math inline">\(B\)</span> 包含 <span
+class="math inline">\(A\)</span>"）。</p>
+<p>方法表示方法（Venn 图）</p>
+<p>用平面上封闭曲线的内部代表集合，这种图称为 <strong>Venn
+图</strong>。</p>
+<p>定义概念（集合相等）</p>
+<p>如果集合 <span class="math inline">\(A\)</span>
+的任何一个元素都是集合 <span class="math inline">\(B\)</span>
+的元素，同时集合 <span class="math inline">\(B\)</span>
+的任何一个元素都是集合 <span class="math inline">\(A\)</span>
+的元素，那么集合 <span class="math inline">\(A\)</span> 与集合 <span
+class="math inline">\(B\)</span> <strong>相等</strong>，记作 <span
+class="math inline">\(A = B\)</span>。即</p>
+<p><span class="math display">\[A \subseteq B\ \text{且}\ B \subseteq A
+\Leftrightarrow A = B.\]</span></p>
+<p>定义概念（真子集）</p>
+<p>如果 <span class="math inline">\(A \subseteq B\)</span>，但存在元素
+<span class="math inline">\(x \in B\)</span> 且 <span
+class="math inline">\(x \notin A\)</span>，就称集合 <span
+class="math inline">\(A\)</span> 是集合 <span
+class="math inline">\(B\)</span> 的<strong>真子集</strong>（proper
+subset），记作</p>
+<p><span class="math display">\[A \subsetneqq B\ (\text{或}\ B
+\supsetneqq A),\]</span></p>
+<p>读作"<span class="math inline">\(A\)</span> 真包含于 <span
+class="math inline">\(B\)</span>"（或"<span
+class="math inline">\(B\)</span> 真包含 <span
+class="math inline">\(A\)</span>"）。</p>
+<p>定义概念（空集）</p>
+<p>不含任何元素的集合叫做<strong>空集</strong>（empty set），记为 <span
+class="math inline">\(\varnothing\)</span>。<strong>规定：空集是任何集合的子集</strong>，即
+<span class="math inline">\(\varnothing \subseteq A\)</span>。</p>
+<p>性质基本结论</p>
+<ul>
+<li>任何一个集合是它本身的子集：<span class="math inline">\(A \subseteq
+A\)</span>；</li>
+<li>传递性：若 <span class="math inline">\(A \subseteq B\)</span> 且
+<span class="math inline">\(B \subseteq C\)</span>，则 <span
+class="math inline">\(A \subseteq C\)</span>。</li>
+</ul>
+<p>要点易混辨析（<span class="math inline">\(\in\)</span> 与 <span
+class="math inline">\(\subseteq\)</span>）</p>
+<p><span class="math inline">\(\{ a\} \subseteq A\)</span>
+是<strong>集合与集合</strong>的包含关系；<span class="math inline">\(a
+\in A\)</span> 是<strong>元素与集合</strong>的属于关系。二者不同，但由
+<span class="math inline">\(a \in A\)</span> 可得 <span
+class="math inline">\(\{ a\} \subseteq A\)</span>。</p>
+<p>要点子集个数规律</p>
+<p>含 <span class="math inline">\(n\)</span> 个元素的集合有 <span
+class="math inline">\(2^{n}\)</span> 个子集、<span
+class="math inline">\(2^{n} - 1\)</span> 个真子集。如 <span
+class="math inline">\(\{ a,b\}\)</span> 的子集为 <span
+class="math inline">\(\varnothing,\{ a\},\{ b\},\{
+a,b\}\)</span>，真子集为 <span class="math inline">\(\varnothing,\{
+a\},\{ b\}\)</span>。</p>
+<p>术语中英术语</p>
+<p>子集 subset；真子集 proper subset；空集 empty set；Venn 图 Venn
+diagram。</p>
+<p>性质关系·转化</p>
+<p>与实数的大小关系类比——<span class="math inline">\(A \subseteq
+B\)</span> 类比 <span class="math inline">\(a \leq b\)</span>；<span
+class="math inline">\(A \subsetneqq B\)</span> 类比 <span
+class="math inline">\(a &lt; b\)</span>；"<span class="math inline">\(A
+\subseteq B\)</span> 且 <span class="math inline">\(B \subseteq
+A\)</span> 则 <span class="math inline">\(A = B\)</span>"类比"<span
+class="math inline">\(a \leq b\)</span> 且 <span class="math inline">\(b
+\leq a\)</span> 则 <span class="math inline">\(a = b\)</span>"。</p>
+<p>节1.3 集合的基本运算1 小节 · 8 知识点</p>
+<p>小节本节知识点节内直列8 条知识点</p>
+<p>定义概念（并集）</p>
+<p>由所有属于集合 <span class="math inline">\(A\)</span>
+<strong>或</strong>属于集合 <span class="math inline">\(B\)</span>
+的元素组成的集合，称为集合 <span class="math inline">\(A\)</span> 与
+<span class="math inline">\(B\)</span> 的<strong>并集</strong>（union
+set），记作 <span class="math inline">\(A \cup B\)</span>（读作"<span
+class="math inline">\(A\)</span> 并 <span
+class="math inline">\(B\)</span>"），即</p>
+<p><span class="math display">\[A \cup B = \{ x \mid x \in A,\
+\text{或}\ x \in B\}.\]</span></p>
+<ul>
+<li>注意：求并集时，公共元素在并集中只能出现<strong>一次</strong>（如
+<span class="math inline">\(5,8\)</span> 在 <span
+class="math inline">\(A \cup B\)</span> 中只计一次）。</li>
+<li>性质：<span class="math inline">\(A \cup A = A\)</span>；<span
+class="math inline">\(A \cup \varnothing = A\)</span>。</li>
+</ul>
+<p>定义概念（交集）</p>
+<p>由所有属于集合 <span class="math inline">\(A\)</span>
+<strong>且</strong>属于集合 <span class="math inline">\(B\)</span>
+的元素组成的集合，称为集合 <span class="math inline">\(A\)</span> 与
+<span class="math inline">\(B\)</span>
+的<strong>交集</strong>（intersection set），记作 <span
+class="math inline">\(A \cap B\)</span>（读作"<span
+class="math inline">\(A\)</span> 交 <span
+class="math inline">\(B\)</span>"），即</p>
+<p><span class="math display">\[A \cap B = \{ x \mid x \in A,\
+\text{且}\ x \in B\}.\]</span></p>
+<ul>
+<li>性质：<span class="math inline">\(A \cap A = A\)</span>；<span
+class="math inline">\(A \cap \varnothing = \varnothing\)</span>。</li>
+</ul>
+<p>定义概念（全集）</p>
+<p>如果一个集合含有所研究问题中涉及的<strong>所有元素</strong>，就称这个集合为<strong>全集</strong>（universal
+set），通常记作 <span class="math inline">\(U\)</span>。</p>
+<p>定义概念（补集）</p>
+<p>对于一个集合 <span class="math inline">\(A\)</span>，由全集 <span
+class="math inline">\(U\)</span> 中<strong>不属于</strong>集合 <span
+class="math inline">\(A\)</span> 的所有元素组成的集合，称为集合 <span
+class="math inline">\(A\)</span> 相对于全集 <span
+class="math inline">\(U\)</span> 的<strong>补集</strong>（complementary
+set），简称集合 <span class="math inline">\(A\)</span> 的补集，记作
+<span class="math inline">\(\complement_{U}A\)</span>，即</p>
+<p><span class="math display">\[\complement_{U}A = \{ x \mid x \in U,\
+\text{且}\ x \notin A\}.\]</span></p>
+<p>方法表示方法</p>
+<p>三种运算均可用 Venn
+图表示；数集运算还可用<strong>数轴</strong>直观表示（如区间型集合的并、交）。</p>
+<p>要点典型应用</p>
+<p>用集合运算刻画图形位置关系——平面内直线 <span
+class="math inline">\(l_{1},l_{2}\)</span> 上点的集合为 <span
+class="math inline">\(L_{1},L_{2}\)</span>，则</p>
+<ul>
+<li>相交于一点 <span class="math inline">\(P\)</span>：<span
+class="math inline">\(L_{1} \cap L_{2} = \{ P\}\)</span>；</li>
+<li>平行：<span class="math inline">\(L_{1} \cap L_{2} =
+\varnothing\)</span>；</li>
+<li>重合：<span class="math inline">\(L_{1} \cap L_{2} = L_{1} =
+L_{2}\)</span>。</li>
+</ul>
+<p>术语中英术语</p>
+<p>并集 union set；交集 intersection set；全集 universal set；补集
+complementary set。</p>
+<p>性质关系·转化</p>
+<p>类比实数的加、减、乘、除运算来理解集合的并、交、补运算——数学中的运算并不局限于数的运算。全集是相对的，同一问题中研究范围改变，补集也随之改变（如
+<span class="math inline">\((x - 2)(x^{2} - 3) = 0\)</span> 在 <span
+class="math inline">\(\mathbf{Q}\)</span> 内解集为 <span
+class="math inline">\(\{ 2\}\)</span>，在 <span
+class="math inline">\(\mathbf{R}\)</span> 内为 <span
+class="math inline">\(\{ 2,\sqrt{3}, - \sqrt{3}\}\)</span>）。</p>
+<p>节1.4 充分条件与必要条件3 小节 · 17 知识点</p>
+<p>小节本节知识点节内直列2 条知识点</p>
+<p>定义预备概念（命题）</p>
+<p>用语言、符号或式子表达的、可以判断真假的<strong>陈述句</strong>叫做<strong>命题</strong>。判断为真的语句是<strong>真命题</strong>，判断为假的语句是<strong>假命题</strong>。中学数学中许多命题可写成"若
+<span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>""如果 <span
+class="math inline">\(p\)</span>，那么 <span
+class="math inline">\(q\)</span>"的形式，其中 <span
+class="math inline">\(p\)</span> 称为<strong>条件</strong>，<span
+class="math inline">\(q\)</span> 称为<strong>结论</strong>。</p>
+<p>定义预备概念（逆命题）</p>
+<p>将命题"若 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>"中的条件 <span
+class="math inline">\(p\)</span> 和结论 <span
+class="math inline">\(q\)</span> 互换，得到新命题"若 <span
+class="math inline">\(q\)</span>，则 <span
+class="math inline">\(p\)</span>"，称为原命题的<strong>逆命题</strong>。</p>
+<p>小节1.4.1 充分条件与必要条件7 条知识点</p>
+<p>性质定义（推出关系）</p>
+<p>"若 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>"为真命题，是指由 <span
+class="math inline">\(p\)</span> 通过推理可以得出 <span
+class="math inline">\(q\)</span>。这时说由 <span
+class="math inline">\(p\)</span> 可以推出 <span
+class="math inline">\(q\)</span>，记作</p>
+<p><span class="math display">\[p \Rightarrow q.\]</span></p>
+<p>若"若 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>"为假命题，则由 <span
+class="math inline">\(p\)</span> 不能推出 <span
+class="math inline">\(q\)</span>，记作 <span class="math inline">\(p
+\nRightarrow q\)</span>。</p>
+<p>定义定义（充分条件与必要条件）</p>
+<p>若 <span class="math inline">\(p \Rightarrow q\)</span>，则称 <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的<strong>充分条件</strong>（sufficient
+condition），<span class="math inline">\(q\)</span> 是 <span
+class="math inline">\(p\)</span> 的<strong>必要条件</strong>（necessary
+condition）。</p>
+<ul>
+<li>理解"必要"：此时若 <span class="math inline">\(q\)</span> 不成立，则
+<span class="math inline">\(p\)</span> 一定不成立——所以 <span
+class="math inline">\(q\)</span> 对于 <span
+class="math inline">\(p\)</span>
+成立而言是<strong>必要</strong>的。</li>
+</ul>
+<p>方法判定方法</p>
+<p>判断 <span class="math inline">\(p\)</span> 是否为 <span
+class="math inline">\(q\)</span> 的充分条件，只需判断 <span
+class="math inline">\(p \Rightarrow q\)</span> 是否成立，即"若 <span
+class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>"是否为真命题；判断 <span
+class="math inline">\(q\)</span> 是否为 <span
+class="math inline">\(p\)</span> 的必要条件，同样只需判断 <span
+class="math inline">\(p \Rightarrow q\)</span> 是否成立。</p>
+<p>要点举反例</p>
+<p>举反例是判断一个命题是假命题的重要方法（如 <span
+class="math inline">\(x^{2} = 1\)</span> 时 <span
+class="math inline">\(x\)</span> 可能为 <span class="math inline">\(-
+1\)</span>，故 <span class="math inline">\(p \nRightarrow
+q\)</span>）。</p>
+<p>性质重要结论（不唯一性）</p>
+<ul>
+<li>对给定结论 <span class="math inline">\(q\)</span>，使 <span
+class="math inline">\(q\)</span> 成立的充分条件 <span
+class="math inline">\(p\)</span>
+<strong>不唯一</strong>。例如"四边形的两组对边分别相等""一组对边平行且相等""两条对角线互相平分""两组对角分别相等"都是"四边形是平行四边形"的充分条件。</li>
+<li>对给定条件 <span class="math inline">\(p\)</span>，由 <span
+class="math inline">\(p\)</span> 可推出的必要条件 <span
+class="math inline">\(q\)</span> <strong>不唯一</strong>。</li>
+</ul>
+<p>方法方法论（与定理的对应）</p>
+<ul>
+<li><strong>数学中的每一条判定定理都给出了相应数学结论成立的一个充分条件</strong>（如平行四边形的每条判定定理都给出"四边形是平行四边形"的一个充分条件）。</li>
+<li><strong>数学中的每一条性质定理都给出了相应数学结论成立的一个必要条件</strong>（如"同位角相等"是"两直线平行"的必要条件——若同位角不相等，则不可能有两直线平行）。</li>
+</ul>
+<p>术语中英术语</p>
+<p>充分条件 sufficient condition；必要条件 necessary condition；命题
+proposition；真命题 true proposition；假命题 false proposition。</p>
+<p>小节1.4.2 充要条件8 条知识点</p>
+<p>定义定义（充要条件）</p>
+<p>如果"若 <span class="math inline">\(p\)</span>，则 <span
+class="math inline">\(q\)</span>"和它的逆命题"若 <span
+class="math inline">\(q\)</span>，则 <span
+class="math inline">\(p\)</span>"<strong>均为真命题</strong>，即既有
+<span class="math inline">\(p \Rightarrow q\)</span> 又有 <span
+class="math inline">\(q \Rightarrow p\)</span>，就记作</p>
+<p><span class="math display">\[p \Leftrightarrow q.\]</span></p>
+<p>此时 <span class="math inline">\(p\)</span> 既是 <span
+class="math inline">\(q\)</span> 的充分条件，也是 <span
+class="math inline">\(q\)</span> 的必要条件，称 <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span>
+的<strong>充分必要条件</strong>，简称为<strong>充要条件</strong>（necessary
+and sufficient condition）。</p>
+<p>要点对称性</p>
+<p>如果 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充要条件，那么 <span
+class="math inline">\(q\)</span> 也是 <span
+class="math inline">\(p\)</span> 的充要条件；即 <span
+class="math inline">\(p \Leftrightarrow q\)</span> 时 <span
+class="math inline">\(p\)</span> 与 <span
+class="math inline">\(q\)</span> <strong>互为充要条件</strong>。</p>
+<p>要点四种条件的判别 （由 <span class="math inline">\(p \Rightarrow
+q\)</span> 与 <span class="math inline">\(q \Rightarrow p\)</span>
+的真假组合确定）</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math inline">\(p \Rightarrow q\)</span>​</th>
+<th><span class="math inline">\(q \Rightarrow p\)</span>​</th>
+<th><span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真</td>
+<td>假</td>
+<td>充分不必要条件</td>
+</tr>
+<tr>
+<td>假</td>
+<td>真</td>
+<td>必要不充分条件</td>
+</tr>
+<tr>
+<td>真</td>
+<td>真</td>
+<td>充要条件</td>
+</tr>
+<tr>
+<td>假</td>
+<td>假</td>
+<td>既不充分也不必要条件</td>
+</tr>
+</tbody>
+</table>
+<p>要点与集合的对应</p>
+<p>设 <span class="math inline">\(A = \{ x \mid x\text{ 满足条件
+}p\}\)</span>，<span class="math inline">\(B = \{ x \mid x\text{
+满足条件 }q\}\)</span>，则</p>
+<ul>
+<li><span class="math inline">\(A \subseteq B\)</span> <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充分条件（<span
+class="math inline">\(p \Rightarrow q\)</span>）；</li>
+<li><span class="math inline">\(B \subseteq A\)</span> <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的必要条件（<span
+class="math inline">\(q \Rightarrow p\)</span>）；</li>
+<li><span class="math inline">\(A = B\)</span> <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充要条件（<span
+class="math inline">\(p \Leftrightarrow q\)</span>）；</li>
+<li><span class="math inline">\(A \subsetneqq B\)</span> <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充分不必要条件。</li>
+</ul>
+<p>方法证明充要条件的方法</p>
+<p>要证 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span> 的充要条件，只需分别证明 例：设 <span
+class="math inline">\(\odot O\)</span> 半径为 <span
+class="math inline">\(r\)</span>，圆心 <span
+class="math inline">\(O\)</span> 到直线 <span
+class="math inline">\(l\)</span> 的距离为 <span
+class="math inline">\(d\)</span>，则 <span class="math inline">\(d =
+r\)</span> 是直线 <span class="math inline">\(l\)</span> 与 <span
+class="math inline">\(\odot O\)</span> 相切的充要条件。</p>
+<ul>
+<li><strong>充分性</strong>（<span class="math inline">\(p \Rightarrow
+q\)</span>）；</li>
+<li><strong>必要性</strong>（<span class="math inline">\(q \Rightarrow
+p\)</span>）。</li>
+</ul>
+<p>性质应用（等价定义）</p>
+<p>充要条件可从不同角度刻画同一概念，据此可给出概念的其他<strong>等价定义</strong>。例如"四边形是平行四边形"的充要条件有"两组对边分别平行""两组对边分别相等""一组对边平行且相等""两条对角线互相平分""两组对角分别相等"，由此可得平行四边形的多种定义形式；同理可得"三角形全等""相似三角形"的其他等价定义。</p>
+<p>术语中英术语</p>
+<p>充要条件 necessary and sufficient condition；逆命题 converse
+proposition；等价 equivalent。</p>
+<p>性质关系·转化</p>
+<p>定义 ↔︎ 充要条件；判定定理 ↔︎ 充分条件；性质定理 ↔︎
+必要条件。这三者的对应关系是梳理几何知识体系的有力工具。</p>
+<p>节1.5 全称量词与存在量词3 小节 · 16 知识点</p>
+<p>小节本节知识点节内直列1 条知识点</p>
+<p>定义预备概念（量词）</p>
+<p>含有变量的陈述句因不知变量代表什么数而无法判断真假，不是命题；若用短语对变量的取值范围加以限定，就使其成为命题，这样的短语称为<strong>量词</strong>。</p>
+<p>小节1.5.1 全称量词与存在量词7 条知识点</p>
+<p>定义概念（全称量词）</p>
+<p>短语"所有的""任意一个"在逻辑中通常叫做<strong>全称量词</strong>（universal
+quantifier），用符号"<span
+class="math inline">\(\forall\)</span>"表示。含有全称量词的命题叫做<strong>全称量词命题</strong>。常见的全称量词还有"一切""每一个""任给"等。</p>
+<p>性质表示符号</p>
+<p>含变量 <span class="math inline">\(x\)</span> 的语句用 <span
+class="math inline">\(p(x),q(x),r(x),\cdots\)</span> 表示，变量 <span
+class="math inline">\(x\)</span> 的取值范围用 <span
+class="math inline">\(M\)</span> 表示，则全称量词命题"对 <span
+class="math inline">\(M\)</span> 中任意一个 <span
+class="math inline">\(x\)</span>，<span
+class="math inline">\(p(x)\)</span> 成立"简记为</p>
+<p><span class="math display">\[\forall x \in M,\ p(x).\]</span></p>
+<p>定义概念（存在量词）</p>
+<p>短语"存在一个""至少有一个"在逻辑中通常叫做<strong>存在量词</strong>（existential
+quantifier），用符号"<span
+class="math inline">\(\exists\)</span>"表示。含有存在量词的命题叫做<strong>存在量词命题</strong>。常见的存在量词还有"有些""有一个""对某些""有的"等。</p>
+<p>性质表示符号</p>
+<p>存在量词命题"存在 <span class="math inline">\(M\)</span> 中的元素
+<span class="math inline">\(x\)</span>，<span
+class="math inline">\(p(x)\)</span> 成立"简记为</p>
+<p><span class="math display">\[\exists x \in M,\ p(x).\]</span></p>
+<p>方法真假判定方法</p>
+<ul>
+<li>全称量词命题 <span class="math inline">\(\forall x \in
+M,p(x)\)</span> 为<strong>真</strong>：需对 <span
+class="math inline">\(M\)</span> 中<strong>每个</strong>元素 <span
+class="math inline">\(x\)</span> 证明 <span
+class="math inline">\(p(x)\)</span> 成立；为<strong>假</strong>：只需在
+<span class="math inline">\(M\)</span> 中<strong>找到一个</strong>元素
+<span class="math inline">\(x_{0}\)</span> 使 <span
+class="math inline">\(p(x_{0})\)</span>
+不成立（即<strong>举反例</strong>）。</li>
+<li>存在量词命题 <span class="math inline">\(\exists x \in
+M,p(x)\)</span> 为<strong>真</strong>：只需在 <span
+class="math inline">\(M\)</span> 中<strong>找到一个</strong>元素 <span
+class="math inline">\(x\)</span> 使 <span
+class="math inline">\(p(x)\)</span> 成立；为<strong>假</strong>：需
+<span class="math inline">\(M\)</span> 中使 <span
+class="math inline">\(p(x)\)</span>
+成立的元素<strong>不存在</strong>。</li>
+</ul>
+<p>术语中英术语</p>
+<p>全称量词 universal quantifier；存在量词 existential
+quantifier；全称量词命题 universal proposition；存在量词命题 existential
+proposition；素数 prime number。</p>
+<p>性质关系·转化</p>
+<p>量词的作用是"限定变量的取值范围"，使含变量的开语句变为可判断真假的命题——这是从"语句"到"命题"的关键一步。</p>
+<p>小节1.5.2 全称量词命题和存在量词命题的否定8 条知识点</p>
+<p>定义概念（命题的否定）</p>
+<p>对一个命题进行否定，得到一个新的命题，这一新命题称为原命题的<strong>否定</strong>。</p>
+<p>要点否定的逻辑特征</p>
+<p>一个命题和它的否定<strong>不能同时为真命题，也不能同时为假命题</strong>，只能一真一假。</p>
+<p>性质表示符号</p>
+<p>用"<span class="math inline">\(\neg p(x)\)</span>"表示"<span
+class="math inline">\(p(x)\)</span> 不成立"。</p>
+<p>性质定理·公式（全称量词命题的否定）</p>
+<p><span class="math display">\[\forall x \in M,\
+p(x)\quad\text{的否定是}\quad\exists x \in M,\ \neg p(x).\]</span></p>
+<p>即<strong>全称量词命题的否定是存在量词命题</strong>。</p>
+<ul>
+<li>操作方法：把"所有的""任意一个"等全称量词变成"并非所有的""并非任意一个"等短语，结论变为其否定。</li>
+</ul>
+<p>性质定理·公式（存在量词命题的否定）</p>
+<p><span class="math display">\[\exists x \in M,\
+p(x)\quad\text{的否定是}\quad\forall x \in M,\ \neg p(x).\]</span></p>
+<p>即<strong>存在量词命题的否定是全称量词命题</strong>。</p>
+<ul>
+<li>操作方法：把"存在一个""至少有一个""有些"等存在量词变成"不存在一个""没有一个"等短语，结论变为其否定。</li>
+</ul>
+<p>方法解题步骤</p>
+<p>① 改量词（全称 ↔︎ 存在）；② 否结论（<span class="math inline">\(p(x)
+\rightarrow \neg p(x)\)</span>）；③ 必要时判断所得命题的真假。</p>
+<p>术语中英术语</p>
+<p>否定 negation；全称量词命题的否定 negation of universal
+proposition；存在量词命题的否定 negation of existential
+proposition。</p>
+<p>性质关系·转化</p>
+<p>量词否定的"改量词、否结论"规则，是反证法与后续"命题的否定"学习的核心工具；注意否定的是<strong>结论</strong>而非条件，且量词必须改写。</p>
+<p>节本章小结（第一章）1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点知识结构</p>
+<ul>
+<li><strong>集合</strong>：集合的含义（确定性、互异性、无序性）→
+集合的表示（列举法、描述法）→ 集合间的关系（子集、真子集、相等、空集）→
+集合的运算（并集、交集、补集）。</li>
+<li><strong>常用逻辑用语</strong>：命题 → 充分条件与必要条件 → 充要条件
+→ 全称量词与存在量词 → 含量词命题的否定。</li>
+</ul>
+<p>要点研究路径</p>
+<p>"<strong>集合的含义与表示 — 集合的关系 —
+集合的运算</strong>"。这一路径与"数 — 数的关系 —
+数的运算"完全平行，体现了类比的研究方法。</p>
+<p>方法核心思想方法</p>
+<ul>
+<li><strong>类比</strong>：类比数与数的相等、大小关系研究集合的包含、相等关系；类比数的加减乘除研究集合的并交补运算。数学中的运算并不局限于数的运算。</li>
+<li><strong>符号化</strong>：用集合语言与逻辑用语简洁、准确地表述数学对象及研究范围，提升表达的逻辑性与准确性。</li>
+<li><strong>对应</strong>：条件与集合的对应（<span
+class="math inline">\(p \Rightarrow q \Leftrightarrow A \subseteq
+B\)</span>），把逻辑问题转化为集合问题。</li>
+</ul>
+<p>性质三条"定理—条件"对应</p>
+<p>定义 ↔︎ 充要条件；判定定理 ↔︎ 充分条件；性质定理 ↔︎
+必要条件。利用这一对应可系统梳理几何知识（如以相似三角形为例：定义给出充要条件，三条判定定理给出充分条件，四条性质定理给出必要条件，其中
+<span class="math inline">\(p_{1},r_{1}\)</span>、<span
+class="math inline">\(p_{2}\)</span>、<span
+class="math inline">\(p_{3},r_{2}\)</span>
+还是充要条件，据此可构造相似三角形的等价定义）。</p>
+<p>要点易混辨析</p>
+<ul>
+<li><span class="math inline">\(a \in A\)</span>（元素与集合）vs <span
+class="math inline">\(\{ a\} \subseteq A\)</span>（集合与集合）。</li>
+<li><span class="math inline">\(\varnothing\)</span> 与 <span
+class="math inline">\(\{ 0\}\)</span>：前者无元素，后者含一个元素 <span
+class="math inline">\(0\)</span>；<span
+class="math inline">\(\varnothing \subseteq \{ 0\}\)</span> 但 <span
+class="math inline">\(\varnothing \neq \{ 0\}\)</span>。</li>
+<li>充分条件、必要条件的方向：<span class="math inline">\(p \Rightarrow
+q\)</span> 时 <span class="math inline">\(p\)</span> 充分、<span
+class="math inline">\(q\)</span> 必要，切勿颠倒。</li>
+<li>含量词命题的否定要"改量词 + 否结论"，不能只否结论。</li>
+</ul>
+<p>节阅读与思考：集合中元素的个数1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>定义概念（有限集与基数）</p>
+<p>含有限个元素的集合 <span class="math inline">\(A\)</span>
+叫做<strong>有限集</strong>，用 <span
+class="math inline">\(card(A)\)</span> 表示有限集合 <span
+class="math inline">\(A\)</span> 中元素的个数。<code>card</code> 是英文
+<strong>cardinal</strong>（基数）的缩写。如 <span
+class="math inline">\(A = \{ a,b,c\}\)</span>，则 <span
+class="math inline">\(card(A) = 3\)</span>。</p>
+<p>性质定理·公式（容斥原理，两个集合）</p>
+<p>对任意两个有限集合 <span class="math inline">\(A,B\)</span>，有</p>
+<p><span class="math display">\[card(A \cup B) = card(A) + card(B) -
+card(A \cap B).\]</span></p>
+<ul>
+<li>直观解释：<span class="math inline">\(card(A) + card(B)\)</span>
+把公共元素算了两次，故须减去 <span class="math inline">\(card(A \cap
+B)\)</span> 一次。</li>
+<li>应用：两次进货共 6 种与 4 种，重复 2 种，则共 <span
+class="math inline">\(6 + 4 - 2 = 8\)</span> 种；两次运动会参赛 8 人与
+12 人，都参赛 3 人，则共 <span class="math inline">\(8 + 12 - 3 =
+17\)</span> 人。</li>
+</ul>
+<p>方法Venn 图解法</p>
+<p>先在 <span class="math inline">\(A \cap B\)</span> 区域填 <span
+class="math inline">\(card(A \cap B)\)</span>，再在 <span
+class="math inline">\(A\)</span> 中不含 <span class="math inline">\(A
+\cap B\)</span> 的区域填 <span class="math inline">\(card(A) - card(A
+\cap B)\)</span>，在 <span class="math inline">\(B\)</span> 中不含 <span
+class="math inline">\(A \cap B\)</span> 的区域填 <span
+class="math inline">\(card(B) - card(A \cap B)\)</span>，三数相加即得
+<span class="math inline">\(card(A \cup
+B)\)</span>。此法对涉及三个以上集合的并、交问题更能显示优越性。</p>
+<p>性质三个集合的推广（思考题）</p>
+<p>可仿照两集合情形探究 <span class="math inline">\(card(A \cup B \cup
+C)\)</span> 与 <span
+class="math inline">\(card(A),card(B),card(C),card(A \cap B),card(B \cap
+C),card(A \cap C),card(A \cap B \cap C)\)</span> 之间的关系。</p>
+<p>要点拓展（无限集的比较）</p>
+<p>有限集合的元素个数可以一一数出；对无限集合（如 <span
+class="math inline">\(A = \{ 1,2,3,\cdots,n,\cdots\}\)</span> 与 <span
+class="math inline">\(B = \{
+2,4,6,\cdots,2n,\cdots\}\)</span>）无法数出个数，但可通过建立元素间的<strong>一一对应</strong>来比较多少。</p>
+<p>节阅读与思考：几何命题与充分条件、必要条件1 小节 · 3 知识点</p>
+<p>小节本节知识点节内直列3 条知识点</p>
+<p>要点总纲</p>
+<p>对一种几何图形或图形之间的关系，可以
+利用充分条件、必要条件梳理已学的几何命题，可以促进更深入地理解几何图形及其关系。</p>
+<ul>
+<li>通过<strong>充要条件</strong>给出它的<strong>等价定义</strong>；</li>
+<li>通过<strong>充分条件</strong>给出它的<strong>判定定理</strong>；</li>
+<li>通过<strong>必要条件</strong>给出它的<strong>性质定理</strong>。</li>
+</ul>
+<p>要点案例：相似三角形 （记 <span class="math inline">\(q\)</span></p>
+<p>两个三角形相似）</p>
+<ul>
+<li><strong>定义</strong>：三个角分别相等、三条边成比例的两个三角形叫做相似三角形。记
+<span class="math inline">\(p\)</span>：三个角分别相等且三条边成比例，则
+<span class="math inline">\(p \Rightarrow q\)</span> 且 <span
+class="math inline">\(q \Rightarrow p\)</span>，故 <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(q\)</span>
+的<strong>充要条件</strong>。三条边、三个内角是三角形的六个要素，定义从各要素间的相互关系给出了充要条件。</li>
+<li><strong>判定定理（充分条件）</strong>：①
+三边成比例的两个三角形相似（<span
+class="math inline">\(p_{1}\)</span>）；②
+两边成比例且夹角相等的两个三角形相似（<span
+class="math inline">\(p_{2}\)</span>）；③
+两角分别相等的两个三角形相似（<span
+class="math inline">\(p_{3}\)</span>）。均有 <span
+class="math inline">\(p_{i} \Rightarrow
+q\)</span>。此外"相似于同一个三角形的两个三角形相似"也是充分条件（说明"相似"具有<strong>传递性</strong>）。</li>
+<li><strong>性质定理（必要条件）</strong>：①
+对应线段的比都相等（等于相似比），特别地对应边之比、对应高之比、对应中线之比、对应角平分线之比都相等（<span
+class="math inline">\(r_{1}\)</span>）；② 对应角相等（<span
+class="math inline">\(r_{2}\)</span>）；③ 周长的比等于对应边之比（<span
+class="math inline">\(r_{3}\)</span>）；④
+面积的比等于对应边之比的平方（<span
+class="math inline">\(r_{4}\)</span>）。均有 <span
+class="math inline">\(q \Rightarrow r_{i}\)</span>。若 <span
+class="math inline">\(r_{i}\)</span>
+不成立，则两三角形一定不相似——故利用性质定理可判定两三角形<strong>不是</strong>相似三角形。</li>
+<li><strong>充要条件的识别与等价定义</strong>：<span
+class="math inline">\(p_{1}(r_{1})\)</span>、<span
+class="math inline">\(p_{2}\)</span>、<span
+class="math inline">\(p_{3}(r_{2})\)</span>
+既是充分条件又是必要条件，据此可构造相似三角形的等价定义："三边成比例的两个三角形叫做相似三角形""两边成比例且夹角相等的两个三角形叫做相似三角形""两角分别相等的两个三角形叫做相似三角形"。</li>
+</ul>
+<p>方法方法论</p>
+<p>判定定理用于<strong>判定是</strong>（充分性），性质定理用于<strong>判定不是</strong>（必要性的逆否）；二者都不能反向使用。仿此思路可梳理等腰三角形、直角三角形、平行四边形（矩形、菱形、正方形）等图形的知识体系。</p>
+<p>章第二章 一元二次函数、方程和不等式4 节 · 4 小节 · 39 知识点</p>
+<p>节2.1 等式性质与不等式性质1 小节 · 12 知识点</p>
+<p>小节本节知识点节内直列12 条知识点</p>
+<p>定义概念（不等式）</p>
+<p>相等关系用<strong>等式</strong>表示，不等关系用<strong>不等式</strong>表示。现实中的多与少、大与小、长与短、不超过或不少于等，反映在数量关系上就是相等与不等。用不等式（组）可刻画限速、含量下限、三角形三边关系、垂线段最短等不等关系。</p>
+<p>性质基本事实（两个实数大小关系的依据）</p>
+<p>如果 <span class="math inline">\(a - b\)</span> 是正数，那么 <span
+class="math inline">\(a &gt; b\)</span>；如果 <span
+class="math inline">\(a - b\)</span> 等于 0，那么 <span
+class="math inline">\(a = b\)</span>；如果 <span class="math inline">\(a
+- b\)</span> 是负数，那么 <span class="math inline">\(a &lt;
+b\)</span>。反过来也对。即</p>
+<p><span class="math display">\[a &gt; b \Leftrightarrow a - b &gt;
+0;\quad\quad a = b \Leftrightarrow a - b = 0;\quad\quad a &lt; b
+\Leftrightarrow a - b &lt; 0.\]</span></p>
+<ul>
+<li>几何解释：数轴上的点与实数一一对应，点 <span
+class="math inline">\(A\)</span> 在点 <span
+class="math inline">\(B\)</span> 左边则 <span class="math inline">\(a
+&lt; b\)</span>，在右边则 <span class="math inline">\(a &gt;
+b\)</span>。</li>
+<li>意义：要比较两个实数的大小，可<strong>转化为比较它们的差与 0
+的大小</strong>（<strong>作差法</strong>）。<span
+class="math inline">\(0\)</span>
+是正数与负数的分界点，为实数比较大小提供了"标杆"。</li>
+</ul>
+<p>方法方法（作差比较法）</p>
+<p>作差 → 变形（因式分解、配方、通分等）→ 判断符号 → 得结论。如</p>
+<p><span class="math display">\[(x + 2)(x + 3) - (x + 1)(x + 4) = (x^{2}
++ 5x + 6) - (x^{2} + 5x + 4) = 2 &gt; 0,\]</span></p>
+<p>故 <span class="math inline">\((x + 2)(x + 3) &gt; (x + 1)(x +
+4)\)</span>。</p>
+<p>要点重要不等式</p>
+<p><span class="math inline">\(\forall a,b \in
+\mathbf{R}\)</span>，有</p>
+<p><span class="math display">\[a^{2} + b^{2} \geq 2ab,\]</span></p>
+<p>**当且仅当 <span class="math inline">\(a = b\)</span>
+时，等号成立**。</p>
+<ul>
+<li>几何来源：第 24 届国际数学家大会会标取自赵爽弦图。正方形 <span
+class="math inline">\(ABCD\)</span> 内含 4 个全等直角三角形，直角边长
+<span class="math inline">\(a,b\ (a \neq b)\)</span>，则正方形边长 <span
+class="math inline">\(\sqrt{a^{2} + b^{2}}\)</span>，面积 <span
+class="math inline">\(a^{2} + b^{2}\)</span>；4 个三角形面积和 <span
+class="math inline">\(2ab\)</span>。由正方形面积大于 4 个三角形面积和得
+<span class="math inline">\(a^{2} + b^{2} &gt; 2ab\)</span>；当 <span
+class="math inline">\(a = b\)</span> 时中间小正方形缩为一点，得 <span
+class="math inline">\(a^{2} + b^{2} = 2ab\)</span>。</li>
+<li>代数证明：<span class="math inline">\(a^{2} + b^{2} - 2ab = (a -
+b)^{2} \geq 0\)</span>，当且仅当 <span class="math inline">\(a =
+b\)</span> 时等号成立。</li>
+</ul>
+<p>性质等式的基本性质 （作为类比原型）</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性质 1</td>
+<td>如果 <span class="math inline">\(a = b\)</span>，那么 <span
+class="math inline">\(b = a\)</span></td>
+</tr>
+<tr>
+<td>性质 2</td>
+<td>如果 <span class="math inline">\(a = b\)</span>，<span
+class="math inline">\(b = c\)</span>，那么 <span class="math inline">\(a
+= c\)</span></td>
+</tr>
+<tr>
+<td>性质 3</td>
+<td>如果 <span class="math inline">\(a = b\)</span>，那么 <span
+class="math inline">\(a \pm c = b \pm c\)</span></td>
+</tr>
+<tr>
+<td>性质 4</td>
+<td>如果 <span class="math inline">\(a = b\)</span>，那么 <span
+class="math inline">\(ac = bc\)</span></td>
+</tr>
+<tr>
+<td>性质 5</td>
+<td>如果 <span class="math inline">\(a = b\)</span>，<span
+class="math inline">\(c \neq 0\)</span>，那么 <span
+class="math inline">\(\frac{a}{c} = \frac{b}{c}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>性质 1、2 反映相等关系<strong>自身</strong>的特性；性质 3、4、5
+从<strong>运算</strong>角度提出，反映等式在运算中保持的不变性。<strong>"运算中的不变性就是性质"</strong>——这是发现不等式性质的指导思想。</li>
+</ul>
+<p>性质定理·公式（不等式的基本性质）</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性质 1</td>
+<td><span class="math inline">\(a &gt; b \Leftrightarrow b &lt;
+a\)</span>​</td>
+<td>对称性</td>
+</tr>
+<tr>
+<td>性质 2</td>
+<td><span class="math inline">\(a &gt; b,\ b &gt; c \Rightarrow a &gt;
+c\)</span>​</td>
+<td>传递性</td>
+</tr>
+<tr>
+<td>性质 3</td>
+<td><span class="math inline">\(a &gt; b \Rightarrow a + c &gt; b +
+c\)</span>​</td>
+<td>可加性（同向）</td>
+</tr>
+<tr>
+<td>性质 4</td>
+<td><span class="math inline">\(a &gt; b,\ c &gt; 0 \Rightarrow ac &gt;
+bc\)</span>；<span class="math inline">\(a &gt; b,\ c &lt; 0 \Rightarrow
+ac &lt; bc\)</span></td>
+<td>可乘性（正同负反）</td>
+</tr>
+<tr>
+<td>性质 5</td>
+<td><span class="math inline">\(a &gt; b,\ c &gt; d \Rightarrow a + c
+&gt; b + d\)</span>​</td>
+<td>同向可加</td>
+</tr>
+<tr>
+<td>性质 6</td>
+<td><span class="math inline">\(a &gt; b &gt; 0,\ c &gt; d &gt; 0
+\Rightarrow ac &gt; bd\)</span>​</td>
+<td>同向同正可乘</td>
+</tr>
+<tr>
+<td>性质 7</td>
+<td><span class="math inline">\(a &gt; b &gt; 0 \Rightarrow a^{n} &gt;
+b^{n}\ (n \in \mathbf{N},n \geq 2)\)</span>​</td>
+<td>乘方</td>
+</tr>
+</tbody>
+</table>
+<p>性质性质 3 的推论（移项法则）</p>
+<p><span class="math inline">\(a + b &gt; c \Rightarrow a + b + ( - b)
+&gt; c + ( - b) \Rightarrow a &gt; c -
+b\)</span>。即<strong>不等式中任何一项可以改变符号后移到不等号的另一边</strong>。</p>
+<p>方法性质 2 的证明（示范）</p>
+<p><span class="math display">\[a &gt; b \Rightarrow a - b &gt; 0,\quad
+b &gt; c \Rightarrow b - c &gt; 0\  \Rightarrow \ (a - b) + (b - c) &gt;
+0\  \Rightarrow \ a - c &gt; 0\  \Rightarrow \ a &gt; c.\]</span></p>
+<p>性质常用推论（由性质推出）</p>
+<ul>
+<li>倒数性质：<span class="math inline">\(a &gt; b &gt; 0 \Rightarrow
+\frac{1}{a} &lt; \frac{1}{b}\)</span>（结合性质 4，两边同乘 <span
+class="math inline">\(\frac{1}{ab} &gt; 0\)</span>）。</li>
+<li>异向可减：<span class="math inline">\(a &gt; b,\ c &lt; d
+\Rightarrow a - c &gt; b - d\)</span>。</li>
+<li>开方：<span class="math inline">\(a &gt; b &gt; 0 \Rightarrow
+\sqrt{a} &gt; \sqrt{b}\)</span>。</li>
+</ul>
+<p>方法方法论</p>
+<p>实数大小关系的基本事实和不等式的性质是解决不等式问题的<strong>基本依据</strong>。研究路径为：<strong>基本事实
+→ 类比等式性质归纳猜想 →
+逻辑推理证明</strong>。这一过程既学习方法，又培养"借助直观理解、通过逻辑推理证明"的思维习惯。</p>
+<p>术语中英术语</p>
+<p>不等式 inequality；等式 equality；作差法 method of
+difference；算术平均数 arithmetic mean；几何平均数 geometric mean。</p>
+<p>性质关系·转化</p>
+<p>等号<strong>没有方向性</strong>，而不等号<strong>具有方向性</strong>——这决定了"两边同乘一个数（式）时，所乘数（式）的符号会影响不等号方向"，是等式与不等式的本质差异。</p>
+<p>节2.2 基本不等式1 小节 · 10 知识点</p>
+<p>小节本节知识点节内直列10 条知识点</p>
+<p>性质定理·公式（基本不等式）</p>
+<p>如果 <span class="math inline">\(a &gt; 0\)</span>，<span
+class="math inline">\(b &gt; 0\)</span>，则</p>
+<p><span class="math display">\[\sqrt{ab} \leq \frac{a +
+b}{2},\]</span></p>
+<p>**当且仅当 <span class="math inline">\(a = b\)</span>
+时，等号成立<strong>。通常称此不等式为</strong>基本不等式**（basic
+inequality）。</p>
+<p>定义概念（两种平均数）</p>
+<p><span class="math inline">\(\frac{a + b}{2}\)</span> 叫做正数 <span
+class="math inline">\(a,b\)</span> 的<strong>算术平均数</strong>，<span
+class="math inline">\(\sqrt{ab}\)</span> 叫做正数 <span
+class="math inline">\(a,b\)</span>
+的<strong>几何平均数</strong>。基本不等式表明：<strong>两个正数的算术平均数不小于它们的几何平均数</strong>。</p>
+<p>要点来源</p>
+<p>由 <span class="math inline">\(a^{2} + b^{2} \geq 2ab\)</span>，用
+<span class="math inline">\(\sqrt{a},\sqrt{b}\)</span> 分别代替 <span
+class="math inline">\(a,b\)</span>（<span class="math inline">\(a &gt;
+0,b &gt; 0\)</span>）即得。</p>
+<p>方法证明方法（分析法）</p>
+<p>要证 <span class="math inline">\(\sqrt{ab} \leq \frac{a +
+b}{2}\)</span>，只要证 <span class="math inline">\(2\sqrt{ab} \leq a +
+b\)</span>，只要证 <span class="math inline">\(2\sqrt{ab} - a - b \leq
+0\)</span>，只要证 <span class="math inline">\(- (\sqrt{a} -
+\sqrt{b})^{2} \leq 0\)</span>，只要证 <span
+class="math inline">\((\sqrt{a} - \sqrt{b})^{2} \geq
+0\)</span>——显然成立，当且仅当 <span class="math inline">\(a =
+b\)</span>
+时等号成立。把上述过程<strong>倒过来</strong>即得证明（<strong>执果索因</strong>的分析法）。</p>
+<p>要点几何解释</p>
+<p>以 <span class="math inline">\(AB\)</span> 为直径作圆，<span
+class="math inline">\(C\)</span> 在 <span
+class="math inline">\(AB\)</span> 上，<span class="math inline">\(AC =
+a\)</span>，<span class="math inline">\(BC = b\)</span>，过 <span
+class="math inline">\(C\)</span> 作垂直于 <span
+class="math inline">\(AB\)</span> 的弦 <span
+class="math inline">\(DE\)</span>，连 <span
+class="math inline">\(AD,BD\)</span>。由 <span
+class="math inline">\(\bigtriangleup ACD \sim \bigtriangleup
+DCB\)</span> 得 <span class="math inline">\(CD = \sqrt{ab}\)</span>；而
+<span class="math inline">\(CD\)</span> 不超过圆的半径 <span
+class="math inline">\(\frac{a + b}{2}\)</span>，故 <span
+class="math inline">\(\sqrt{ab} \leq \frac{a + b}{2}\)</span>。当且仅当
+<span class="math inline">\(C\)</span> 与圆心重合（即 <span
+class="math inline">\(a = b\)</span>）时等号成立。</p>
+<p>性质定理·公式（两个最值结论）</p>
+<p>设 <span class="math inline">\(x,y\)</span> 都是正数，</p>
+<ul>
+<li>若<strong>积</strong> <span class="math inline">\(xy\)</span> 为定值
+<span class="math inline">\(P\)</span>，则当 <span
+class="math inline">\(x = y\)</span> 时，<strong>和</strong> <span
+class="math inline">\(x + y\)</span> 有最小值 <span
+class="math inline">\(2\sqrt{P}\)</span>；</li>
+<li>若<strong>和</strong> <span class="math inline">\(x + y\)</span>
+为定值 <span class="math inline">\(S\)</span>，则当 <span
+class="math inline">\(x = y\)</span> 时，<strong>积</strong> <span
+class="math inline">\(xy\)</span> 有最大值 <span
+class="math inline">\(\frac{1}{4}S^{2}\)</span>。</li>
+<li>记忆口诀：<strong>积定和最小，和定积最大</strong>。</li>
+</ul>
+<p>要点应用要点（"一正、二定、三相等"）</p>
+<ul>
+<li><strong>一正</strong>：各项必须为正数（否则不能直接用基本不等式）；</li>
+<li><strong>二定</strong>：和或积之一必须是<strong>定值</strong>；</li>
+<li><strong>三相等</strong>：必须验证<strong>等号能否取到</strong>（求出取等条件，说明最值可达）。如求
+<span class="math inline">\(x + \frac{1}{x}\ (x &gt; 0)\)</span>
+的最小值，因 <span class="math inline">\(x \cdot \frac{1}{x} =
+1\)</span> 为定值，故 <span class="math inline">\(x + \frac{1}{x} \geq
+2\sqrt{x \cdot \frac{1}{x}} = 2\)</span>，当且仅当 <span
+class="math inline">\(x = \frac{1}{x}\)</span> 即 <span
+class="math inline">\(x = 1\)</span> 时取等，最小值 <span
+class="math inline">\(2\)</span>。</li>
+</ul>
+<p>要点典型应用</p>
+<ul>
+<li>面积定值的矩形，当且仅当为<strong>正方形</strong>时周长（篱笆）最短（<span
+class="math inline">\(xy = 100\)</span> 时 <span
+class="math inline">\(2(x + y) \geq 40\)</span>，<span
+class="math inline">\(x = y = 10\)</span>）；</li>
+<li>周长定值的矩形，当且仅当为<strong>正方形</strong>时面积最大（<span
+class="math inline">\(2(x + y) = 36\)</span> 时 <span
+class="math inline">\(xy \leq 81\)</span>，<span class="math inline">\(x
+= y = 9\)</span>）；</li>
+<li>无盖长方体贮水池造价最低问题：容积 <span
+class="math inline">\(4800\, m^{3}\)</span>、深 <span
+class="math inline">\(3\, m\)</span>，则 <span class="math inline">\(xy
+= 1600\)</span>，<span class="math inline">\(z = 240000 + 720(x + y)
+\geq 240000 + 1440\sqrt{1600} = 297600\)</span>，当 <span
+class="math inline">\(x = y = 40\)</span> 时总造价最低为 297 600
+元。</li>
+</ul>
+<p>术语中英术语</p>
+<p>基本不等式 basic inequality；算术平均数 arithmetic mean；几何平均数
+geometric mean；分析法 analytic method。</p>
+<p>性质关系·转化</p>
+<p>基本不等式在代数式运算中的地位，类似于<strong>乘法公式</strong>——都是解决一类问题的重要工具。常见变式：<span
+class="math inline">\(ab \leq \left( \frac{a + b}{2}
+\right)^{2}\)</span>；<span class="math inline">\(\frac{2xy}{x + y} \leq
+\sqrt{xy}\ (x,y &gt; 0,x \neq y)\)</span>；<span
+class="math inline">\(\frac{x}{y} + \frac{y}{x} \geq 2\)</span>。</p>
+<p>节2.3 二次函数与一元二次方程、不等式1 小节 · 11 知识点</p>
+<p>小节本节知识点节内直列11 条知识点</p>
+<p>定义概念（一元二次不等式）</p>
+<p>只含有一个未知数，并且未知数的<strong>最高次数是 2</strong>
+的不等式，称为<strong>一元二次不等式</strong>（quadratic inequality with
+one unknown）。一般形式为</p>
+<p><span class="math display">\[ax^{2} + bx + c &gt;
+0\quad\text{或}\quad ax^{2} + bx + c &lt; 0,\]</span></p>
+<p>其中 <span class="math inline">\(a,b,c\)</span> 均为常数，<span
+class="math inline">\(a \neq 0\)</span>。</p>
+<p>定义概念（二次函数的零点）</p>
+<p>对于二次函数 <span class="math inline">\(y = ax^{2} + bx +
+c\)</span>，把使 <span class="math inline">\(ax^{2} + bx + c =
+0\)</span> 的实数 <span class="math inline">\(x\)</span>
+叫做该二次函数的<strong>零点</strong>。</p>
+<p>要点核心思想（三个"二次"的联系）</p>
+<p>以<strong>二次函数</strong>为纽带，把一元二次<strong>方程</strong>与一元二次<strong>不等式</strong>联系起来——一元二次方程的根即相应二次函数的<strong>零点</strong>；函数的图象与
+<span class="math inline">\(x\)</span>
+轴的位置关系，决定了一元二次不等式解集的形式。这与初中"用一次函数看一元一次方程、一元一次不等式"完全平行。</p>
+<p>要点求解思路</p>
+<p>先求一元二次方程的根（即函数零点），再根据二次函数图象与 <span
+class="math inline">\(x\)</span> 轴的相对位置确定解集。零点把 <span
+class="math inline">\(x\)</span> 轴分成若干段：图象在 <span
+class="math inline">\(x\)</span> 轴<strong>上方</strong>的区间对应 <span
+class="math inline">\(y &gt; 0\)</span>（不等式 <span
+class="math inline">\(&gt; 0\)</span> 的解集），在 <span
+class="math inline">\(x\)</span> 轴<strong>下方</strong>的区间对应 <span
+class="math inline">\(y &lt; 0\)</span>。</p>
+<p>性质定理·公式（二次函数与一元二次方程、不等式的对应关系）</p>
+<p>设 <span class="math inline">\(a &gt; 0\)</span>，<span
+class="math inline">\(\Delta = b^{2} - 4ac\)</span>，</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>判别式</th>
+<th><span class="math inline">\(\Delta &gt; 0\)</span>​</th>
+<th><span class="math inline">\(\Delta = 0\)</span>​</th>
+<th><span class="math inline">\(\Delta &lt; 0\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程的根</td>
+<td>两个不相等实根 <span class="math inline">\(x_{1} &lt;
+x_{2}\)</span></td>
+<td>两个相等实根 <span class="math inline">\(x_{1} = x_{2} = -
+\frac{b}{2a}\)</span></td>
+<td>无实数根</td>
+</tr>
+<tr>
+<td><span class="math inline">\(ax^{2} + bx + c &gt; 0\)</span>
+的解集</td>
+<td><span class="math inline">\(\{ x \mid x &lt; x_{1}\ \text{或}\ x
+&gt; x_{2}\}\)</span>​</td>
+<td><span class="math inline">\(\left\{ x\  \middle| \ x \neq -
+\frac{b}{2a} \right\}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+</tr>
+<tr>
+<td><span class="math inline">\(ax^{2} + bx + c &lt; 0\)</span>
+的解集</td>
+<td><span class="math inline">\(\{ x \mid x_{1} &lt; x &lt;
+x_{2}\}\)</span>​</td>
+<td><span class="math inline">\(\varnothing\)</span>​</td>
+<td><span class="math inline">\(\varnothing\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<p>方法求解步骤（可化成 <span class="math inline">\(ax^{2} + bx + c &gt;
+0,\ a &gt; 0\)</span> 形式）</p>
+<ul>
+<li>① <strong>化正</strong>：若二次项系数 <span class="math inline">\(a
+&lt; 0\)</span>，先两边同乘 <span class="math inline">\(- 1\)</span>
+化为正（注意<strong>不等号方向改变</strong>）；</li>
+<li>② <strong>求根</strong>：计算 <span
+class="math inline">\(\Delta\)</span>，求方程 <span
+class="math inline">\(ax^{2} + bx + c = 0\)</span>
+的根（或判断无根）；</li>
+<li>③ <strong>画图</strong>：画出对应二次函数的草图，标出与 <span
+class="math inline">\(x\)</span> 轴的交点；</li>
+<li>④ <strong>写解集</strong>：依图象在 <span
+class="math inline">\(x\)</span>
+轴上、下方的区间写出解集（"大于取两边，小于取中间"）。</li>
+</ul>
+<p>性质典型例题结论</p>
+<ul>
+<li><span class="math inline">\(x^{2} - 5x + 6 &gt; 0\)</span>：<span
+class="math inline">\(\Delta &gt; 0\)</span>，根 <span
+class="math inline">\(2,3\)</span>，解集 <span class="math inline">\(\{
+x \mid x &lt; 2\ \text{或}\ x &gt; 3\}\)</span>；</li>
+<li><span class="math inline">\(9x^{2} - 6x + 1 &gt; 0\)</span>：<span
+class="math inline">\(\Delta = 0\)</span>，根 <span
+class="math inline">\(x_{1} = x_{2} = \frac{1}{3}\)</span>，解集 <span
+class="math inline">\(\left\{ x\  \middle| \ x \neq \frac{1}{3}
+\right\}\)</span>；</li>
+<li><span class="math inline">\(- x^{2} + 2x - 3 &gt; 0\)</span>：化为
+<span class="math inline">\(x^{2} - 2x + 3 &lt; 0\)</span>，<span
+class="math inline">\(\Delta = - 8 &lt; 0\)</span>，解集 <span
+class="math inline">\(\varnothing\)</span>。</li>
+</ul>
+<p>要点应用</p>
+<p>用一元二次不等式解决实际问题的关键是把"不少于""超过""不超过"等<strong>不等关系</strong>转化为一元二次不等式，求出解集后再结合实际意义（如取整数、取正值）确定答案。如摩托车产量问题：<span
+class="math inline">\(- 20x^{2} + 2200x &gt; 60000\)</span> 化为 <span
+class="math inline">\(x^{2} - 110x + 3000 &lt; 0\)</span>，解集 <span
+class="math inline">\(\{ x \mid 50 &lt; x &lt; 60\}\)</span>，因 <span
+class="math inline">\(x\)</span> 取整数，故产量在 51～59 辆时可获 6
+万元以上收益。</p>
+<p>术语中英术语</p>
+<p>一元二次不等式 quadratic inequality with one unknown；零点 zero
+point；判别式 discriminant；解集 solution set。</p>
+<p>性质关系·转化</p>
+<ul>
+<li><strong>函数—方程—不等式</strong>三位一体：函数值等于 0 ↔︎ 方程的解 ↔︎
+图象与 <span class="math inline">\(x\)</span> 轴交点；函数值大于 0 ↔︎
+不等式的解集 ↔︎ 图象在 <span class="math inline">\(x\)</span>
+轴上方部分对应的横坐标范围。</li>
+<li>一元二次不等式的解集与<strong>集合运算</strong>直接衔接：求 <span
+class="math inline">\(M \cap N\)</span>、<span class="math inline">\(M
+\cup N\)</span> 时需先分别解出不等式。</li>
+</ul>
+<p>方法方法总结</p>
+<p>用函数观点统一方程与不等式，是本章乃至整个高中数学的基本思想方法；其中<strong>函数的图象、零点、图象与</strong>
+<span class="math inline">\(x\)</span>
+<strong>轴的关系</strong>是关键要素。</p>
+<p>节本章小结（第二章）1 小节 · 6 知识点</p>
+<p>小节本节知识点节内直列6 条知识点</p>
+<p>要点知识结构</p>
+<p>两个实数大小关系的基本事实 →（类比等式性质）不等式的基本性质 →
+基本不等式（最值问题）→
+一元二次不等式（与二次函数、一元二次方程的联系）。</p>
+<p>方法核心思想方法——类比</p>
+<p>本章内容基本是"类比等式与方程"获得的：</p>
+<ul>
+<li>类比等式性质得不等式性质，特别注意"<strong>等号无方向、不等号有方向</strong>"这一差异，以及同乘数（式）符号对不等号方向的影响；</li>
+<li>类比"用一次函数看一元一次方程、一元一次不等式"，得"以二次函数为纽带联系一元二次方程与一元二次不等式"的方法；</li>
+<li>类比"相等关系的命题把等号改为不等号"可得相应的不等关系命题（但<strong>未必都成立</strong>，需逐一验证）。</li>
+</ul>
+<p>要点研究路径</p>
+<p>基本事实 → 归纳猜想 →
+逻辑推理证明。<strong>"运算中的不变性就是性质"</strong>是发现不等式性质的指导思想。</p>
+<p>方法方法论结论</p>
+<p><strong>类比是发现的引路人</strong>。以实数大小关系的基本事实为基础，先通过类比归纳猜想，再运用逻辑推理证明，既学习发现数学关系与规律的方法，又培养借助直观理解数学内容、通过逻辑推理证明数学结论的思维习惯。</p>
+<p>要点易混辨析</p>
+<ul>
+<li>两边同乘（除）一个数时，须先判断其<strong>符号</strong>：正数不变号，负数变号，零不可乘除。</li>
+<li>同向不等式可加（性质
+5）但<strong>不可减</strong>；同向同<strong>正</strong>不等式可乘（性质
+6）但<strong>不可除</strong>。</li>
+<li>基本不等式使用的三个条件"一正二定三相等"缺一不可，尤其不能忽略<strong>验证等号能否取到</strong>。</li>
+<li><span class="math inline">\(a &gt; b\)</span> 与 <span
+class="math inline">\(a^{2} &gt; b^{2}\)</span> 互不推出（<span
+class="math inline">\(a &gt; b\)</span> 且 <span
+class="math inline">\(ab &lt; 0\)</span> 时结论相反）；<span
+class="math inline">\(a &gt; b\)</span> 与 <span
+class="math inline">\(ac^{2} &gt; bc^{2}\)</span> 也互不推出（<span
+class="math inline">\(c = 0\)</span> 时 <span
+class="math inline">\(ac^{2} = bc^{2}\)</span>）。</li>
+</ul>
+<p>要点知识衔接</p>
+<p>不等式的性质与一元二次不等式的解法，是后续求函数<strong>定义域</strong>、判断函数<strong>单调性</strong>、求<strong>值域</strong>与<strong>最值</strong>的基本工具。</p>
+<p>章第三章 函数的概念与性质8 节 · 11 小节 · 73 知识点</p>
+<p>节3.1 函数的概念及其表示2 小节 · 16 知识点</p>
+<p>小节3.1.1 函数的概念9 条知识点</p>
+<p>定义定义（函数）</p>
+<p>一般地，设 <span class="math inline">\(A,B\)</span>
+是<strong>非空的实数集</strong>，如果对于集合 <span
+class="math inline">\(A\)</span> 中的<strong>任意一个</strong>数 <span
+class="math inline">\(x\)</span>，按照某种<strong>确定的对应关系</strong>
+<span class="math inline">\(f\)</span>，在集合 <span
+class="math inline">\(B\)</span> 中都有<strong>唯一确定</strong>的数
+<span class="math inline">\(y\)</span> 和它对应，那么就称 <span
+class="math inline">\(f:A \rightarrow B\)</span> 为从集合 <span
+class="math inline">\(A\)</span> 到集合 <span
+class="math inline">\(B\)</span>
+的一个<strong>函数</strong>（function），记作</p>
+<p><span class="math display">\[y = f(x),\quad x \in A.\]</span></p>
+<p>定义概念（三要素）</p>
+<ul>
+<li><span class="math inline">\(x\)</span>
+叫做<strong>自变量</strong>；</li>
+<li><span class="math inline">\(x\)</span> 的取值范围 <span
+class="math inline">\(A\)</span>
+叫做函数的<strong>定义域</strong>（domain）；</li>
+<li>与 <span class="math inline">\(x\)</span> 的值相对应的 <span
+class="math inline">\(y\)</span> 值叫做<strong>函数值</strong>；</li>
+<li>函数值的集合 <span class="math inline">\(\{ f(x) \mid x \in
+A\}\)</span> 叫做函数的<strong>值域</strong>（range）。</li>
+<li>显然<strong>值域是集合</strong> <span
+class="math inline">\(B\)</span> <strong>的子集</strong>（可能是 <span
+class="math inline">\(B\)</span> 的真子集）。</li>
+</ul>
+<p>性质表示符号</p>
+<p>符号 <span class="math inline">\(f\)</span> 统一表示对应关系；<span
+class="math inline">\(f(x)\)</span> 表示 <span
+class="math inline">\(x\)</span>
+对应的<strong>函数值</strong>，而<strong>不是</strong> <span
+class="math inline">\(f\)</span> 乘 <span
+class="math inline">\(x\)</span>。</p>
+<p>定义概念（区间）</p>
+<p>设 <span class="math inline">\(a,b\)</span> 是两个实数，且 <span
+class="math inline">\(a &lt; b\)</span>：</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>不等式</th>
+<th>名称</th>
+<th>记号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(a \leq x \leq b\)</span>​</td>
+<td>闭区间</td>
+<td><span class="math inline">\(\lbrack a,b\rbrack\)</span>​</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a &lt; x &lt; b\)</span>​</td>
+<td>开区间</td>
+<td><span class="math inline">\((a,b)\)</span>​</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a \leq x &lt; b\)</span>​</td>
+<td>半开半闭区间</td>
+<td><span class="math inline">\(\lbrack a,b)\)</span>​</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a &lt; x \leq b\)</span>​</td>
+<td>半开半闭区间</td>
+<td><span class="math inline">\((a,b\rbrack\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="math inline">\(a,b\)</span>
+都叫做相应区间的<strong>端点</strong>。数轴表示时，<strong>实心点</strong>表示包括该端点，<strong>空心点</strong>表示不包括该端点。</li>
+<li>实数集 <span class="math inline">\(\mathbf{R} = ( - \infty, +
+\infty)\)</span>；"<span
+class="math inline">\(\infty\)</span>"读作"无穷大"，"<span
+class="math inline">\(- \infty\)</span>"读作"负无穷大"，"<span
+class="math inline">\(+ \infty\)</span>"读作"正无穷大"。</li>
+<li>满足 <span class="math inline">\(x \geq a\)</span>、<span
+class="math inline">\(x &gt; a\)</span>、<span class="math inline">\(x
+\leq b\)</span>、<span class="math inline">\(x &lt; b\)</span>
+的实数集分别表示为 <span class="math inline">\(\lbrack a, +
+\infty)\)</span>、<span class="math inline">\((a, +
+\infty)\)</span>、<span class="math inline">\(( -
+\infty,b\rbrack\)</span>、<span class="math inline">\(( -
+\infty,b)\)</span>。</li>
+</ul>
+<p>定义常见函数的定义域与值域</p>
+<ul>
+<li>一次函数 <span class="math inline">\(y = ax + b\ (a \neq
+0)\)</span>：定义域 <span
+class="math inline">\(\mathbf{R}\)</span>，值域 <span
+class="math inline">\(\mathbf{R}\)</span>。</li>
+<li>二次函数 <span class="math inline">\(y = ax^{2} + bx + c\ (a \neq
+0)\)</span>：定义域 <span class="math inline">\(\mathbf{R}\)</span>；当
+<span class="math inline">\(a &gt; 0\)</span> 时值域 <span
+class="math inline">\(B = \left\{ y\  \middle| \ y \geq \frac{4ac -
+b^{2}}{4a} \right\}\)</span>，当 <span class="math inline">\(a &lt;
+0\)</span> 时 <span class="math inline">\(B = \left\{ y\  \middle| \ y
+\leq \frac{4ac - b^{2}}{4a} \right\}\)</span>。</li>
+<li>反比例函数 <span class="math inline">\(y = \frac{k}{x}\ (k \neq
+0)\)</span>：定义域 <span class="math inline">\(\{ x \mid x \neq
+0\}\)</span>，值域 <span class="math inline">\(\{ y \mid y \neq
+0\}\)</span>。</li>
+</ul>
+<p>方法定理·公式（同一函数的判定）</p>
+<p>一个函数的构成要素为<strong>定义域、对应关系和值域</strong>；因为值域由定义域和对应关系决定，所以</p>
+<ul>
+<li>仅有对应关系相同而定义域不同，<strong>不是</strong>同一个函数（如
+<span class="math inline">\(y = 350x,\ x \in \lbrack
+0,0.5\rbrack\)</span> 与 <span class="math inline">\(y = 350x,\ x \in \{
+1,\cdots,6\}\)</span>）。</li>
+<li>表示函数的字母不同不影响同一性（如 <span class="math inline">\(u =
+t^{2}\)</span>、<span class="math inline">\(x = y^{2}\)</span>、<span
+class="math inline">\(y = x^{2}\)</span>
+定义域与对应关系均相同，是同一函数）。</li>
+<li>典型反例：<span class="math inline">\(y = (\sqrt{x})^{2} = x\ (x
+\geq 0)\)</span> 与 <span class="math inline">\(y = x\ (x \in
+\mathbf{R})\)</span> 定义域不同；<span class="math inline">\(y =
+\sqrt{x^{2}} = |x|\)</span> 与 <span class="math inline">\(y =
+x\)</span> 对应关系不同；<span class="math inline">\(m = \frac{n^{2}}{n}
+= n\ (n \neq 0)\)</span> 与 <span class="math inline">\(y = x\)</span>
+定义域不同；而 <span class="math inline">\(u = \sqrt[3]{v^{3}} = v\ (v
+\in \mathbf{R})\)</span> 与 <span class="math inline">\(y = x\)</span>
+是同一函数。</li>
+</ul>
+<p>定义求定义域的原则</p>
+<p>① 分式的<strong>分母不为 0</strong>；②
+偶次根式的<strong>被开方数不小于 0</strong>；③
+实际问题由<strong>实际背景</strong>确定；④
+若只给出解析式而未指明定义域，则定义域指<strong>能使式子有意义的实数集合</strong>（各条件取交集）。</p>
+<p>术语中英术语</p>
+<p>函数 function；定义域 domain；值域 range；自变量 independent
+variable；函数值 function value；区间 interval。</p>
+<p>性质关系·转化</p>
+<p>初中"变量依赖关系"的函数定义 →
+高中"两个实数集之间对应关系"的函数定义，<strong>抽象层次提高</strong>。新定义的必要性在于：不同函数可进行加、减、乘、除等运算，使函数研究的内容与应用范围得到扩展。</p>
+<p>小节3.1.2 函数的表示法7 条知识点</p>
+<p>要点三种表示法</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>表示法</th>
+<th>含义</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>解析法</strong></td>
+<td>用解析式表示两个变量之间的对应关系</td>
+<td>简明、便于计算与推理，但并非所有函数都能用解析式表示</td>
+</tr>
+<tr>
+<td><strong>列表法</strong></td>
+<td>列出表格表示两个变量之间的对应关系</td>
+<td>直接、便于查值，但只能表示有限个对应值</td>
+</tr>
+<tr>
+<td><strong>图象法</strong></td>
+<td>用图象表示两个变量之间的对应关系</td>
+<td>直观、便于观察变化趋势，但读数精度有限</td>
+</tr>
+</tbody>
+</table>
+<p>定义概念（分段函数）</p>
+<p>像</p>
+<p><span class="math display">\[y = \left\{ \begin{matrix}
+- x, &amp; x &lt; 0, \\
+x, &amp; x \geq 0
+\end{matrix} \right.\ \]</span></p>
+<p>这样的函数称为<strong>分段函数</strong>。生活中很多实际问题（出租车计费、个人所得税纳税额、阶梯水价等）都可用分段函数描述。</p>
+<ul>
+<li>注意：分段函数是<strong>一个函数</strong>，不是几个函数；其定义域是各段定义域的<strong>并集</strong>，值域是各段值域的<strong>并集</strong>。</li>
+</ul>
+<p>要点函数图象的判断依据</p>
+<p>函数图象可以是光滑曲线，也可以是直线、折线、<strong>离散的点</strong>；判断一个图形是否为函数图象的依据是——<strong>对定义域内任意一个</strong>
+<span class="math inline">\(x\)</span><strong>，都有唯一的</strong>
+<span class="math inline">\(y\)</span>
+<strong>与之对应</strong>（即任一垂直于 <span
+class="math inline">\(x\)</span> 轴的直线与图象至多有一个交点）。</p>
+<p>方法方法（最值型分段函数）</p>
+<p>对 <span class="math inline">\(\forall x \in \mathbf{R}\)</span>，用
+<span class="math inline">\(M(x) = \max\{ f(x),g(x)\}\)</span> 表示
+<span class="math inline">\(f(x),g(x)\)</span>
+中的<strong>最大者</strong>，用 <span class="math inline">\(m(x) =
+\min\{ f(x),g(x)\}\)</span>
+表示<strong>最小者</strong>。求其解析式的步骤：① 画出 <span
+class="math inline">\(f(x),g(x)\)</span> 的图象；② 解方程 <span
+class="math inline">\(f(x) = g(x)\)</span> 求出图象交点横坐标；③
+分段写出解析式（取图象位于上方／下方的部分）。</p>
+<p>要点选择表示法的原则</p>
+<p>对具体问题，应根据需要<strong>选择恰当的方法</strong>表示函数关系。如分析成绩变化趋势宜用图象法（离散点＋虚线连接），计算个税税额宜用解析法（分段函数），查阅对应数值宜用列表法。</p>
+<p>术语中英术语</p>
+<p>解析法 analytic method；列表法 tabular method；图象法 graphical
+method；分段函数 piecewise function。</p>
+<p>性质关系·转化</p>
+<p>三种表示法可以<strong>互相转化</strong>——由解析式可列表、可作图；由图象可读出对应值、可反求解析式（分段）；由表格可描点作图、可拟合解析式。解题时应灵活选用。</p>
+<p>节3.2 函数的基本性质3 小节 · 24 知识点</p>
+<p>小节本节知识点节内直列1 条知识点</p>
+<p>要点总纲</p>
+<p><strong>变化中的不变性就是性质，变化中的规律性也是性质</strong>。研究函数的性质（增减、最值、对称等），是通过研究函数的变化规律来把握客观世界事物变化规律的重要方法。</p>
+<p>小节3.2.1 单调性与最大（小）值13 条知识点</p>
+<p>定义概念（单调性）</p>
+<p>函数值随自变量的增大而增大（或减小）的性质叫做函数的<strong>单调性</strong>。</p>
+<p>定义定义（单调递增与增函数）</p>
+<p>设函数 <span class="math inline">\(f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，区间 <span class="math inline">\(I
+\subseteq D\)</span>。如果 <span class="math inline">\(\forall
+x_{1},x_{2} \in I\)</span>，当 <span class="math inline">\(x_{1} &lt;
+x_{2}\)</span> 时，都有</p>
+<p><span class="math display">\[f(x_{1}) &lt; f(x_{2}),\]</span></p>
+<p>那么就称函数 <span class="math inline">\(f(x)\)</span> 在区间 <span
+class="math inline">\(I\)</span> 上**单调递增**。特别地，当函数 <span
+class="math inline">\(f(x)\)</span>
+在它的<strong>定义域上</strong>单调递增时，就称它是<strong>增函数</strong>（increasing
+function）。</p>
+<p>定义定义（单调递减与减函数）</p>
+<p>如果 <span class="math inline">\(\forall x_{1},x_{2} \in
+I\)</span>，当 <span class="math inline">\(x_{1} &lt; x_{2}\)</span>
+时，都有</p>
+<p><span class="math display">\[f(x_{1}) &gt; f(x_{2}),\]</span></p>
+<p>那么就称函数 <span class="math inline">\(f(x)\)</span> 在区间 <span
+class="math inline">\(I\)</span> 上**单调递减**。特别地，当函数 <span
+class="math inline">\(f(x)\)</span>
+在它的<strong>定义域上</strong>单调递减时，就称它是<strong>减函数</strong>（decreasing
+function）。</p>
+<p>定义概念（单调区间）</p>
+<p>如果函数 <span class="math inline">\(y = f(x)\)</span> 在区间 <span
+class="math inline">\(I\)</span>
+上单调递增或单调递减，就说函数在这一区间具有（<strong>严格的</strong>）<strong>单调性</strong>，区间
+<span class="math inline">\(I\)</span> 叫做 <span
+class="math inline">\(y = f(x)\)</span>
+的<strong>单调区间</strong>。</p>
+<p>要点注意要点</p>
+<ul>
+<li>单调性是对<strong>定义域内某个区间</strong>而言的，必须指明区间；同一个函数在不同区间上可以有不同的单调性（如
+<span class="math inline">\(f(x) = x^{2}\)</span> 在 <span
+class="math inline">\(( - \infty,0\rbrack\)</span> 上递减、在 <span
+class="math inline">\(\lbrack 0, + \infty)\)</span> 上递增）。</li>
+<li>定义中的 <span class="math inline">\(x_{1},x_{2}\)</span> 必须是区间
+<span class="math inline">\(I\)</span>
+内<strong>任意</strong>取的两个值，不能用特殊值代替。</li>
+<li>若只在 <span class="math inline">\(I\)</span>
+的<strong>某个子集</strong> <span class="math inline">\(A\)</span>
+上满足 <span class="math inline">\(f(x_{1}) &lt;
+f(x_{2})\)</span>，<strong>不能</strong>说 <span
+class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(I\)</span> 上单调递增。</li>
+</ul>
+<p>方法证明单调性的步骤（定义法）</p>
+<ul>
+<li>① <strong>取值</strong>：设 <span class="math inline">\(x_{1},x_{2}
+\in I\)</span> 且 <span class="math inline">\(x_{1} &lt;
+x_{2}\)</span>；</li>
+<li>② <strong>作差</strong>：计算 <span class="math inline">\(f(x_{1}) -
+f(x_{2})\)</span>；</li>
+<li>③
+<strong>变形</strong>：因式分解、通分、配方等，化为可判断符号的形式；</li>
+<li>④ <strong>定号</strong>：判断差的符号（依据已知区间与 <span
+class="math inline">\(x_{1} &lt; x_{2}\)</span>）；</li>
+<li>⑤ <strong>结论</strong>：由 <span class="math inline">\(f(x_{1}) -
+f(x_{2})\)</span> 的符号得出单调性。</li>
+<li>核心依据：<strong>实数大小关系的基本事实</strong>——比较 <span
+class="math inline">\(f(x_{1})\)</span> 与 <span
+class="math inline">\(f(x_{2})\)</span> 即比较 <span
+class="math inline">\(f(x_{1}) - f(x_{2})\)</span> 与 0。</li>
+</ul>
+<p>性质等价刻画（增量形式）</p>
+<p>记 <span class="math inline">\(\Delta x = x_{1} -
+x_{2}\)</span>，<span class="math inline">\(\Delta y = f(x_{1}) -
+f(x_{2})\)</span>，则</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(I\)</span> 上单调递增 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\forall x_{1},x_{2} \in I\)</span>，<span
+class="math inline">\(x_{1} \neq x_{2}\)</span>，都有 <span
+class="math inline">\(\frac{\Delta y}{\Delta x} &gt; 0\)</span>；</li>
+<li><span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(I\)</span> 上单调递减 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\forall x_{1},x_{2} \in I\)</span>，<span
+class="math inline">\(x_{1} \neq x_{2}\)</span>，都有 <span
+class="math inline">\(\frac{\Delta y}{\Delta x} &lt; 0\)</span>。</li>
+</ul>
+<p>定义定义（最大值）</p>
+<p>设函数 <span class="math inline">\(y = f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，如果存在实数 <span
+class="math inline">\(M\)</span> 满足 那么称 <span
+class="math inline">\(M\)</span> 是函数 <span class="math inline">\(y =
+f(x)\)</span> 的<strong>最大值</strong>（maximum value）。</p>
+<ul>
+<li>（1）<span class="math inline">\(\forall x \in D\)</span>，都有
+<span class="math inline">\(f(x) \leq M\)</span>；</li>
+<li>（2）<span class="math inline">\(\exists x_{0} \in D\)</span>，使得
+<span class="math inline">\(f(x_{0}) = M\)</span>，</li>
+</ul>
+<p>定义定义（最小值）</p>
+<p>设函数 <span class="math inline">\(y = f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，如果存在实数 <span
+class="math inline">\(m\)</span> 满足 那么称 <span
+class="math inline">\(m\)</span> 是函数 <span class="math inline">\(y =
+f(x)\)</span> 的<strong>最小值</strong>（minimum value）。</p>
+<ul>
+<li>（1）<span class="math inline">\(\forall x \in D\)</span>，都有
+<span class="math inline">\(f(x) \geq m\)</span>；</li>
+<li>（2）<span class="math inline">\(\exists x_{0} \in D\)</span>，使得
+<span class="math inline">\(f(x_{0}) = m\)</span>，</li>
+<li>两个条件缺一不可：（1）保证是<strong>上（下）界</strong>，（2）保证该界<strong>能取到</strong>。</li>
+</ul>
+<p>方法求最值的常用方法</p>
+<ul>
+<li><strong>图象法</strong>：观察图象的最高点／最低点（如二次函数用顶点公式
+<span class="math inline">\(t = - \frac{b}{2a}\)</span> 与 <span
+class="math inline">\(\frac{4ac - b^{2}}{4a}\)</span>）；</li>
+<li><strong>单调性法</strong>：若 <span
+class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(\lbrack a,b\rbrack\)</span>
+上单调，则最值在<strong>端点</strong>处取得。如 <span
+class="math inline">\(f(x) = \frac{2}{x - 1}\)</span> 在 <span
+class="math inline">\(\lbrack 2,6\rbrack\)</span> 上单调递减，故 <span
+class="math inline">\(x = 2\)</span> 时取最大值 <span
+class="math inline">\(2\)</span>，<span class="math inline">\(x =
+6\)</span> 时取最小值 <span class="math inline">\(0.4\)</span>；</li>
+<li><strong>基本不等式法</strong>：见第二章 2.2。</li>
+</ul>
+<p>方法研究方法的普适性</p>
+<p><strong>通过观察图象先对函数是否具有某种性质作出猜想，然后通过逻辑推理证明猜想的正确性</strong>，是研究函数性质的一种常用方法。</p>
+<p>术语中英术语</p>
+<p>单调递增 monotonically increasing；单调递减 monotonically
+decreasing；增函数 increasing function；减函数 decreasing
+function；单调区间 monotonic interval；最大值 maximum value；最小值
+minimum value。</p>
+<p>性质关系·转化</p>
+<p>单调性 ↔︎ 图象的"上升／下降"；最值 ↔︎
+图象的"最高点／最低点"。二者都是刻画函数变化规律的基本工具，也是解不等式、比较大小、求参数范围的基础。</p>
+<p>小节3.2.2 奇偶性10 条知识点</p>
+<p>定义定义（偶函数）</p>
+<p>设函数 <span class="math inline">\(f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，如果 <span
+class="math inline">\(\forall x \in D\)</span>，都有 <span
+class="math inline">\(- x \in D\)</span>，且</p>
+<p><span class="math display">\[f( - x) = f(x),\]</span></p>
+<p>那么函数 <span class="math inline">\(f(x)\)</span>
+就叫做<strong>偶函数</strong>（even function）。</p>
+<ul>
+<li>图象特征：<strong>关于</strong> <span
+class="math inline">\(y\)</span> <strong>轴对称</strong>。</li>
+<li>符号语言：自变量取一对<strong>相反数</strong>时，相应的两个<strong>函数值相等</strong>。</li>
+</ul>
+<p>定义定义（奇函数）</p>
+<p>设函数 <span class="math inline">\(f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，如果 <span
+class="math inline">\(\forall x \in D\)</span>，都有 <span
+class="math inline">\(- x \in D\)</span>，且</p>
+<p><span class="math display">\[f( - x) = - f(x),\]</span></p>
+<p>那么函数 <span class="math inline">\(f(x)\)</span>
+就叫做<strong>奇函数</strong>（odd function）。</p>
+<ul>
+<li>图象特征：<strong>关于原点成中心对称图形</strong>。</li>
+<li>符号语言：自变量取一对<strong>相反数</strong>时，相应的函数值也是一对<strong>相反数</strong>。</li>
+</ul>
+<p>方法判断步骤</p>
+<ul>
+<li>①
+<strong>先看定义域</strong>：定义域必须<strong>关于原点对称</strong>（这是奇偶性存在的前提）；若不对称，则既不是奇函数也不是偶函数。</li>
+<li>② <strong>再算</strong> <span class="math inline">\(f( -
+x)\)</span>：化简后与 <span class="math inline">\(f(x)\)</span>
+比较——等于 <span class="math inline">\(f(x)\)</span> 为偶函数；等于
+<span class="math inline">\(- f(x)\)</span>
+为奇函数；两者都不等则非奇非偶。</li>
+</ul>
+<p>要点重要提醒</p>
+<p><strong>奇偶性是函数在它的定义域上的整体性质</strong>，所以判断奇偶性应<strong>先明确定义域</strong>。</p>
+<p>性质定理·公式（图象对称的充要条件）</p>
+<ul>
+<li><span class="math inline">\(y = f(x)\)</span> 是偶函数 <span
+class="math inline">\(\Leftrightarrow\)</span> 其图象关于 <span
+class="math inline">\(y\)</span> 轴对称；</li>
+<li><span class="math inline">\(y = f(x)\)</span> 是奇函数 <span
+class="math inline">\(\Leftrightarrow\)</span> 其图象关于原点对称。</li>
+</ul>
+<p>性质典型结论</p>
+<ul>
+<li><span class="math inline">\(f(x) = x^{4}\)</span>、<span
+class="math inline">\(f(x) = \frac{1}{x^{2}}\)</span>、<span
+class="math inline">\(f(x) = x^{2} + 1\)</span>、<span
+class="math inline">\(g(x) = \frac{2}{x^{2} + 11}\)</span>
+是偶函数；</li>
+<li><span class="math inline">\(f(x) = x^{5}\)</span>、<span
+class="math inline">\(f(x) = x + \frac{1}{x}\)</span>、<span
+class="math inline">\(g(x) = \frac{1}{x}\)</span>、<span
+class="math inline">\(f(x) = x^{3} + x\)</span> 是奇函数；</li>
+<li><span class="math inline">\(f(x) = |x|\)</span> 是偶函数；<span
+class="math inline">\(f(x) = x^{2}\)</span>（<span
+class="math inline">\(x \in \lbrack -
+1,2\rbrack\)</span>）<strong>非奇非偶</strong>（定义域不对称）。</li>
+</ul>
+<p>要点应用（简化研究）</p>
+<p>若已知 <span class="math inline">\(y = f(x)\)</span>
+为偶（奇）函数，则只需研究 <span class="math inline">\(x \geq
+0\)</span>（或某一半区间）上的性质，再利用对称性即可推知整个定义域上的性质——可<strong>简化对函数的研究</strong>，也可<strong>由一半图象补全另一半</strong>。</p>
+<p>性质拓展（对称中心的推广）</p>
+<p><span class="math inline">\(y = f(x)\)</span> 的图象关于点 <span
+class="math inline">\(P(a,b)\)</span>
+成中心对称图形的充要条件是<strong>函数</strong> <span
+class="math inline">\(y = f(x + a) - b\)</span>
+<strong>为奇函数</strong>；类似地，<span class="math inline">\(y =
+f(x)\)</span> 的图象关于直线 <span class="math inline">\(x = a\)</span>
+成轴对称图形的充要条件是 <span class="math inline">\(y = f(x +
+a)\)</span> 为偶函数。</p>
+<p>术语中英术语</p>
+<p>偶函数 even function；奇函数 odd function；对称 symmetry；定义域
+domain。</p>
+<p>性质关系·转化</p>
+<p>单调性是<strong>局部</strong>性质（对某区间而言），奇偶性是<strong>整体</strong>性质（对整个定义域而言）。二者结合可大幅缩小研究范围。此外，奇函数在关于原点对称的两个区间上<strong>单调性相同</strong>；偶函数在关于原点对称的两个区间上<strong>单调性相反</strong>。</p>
+<p>节3.3 幂函数1 小节 · 9 知识点</p>
+<p>小节本节知识点节内直列9 条知识点</p>
+<p>定义概念（幂函数）</p>
+<p>一般地，函数</p>
+<p><span class="math display">\[y = x^{\alpha}\]</span></p>
+<p>叫做**幂函数**（power function），其中 <span
+class="math inline">\(x\)</span> 是自变量，<span
+class="math inline">\(\alpha\)</span> 是常数。</p>
+<p>要点形式特征</p>
+<p>解析式都具有<strong>幂</strong>的形式，以幂的<strong>底数</strong>为自变量，幂的<strong>指数为常数</strong>。</p>
+<p>要点研究对象</p>
+<p>本册只研究 <span class="math inline">\(\alpha = 1,2,3,\frac{1}{2}, -
+1\)</span> 时的图象与性质，即</p>
+<p><span class="math display">\[y = x,\quad y = x^{2},\quad y =
+x^{3},\quad y = x^{\frac{1}{2}},\quad y = x^{- 1}.\]</span></p>
+<p>要点研究路径（与一般函数一致）</p>
+<p>先由解析式求出<strong>定义域</strong> → 画出<strong>图象</strong> →
+利用图象和解析式讨论<strong>值域、单调性、奇偶性</strong>等问题。</p>
+<p>性质五个幂函数的性质</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>函数</th>
+<th>定义域</th>
+<th>值域</th>
+<th>奇偶性</th>
+<th>单调性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(y = x\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td>奇函数</td>
+<td>在 <span class="math inline">\(\mathbf{R}\)</span> 上递增</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y = x^{2}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td><span class="math inline">\(\lbrack 0, + \infty)\)</span>​</td>
+<td>偶函数</td>
+<td><span class="math inline">\(( - \infty,0\rbrack\)</span>
+上递减，<span class="math inline">\(\lbrack 0, + \infty)\)</span>
+上递增</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y = x^{3}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td>奇函数</td>
+<td>在 <span class="math inline">\(\mathbf{R}\)</span> 上递增</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y = x^{\frac{1}{2}}\)</span>​</td>
+<td><span class="math inline">\(\lbrack 0, + \infty)\)</span>​</td>
+<td><span class="math inline">\(\lbrack 0, + \infty)\)</span>​</td>
+<td>非奇非偶</td>
+<td>在 <span class="math inline">\(\lbrack 0, + \infty)\)</span>
+上递增</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y = x^{- 1}\)</span>​</td>
+<td><span class="math inline">\(\{ x \mid x \neq 0\}\)</span>​</td>
+<td><span class="math inline">\(\{ y \mid y \neq 0\}\)</span>​</td>
+<td>奇函数</td>
+<td><span class="math inline">\(( - \infty,0)\)</span> 上递减，<span
+class="math inline">\((0, + \infty)\)</span> 上递减</td>
+</tr>
+</tbody>
+</table>
+<p>性质共同性质</p>
+<ul>
+<li>（1）五个函数的图象<strong>都通过点</strong> <span
+class="math inline">\((1,1)\)</span>；</li>
+<li>（2）<span class="math inline">\(y = x\)</span>、<span
+class="math inline">\(y = x^{3}\)</span>、<span class="math inline">\(y
+= x^{- 1}\)</span> 是<strong>奇函数</strong>，<span
+class="math inline">\(y = x^{2}\)</span>
+是<strong>偶函数</strong>，<span class="math inline">\(y =
+x^{\frac{1}{2}}\)</span> 非奇非偶；</li>
+<li>（3）在区间 <span class="math inline">\((0, + \infty)\)</span>
+上，<span class="math inline">\(y = x\)</span>、<span
+class="math inline">\(y = x^{2}\)</span>、<span class="math inline">\(y
+= x^{3}\)</span>、<span class="math inline">\(y =
+x^{\frac{1}{2}}\)</span> <strong>单调递增</strong>，<span
+class="math inline">\(y = x^{- 1}\)</span>
+<strong>单调递减</strong>；</li>
+<li>（4）在第一象限内，<span class="math inline">\(y = x^{- 1}\)</span>
+的图象<strong>向上与</strong> <span class="math inline">\(y\)</span>
+<strong>轴无限接近，向右与</strong> <span
+class="math inline">\(x\)</span>
+<strong>轴无限接近</strong>（以两坐标轴为渐近线）。</li>
+</ul>
+<p>方法方法（证明幂函数单调性）</p>
+<p>如证 <span class="math inline">\(f(x) = \sqrt{x}\)</span>
+是增函数，用<strong>分子有理化</strong>变形：</p>
+<p><span class="math display">\[f(x_{1}) - f(x_{2}) = \sqrt{x_{1}} -
+\sqrt{x_{2}} = \frac{x_{1} - x_{2}}{\sqrt{x_{1}} +
+\sqrt{x_{2}}},\]</span></p>
+<p>由 <span class="math inline">\(x_{1} - x_{2} &lt; 0\)</span>、<span
+class="math inline">\(\sqrt{x_{1}} + \sqrt{x_{2}} &gt; 0\)</span> 得
+<span class="math inline">\(f(x_{1}) &lt; f(x_{2})\)</span>。</p>
+<p>术语中英术语</p>
+<p>幂函数 power function；指数 exponent；底数 base；渐近线
+asymptote。</p>
+<p>性质关系·转化</p>
+<p>幂函数与后续的<strong>指数函数</strong>、<strong>对数函数</strong>共同构成基本初等函数体系。注意区分：幂函数
+<span class="math inline">\(y = x^{\alpha}\)</span>
+的<strong>底数是自变量</strong>、指数为常数；指数函数 <span
+class="math inline">\(y = a^{x}\)</span>
+的<strong>指数是自变量</strong>、底数为常数。此外，<span
+class="math inline">\(y = x\)</span> 与 <span class="math inline">\(y =
+\frac{1}{x}\)</span> 都是幂函数，它们的和构成新函数 <span
+class="math inline">\(y = x +
+\frac{1}{x}\)</span>——不同函数通过加、减、乘、除等运算可构成新函数。</p>
+<p>节3.4 函数的应用（一）1 小节 · 6 知识点</p>
+<p>小节本节知识点节内直列6 条知识点</p>
+<p>要点总纲</p>
+<p>一次函数、二次函数、幂函数等都与现实世界有紧密联系。用函数模型解决实际问题的过程为：</p>
+<p>要点建模要点</p>
+<ul>
+<li><strong>明确自变量与因变量</strong>及其实际含义、单位；</li>
+<li><strong>确定定义域</strong>：既要使解析式有意义，也要符合实际背景（如件数取正整数、时间非负）；</li>
+<li><strong>合理分段</strong>：当不同范围内对应关系不同时，用<strong>分段函数</strong>表述（各段定义域一般不重不漏，注意端点归属）；</li>
+<li><strong>检验与解释</strong>：求出结果后回到原问题情境中解释其实际含义。</li>
+</ul>
+<p>要点典型模型</p>
+<p><span class="math display">\[s = \left\{ \begin{matrix}
+50t + 2004, &amp; 0 \leq t &lt; 1, \\
+80(t - 1) + 2054, &amp; 1 \leq t &lt; 2, \\
+90(t - 2) + 2134, &amp; 2 \leq t &lt; 3, \\
+75(t - 3) + 2224, &amp; 3 \leq t &lt; 4, \\
+65(t - 4) + 2299, &amp; 4 \leq t \leq 5.
+\end{matrix} \right.\ \]</span></p>
+<p>即每段以<strong>上一段末的累计值</strong>为起点累加。</p>
+<ul>
+<li><strong>个税模型（分段函数）</strong>：由"应纳税所得额 <span
+class="math inline">\(t = g(x)\)</span>"与"个税税额 <span
+class="math inline">\(y = f(t)\)</span>"复合，得 <span
+class="math inline">\(y\)</span> 关于综合所得收入额 <span
+class="math inline">\(x\)</span> 的分段函数。如小王全年综合所得由 117
+600 元增至 153 600 元时，<span class="math inline">\(y = 0.08 \times
+153600 - 9536 = 2752\)</span> 元。</li>
+<li><strong>路程模型（面积与分段）</strong>：速率—时间图象中，<strong>阴影部分面积＝行驶路程</strong>（<span
+class="math inline">\(50 + 80 + 90 + 75 + 65 = 360\)</span>
+km）。里程表读数 <span class="math inline">\(s\)</span> 关于 <span
+class="math inline">\(t\)</span> 需分段累加：</li>
+</ul>
+<p>要点解题策略</p>
+<ul>
+<li><strong>读图能力</strong>是分析题意的基础——图象能直观反映分段、增减、极值等特征；</li>
+<li><strong>二次函数模型</strong>用于求最值（利润最大、面积最大、用料最省）：<span
+class="math inline">\(y = ax^{2} + bx + c\)</span>
+在顶点处取得最值；</li>
+<li><strong>正比例／反比例模型</strong>用于描述"成正比""成反比"关系（如流量与半径的四次方成正比、费用与距离成反比）。</li>
+</ul>
+<p>术语中英术语</p>
+<p>函数模型 function model；分段函数 piecewise function；最值
+optimization；建模 modeling。</p>
+<p>性质关系·转化</p>
+<p>函数的应用是"数学建模"素养的具体体现，为第四章"函数模型的应用"（指数、对数模型）与后续"数学建模"活动奠定方法基础。</p>
+<p>节本章小结（第三章）1 小节 · 4 知识点</p>
+<p>小节本节知识点节内直列4 条知识点</p>
+<p>要点知识结构</p>
+<ul>
+<li>函数的概念（对应关系、三要素）→
+函数的表示（解析法、列表法、图象法、分段函数）→
+函数的基本性质（单调性、最大（小）值、奇偶性）→ 具体函数类（幂函数）→
+函数的应用。</li>
+</ul>
+<p>方法核心思想方法</p>
+<ul>
+<li><strong>从直观到符号</strong>：研究函数性质时，一般<strong>先从几何直观（观察图象）入手</strong>，再用<strong>自然语言</strong>描述图象特征，最后抽象到用<strong>数学符号</strong>刻画相应的数量特征；而对具体函数，则要利用单调性、奇偶性等<strong>定义</strong>，通过推理、运算来实现。这是一个渐进的过程，也是数学学习和研究中经常使用的方法。</li>
+<li><strong>类比与特殊化</strong>：按"映射 →（特殊化）→ 函数 →（类比）→
+数、方程、数列、不等式等"的逻辑获得研究内容；具体函数类包括一次函数、二次函数、反比例函数、幂函数、指数函数、对数函数、三角函数等。</li>
+</ul>
+<p>定义函数概念的发展</p>
+<p>17
+世纪科学家研究天体位置、航海测量、炮弹弹道等问题，需要探究两个变量之间的关系——这是函数概念产生和发展的背景。</p>
+<ul>
+<li><strong>莱布尼茨</strong>（G. W.
+Leibniz，1646—1716）最初使用"function"一词，表示随曲线变化而改变的<strong>几何量</strong>（坐标、切线等）。</li>
+<li><strong>约翰·伯努利</strong>（J. Bernoulli，1667—1748）1718
+年强调函数要用<strong>式子</strong>表示。</li>
+<li><strong>欧拉</strong>（L. Euler，1707—1783）1755
+年定义："如果某些变量以一种方式依赖于另一些变量，我们将前面的变量称为后面变量的函数。"</li>
+<li><strong>狄利克雷</strong>（P. G. L. Dirichlet，1805—1859）1837
+年提出："如果对于 <span class="math inline">\(x\)</span>
+的每一个值，<span class="math inline">\(y\)</span>
+总有一个完全确定的值与之对应，那么 <span
+class="math inline">\(y\)</span> 是 <span
+class="math inline">\(x\)</span>
+的函数。"——只要有一个<strong>法则</strong>即可，不管用解析式、图象还是表格表示。例：<strong>狄利克雷函数</strong>——自变量取有理数时函数值为
+1，取无理数时为 0。</li>
+<li>19 世纪 70
+年代以后，随集合概念出现，函数概念用更加严谨的<strong>集合和对应语言</strong>表述，即本册所学的定义。</li>
+<li>在中国，清代数学家<strong>李善兰</strong>（1811—1882）1859
+年与英国传教士伟烈亚力合译《代微积拾级》时首次将"function"译作"<strong>函数</strong>"。</li>
+<li>结论：函数概念的发展与生产、生活以及科学技术的实际需要紧密相关，并随研究深入不断得到<strong>严谨化、精确化</strong>的表达。</li>
+</ul>
+<p>要点易混辨析</p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span>
+表示函数值，<strong>不是</strong> <span class="math inline">\(f\)</span>
+乘 <span class="math inline">\(x\)</span>。</li>
+<li>判断同一函数只看<strong>定义域</strong>与<strong>对应关系</strong>，与自变量用什么字母无关；值域由二者决定，不必单独比较。</li>
+<li>单调性必须<strong>指明区间</strong>；<span
+class="math inline">\(f(x) = \frac{1}{x}\)</span> 在 <span
+class="math inline">\(( - \infty,0)\)</span> 和 <span
+class="math inline">\((0, + \infty)\)</span>
+上都递减，但<strong>不能</strong>说在定义域上递减。</li>
+<li>最值定义的两个条件（上（下）界＋能取到）缺一不可。</li>
+<li>判断奇偶性<strong>先看定义域是否关于原点对称</strong>；定义域不对称则直接判定为非奇非偶。</li>
+<li>幂函数 <span class="math inline">\(y =
+x^{\alpha}\)</span>（底数为自变量）与指数函数 <span
+class="math inline">\(y =
+a^{x}\)</span>（指数为自变量）形式相近但本质不同。</li>
+</ul>
+<p>节探究与发现：函数 <span class="math inline">\(y = x +
+\frac{1}{x}\)</span> 的图象与性质1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点背景</p>
+<p><span class="math inline">\(y = x\)</span> 是正比例函数，<span
+class="math inline">\(y = \frac{1}{x}\)</span>
+是反比例函数，二者<strong>都是幂函数</strong>。不同的函数通过加、减、乘、除等运算可以构成新的函数。本节探究二者之和
+<span class="math inline">\(y = x + \frac{1}{x}\)</span>
+的性质及其与原函数性质的联系。</p>
+<p>要点研究路径</p>
+<p>①
+明确可从哪些方面研究（定义域、值域、奇偶性、单调性、图象、变化趋势）；②
+确定研究路径（解析式 → 定义域 → 图象 → 性质）；③ 按路径逐一研究。</p>
+<p>性质关键结论</p>
+<ul>
+<li><strong>定义域</strong>：<span class="math inline">\(\{ x \mid x
+\neq 0\}\)</span>。</li>
+<li><strong>奇偶性</strong>：<span class="math inline">\(f( - x) = - x +
+\frac{1}{- x} = - \left( x + \frac{1}{x} \right) = -
+f(x)\)</span>，为<strong>奇函数</strong>，图象关于原点对称。</li>
+<li><strong>最值（基本不等式）</strong>：</li>
+<li>当 <span class="math inline">\(x &gt; 0\)</span> 时，<span
+class="math inline">\(x + \frac{1}{x} \geq 2\)</span>，当且仅当 <span
+class="math inline">\(x = \frac{1}{x}\)</span> 即 <span
+class="math inline">\(x = 1\)</span> 时取等号；</li>
+<li>当 <span class="math inline">\(x &lt; 0\)</span> 时，<span
+class="math inline">\(x + \frac{1}{x} \leq - 2\)</span>，当且仅当 <span
+class="math inline">\(x = \frac{1}{x}\)</span> 即 <span
+class="math inline">\(x = - 1\)</span> 时取等号。</li>
+<li><strong>单调性</strong>：在 <span
+class="math inline">\((0,1\rbrack\)</span> 上递减，在 <span
+class="math inline">\(\lbrack 1, + \infty)\)</span>
+上递增；由奇偶性推知在 <span class="math inline">\(\lbrack -
+1,0)\)</span> 上递减，在 <span class="math inline">\(( - \infty, -
+1\rbrack\)</span> 上递增。</li>
+<li><strong>图象特征</strong>：呈"对勾"形（双钩），以 <span
+class="math inline">\(y\)</span> 轴为渐近线；当 <span
+class="math inline">\(|x|\)</span> 无限增大时图象无限接近直线 <span
+class="math inline">\(y = x\)</span>。</li>
+</ul>
+<p>要点变化趋势的合成解释</p>
+<p><span class="math inline">\(y = x + \frac{1}{x}\)</span>
+的图象变化趋势可由 <span class="math inline">\(y = x\)</span> 与 <span
+class="math inline">\(y = \frac{1}{x}\)</span>
+的图象变化趋势<strong>叠加</strong>说明——当 <span
+class="math inline">\(|x|\)</span> 很大时 <span
+class="math inline">\(\frac{1}{x}\)</span> 影响很小，图象接近 <span
+class="math inline">\(y = x\)</span>；当 <span
+class="math inline">\(|x|\)</span> 很小时 <span
+class="math inline">\(\frac{1}{x}\)</span> 起主导作用，图象接近 <span
+class="math inline">\(y = \frac{1}{x}\)</span>。</p>
+<p>方法方法论</p>
+<p>这是"由已知函数构造新函数、并借助原函数性质研究新函数"的典型范例，体现了<strong>联系的观点</strong>与<strong>运算生成新对象</strong>的思想。</p>
+<p>节信息技术应用：用计算机绘制函数图象1 小节 · 4 知识点</p>
+<p>小节本节知识点节内直列4 条知识点</p>
+<p>要点原理</p>
+<p>不同软件绘制函数图象的具体操作不尽相同，但都基于熟悉的<strong>描点作图</strong>——给自变量赋值
+→ 用计算法则算出相应函数值 → 由对应值生成一系列点 →
+连接这些点描绘出图象。</p>
+<p>要点以 GeoGebra 为例</p>
+<ul>
+<li><strong>直接输入函数</strong>：在输入框内输入 <code>f(x)=x^3</code>
+并回车，代数区显示解析式，绘图区自动显示图象。</li>
+<li><strong>绘制含参数的函数</strong>（如 <span
+class="math inline">\(f(x) = bx^{2},\ b \neq 0\)</span>）：①
+在输入框内输入参数 <code>b</code>
+并回车，创建<strong>滑动条</strong>，在属性中设置最小值、最大值、增量；②
+输入 <code>f(x)=b*x^2</code> 并回车，绘图区显示当前 <span
+class="math inline">\(b\)</span> 值对应的图象；③
+左右移动滑动条，图象随之"动"起来。</li>
+</ul>
+<p>要点探究任务</p>
+<p>绘制 <span class="math inline">\(f(x) = ax^{2} + bx + c\ (a \neq
+0)\)</span> 的图象，探究系数 <span class="math inline">\(a,b,c\)</span>
+对函数图象的影响。</p>
+<p>性质意义</p>
+<p>信息技术使"含参函数图象的动态变化"可视化，有助于发现规律、形成猜想，再用逻辑推理加以证明。</p>
+<p>节文献阅读与数学写作：函数的形成与发展1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点背景</p>
+<p>自 17
+世纪近代数学产生以来，函数一直处于数学的核心位置。数学和科学的绝大部分都与函数内容有关——圆柱体的体积和表面积是其底面半径的函数，气体膨胀的体积是温度的函数，运动物体的路程是时间的函数，等等。</p>
+<p>要点活动目标</p>
+<p>① 了解函数形成、发展的历史；②
+体验<strong>文献综述</strong>的写作过程与方法。</p>
+<p>要点实施建议</p>
+<p>确定选题（明确阅读方向、拟定题目）→
+搜集资料（书籍、网络，含文字、图片、数据、音像）→
+素材整理（按主题归纳概括，用文献综述方式形成读书报告）→
+交流讨论（组内或全班）。</p>
+<p>要点参考选题</p>
+<p>① 函数产生的社会背景；② 函数概念发展的历史过程；③ 函数符号的故事；④
+数学家与函数（开普勒、伽利略、笛卡儿、牛顿、莱布尼茨、欧拉等对函数发展的贡献）。</p>
+<p>要点文献综述的结构</p>
+<p>① 标题；② 提要或前言（研究意义、资料范围与来源、相关论文篇目数量）；③
+正文（核心部分，在归类整理基础上系统介绍有用资料）；④
+参考文献（作者名、文献名、页码、出处、时间等全面标示）。</p>
+<p>章第四章 指数函数与对数函数8 节 · 15 小节 · 77 知识点</p>
+<p>节4.1 指数2 小节 · 11 知识点</p>
+<p>小节4.1.1 n 次方根与分数指数幂7 条知识点</p>
+<p>要点n 次方根（<span class="math inline">\(n\)</span>-th root）</p>
+<p>若 <span class="math inline">\(x^{n} = a\)</span>（<span
+class="math inline">\(n &gt; 1\)</span>，<span class="math inline">\(n
+\in \mathbf{N}^{*}\)</span>），则 <span class="math inline">\(x\)</span>
+叫做 <span class="math inline">\(a\)</span> 的 <span
+class="math inline">\(n\)</span> 次方根。</p>
+<p>要点根式（radical）</p>
+<p>式子 <span class="math inline">\(\sqrt[n]{a}\)</span> 叫做根式，<span
+class="math inline">\(n\)</span> 叫做根指数，<span
+class="math inline">\(a\)</span> 叫做被开方数。</p>
+<p>性质n 次方根的个数（分类讨论）</p>
+<ul>
+<li><span class="math inline">\(n\)</span>
+为<strong>奇数</strong>时：<span class="math inline">\(a\)</span> 的
+<span class="math inline">\(n\)</span> 次方根只有一个，记作 <span
+class="math inline">\(\sqrt[n]{a}\)</span>（<span
+class="math inline">\(a\)</span> 可为任意实数）；</li>
+<li><span class="math inline">\(n\)</span>
+为<strong>偶数</strong>时：<span class="math inline">\(a &gt; 0\)</span>
+时有两个互为相反数的 <span class="math inline">\(n\)</span> 次方根，记作
+<span class="math inline">\(\pm \sqrt[n]{a}\)</span>；<span
+class="math inline">\(a = 0\)</span> 时为 <span
+class="math inline">\(0\)</span>；<span class="math inline">\(a &lt;
+0\)</span> 时<strong>没有实数根</strong>。</li>
+</ul>
+<p>要点两个基本恒等式</p>
+<ul>
+<li><span class="math inline">\(\left( \sqrt[n]{a} \right)^{n} =
+a\)</span>（<span class="math inline">\(n &gt; 1\)</span>，<span
+class="math inline">\(n \in \mathbf{N}^{*}\)</span>）；</li>
+<li><span class="math inline">\(\sqrt[n]{a^{n}} = \left\{ \begin{matrix}
+a, &amp; n\text{ 为奇数}, \\
+|a|, &amp; n\text{ 为偶数}.
+\end{matrix} \right.\ \)</span>​</li>
+</ul>
+<p>要点分数指数幂（fractional exponent）的规定 （<span
+class="math inline">\(a &gt; 0\)</span>，<span class="math inline">\(m,n
+\in \mathbf{N}^{*}\)</span>，<span class="math inline">\(n &gt;
+1\)</span>）</p>
+<ul>
+<li>正分数指数幂：<span class="math inline">\(a^{\frac{m}{n}} =
+\sqrt[n]{a^{m}}\)</span>；</li>
+<li>负分数指数幂：<span class="math inline">\(a^{- \frac{m}{n}} =
+\frac{1}{a^{\frac{m}{n}}} = \frac{1}{\sqrt[n]{a^{m}}}\)</span>；</li>
+<li><span class="math inline">\(0\)</span> 的正分数指数幂等于 <span
+class="math inline">\(0\)</span>，<span class="math inline">\(0\)</span>
+的负分数指数幂<strong>没有意义</strong>。</li>
+</ul>
+<p>性质实数指数幂的运算性质 （<span class="math inline">\(a &gt;
+0\)</span>，<span class="math inline">\(b &gt; 0\)</span>，<span
+class="math inline">\(r,s \in \mathbf{R}\)</span>）</p>
+<ul>
+<li><span class="math inline">\(a^{r}a^{s} = a^{r + s}\)</span>；</li>
+<li><span class="math inline">\(\left( a^{r} \right)^{s} =
+a^{rs}\)</span>；</li>
+<li><span class="math inline">\((ab)^{r} = a^{r}b^{r}\)</span>。</li>
+</ul>
+<p>性质关系·转化</p>
+<p>规定分数指数幂后，整数指数幂的运算性质<strong>推广到有理数指数幂</strong>，根式运算可转化为指数运算，从而统一为幂的运算。</p>
+<p>小节4.1.2 无理数指数幂及其运算性质4 条知识点</p>
+<p>要点无理数指数幂（irrational exponent）</p>
+<p><span class="math inline">\(a^{\alpha}\)</span>（<span
+class="math inline">\(a &gt; 0\)</span>，<span
+class="math inline">\(\alpha\)</span>
+为无理数）是一个<strong>确定的实数</strong>。</p>
+<p>要点逼近思想</p>
+<p>用有理数指数幂逼近无理数指数幂——取 <span
+class="math inline">\(\alpha\)</span> 的不足近似值 <span
+class="math inline">\(a_{1},a_{2},\cdots\)</span> 与过剩近似值 <span
+class="math inline">\(b_{1},b_{2},\cdots\)</span>，则 <span
+class="math inline">\(a^{a_{n}}\)</span> 与 <span
+class="math inline">\(a^{b_{n}}\)</span> 从两侧逼近同一个确定的数，即
+<span class="math inline">\(a^{\alpha}\)</span>。</p>
+<p>性质运算性质</p>
+<p>实数指数幂的运算性质对无理数指数幂<strong>同样成立</strong>，即 4.1.1
+中的三条性质对 <span class="math inline">\(r,s \in \mathbf{R}\)</span>
+全部适用。</p>
+<p>定义概念拓展的路径</p>
+<p>整数指数幂 → 有理数指数幂（分数指数幂）→ 无理数指数幂（逼近）→
+<strong>实数指数幂</strong>；体现了数学概念推广中"先定义、再验证运算性质、最后统一"的基本思想。</p>
+<p>节4.2 指数函数2 小节 · 10 知识点</p>
+<p>小节4.2.1 指数函数的概念5 条知识点</p>
+<p>要点指数函数（exponential function）</p>
+<p>函数 <span class="math inline">\(y = a^{x}\)</span>（<span
+class="math inline">\(a &gt; 0\)</span>，且 <span
+class="math inline">\(a \neq 1\)</span>）叫做指数函数，其中指数 <span
+class="math inline">\(x\)</span> 是自变量，<strong>定义域是</strong>
+<span class="math inline">\(\mathbf{R}\)</span>。</p>
+<p>要点解析式特征</p>
+<p>① 底数 <span class="math inline">\(a\)</span> 是大于 <span
+class="math inline">\(0\)</span> 且不等于 <span
+class="math inline">\(1\)</span> 的<strong>常数</strong>；②
+指数位置是<strong>自变量</strong> <span
+class="math inline">\(x\)</span>；③ 系数为 <span
+class="math inline">\(1\)</span>；④ <span
+class="math inline">\(a^{x}\)</span> 前无常数项。</p>
+<p>要点指数增长模型</p>
+<p>设基数为 <span class="math inline">\(N\)</span>，每次增长率为 <span
+class="math inline">\(p\)</span>，则经过 <span
+class="math inline">\(x\)</span> 次增长后的量为</p>
+<p><span class="math display">\[y = N(1 + p)^{x}\quad(p &gt;
+0).\]</span></p>
+<p>要点指数衰减模型</p>
+<p>设基数为 <span class="math inline">\(N\)</span>，每次衰减率为 <span
+class="math inline">\(p\)</span>（<span class="math inline">\(0 &lt; p
+&lt; 1\)</span>），则</p>
+<p><span class="math display">\[y = N(1 - p)^{x}.\]</span></p>
+<p>性质关系·转化</p>
+<p>指数增长/衰减模型都可化归为 <span class="math inline">\(y =
+ka^{x}\)</span> 的形式，其中 <span class="math inline">\(k\)</span>
+为初始量，<span class="math inline">\(a = 1 \pm p\)</span>
+为增长（衰减）因子；<span class="math inline">\(a &gt; 1\)</span>
+对应增长，<span class="math inline">\(0 &lt; a &lt; 1\)</span>
+对应衰减。</p>
+<p>小节4.2.2 指数函数的图象和性质5 条知识点</p>
+<p>要点图象特征</p>
+<p><span class="math inline">\(y = a^{x}\)</span> 的图象恒过定点 <span
+class="math inline">\((0,1)\)</span>，恒在 <span
+class="math inline">\(x\)</span> 轴上方，以 <span
+class="math inline">\(x\)</span> 轴为渐近线。</p>
+<p>性质性质表</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>项目</th>
+<th><span class="math inline">\(a &gt; 1\)</span>​</th>
+<th><span class="math inline">\(0 &lt; a &lt; 1\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+</tr>
+<tr>
+<td>值域</td>
+<td><span class="math inline">\((0, + \infty)\)</span>​</td>
+<td><span class="math inline">\((0, + \infty)\)</span>​</td>
+</tr>
+<tr>
+<td>定点</td>
+<td>过 <span class="math inline">\((0,1)\)</span></td>
+<td>过 <span class="math inline">\((0,1)\)</span></td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>在 <span class="math inline">\(\mathbf{R}\)</span>
+上是<strong>增函数</strong></td>
+<td>在 <span class="math inline">\(\mathbf{R}\)</span>
+上是<strong>减函数</strong></td>
+</tr>
+<tr>
+<td>函数值范围</td>
+<td><span class="math inline">\(x &gt; 0\)</span> 时 <span
+class="math inline">\(y &gt; 1\)</span>；<span class="math inline">\(x
+&lt; 0\)</span> 时 <span class="math inline">\(0 &lt; y &lt;
+1\)</span></td>
+<td><span class="math inline">\(x &gt; 0\)</span> 时 <span
+class="math inline">\(0 &lt; y &lt; 1\)</span>；<span
+class="math inline">\(x &lt; 0\)</span> 时 <span class="math inline">\(y
+&gt; 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>性质对称关系</p>
+<p><span class="math inline">\(y = a^{x}\)</span> 与 <span
+class="math inline">\(y = a^{- x} = \left( \frac{1}{a}
+\right)^{x}\)</span> 的图象关于 <span class="math inline">\(y\)</span>
+<strong>轴对称</strong>。</p>
+<p>要点底数对图象的影响</p>
+<p>在 <span class="math inline">\(y\)</span>
+轴右侧，图象自下而上对应的底数<strong>依次增大</strong>（"底大图高"）；在
+<span class="math inline">\(y\)</span> 轴左侧则相反。</p>
+<p>方法比较大小的常用方法</p>
+<p>① 同底不同指数——利用单调性；②
+同指数不同底——利用图象位置（底大图高）；③
+底、指数均不同——插入中间量（常用 <span class="math inline">\(1\)</span>
+或 <span class="math inline">\(0\)</span>）。</p>
+<p>节4.3 对数2 小节 · 11 知识点</p>
+<p>小节4.3.1 对数的概念7 条知识点</p>
+<p>定义对数（logarithm）的定义</p>
+<p>若 <span class="math inline">\(a^{x} = N\)</span>（<span
+class="math inline">\(a &gt; 0\)</span>，且 <span
+class="math inline">\(a \neq 1\)</span>），则 <span
+class="math inline">\(x\)</span> 叫做以 <span
+class="math inline">\(a\)</span> 为底 <span
+class="math inline">\(N\)</span> 的对数，记作</p>
+<p><span class="math display">\[x = \log_{a}N,\]</span></p>
+<p>其中 <span class="math inline">\(a\)</span> 叫做**底数**，<span
+class="math inline">\(N\)</span> 叫做<strong>真数</strong>。</p>
+<p>要点指数式与对数式的互化</p>
+<p><span class="math display">\[a^{x} = N \Leftrightarrow x =
+\log_{a}N\quad(a &gt; 0,\ a \neq 1,\ N &gt; 0).\]</span></p>
+<p>要点对数恒等式</p>
+<p><span class="math inline">\(a^{\log_{a}N} = N\)</span>；<span
+class="math inline">\(\log_{a}a^{x} = x\)</span>。</p>
+<p>性质两个基本结论</p>
+<p>① <strong>负数和</strong> <span class="math inline">\(0\)</span>
+<strong>没有对数</strong>（真数 <span class="math inline">\(N &gt;
+0\)</span>）；② <span class="math inline">\(\log_{a}1 =
+0\)</span>，<span class="math inline">\(\log_{a}a = 1\)</span>。</p>
+<p>要点常用对数（common logarithm）</p>
+<p>以 <span class="math inline">\(10\)</span> 为底的对数，记作 <span
+class="math inline">\(\lg N\)</span>，即 <span class="math inline">\(\lg
+N = \log_{10}N\)</span>。</p>
+<p>要点自然对数（natural logarithm）</p>
+<p>以无理数 <span class="math inline">\(e = 2.718\ 281\
+828\cdots\)</span> 为底的对数，记作 <span class="math inline">\(\ln
+N\)</span>，即 <span class="math inline">\(\ln N =
+\log_{e}N\)</span>。</p>
+<p>性质关系·转化</p>
+<p>对数是指数运算的<strong>逆运算</strong>——已知底数与幂求指数；"定义—表示—性质—运算（法则）—应用"是研究对数概念的路径。</p>
+<p>小节4.3.2 对数的运算4 条知识点</p>
+<p>性质运算性质 （<span class="math inline">\(a &gt; 0\)</span>，且
+<span class="math inline">\(a \neq 1\)</span>，<span
+class="math inline">\(M &gt; 0\)</span>，<span class="math inline">\(N
+&gt; 0\)</span>）</p>
+<ul>
+<li>积的对数：<span class="math inline">\(\log_{a}(MN) = \log_{a}M +
+\log_{a}N\)</span>；</li>
+<li>商的对数：<span class="math inline">\(\log_{a}\frac{M}{N} =
+\log_{a}M - \log_{a}N\)</span>；</li>
+<li>幂的对数：<span class="math inline">\(\log_{a}M^{n} =
+n\log_{a}M\)</span>（<span class="math inline">\(n \in
+\mathbf{R}\)</span>）。</li>
+</ul>
+<p>要点换底公式（change-of-base formula）</p>
+<p><span class="math display">\[\log_{a}b =
+\frac{\log_{c}b}{\log_{c}a}\quad(a &gt; 0,\ a \neq 1;\ c &gt; 0,\ c \neq
+1;\ b &gt; 0).\]</span></p>
+<p>要点换底公式的常用推论</p>
+<ul>
+<li><span class="math inline">\(\log_{a}b \cdot \log_{b}a =
+1\)</span>，即 <span class="math inline">\(\log_{a}b =
+\frac{1}{\log_{b}a}\)</span>；</li>
+<li><span class="math inline">\(\log_{a^{m}}b^{n} =
+\frac{n}{m}\log_{a}b\)</span>；</li>
+<li><span class="math inline">\(\log_{a}b = \frac{\lg b}{\lg a} =
+\frac{\ln b}{\ln a}\)</span>。</li>
+</ul>
+<p>性质关系·转化</p>
+<p>对数运算把<strong>积、商、幂</strong>分别转化为<strong>和、差、倍数</strong>，这正是对数能简化大数运算（如天文学计算）的根本原因。</p>
+<p>节4.4 对数函数3 小节 · 13 知识点</p>
+<p>小节4.4.1 对数函数的概念4 条知识点</p>
+<p>要点对数函数（logarithmic function）</p>
+<p>函数 <span class="math inline">\(y = \log_{a}x\)</span>（<span
+class="math inline">\(a &gt; 0\)</span>，且 <span
+class="math inline">\(a \neq 1\)</span>）叫做对数函数，其中 <span
+class="math inline">\(x\)</span> 是自变量，<strong>定义域是</strong>
+<span class="math inline">\((0, + \infty)\)</span>。</p>
+<p>要点解析式特征</p>
+<p>① 底数 <span class="math inline">\(a\)</span> 为大于 <span
+class="math inline">\(0\)</span> 且不等于 <span
+class="math inline">\(1\)</span> 的常数；②
+真数位置是<strong>自变量</strong> <span
+class="math inline">\(x\)</span>；③ 系数为 <span
+class="math inline">\(1\)</span>。</p>
+<p>性质与指数函数的关系</p>
+<p>由 <span class="math inline">\(y = a^{x}\)</span> 得 <span
+class="math inline">\(x = \log_{a}y\)</span>，将 <span
+class="math inline">\(x,y\)</span> 互换得 <span class="math inline">\(y
+= \log_{a}x\)</span>，故 <span class="math inline">\(y =
+\log_{a}x\)</span> 与 <span class="math inline">\(y = a^{x}\)</span>
+<strong>互为反函数</strong>，定义域与值域互换。</p>
+<p>定义定义域的求法</p>
+<p>真数大于 <span
+class="math inline">\(0\)</span>；若真数含根式、分式，还需同时满足相应条件。</p>
+<p>小节4.4.2 对数函数的图象和性质5 条知识点</p>
+<p>要点图象特征</p>
+<p><span class="math inline">\(y = \log_{a}x\)</span> 的图象恒过定点
+<span class="math inline">\((1,0)\)</span>，恒在 <span
+class="math inline">\(y\)</span> 轴右侧，以 <span
+class="math inline">\(y\)</span> 轴为渐近线。</p>
+<p>性质性质表</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>项目</th>
+<th><span class="math inline">\(a &gt; 1\)</span>​</th>
+<th><span class="math inline">\(0 &lt; a &lt; 1\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td><span class="math inline">\((0, + \infty)\)</span>​</td>
+<td><span class="math inline">\((0, + \infty)\)</span>​</td>
+</tr>
+<tr>
+<td>值域</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+<td><span class="math inline">\(\mathbf{R}\)</span>​</td>
+</tr>
+<tr>
+<td>定点</td>
+<td>过 <span class="math inline">\((1,0)\)</span></td>
+<td>过 <span class="math inline">\((1,0)\)</span></td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>在 <span class="math inline">\((0, + \infty)\)</span>
+上是<strong>增函数</strong></td>
+<td>在 <span class="math inline">\((0, + \infty)\)</span>
+上是<strong>减函数</strong></td>
+</tr>
+<tr>
+<td>函数值范围</td>
+<td><span class="math inline">\(x &gt; 1\)</span> 时 <span
+class="math inline">\(y &gt; 0\)</span>；<span class="math inline">\(0
+&lt; x &lt; 1\)</span> 时 <span class="math inline">\(y &lt;
+0\)</span></td>
+<td><span class="math inline">\(x &gt; 1\)</span> 时 <span
+class="math inline">\(y &lt; 0\)</span>；<span class="math inline">\(0
+&lt; x &lt; 1\)</span> 时 <span class="math inline">\(y &gt;
+0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>性质对称关系</p>
+<p><span class="math inline">\(y = \log_{a}x\)</span> 与 <span
+class="math inline">\(y = \log_{\frac{1}{a}}x\)</span> 的图象关于 <span
+class="math inline">\(x\)</span> <strong>轴对称</strong>。</p>
+<p>性质反函数图象关系</p>
+<p><span class="math inline">\(y = \log_{a}x\)</span> 与 <span
+class="math inline">\(y = a^{x}\)</span> 的图象关于直线 <span
+class="math inline">\(y = x\)</span> 对称。</p>
+<p>要点底数对图象的影响</p>
+<p>在 <span class="math inline">\(x\)</span>
+轴上方，图象自左而右对应的底数<strong>依次减小</strong>；即 <span
+class="math inline">\(x &gt; 1\)</span> 时"底大图低"。</p>
+<p>小节4.4.3 不同函数增长的差异4 条知识点</p>
+<p>要点三种增长方式</p>
+<ul>
+<li><strong>直线上升</strong>：<span class="math inline">\(y = kx +
+b\)</span>（<span class="math inline">\(k &gt;
+0\)</span>），匀速增长，增长量恒定；</li>
+<li><strong>指数爆炸</strong>：<span class="math inline">\(y =
+a^{x}\)</span>（<span class="math inline">\(a &gt;
+1\)</span>），增长速度越来越快，增长量成倍增加；</li>
+<li><strong>对数增长</strong>：<span class="math inline">\(y =
+\log_{a}x\)</span>（<span class="math inline">\(a &gt;
+1\)</span>），增长速度越来越慢，最终趋于平缓。</li>
+</ul>
+<p>要点增长速度的比较</p>
+<p>存在 <span class="math inline">\(x_{0}\)</span>，当 <span
+class="math inline">\(x &gt; x_{0}\)</span> 时，</p>
+<p><span class="math display">\[a^{x} &gt; kx &gt; \log_{a}x\quad(a &gt;
+1,\ k &gt; 0),\]</span></p>
+<p>即<strong>指数函数增长最快，一次函数次之，对数函数最慢</strong>。</p>
+<p>方法比较方法</p>
+<p>① 画图象直观比较；② 取特殊值计算比较；③
+作差（作商）构造函数，用单调性比较。</p>
+<p>性质意义</p>
+<p>增长方式的差异是<strong>选择函数模型</strong>的依据——短期看常数/线性模型可能占优，长期看指数模型必然"爆炸"。</p>
+<p>节4.5 函数的应用（二）3 小节 · 17 知识点</p>
+<p>小节4.5.1 函数的零点与方程的解5 条知识点</p>
+<p>要点函数零点（zero of a function）</p>
+<p>对于函数 <span class="math inline">\(y = f(x)\)</span>，使 <span
+class="math inline">\(f(x) = 0\)</span> 的<strong>实数</strong> <span
+class="math inline">\(x\)</span> 叫做函数 <span class="math inline">\(y
+= f(x)\)</span> 的零点。</p>
+<p>性质三者等价关系</p>
+<p><span class="math display">\[\text{函数 }y = f(x)\text{ 有零点}
+\Leftrightarrow \text{方程 }f(x) = 0\text{ 有实数解} \Leftrightarrow y =
+f(x)\text{ 的图象与 }x\text{ 轴有公共点}.\]</span></p>
+<p>性质零点存在定理（zero-point existence theorem）</p>
+<p>如果函数 <span class="math inline">\(y = f(x)\)</span> 在区间 <span
+class="math inline">\(\lbrack a,b\rbrack\)</span>
+上的图象是<strong>连续不断</strong>的一条曲线，并且 <span
+class="math inline">\(f(a) \cdot f(b) &lt; 0\)</span>，那么函数 <span
+class="math inline">\(y = f(x)\)</span> 在区间 <span
+class="math inline">\((a,b)\)</span>
+内<strong>至少有一个零点</strong>，即存在 <span class="math inline">\(c
+\in (a,b)\)</span>，使得 <span class="math inline">\(f(c) =
+0\)</span>。</p>
+<p>性质定理的三个条件</p>
+<p>① 闭区间 <span class="math inline">\(\lbrack a,b\rbrack\)</span>
+上图象连续不断；② <span class="math inline">\(f(a)f(b) &lt;
+0\)</span>；③ 结论是"至少一个"，<strong>个数不确定</strong>。</p>
+<p>要点注意</p>
+<p><span class="math inline">\(f(a)f(b) &gt; 0\)</span>
+时<strong>不能</strong>断定没有零点；图象不连续时定理<strong>不适用</strong>（如
+<span class="math inline">\(f(x) = \frac{1}{x}\)</span> 在 <span
+class="math inline">\(\lbrack - 1,1\rbrack\)</span> 上）。</p>
+<p>小节4.5.2 用二分法求方程的近似解5 条知识点</p>
+<p>要点二分法（bisection method）</p>
+<p>对于在区间 <span class="math inline">\(\lbrack a,b\rbrack\)</span>
+上连续不断且 <span class="math inline">\(f(a)f(b) &lt; 0\)</span> 的函数
+<span class="math inline">\(y =
+f(x)\)</span>，通过不断地把零点所在区间<strong>一分为二</strong>，使区间的两个端点逐步逼近零点，进而得到零点近似值的方法。</p>
+<p>方法操作步骤</p>
+<p>1. 确定初始区间 <span class="math inline">\(\lbrack
+a,b\rbrack\)</span>，验证 <span class="math inline">\(f(a)f(b) &lt;
+0\)</span>； 2. 求中点 <span class="math inline">\(x_{1} = \frac{a +
+b}{2}\)</span>，计算 <span class="math inline">\(f(x_{1})\)</span>； 3.
+若 <span class="math inline">\(f(x_{1}) = 0\)</span>，则 <span
+class="math inline">\(x_{1}\)</span> 即为零点；若 <span
+class="math inline">\(f(a)f(x_{1}) &lt; 0\)</span>，则零点在 <span
+class="math inline">\((a,x_{1})\)</span> 内，令 <span
+class="math inline">\(b = x_{1}\)</span>；否则零点在 <span
+class="math inline">\((x_{1},b)\)</span> 内，令 <span
+class="math inline">\(a = x_{1}\)</span>； 4. 重复 2、3，直到区间长度
+<span class="math inline">\(|a - b| &lt; \varepsilon\)</span>（<span
+class="math inline">\(\varepsilon\)</span>
+为给定<strong>精确度</strong>），此时区间内任一点都可作为零点的近似值。</p>
+<p>要点精确度（accuracy）</p>
+<p>给定的正数 <span
+class="math inline">\(\varepsilon\)</span>，当零点所在区间长度小于 <span
+class="math inline">\(\varepsilon\)</span> 时停止计算。</p>
+<p>要点适用条件</p>
+<p>函数图象在区间上<strong>连续不断</strong>，且端点函数值<strong>异号</strong>；对图象"穿轴"的零点有效，对"相切"型零点（不变号）<strong>不适用</strong>。</p>
+<p>性质关系·转化</p>
+<p>二分法把"求方程近似解"转化为"<strong>缩小零点所在区间</strong>"，体现了逼近思想与算法思想。</p>
+<p>小节4.5.3 函数模型的应用7 条知识点</p>
+<p>要点马尔萨斯人口模型（Malthusian population model）</p>
+<p><span class="math display">\[y = y_{0}e^{rt}\quad(y_{0}\text{
+为初始人口},\ r\text{ 为年增长率},\ t\text{ 为年数}),\]</span></p>
+<p>属于**指数增长**模型；当 <span class="math inline">\(r &gt;
+0\)</span> 时人口增长，<span class="math inline">\(r &lt; 0\)</span>
+时衰减。</p>
+<p>要点指数衰减模型与半衰期</p>
+<p>若经过时间 <span class="math inline">\(T\)</span>
+后剩余量为初始量的一半，则 <span class="math inline">\(T\)</span>
+称为<strong>半衰期（half-life）</strong>，此时</p>
+<p><span class="math display">\[y = k\left( \frac{1}{2}
+\right)^{\frac{x}{T}} = k\left( \sqrt[T]{\frac{1}{2}}
+\right)^{x}.\]</span></p>
+<p>要点碳 14 测年</p>
+<p>碳 14 的半衰期约为 <span class="math inline">\(5730\)</span>
+年，残留量 <span class="math inline">\(y\)</span> 与初始量 <span
+class="math inline">\(k\)</span>、年代 <span
+class="math inline">\(x\)</span> 的关系为</p>
+<p><span class="math display">\[y = k\left( \sqrt[5730]{\frac{1}{2}}
+\right)^{x};\]</span></p>
+<p>由 <span class="math inline">\(\frac{y}{k} = 0.552\)</span> 解得
+<span class="math inline">\(x = \log_{\sqrt[5730]{\frac{1}{2}}}0.552
+\approx 4912\)</span>，从而推断文物年代。</p>
+<p>要点选择函数模型的两条标准 （以奖励方案为例）</p>
+<p>① <strong>上限要求</strong>——函数值不超过给定最大值（如奖金不超过
+<span class="math inline">\(5\)</span> 万元）；②
+<strong>比例要求</strong>——函数值不超过自变量的给定倍数（如奖金不超过利润的
+<span class="math inline">\(25\%\)</span>）。常用"画图象观察 +
+计算验证"相结合。</p>
+<p>方法用函数建立数学模型解决实际问题的基本过程</p>
+<p><span class="math display">\[\text{实际问题} \rightarrow
+\text{分析增长方式} \rightarrow \text{选择函数类型} \rightarrow
+\text{建立函数模型} \rightarrow \text{求解模型} \rightarrow
+\text{检验（与实际比对）} \rightarrow \text{解决实际问题}.\]</span></p>
+<p>要点关键要点</p>
+<p>① 先判断实际问题的增长类型（"对数增长""直线上升"还是"指数爆炸"）；②
+注意模型的<strong>适用条件</strong>（如马尔萨斯模型不适用于计划生育政策下的人口变化）；③
+常用信息技术辅助画图、拟合与运算。</p>
+<p>要点常见模型汇总</p>
+<p>一次函数 <span class="math inline">\(y = kx +
+b\)</span>（匀速变化）、二次函数 <span class="math inline">\(y = ax^{2}
++ bx + c\)</span>（先增后减/先减后增）、指数函数 <span
+class="math inline">\(y = ka^{x}\)</span>（指数增长/衰减）、对数函数
+<span class="math inline">\(y = k\log_{a}x +
+b\)</span>（增长趋缓）、幂函数 <span class="math inline">\(y =
+x^{\alpha}\)</span>。</p>
+<p>节本章小结（第四章）1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点知识主线</p>
+<p>指数概念的扩充（整数→有理数→实数）→ 指数函数（概念·图象·性质）→
+对数概念与运算 → 对数函数（概念·图象·性质）→ 函数的零点与二分法 →
+函数模型的应用。</p>
+<p>要点研究路径</p>
+<p>指数函数、对数函数均按"<strong>实际问题—函数概念—图象与性质—应用</strong>"的路径展开。</p>
+<p>要点核心思想</p>
+<p>①
+概念推广的思想（指数由整数到实数、由"已知底数和指数求幂"到"已知底数和幂求指数"）；②
+逼近的思想（无理数指数幂、二分法）；③
+数形结合与函数思想（图象是研究性质的重要载体）；④
+模型思想（分析增长方式→选择模型→求解→检验）。</p>
+<p>要点三种增长的现实原型</p>
+<p>"直线上升"——匀速运动、固定工资；"指数爆炸"——人口增长、病毒复制、复利；"对数增长"——学习曲线、溶液浓度变化。</p>
+<p>方法方法提示</p>
+<p>信息技术是研究函数图象与性质、求方程近似解、拟合函数模型的有力工具。</p>
+<p>节文献阅读与数学写作：对数概念的形成与发展1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点历史地位</p>
+<p>对数的发明、解析几何的创始和微积分的建立被恩格斯并称为 <strong>17
+世纪数学的三大成就</strong>。</p>
+<p>要点名人评价</p>
+<p>伽利略——"给我空间、时间及对数，我就可以创造一个宇宙"；拉普拉斯——"因为省时省力，对数倍增了天文学家的寿命"。</p>
+<p>要点主题</p>
+<p>① 对数概念形成和发展的过程；② 对数对简化运算的作用。</p>
+<p>要点实施建议</p>
+<p>选题 → 分组（<span class="math inline">\(5 \sim 6\)</span>
+人一组，确定组长）→ 分配任务 →
+搜集资料（互联网、书店、图书馆，含文字、图片、数据、音像）→
+素材整理（用论文形式展现成果）→ 交流讨论。</p>
+<p>要点参考选题</p>
+<p>对数产生的背景、对数发明的过程、对数的具体应用、对数对简化运算的作用、对数对人类文明进步的贡献。</p>
+<p>节数学建模：建立函数模型解决实际问题1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点建模六步</p>
+<p>① 观察实际情景，发现和提出问题；② 收集数据；③
+分析数据（画散点图，判断变化规律）；④
+建立模型（确定函数类型并求参数）；⑤ 检验模型（与实际数据比对）；⑥
+求解问题（用模型回答原问题）。</p>
+<p>要点典型案例：茶水冷却模型</p>
+<ul>
+<li>问题：<span class="math inline">\(85\,^{\circ}C\)</span>
+水泡茶，室温 <span
+class="math inline">\(25\,^{\circ}C\)</span>，茶水降至 <span
+class="math inline">\(60\,^{\circ}C\)</span>
+时口感最佳，需放置多久？</li>
+<li>选型：考虑到温度降至室温后不再下降，选择 <span
+class="math inline">\(y = ka^{x} + 25\)</span>（<span
+class="math inline">\(k \in \mathbf{R}\)</span>，<span
+class="math inline">\(0 &lt; a &lt; 1\)</span>，<span
+class="math inline">\(x \geq 0\)</span>）。</li>
+<li>定参：<span class="math inline">\(x = 0\)</span> 时 <span
+class="math inline">\(y = 85\)</span>，得 <span class="math inline">\(k
+= 60\)</span>；计算各分 <span class="math inline">\((y - 25)\)</span>
+与上一分 <span class="math inline">\((y - 25)\)</span> 的比值，取平均值
+<span class="math inline">\(a \approx 0.9227\)</span>。</li>
+<li>模型：<span class="math inline">\(y = 60 \times {0.9227}^{x} + 25\
+(x \geq 0)\)</span>。</li>
+<li>求解：令 <span class="math inline">\(y = 60\)</span>，得 <span
+class="math inline">\(x = \log_{0.9227}\frac{7}{12} \approx
+6.6997\)</span>，即约 <span class="math inline">\(7\)</span>
+<strong>min</strong>。</li>
+</ul>
+<p>要点待研究的选题</p>
+<p>冰箱取肉解冻的提前时间；由身高体重判断是否超重；微波炉/电磁炉烧水的省电功率设定；估计阅读一本书所需时间。</p>
+<p>要点活动要求</p>
+<p>① 组建 <span class="math inline">\(3 \sim 5\)</span>
+人合作团队，明确分工，完成开题报告；②
+按"背景分析—数据收集—数据分析—数学建模—获得结论"开展研究；③
+撰写研究报告；④ 交流展示（组内→大组→全班，含自评、互评、师评）。</p>
+<p>要点研究报告参考栏目</p>
+<p>课题名称、课题组成员及分工、选题的意义、研究计划、研究过程、研究结果、收获与体会、研究评价。</p>
+<p>章第五章 三角函数13 节 · 19 小节 · 135 知识点</p>
+<p>节5.1 任意角和弧度制2 小节 · 23 知识点</p>
+<p>小节5.1.1 任意角12 条知识点</p>
+<p>性质角的概念推广的背景</p>
+<p>圆周运动是常见的周期现象。用角的大小刻画单位圆上点的位置变化时，<span
+class="math inline">\(0^{\circ} \sim 360^{\circ}\)</span>
+的范围不够用（体操"转体 540 度""720
+度"、齿轮反向旋转），故需扩大角的范围。</p>
+<p>要点正角、负角、零角</p>
+<ul>
+<li><strong>正角</strong>：一条射线绕其端点按<strong>逆时针</strong>方向旋转形成的角；</li>
+<li><strong>负角</strong>：按<strong>顺时针</strong>方向旋转形成的角；</li>
+<li><strong>零角</strong>：射线没有作任何旋转，此时始边与终边重合，<span
+class="math inline">\(\alpha = 0^{\circ}\)</span>。</li>
+</ul>
+<p>要点任意角</p>
+<p>正角、负角、零角统称任意角。</p>
+<p>要点相等角</p>
+<p>若两角旋转<strong>方向相同</strong>且<strong>旋转量相等</strong>，则两角相等。</p>
+<p>要点角的加法</p>
+<p>把角 <span class="math inline">\(\alpha\)</span> 的终边再旋转角 <span
+class="math inline">\(\beta\)</span>，所得角为 <span
+class="math inline">\(\alpha + \beta\)</span>。</p>
+<p>要点相反角</p>
+<p>射线绕端点按<strong>不同方向</strong>旋转<strong>相同的量</strong>所成的两个角互为相反角；角
+<span class="math inline">\(\alpha\)</span> 的相反角记为 <span
+class="math inline">\(- \alpha\)</span>。</p>
+<p>要点角的减法</p>
+<p><span class="math inline">\(\alpha - \beta = \alpha + ( -
+\beta)\)</span>——角的减法可转化为加法。</p>
+<p>要点象限角</p>
+<p>在直角坐标系中，使角的<strong>顶点与原点重合</strong>、<strong>始边与</strong>
+<span class="math inline">\(x\)</span>
+<strong>轴的非负半轴重合</strong>，则角的终边在第几象限，就说这个角是<strong>第几象限角</strong>。</p>
+<p>要点轴线角</p>
+<p>若角的终边在<strong>坐标轴上</strong>，则认为这个角<strong>不属于任何一个象限</strong>。</p>
+<p>要点终边相同的角的集合</p>
+<p><span class="math display">\[S = \{\beta \mid \beta = \alpha + k
+\cdot 360^{\circ},\ k \in \mathbf{Z}\},\]</span></p>
+<p>即任一与角 <span class="math inline">\(\alpha\)</span>
+终边相同的角，都可表示成角 <span class="math inline">\(\alpha\)</span>
+与整数个周角的和。</p>
+<p>性质常用结论</p>
+<ul>
+<li>终边在 <span class="math inline">\(x\)</span> 轴上的角：<span
+class="math inline">\(\{\beta \mid \beta = k \cdot 180^{\circ},\ k \in
+\mathbf{Z}\}\)</span>；</li>
+<li>终边在 <span class="math inline">\(y\)</span> 轴上的角：<span
+class="math inline">\(\{\beta \mid \beta = 90^{\circ} + k \cdot
+180^{\circ},\ k \in \mathbf{Z}\}\)</span>；</li>
+<li>终边在直线 <span class="math inline">\(y = x\)</span> 上的角：<span
+class="math inline">\(\{\beta \mid \beta = 45^{\circ} + k \cdot
+180^{\circ},\ k \in \mathbf{Z}\}\)</span>；</li>
+<li>第一象限角：<span class="math inline">\(\{\alpha \mid k \cdot
+360^{\circ} &lt; \alpha &lt; 90^{\circ} + k \cdot 360^{\circ},\ k \in
+\mathbf{Z}\}\)</span>（其余象限类似）。</li>
+</ul>
+<p>性质关系·转化</p>
+<p>在直角坐标系中讨论角，可很好地表现角"<strong>周而复始</strong>"的变化规律，为后续研究三角函数的周期性作准备。</p>
+<p>小节5.1.2 弧度制11 条知识点</p>
+<p>要点角度制</p>
+<p>用度作单位度量角的单位制，<span class="math inline">\(1\)</span>
+度的角等于周角的 <span
+class="math inline">\(\frac{1}{360}\)</span>。</p>
+<p>要点弧度制（radian measure）</p>
+<p>长度等于<strong>半径长</strong>的圆弧所对的圆心角叫做 <span
+class="math inline">\(1\)</span> <strong>弧度</strong>的角，单位符号
+<strong>rad</strong>。</p>
+<p>要点单位圆</p>
+<p>半径长为 <span class="math inline">\(1\)</span> 的圆。单位圆中弧长为
+<span class="math inline">\(1\)</span> 的弧所对的圆心角就是 <span
+class="math inline">\(1\)</span> rad。</p>
+<p>要点弧度数的计算公式</p>
+<p>半径为 <span class="math inline">\(r\)</span> 的圆中，弧长为 <span
+class="math inline">\(l\)</span> 的弧所对圆心角为 <span
+class="math inline">\(\alpha\)</span> rad，则</p>
+<p><span class="math display">\[|\alpha| = \frac{l}{r}.\]</span></p>
+<p>性质符号规定</p>
+<p>正角的弧度数为<strong>正数</strong>，负角的弧度数为<strong>负数</strong>，零角的弧度数为
+<span class="math inline">\(0\)</span>；<span
+class="math inline">\(\alpha\)</span>
+的正负由终边的<strong>旋转方向</strong>决定（逆时针为正，顺时针为负）。</p>
+<p>要点角度与弧度的换算</p>
+<p><span class="math display">\[360^{\circ} = 2\pi\ rad,\quad
+180^{\circ} = \pi\ rad,\]</span></p>
+<p><span class="math display">\[1^{\circ} = \frac{\pi}{180}\ rad \approx
+0.017\ 45\ rad,\quad 1\ rad = \left( \frac{180}{\pi} \right)^{\circ}
+\approx {57.30}^{\circ} = 57^{\circ}18&#39;.\]</span></p>
+<p>要点特殊角的度数与弧度数对应</p>
+<table style="width:83%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr>
+<th>度</th>
+<th><span class="math inline">\(0^{\circ}\)</span>​</th>
+<th><span class="math inline">\(30^{\circ}\)</span>​</th>
+<th><span class="math inline">\(45^{\circ}\)</span>​</th>
+<th><span class="math inline">\(60^{\circ}\)</span>​</th>
+<th><span class="math inline">\(90^{\circ}\)</span>​</th>
+<th><span class="math inline">\(120^{\circ}\)</span>​</th>
+<th><span class="math inline">\(135^{\circ}\)</span>​</th>
+<th><span class="math inline">\(150^{\circ}\)</span>​</th>
+<th><span class="math inline">\(180^{\circ}\)</span>​</th>
+<th><span class="math inline">\(270^{\circ}\)</span>​</th>
+<th><span class="math inline">\(360^{\circ}\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弧度</td>
+<td><span class="math inline">\(0\)</span>​</td>
+<td><span class="math inline">\(\frac{\pi}{6}\)</span>​</td>
+<td><span class="math inline">\(\frac{\pi}{4}\)</span>​</td>
+<td><span class="math inline">\(\frac{\pi}{3}\)</span>​</td>
+<td><span class="math inline">\(\frac{\pi}{2}\)</span>​</td>
+<td><span class="math inline">\(\frac{2\pi}{3}\)</span>​</td>
+<td><span class="math inline">\(\frac{3\pi}{4}\)</span>​</td>
+<td><span class="math inline">\(\frac{5\pi}{6}\)</span>​</td>
+<td><span class="math inline">\(\pi\)</span>​</td>
+<td><span class="math inline">\(\frac{3\pi}{2}\)</span>​</td>
+<td><span class="math inline">\(2\pi\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<p>要点书写约定</p>
+<p>用弧度制表示角时，"弧度"或"rad"通常<strong>略去不写</strong>，只写弧度数（如
+<span class="math inline">\(\alpha = 2\)</span> 表示 <span
+class="math inline">\(2\)</span> rad 的角）。</p>
+<p>要点一一对应</p>
+<p>角的概念推广后，在弧度制下，<strong>角的集合与实数集</strong> <span
+class="math inline">\(\mathbf{R}\)</span>
+<strong>之间建立了一一对应关系</strong>——每个角对应唯一实数（其弧度数），每个实数对应唯一的角。</p>
+<p>要点弧长与扇形面积公式 （<span class="math inline">\(R\)</span>
+为半径，<span class="math inline">\(\alpha\)</span>
+为圆心角弧度数，<span class="math inline">\(0 &lt; \alpha &lt;
+2\pi\)</span>）</p>
+<p><span class="math display">\[l = \alpha R,\quad\quad S =
+\frac{1}{2}\alpha R^{2} = \frac{1}{2}lR.\]</span></p>
+<p>性质意义</p>
+<p>弧度制下弧长、扇形面积公式形式<strong>最简</strong>；弧度制的本质是<strong>用长度单位度量角</strong>，统一了三角函数自变量与函数值的单位，使三角函数成为实数集到实数集的对应——这是建立任意角三角函数概念的关键。</p>
+<p>节5.2 三角函数的概念2 小节 · 14 知识点</p>
+<p>小节5.2.1 三角函数的概念9 条知识点</p>
+<p>定义单位圆定义</p>
+<p>设 <span class="math inline">\(\alpha\)</span> 是任意角，<span
+class="math inline">\(\alpha \in \mathbf{R}\)</span>，它的终边 <span
+class="math inline">\(OP\)</span> 与单位圆交于点 <span
+class="math inline">\(P(x,y)\)</span>，则</p>
+<ul>
+<li><strong>正弦函数（sine function）</strong>：<span
+class="math inline">\(y = \sin\alpha\)</span>（点 <span
+class="math inline">\(P\)</span> 的<strong>纵坐标</strong>）；</li>
+<li><strong>余弦函数（cosine function）</strong>：<span
+class="math inline">\(x = \cos\alpha\)</span>（点 <span
+class="math inline">\(P\)</span> 的<strong>横坐标</strong>）；</li>
+<li><strong>正切函数（tangent function）</strong>：<span
+class="math inline">\(\frac{y}{x} = \tan\alpha\)</span>（<span
+class="math inline">\(x \neq 0\)</span>）。</li>
+</ul>
+<p>要点三角函数（trigonometric function）</p>
+<p>正弦、余弦、正切函数统称三角函数，记作</p>
+<p><span class="math display">\[y = \sin x,\ x \in \mathbf{R};\quad y =
+\cos x,\ x \in \mathbf{R};\quad y = \tan x,\ x \neq \frac{\pi}{2} +
+k\pi\ (k \in \mathbf{Z}).\]</span></p>
+<p>性质正切无意义的情形</p>
+<p>当 <span class="math inline">\(\alpha = \frac{\pi}{2} +
+k\pi\)</span>（<span class="math inline">\(k \in
+\mathbf{Z}\)</span>）时终边在 <span class="math inline">\(y\)</span>
+轴上，<span class="math inline">\(x = 0\)</span>，<span
+class="math inline">\(\tan\alpha\)</span> 无意义。</p>
+<p>要点终边上任一点的坐标表示</p>
+<p>设角 <span class="math inline">\(\alpha\)</span> 终边上任一点 <span
+class="math inline">\(P(x,y)\)</span>（不与原点重合），<span
+class="math inline">\(r = \sqrt{x^{2} + y^{2}}\)</span>，则</p>
+<p><span class="math display">\[\sin\alpha =
+\frac{y}{r},\quad\quad\cos\alpha = \frac{x}{r},\quad\quad\tan\alpha =
+\frac{y}{x}.\]</span></p>
+<p>证明依据：<span class="math inline">\(\bigtriangleup OMP \sim
+\bigtriangleup OM_{0}P_{0}\)</span>（与单位圆上的点比较）。函数值**不随
+<span class="math inline">\(P\)</span> 点位置的改变而改变**。</p>
+<p>定义定义域</p>
+<p><span class="math inline">\(\sin\alpha\)</span>、<span
+class="math inline">\(\cos\alpha\)</span> 的定义域为 <span
+class="math inline">\(\mathbf{R}\)</span>；<span
+class="math inline">\(\tan\alpha\)</span> 的定义域为 <span
+class="math inline">\(\left\{ x \mid x \neq \frac{\pi}{2} + k\pi,\ k \in
+\mathbf{Z} \right\}\)</span>。</p>
+<p>性质各象限符号规律 （"一全正、二正弦、三正切、四余弦"）</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>象限</th>
+<th><span class="math inline">\(\sin\alpha\)</span>​</th>
+<th><span class="math inline">\(\cos\alpha\)</span>​</th>
+<th><span class="math inline">\(\tan\alpha\)</span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一</td>
+<td><span class="math inline">\(+\)</span>​</td>
+<td><span class="math inline">\(+\)</span>​</td>
+<td><span class="math inline">\(+\)</span>​</td>
+</tr>
+<tr>
+<td>第二</td>
+<td><span class="math inline">\(+\)</span>​</td>
+<td><span class="math inline">\(-\)</span>​</td>
+<td><span class="math inline">\(-\)</span>​</td>
+</tr>
+<tr>
+<td>第三</td>
+<td><span class="math inline">\(-\)</span>​</td>
+<td><span class="math inline">\(-\)</span>​</td>
+<td><span class="math inline">\(+\)</span>​</td>
+</tr>
+<tr>
+<td>第四</td>
+<td><span class="math inline">\(-\)</span>​</td>
+<td><span class="math inline">\(+\)</span>​</td>
+<td><span class="math inline">\(-\)</span>​</td>
+</tr>
+</tbody>
+</table>
+<p>要点公式一 （终边相同的角）</p>
+<p><span class="math display">\[\sin(\alpha + k \cdot 2\pi) =
+\sin\alpha,\quad\cos(\alpha + k \cdot 2\pi) =
+\cos\alpha,\quad\tan(\alpha + k \cdot 2\pi) = \tan\alpha\quad(k \in
+\mathbf{Z}).\]</span></p>
+<p>要点公式一的作用</p>
+<p>三角函数值有"周而复始"的变化规律；可把<strong>任意角</strong>的三角函数值转化为
+<span class="math inline">\(0 \sim 2\pi\)</span>（或 <span
+class="math inline">\(0^{\circ} \sim
+360^{\circ}\)</span>）角的三角函数值。</p>
+<p>要点象限角的充要条件 （以第三象限为例）</p>
+<p><span class="math inline">\(\theta\)</span> 为第三象限角 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\sin\theta &lt; 0\)</span> 且 <span
+class="math inline">\(\tan\theta &gt; 0\)</span>。</p>
+<p>小节5.2.2 同角三角函数的基本关系5 条知识点</p>
+<p>性质平方关系</p>
+<p><span class="math display">\[\boxed{\sin^{2}\alpha + \cos^{2}\alpha =
+1}\]</span></p>
+<p>推导：单位圆上 <span class="math inline">\(P(x,y)\)</span> 满足 <span
+class="math inline">\(x^{2} + y^{2} = 1\)</span>；当 <span
+class="math inline">\(\alpha\)</span> 的终边与坐标轴重合时也成立。</p>
+<p>性质商数关系</p>
+<p><span class="math display">\[\frac{\sin\alpha}{\cos\alpha} =
+\tan\alpha\quad\left( \alpha \neq k\pi + \frac{\pi}{2},\ k \in
+\mathbf{Z} \right).\]</span></p>
+<p>要点文字表述</p>
+<p>同一个角 <span class="math inline">\(\alpha\)</span>
+的正弦、余弦的<strong>平方和等于</strong> <span
+class="math inline">\(1\)</span>，<strong>商等于</strong>角 <span
+class="math inline">\(\alpha\)</span> 的<strong>正切</strong>。</p>
+<p>要点基本应用</p>
+<ul>
+<li><strong>知一求二</strong>：已知一个三角函数值及角所在象限，用平方关系求其余两个（注意<strong>分类讨论</strong>象限、正确取舍符号）；</li>
+<li><strong>化简与证明</strong>：常用"切化弦"、<span
+class="math inline">\(1 = \sin^{2}\alpha + \cos^{2}\alpha\)</span>
+的代换、分子分母同乘（除）某式等技巧；</li>
+<li><strong>证明恒等式的两种思路</strong>：① 从一边化到另一边（作差为
+<span class="math inline">\(0\)</span>）；②
+两边分别化到同一式（分析法、综合法）。</li>
+</ul>
+<p>要点常用变形</p>
+<ul>
+<li><span class="math inline">\(\sin^{4}\alpha +
+\sin^{2}\alpha\cos^{2}\alpha + \cos^{2}\alpha = 1\)</span>；</li>
+<li><span class="math inline">\(\tan^{2}\alpha - \sin^{2}\alpha =
+\tan^{2}\alpha\sin^{2}\alpha\)</span>；</li>
+<li><span class="math inline">\((\sin\alpha \pm \cos\alpha)^{2} = 1 \pm
+2\sin\alpha\cos\alpha\)</span>（"知和求积"的桥梁）。</li>
+</ul>
+<p>节5.3 诱导公式1 小节 · 11 知识点</p>
+<p>小节本节知识点节内直列11 条知识点</p>
+<p>要点研究思路</p>
+<p>圆的最重要性质是<strong>对称性</strong>，而对称性（如奇偶性）也是函数的重要性质——利用单位圆的对称性研究三角函数的对称性。</p>
+<p>要点公式一 （<span class="math inline">\(2k\pi +
+\alpha\)</span>，终边相同）</p>
+<p><span class="math display">\[\sin(\alpha + 2k\pi) =
+\sin\alpha,\quad\cos(\alpha + 2k\pi) = \cos\alpha,\quad\tan(\alpha +
+2k\pi) = \tan\alpha.\]</span></p>
+<p>要点公式二 （关于<strong>原点</strong>对称，角 <span
+class="math inline">\(\pi + \alpha\)</span>）</p>
+<p><span class="math display">\[\sin(\pi + \alpha) = -
+\sin\alpha,\quad\cos(\pi + \alpha) = - \cos\alpha,\quad\tan(\pi +
+\alpha) = \tan\alpha.\]</span></p>
+<p>要点公式三 （关于 <span class="math inline">\(x\)</span>
+<strong>轴</strong>对称，角 <span class="math inline">\(-
+\alpha\)</span>）</p>
+<p><span class="math display">\[\sin( - \alpha) = -
+\sin\alpha,\quad\cos( - \alpha) = \cos\alpha,\quad\tan( - \alpha) = -
+\tan\alpha.\]</span></p>
+<p>要点公式四 （关于 <span class="math inline">\(y\)</span>
+<strong>轴</strong>对称，角 <span class="math inline">\(\pi -
+\alpha\)</span>）</p>
+<p><span class="math display">\[\sin(\pi - \alpha) =
+\sin\alpha,\quad\cos(\pi - \alpha) = - \cos\alpha,\quad\tan(\pi -
+\alpha) = - \tan\alpha.\]</span></p>
+<p>要点公式五 （关于直线 <span class="math inline">\(y = x\)</span>
+对称，角 <span class="math inline">\(\frac{\pi}{2} -
+\alpha\)</span>）</p>
+<p><span class="math display">\[\sin\left( \frac{\pi}{2} - \alpha
+\right) = \cos\alpha,\quad\cos\left( \frac{\pi}{2} - \alpha \right) =
+\sin\alpha.\]</span></p>
+<p>要点公式六 （角 <span class="math inline">\(\frac{\pi}{2} +
+\alpha\)</span>）</p>
+<p><span class="math display">\[\sin\left( \frac{\pi}{2} + \alpha
+\right) = \cos\alpha,\quad\cos\left( \frac{\pi}{2} + \alpha \right) = -
+\sin\alpha.\]</span></p>
+<p>要点公式一～公式六统称诱导公式</p>
+<p>。</p>
+<p>要点记忆规律</p>
+<ul>
+<li><span class="math inline">\(k\pi \pm \alpha\)</span>（<span
+class="math inline">\(k\)</span> 为偶数，即 <span
+class="math inline">\(2k\pi \pm \alpha\)</span>、<span
+class="math inline">\(\pi \pm \alpha\)</span>、<span
+class="math inline">\(-
+\alpha\)</span>）：<strong>函数名不变</strong>，符号看<strong>把</strong>
+<span class="math inline">\(\alpha\)</span>
+<strong>看作锐角时原函数值的符号</strong>；</li>
+<li><span class="math inline">\(\frac{\pi}{2} \pm \alpha\)</span>（<span
+class="math inline">\(k\)</span>
+为奇数）：<strong>函数名改变</strong>（正弦↔︎余弦），符号同样"看象限"。</li>
+</ul>
+<p>方法把任意角三角函数化为锐角三角函数的步骤</p>
+<p><span class="math display">\[\text{负角化正角}\  \rightarrow \
+\text{大角化小角（化到 }0 \sim 2\pi\text{）}\  \rightarrow \
+\text{钝角化锐角}.\]</span></p>
+<p>要点公式的深层价值</p>
+<p>如今"求值"作用已被计算工具取代，但公式所体现的<strong>三角函数对称性</strong>在解决问题中依然重要（如
+<span class="math inline">\(\sin(\frac{3\pi}{2} - \alpha) = -
+\cos\alpha\)</span>、<span class="math inline">\(\cos(\frac{3\pi}{2} +
+\alpha) = \sin\alpha\)</span> 均可由公式二、五复合推出）。</p>
+<p>节5.4 三角函数的图象与性质3 小节 · 20 知识点</p>
+<p>小节5.4.1 正弦函数、余弦函数的图象6 条知识点</p>
+<p>要点正弦曲线的画法（几何法）</p>
+<p>在直角坐标系中画单位圆，把 <span class="math inline">\(x\)</span>
+轴上 <span class="math inline">\(0 \sim 2\pi\)</span> 一段<strong>分成
+12 等份</strong>，将圆周相应 12 等分，取各点纵坐标平移得点 <span
+class="math inline">\(T(x_{0},\sin x_{0})\)</span>，用光滑曲线连接。</p>
+<p>要点正弦曲线（sine curve）</p>
+<p>将 <span class="math inline">\(y = \sin x,\ x \in \lbrack
+0,2\pi\rbrack\)</span> 的图象不断向左、右平移（每次 <span
+class="math inline">\(2\pi\)</span> 个单位），得 <span
+class="math inline">\(y = \sin x,\ x \in \mathbf{R}\)</span>
+的图象，是一条"波浪起伏"的连续光滑曲线。</p>
+<p>要点五点（画图）法</p>
+<p><span class="math inline">\(y = \sin x,\ x \in \lbrack
+0,2\pi\rbrack\)</span> 上的五个关键点</p>
+<p><span class="math display">\[(0,0),\ \left( \frac{\pi}{2},1 \right),\
+(\pi,0),\ \left( \frac{3\pi}{2}, - 1 \right),\ (2\pi,0).\]</span></p>
+<p>要点余弦曲线（cosine curve）</p>
+<p>由 <span class="math inline">\(\cos x = \sin\left( x + \frac{\pi}{2}
+\right)\)</span>，将正弦曲线<strong>向左平移</strong> <span
+class="math inline">\(\frac{\pi}{2}\)</span>
+<strong>个单位</strong>即得；形状与正弦曲线相同。</p>
+<p>要点余弦的五点 （<span class="math inline">\(x \in \lbrack -
+\pi,\pi\rbrack\)</span>）</p>
+<p><span class="math inline">\(( - \pi, - 1)\)</span>、<span
+class="math inline">\(\left( - \frac{\pi}{2},0 \right)\)</span>、<span
+class="math inline">\((0,1)\)</span>、<span class="math inline">\(\left(
+\frac{\pi}{2},0 \right)\)</span>、<span class="math inline">\((\pi, -
+1)\)</span>。</p>
+<p>要点图象变换的初步应用</p>
+<p><span class="math inline">\(y = 1 + \sin x\)</span> 由 <span
+class="math inline">\(y = \sin x\)</span> <strong>向上平移</strong>
+<span class="math inline">\(1\)</span> <strong>个单位</strong>；<span
+class="math inline">\(y = - \cos x\)</span> 由 <span
+class="math inline">\(y = \cos x\)</span> <strong>关于</strong> <span
+class="math inline">\(x\)</span>
+<strong>轴对称</strong>（纵坐标变为相反数）。</p>
+<p>小节5.4.2 正弦函数、余弦函数的性质6 条知识点</p>
+<p>要点1. 周期性</p>
+<p><span class="math display">\[f(x + T) = f(x),\]</span></p>
+<p>则 <span class="math inline">\(f(x)\)</span> 叫做周期函数，非零常数
+<span class="math inline">\(T\)</span> 叫做它的**周期（period）**。</p>
+<p><span class="math display">\[T = \frac{2\pi}{\omega}.\]</span></p>
+<ul>
+<li><strong>周期函数（periodic function）</strong>：设 <span
+class="math inline">\(f(x)\)</span> 的定义域为 <span
+class="math inline">\(D\)</span>，若存在<strong>非零常数</strong> <span
+class="math inline">\(T\)</span>，使对每一个 <span
+class="math inline">\(x \in D\)</span> 都有 <span
+class="math inline">\(x + T \in D\)</span>，且</li>
+<li><strong>最小正周期</strong>：若在所有周期中存在<strong>最小的正数</strong>，则称之为<strong>最小正周期</strong>。</li>
+<li><strong>结论</strong>：正弦、余弦函数都是周期函数，<span
+class="math inline">\(2k\pi\ (k \in \mathbf{Z},\ k \neq 0)\)</span>
+都是它们的周期，<strong>最小正周期为</strong> <span
+class="math inline">\(2\pi\)</span>。</li>
+<li><strong>一般公式</strong>：<span class="math inline">\(y =
+A\sin(\omega x + \varphi)\)</span> 与 <span class="math inline">\(y =
+A\cos(\omega x + \varphi)\)</span>（<span class="math inline">\(A \neq
+0\)</span>，<span class="math inline">\(\omega &gt;
+0\)</span>）的周期</li>
+</ul>
+<p>要点2. 奇偶性</p>
+<ul>
+<li>由 <span class="math inline">\(\sin( - x) = - \sin x\)</span>、<span
+class="math inline">\(\cos( - x) = \cos x\)</span>
+得：<strong>正弦函数是奇函数</strong>（图象关于原点对称），<strong>余弦函数是偶函数</strong>（图象关于
+<span class="math inline">\(y\)</span> 轴对称）。</li>
+</ul>
+<p>要点3. 单调性</p>
+<ul>
+<li><strong>正弦函数</strong>：在每一个闭区间 <span
+class="math inline">\(\left\lbrack - \frac{\pi}{2} + 2k\pi,\
+\frac{\pi}{2} + 2k\pi \right\rbrack\)</span>
+上<strong>单调递增</strong>（值从 <span class="math inline">\(-
+1\)</span> 增到 <span class="math inline">\(1\)</span>）；在每一个闭区间
+<span class="math inline">\(\left\lbrack \frac{\pi}{2} + 2k\pi,\
+\frac{3\pi}{2} + 2k\pi \right\rbrack\)</span>
+上<strong>单调递减</strong>（值从 <span class="math inline">\(1\)</span>
+减到 <span class="math inline">\(- 1\)</span>）。</li>
+<li><strong>余弦函数</strong>：在每一个闭区间 <span
+class="math inline">\(\lbrack - \pi + 2k\pi,\ 2k\pi\rbrack\)</span>（即
+<span class="math inline">\(\lbrack 2k\pi -
+\pi,2k\pi\rbrack\)</span>）上<strong>单调递增</strong>（值从 <span
+class="math inline">\(- 1\)</span> 增到 <span
+class="math inline">\(1\)</span>）；在每一个闭区间 <span
+class="math inline">\(\lbrack 2k\pi,\ \pi + 2k\pi\rbrack\)</span>
+上<strong>单调递减</strong>（值从 <span class="math inline">\(1\)</span>
+减到 <span class="math inline">\(- 1\)</span>）。</li>
+</ul>
+<p>要点4. 最大值与最小值</p>
+<ul>
+<li>正弦函数：当且仅当 <span class="math inline">\(x = \frac{\pi}{2} +
+2k\pi\)</span> 时取最大值 <span
+class="math inline">\(1\)</span>；当且仅当 <span class="math inline">\(x
+= - \frac{\pi}{2} + 2k\pi\)</span> 时取最小值 <span
+class="math inline">\(- 1\)</span>。</li>
+<li>余弦函数：当且仅当 <span class="math inline">\(x = 2k\pi\)</span>
+时取最大值 <span class="math inline">\(1\)</span>；当且仅当 <span
+class="math inline">\(x = \pi + 2k\pi\)</span> 时取最小值 <span
+class="math inline">\(- 1\)</span>。</li>
+</ul>
+<p>要点5. 对称性</p>
+<ul>
+<li>正弦曲线：对称中心 <span
+class="math inline">\((k\pi,0)\)</span>，对称轴 <span
+class="math inline">\(x = k\pi + \frac{\pi}{2}\)</span>（<span
+class="math inline">\(k \in \mathbf{Z}\)</span>）；</li>
+<li>余弦曲线：对称中心 <span class="math inline">\(\left( k\pi +
+\frac{\pi}{2},0 \right)\)</span>，对称轴 <span class="math inline">\(x =
+k\pi\)</span>（<span class="math inline">\(k \in
+\mathbf{Z}\)</span>）。</li>
+</ul>
+<p>方法方法要点</p>
+<ul>
+<li>求周期：利用定义式 <span class="math inline">\(f(x + T) =
+f(x)\)</span> 作代数变形，或直接用 <span class="math inline">\(T =
+\frac{2\pi}{\omega}\)</span>；</li>
+<li>求单调区间：令 <span class="math inline">\(z = \omega x +
+\varphi\)</span>，先求 <span class="math inline">\(y = \sin
+z\)</span>（或 <span class="math inline">\(\cos
+z\)</span>）的单调区间，再解关于 <span class="math inline">\(x\)</span>
+的不等式，注意<strong>限定定义域</strong>；</li>
+<li>比较大小：先用诱导公式化到<strong>同一单调区间</strong>内，再用单调性比较。</li>
+</ul>
+<p>小节5.4.3 正切函数的性质与图象8 条知识点</p>
+<p>要点研究思路的转换</p>
+<p>与正弦、余弦不同，正切函数<strong>先从定义出发研究性质，再由性质研究图象</strong>。</p>
+<p>要点1. 周期性</p>
+<p>由 <span class="math inline">\(\tan(x + \pi) = \tan x\)</span>
+知，正切函数是周期函数，<strong>周期是</strong> <span
+class="math inline">\(\pi\)</span>。</p>
+<p>要点2. 奇偶性</p>
+<p>由 <span class="math inline">\(\tan( - x) = - \tan x\)</span>
+知，正切函数是<strong>奇函数</strong>。</p>
+<p>定义3. 定义域与值域</p>
+<p>定义域 <span class="math inline">\(\left\{ x \mid x \neq
+\frac{\pi}{2} + k\pi,\ k \in \mathbf{Z}
+\right\}\)</span>；<strong>值域为</strong> <span
+class="math inline">\(\mathbf{R}\)</span>，无最大值、最小值。</p>
+<p>要点4. 单调性</p>
+<p>在每一个区间 <span class="math inline">\(\left( - \frac{\pi}{2} +
+k\pi,\ \frac{\pi}{2} + k\pi \right)\)</span>（<span
+class="math inline">\(k \in
+\mathbf{Z}\)</span>）上都<strong>单调递增</strong>。</p>
+<p>要点5. 图象（正切曲线，tangent curve）</p>
+<p>由被与 <span class="math inline">\(y\)</span> 轴平行的一系列直线
+<span class="math inline">\(x = \frac{\pi}{2} + k\pi\)</span>
+所隔开的<strong>无穷多支形状相同的曲线</strong>组成；在 <span
+class="math inline">\(x \in \left\lbrack 0,\frac{\pi}{2}
+\right)\)</span> 内，线段 <span class="math inline">\(AT\)</span>
+的长度即 <span class="math inline">\(\tan x\)</span> 的值，当 <span
+class="math inline">\(x \rightarrow \frac{\pi}{2}^{-}\)</span> 时 <span
+class="math inline">\(AT \rightarrow +
+\infty\)</span>，图象向右上方无限逼近直线 <span class="math inline">\(x
+= \frac{\pi}{2}\)</span>。</p>
+<p>要点对称性</p>
+<p>正切曲线<strong>没有对称轴</strong>，其对称中心为 <span
+class="math inline">\(\left( \frac{k\pi}{2},0 \right)\)</span>（<span
+class="math inline">\(k \in \mathbf{Z}\)</span>）。</p>
+<p>要点图象作法</p>
+<p>先画 <span class="math inline">\(x \in \left\lbrack 0,\frac{\pi}{2}
+\right)\)</span> 的一段 → 由奇函数性质得 <span class="math inline">\(x
+\in \left( - \frac{\pi}{2},0 \right\rbrack\)</span> 的一段 →
+由周期性每次平移 <span class="math inline">\(\pi\)</span> 得全图。</p>
+<p>节5.5 三角恒等变换2 小节 · 18 知识点</p>
+<p>小节5.5.1 两角和与差的正弦、余弦和正切公式10 条知识点</p>
+<p>要点三角恒等变换</p>
+<p>利用公式对三角函数式进行的恒等变形（化简、求值、证明）。</p>
+<p>要点1. 两角差的余弦公式（<span class="math inline">\(C_{(\alpha -
+\beta)}\)</span>）</p>
+<p><span class="math display">\[\cos(\alpha - \beta) =
+\cos\alpha\cos\beta + \sin\alpha\sin\beta.\]</span></p>
+<p><span class="math display">\[P_{1}P_{2} = \sqrt{(x_{2} - x_{1})^{2} +
+(y_{2} - y_{1})^{2}}.\]</span></p>
+<ul>
+<li><strong>推导依据</strong>：单位圆的<strong>旋转对称性</strong>（<span
+class="math inline">\(\widehat{AP} = \widehat{A_{1}P_{1}}\)</span>，故
+<span class="math inline">\(AP = A_{1}P_{1}\)</span>）+
+<strong>两点间距离公式</strong></li>
+<li>该公式是<strong>一切和差角公式的基础</strong>。</li>
+</ul>
+<p>要点2. 两角和的余弦公式（<span class="math inline">\(C_{(\alpha +
+\beta)}\)</span>）</p>
+<p><span class="math display">\[\cos(\alpha + \beta) =
+\cos\alpha\cos\beta - \sin\alpha\sin\beta.\]</span></p>
+<p>推导：<span class="math inline">\(\alpha + \beta = \alpha - ( -
+\beta)\)</span>，用 <span class="math inline">\(C_{(\alpha -
+\beta)}\)</span> 及诱导公式；也可用"换元"观点把 <span
+class="math inline">\(\beta\)</span> 换成 <span class="math inline">\(-
+\beta\)</span>。</p>
+<p>要点3. 两角和与差的正弦公式</p>
+<p><span class="math display">\[\sin(\alpha + \beta) =
+\sin\alpha\cos\beta + \cos\alpha\sin\beta\quad\left( S_{(\alpha +
+\beta)} \right),\]</span></p>
+<p><span class="math display">\[\sin(\alpha - \beta) =
+\sin\alpha\cos\beta - \cos\alpha\sin\beta\quad\left( S_{(\alpha -
+\beta)} \right).\]</span></p>
+<p>推导：用 <span class="math inline">\(C_{(\alpha \pm \beta)}\)</span>
+及诱导公式五（或六）实现正弦、余弦互化。</p>
+<p>要点4. 两角和与差的正切公式</p>
+<p><span class="math display">\[\tan(\alpha + \beta) = \frac{\tan\alpha
++ \tan\beta}{1 - \tan\alpha\tan\beta}\quad\left( T_{(\alpha + \beta)}
+\right),\]</span></p>
+<p><span class="math display">\[\tan(\alpha - \beta) = \frac{\tan\alpha
+- \tan\beta}{1 + \tan\alpha\tan\beta}\quad\left( T_{(\alpha - \beta)}
+\right).\]</span></p>
+<p>推导：<span class="math inline">\(\tan =
+\frac{\sin}{\cos}\)</span>，分子分母同除 <span
+class="math inline">\(\cos\alpha\cos\beta\)</span>。</p>
+<p>要点公式命名</p>
+<p><span class="math inline">\(S_{(\alpha + \beta)}\)</span>、<span
+class="math inline">\(C_{(\alpha + \beta)}\)</span>、<span
+class="math inline">\(T_{(\alpha + \beta)}\)</span>
+统称<strong>和角公式</strong>；<span class="math inline">\(S_{(\alpha -
+\beta)}\)</span>、<span class="math inline">\(C_{(\alpha -
+\beta)}\)</span>、<span class="math inline">\(T_{(\alpha -
+\beta)}\)</span> 统称<strong>差角公式</strong>。</p>
+<p>要点5. 二倍角公式</p>
+<p><span class="math display">\[\sin 2\alpha =
+2\sin\alpha\cos\alpha\quad(S_{2\alpha}),\]</span></p>
+<p><span class="math display">\[\cos 2\alpha = \cos^{2}\alpha -
+\sin^{2}\alpha = 1 - 2\sin^{2}\alpha = 2\cos^{2}\alpha -
+1\quad(C_{2\alpha}),\]</span></p>
+<p><span class="math display">\[\tan 2\alpha = \frac{2\tan\alpha}{1 -
+\tan^{2}\alpha}\quad(T_{2\alpha}).\]</span></p>
+<ul>
+<li>倍角公式统称<strong>倍角公式</strong>，这里的"倍角"<strong>专指"二倍角"</strong>。</li>
+<li><strong>换元思想</strong>："倍"描述两个数量之间的关系——<span
+class="math inline">\(2\alpha\)</span> 是 <span
+class="math inline">\(\alpha\)</span> 的二倍，<span
+class="math inline">\(4\alpha\)</span> 是 <span
+class="math inline">\(2\alpha\)</span> 的二倍，<span
+class="math inline">\(\frac{\alpha}{2}\)</span> 是 <span
+class="math inline">\(\frac{\alpha}{4}\)</span> 的二倍。</li>
+</ul>
+<p>要点公式的逻辑链条</p>
+<p><span class="math display">\[C_{(\alpha - \beta)}\  \Rightarrow \
+C_{(\alpha + \beta)}\  \Rightarrow \ S_{(\alpha \pm
+\beta)}\  \Rightarrow \ T_{(\alpha \pm \beta)}\  \Rightarrow \
+\text{倍角公式}.\]</span></p>
+<p>要点公式的逆向使用</p>
+<p>从右到左使用可化简式子，如</p>
+<p><span class="math display">\[\sin 72^{\circ}\cos 42^{\circ} - \cos
+72^{\circ}\sin 42^{\circ} = \sin 30^{\circ} = \frac{1}{2};\]</span></p>
+<p><span class="math display">\[\frac{1 + \tan 15^{\circ}}{1 - \tan
+15^{\circ}} = \tan(45^{\circ} + 15^{\circ}) = \sqrt{3}.\]</span></p>
+<p>性质关系·转化</p>
+<p>诱导公式是<strong>和（差）角公式的特例</strong>（把 <span
+class="math inline">\(\alpha\)</span> 或 <span
+class="math inline">\(\beta\)</span>
+取特殊角）；反之，由和（差）角公式也可推出全部诱导公式。</p>
+<p>小节5.5.2 简单的三角恒等变换8 条知识点</p>
+<p>要点半角公式 （由倍角公式以 <span
+class="math inline">\(\frac{\alpha}{2}\)</span> 代 <span
+class="math inline">\(\alpha\)</span> 得到）</p>
+<p><span class="math display">\[\sin^{2}\frac{\alpha}{2} = \frac{1 -
+\cos\alpha}{2},\quad\quad\cos^{2}\frac{\alpha}{2} = \frac{1 +
+\cos\alpha}{2},\quad\quad\tan^{2}\frac{\alpha}{2} = \frac{1 -
+\cos\alpha}{1 + \cos\alpha};\]</span></p>
+<p><span class="math display">\[\sin\frac{\alpha}{2} = \pm \sqrt{\frac{1
+- \cos\alpha}{2}},\quad\cos\frac{\alpha}{2} = \pm \sqrt{\frac{1 +
+\cos\alpha}{2}},\quad\tan\frac{\alpha}{2} = \pm \sqrt{\frac{1 -
+\cos\alpha}{1 + \cos\alpha}}\]</span></p>
+<p>（符号由 <span class="math inline">\(\frac{\alpha}{2}\)</span>
+所在<strong>象限</strong>决定）。</p>
+<p>要点半角正切的有理式</p>
+<p><span class="math display">\[\tan\frac{\alpha}{2} =
+\frac{\sin\alpha}{1 + \cos\alpha} = \frac{1 -
+\cos\alpha}{\sin\alpha}.\]</span></p>
+<p>要点积化和差公式</p>
+<p><span class="math display">\[\sin\alpha\cos\beta =
+\frac{1}{2}\left\lbrack \sin(\alpha + \beta) + \sin(\alpha - \beta)
+\right\rbrack,\]</span></p>
+<p><span class="math display">\[\cos\alpha\sin\beta =
+\frac{1}{2}\left\lbrack \sin(\alpha + \beta) - \sin(\alpha - \beta)
+\right\rbrack,\]</span></p>
+<p><span class="math display">\[\cos\alpha\cos\beta =
+\frac{1}{2}\left\lbrack \cos(\alpha + \beta) + \cos(\alpha - \beta)
+\right\rbrack,\]</span></p>
+<p><span class="math display">\[\sin\alpha\sin\beta = -
+\frac{1}{2}\left\lbrack \cos(\alpha + \beta) - \cos(\alpha - \beta)
+\right\rbrack.\]</span></p>
+<p>要点和差化积公式</p>
+<p><span class="math display">\[\sin\theta + \sin\varphi =
+2\sin\frac{\theta + \varphi}{2}\cos\frac{\theta -
+\varphi}{2},\]</span></p>
+<p><span class="math display">\[\sin\theta - \sin\varphi =
+2\cos\frac{\theta + \varphi}{2}\sin\frac{\theta -
+\varphi}{2},\]</span></p>
+<p><span class="math display">\[\cos\theta + \cos\varphi =
+2\cos\frac{\theta + \varphi}{2}\cos\frac{\theta -
+\varphi}{2},\]</span></p>
+<p><span class="math display">\[\cos\theta - \cos\varphi = -
+2\sin\frac{\theta + \varphi}{2}\sin\frac{\theta -
+\varphi}{2}.\]</span></p>
+<p>要点辅助角公式（化归为 <span class="math inline">\(y = A\sin(x +
+\varphi)\)</span>）</p>
+<p><span class="math display">\[a\sin x + b\cos x = \sqrt{a^{2} +
+b^{2}}\sin(x + \varphi),\quad\text{其中}\ \tan\varphi =
+\frac{b}{a}.\]</span></p>
+<p>例：<span class="math inline">\(\sin x + \sqrt{3}\cos x = 2\sin\left(
+x + \frac{\pi}{3} \right)\)</span>；<span class="math inline">\(3\sin x
++ 4\cos x = 5\sin(x + \varphi)\)</span>，其中 <span
+class="math inline">\(\cos\varphi = \frac{3}{5}\)</span>，<span
+class="math inline">\(\sin\varphi = \frac{4}{5}\)</span>。</p>
+<p>要点三角恒等变换的基本特点</p>
+<p>不同的三角函数式不仅有<strong>结构形式</strong>的差异，还有<strong>所含的角</strong>以及<strong>三角函数种类</strong>的差异；变换时先<strong>寻找各角之间的联系</strong>，据此选择公式。</p>
+<p>要点常用策略</p>
+<p>① 统一角（异角化同角）；② 统一函数名（切化弦、弦化切）；③
+统一结构（升幂、降幂、通分、配方）；④ 常数代换（<span
+class="math inline">\(1 = \sin^{2}\alpha +
+\cos^{2}\alpha\)</span>、<span class="math inline">\(\sqrt{3} =
+\tan\frac{\pi}{3}\)</span> 等）。</p>
+<p>性质关系·转化</p>
+<p>以上变换处处体现<strong>化归思想</strong>——把陌生化为熟悉、把复杂化为简单、把多元化为一元。</p>
+<p>节5.6 函数 <span class="math inline">\(y = A\sin(\omega x +
+\varphi)\)</span>2 小节 · 11 知识点</p>
+<p>小节5.6.1 匀速圆周运动的数学模型4 条知识点</p>
+<p>要点实际问题</p>
+<p>筒车（古代水利灌溉工具）上盛水筒作<strong>匀速圆周运动</strong>，因运动具有<strong>周期性</strong>，可用三角函数模型刻画。</p>
+<p>要点相关量</p>
+<p>转轮中心 <span class="math inline">\(O\)</span> 到水面的距离 <span
+class="math inline">\(h\)</span>、筒车半径 <span
+class="math inline">\(r\)</span>、转动角速度 <span
+class="math inline">\(\omega\)</span>、盛水筒初始位置 <span
+class="math inline">\(P_{0}\)</span>（对应角 <span
+class="math inline">\(\varphi\)</span>）、经过时间 <span
+class="math inline">\(t\)</span>。</p>
+<p>方法建模过程</p>
+<p>以 <span class="math inline">\(O\)</span>
+为原点、与水平面平行的直线为 <span class="math inline">\(x\)</span>
+轴建立直角坐标系，则 <span class="math inline">\(t\)</span> s 后</p>
+<p><span class="math display">\[y = r\sin(\omega t +
+\varphi),\]</span></p>
+<p>故盛水筒距水面高度</p>
+<p><span class="math display">\[H = r\sin(\omega t + \varphi) +
+h.\]</span></p>
+<p>性质意义</p>
+<p><span class="math inline">\(h\)</span> 为常量，只需研究 <span
+class="math inline">\(y = r\sin(\omega t + \varphi)\)</span>
+的性质，即可把握盛水筒的运动规律——这是形如 <span class="math inline">\(y
+= A\sin(\omega x + \varphi)\)</span> 的函数的现实原型。</p>
+<p>小节5.6.2 函数 <span class="math inline">\(y = A\sin(\omega x +
+\varphi)\)</span> 的图象7 条知识点</p>
+<p>性质参数的意义</p>
+<p>函数由 <span class="math inline">\(A\)</span>、<span
+class="math inline">\(\omega\)</span>、<span
+class="math inline">\(\varphi\)</span>
+三个参数确定，了解参数的意义及其对图象的影响，就能把握函数性质。</p>
+<p>要点1. <span class="math inline">\(\varphi\)</span> 对 <span
+class="math inline">\(y = \sin(x + \varphi)\)</span>
+图象的影响（左右平移）</p>
+<p>把正弦曲线 <span class="math inline">\(y = \sin x\)</span>
+上所有点<strong>向左</strong>（<span class="math inline">\(\varphi &gt;
+0\)</span>）或<strong>向右</strong>（<span class="math inline">\(\varphi
+&lt; 0\)</span>）平移 <span class="math inline">\(|\varphi|\)</span>
+个单位长度，得 <span class="math inline">\(y = \sin(x +
+\varphi)\)</span> 的图象。</p>
+<p>要点2. <span class="math inline">\(\omega\ (\omega &gt; 0)\)</span>
+对 <span class="math inline">\(y = \sin(\omega x + \varphi)\)</span>
+图象的影响（横向伸缩）</p>
+<p>把 <span class="math inline">\(y = \sin(x + \varphi)\)</span>
+图象上所有点的<strong>横坐标</strong>缩短（<span
+class="math inline">\(\omega &gt; 1\)</span>）或伸长（<span
+class="math inline">\(0 &lt; \omega &lt; 1\)</span>）到原来的 <span
+class="math inline">\(\frac{1}{\omega}\)</span> 倍（纵坐标不变），得
+<span class="math inline">\(y = \sin(\omega x + \varphi)\)</span>
+的图象；其周期为 <span
+class="math inline">\(\frac{2\pi}{\omega}\)</span>。</p>
+<p>要点3. <span class="math inline">\(A\ (A &gt; 0)\)</span> 对 <span
+class="math inline">\(y = A\sin(\omega x + \varphi)\)</span>
+图象的影响（纵向伸缩）</p>
+<p>把 <span class="math inline">\(y = \sin(\omega x + \varphi)\)</span>
+图象上所有点的<strong>纵坐标</strong>伸长（<span class="math inline">\(A
+&gt; 1\)</span>）或缩短（<span class="math inline">\(0 &lt; A &lt;
+1\)</span>）到原来的 <span class="math inline">\(A\)</span>
+倍（横坐标不变），得 <span class="math inline">\(y = A\sin(\omega x +
+\varphi)\)</span> 的图象；其<strong>值域为</strong> <span
+class="math inline">\(\lbrack - A,A\rbrack\)</span>，最大值 <span
+class="math inline">\(A\)</span>，最小值 <span class="math inline">\(-
+A\)</span>。</p>
+<p>要点图象变换的完整流程</p>
+<p><span class="math display">\[y = \sin x\ \overset{\text{左右平移
+}|\varphi|}{\rightarrow}\ y = \sin(x + \varphi)\
+\overset{\text{横坐标变为 }\frac{1}{\omega}\text{ 倍}}{\rightarrow}\ y =
+\sin(\omega x + \varphi)\ \overset{\text{纵坐标变为 }A\text{
+倍}}{\rightarrow}\ y = A\sin(\omega x + \varphi).\]</span></p>
+<p>要点"五点法"作简图</p>
+<p>令 <span class="math inline">\(X = \omega x + \varphi\)</span>，取
+<span class="math inline">\(X =
+0,\frac{\pi}{2},\pi,\frac{3\pi}{2},2\pi\)</span>，求出对应 <span
+class="math inline">\(x\)</span> 与 <span
+class="math inline">\(y\)</span>，描点连线；一个周期长度为 <span
+class="math inline">\(T = \frac{2\pi}{\omega}\)</span>。</p>
+<p>要点注意</p>
+<p>先平移后伸缩与先伸缩后平移的<strong>平移量不同</strong>——若先伸缩（横坐标变为
+<span
+class="math inline">\(\frac{1}{\omega}\)</span>）再平移，则平移量为
+<span class="math inline">\(\frac{|\varphi|}{\omega}\)</span>。</p>
+<p>节5.7 三角函数的应用1 小节 · 9 知识点</p>
+<p>小节本节知识点节内直列9 条知识点</p>
+<p>要点应用前提</p>
+<p>现实中有大量<strong>周而复始、循环往复</strong>的周期运动变化现象，凡具周期性者都可考虑用三角函数描述。</p>
+<p>要点简谐运动（simple harmonic motion）</p>
+<p>物体所受的力（总指向平衡位置）<strong>正比于它离开平衡位置的距离</strong>的运动；在适当坐标系下可表示为</p>
+<p><span class="math display">\[y = A\sin(\omega x + \varphi),\quad x
+\in \lbrack 0, + \infty),\ A &gt; 0,\ \omega &gt; 0.\]</span></p>
+<p>要点描述简谐运动的物理量</p>
+<table style="width:82%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>物理量</th>
+<th>符号/公式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>振幅</td>
+<td><span class="math inline">\(A\)</span>​</td>
+<td>离开平衡位置的<strong>最大距离</strong></td>
+</tr>
+<tr>
+<td>周期</td>
+<td><span class="math inline">\(T = \frac{2\pi}{\omega}\)</span>​</td>
+<td>往复运动<strong>一次</strong>所需时间</td>
+</tr>
+<tr>
+<td>频率</td>
+<td><span class="math inline">\(f = \frac{1}{T} =
+\frac{\omega}{2\pi}\)</span>​</td>
+<td><strong>单位时间</strong>内往复运动的次数</td>
+</tr>
+<tr>
+<td>相位</td>
+<td><span class="math inline">\(\omega x + \varphi\)</span>​</td>
+<td>决定运动状态的量</td>
+</tr>
+<tr>
+<td>初相</td>
+<td><span class="math inline">\(\varphi\)</span>​</td>
+<td><span class="math inline">\(x = 0\)</span> 时的相位</td>
+</tr>
+</tbody>
+</table>
+<p>要点典型模型 1：弹簧振子 。由数据表与散点图得 <span
+class="math inline">\(A = 20\)</span>、<span class="math inline">\(T =
+0.6\)</span> 故 <span class="math inline">\(\omega =
+\frac{10\pi}{3}\)</span>、初始位移 <span class="math inline">\(-
+20\)</span> 得 <span class="math inline">\(\varphi = -
+\frac{\pi}{2}\)</span></p>
+<p><span class="math display">\[y = 20\sin\left( \frac{10\pi}{3}t -
+\frac{\pi}{2} \right),\ t \in \lbrack 0, + \infty).\]</span></p>
+<p>要点典型模型 2：交变电流 。由图象得 <span class="math inline">\(A =
+5\)</span>、周期 <span class="math inline">\(\frac{1}{50}\)</span> s
+故频率 <span class="math inline">\(50\)</span> Hz、<span
+class="math inline">\(\omega = 100\pi\)</span>、初相约 <span
+class="math inline">\(\frac{\pi}{3}\)</span></p>
+<p><span class="math display">\[i = 5\sin\left( 100\pi t + \frac{\pi}{3}
+\right),\ t \in \lbrack 0, + \infty).\]</span></p>
+<p>要点典型模型 3：温度变化曲线 。形如 <span class="math inline">\(y =
+A\sin(\omega x + \varphi) + b\)</span></p>
+<p>由最高 <span class="math inline">\(30\)</span>、最低 <span
+class="math inline">\(10\)</span> 得 <span class="math inline">\(A =
+\frac{1}{2}(30 - 10) = 10\)</span>、<span class="math inline">\(b =
+\frac{1}{2}(30 + 10) = 20\)</span>；由半个周期 <span
+class="math inline">\(= 14 - 6\)</span> 得 <span
+class="math inline">\(\omega = \frac{\pi}{8}\)</span>；代入点得 <span
+class="math inline">\(\varphi = \frac{3\pi}{4}\)</span>：</p>
+<p><span class="math display">\[y = 10\sin\left( \frac{\pi}{8}x +
+\frac{3\pi}{4} \right) + 20,\ x \in \lbrack 6,14\rbrack.\]</span></p>
+<p><strong>注意</strong>：所求模型只近似刻画某时段的变化，必须特别注意<strong>自变量的取值范围</strong>。</p>
+<p>要点典型模型 4：潮汐与港口水深 。形如 <span class="math inline">\(y =
+A\sin(\omega x + \varphi) + h\)</span></p>
+<p>由数据得 <span class="math inline">\(A = 2.5\)</span>、<span
+class="math inline">\(h = 5\)</span>、<span class="math inline">\(T =
+12.4\)</span>、<span class="math inline">\(\varphi = 0\)</span>，故
+<span class="math inline">\(\omega = \frac{5\pi}{31}\)</span>：</p>
+<p><span class="math display">\[y = 2.5\sin\frac{5\pi}{31}x +
+5.\]</span></p>
+<ul>
+<li>进港条件：水深 <span class="math inline">\(\geq\)</span> 吃水深度 +
+安全间隙（如 <span class="math inline">\(4 + 1.5 = 5.5\)</span>
+m）；</li>
+<li>解 <span class="math inline">\(\sin\frac{5\pi}{31}x = 0.2\)</span>
+得 <span class="math inline">\(x_{A} \approx 0.3975\)</span>、<span
+class="math inline">\(x_{B} \approx 5.8025\)</span>，结合周期性 <span
+class="math inline">\(x_{C} \approx 12.7975\)</span>、<span
+class="math inline">\(x_{D} \approx 18.2025\)</span>；</li>
+<li>若吃水深度随时间均匀减小，需与另一函数（一次函数）联立，用<strong>二分法</strong>求交点。</li>
+</ul>
+<p>方法建模的一般步骤</p>
+<p><span class="math display">\[\text{收集数据} \rightarrow
+\text{画散点图} \rightarrow \text{观察规律、选择函数模型} \rightarrow
+\text{求参数} \rightarrow \text{检验模型} \rightarrow
+\text{解决实际问题}.\]</span></p>
+<p>要点关键提示</p>
+<p>①
+现实中许多现象只在<strong>一定范围内近似</strong>呈周期变化，用三角函数<strong>近似</strong>描述；②
+实际问题常涉及复杂数据，往往需要<strong>信息技术</strong>辅助拟合与计算；③
+求参数的一般方法：<span class="math inline">\(A = \frac{\text{最大值} -
+\text{最小值}}{2}\)</span>，<span class="math inline">\(b =
+\frac{\text{最大值} + \text{最小值}}{2}\)</span>，<span
+class="math inline">\(\omega = \frac{2\pi}{T}\)</span>，<span
+class="math inline">\(\varphi\)</span> 由初始点代入求得。</p>
+<p>节阅读与思考：三角学与天文学1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点起源</p>
+<p>三角学的起源、发展与<strong>天文学</strong>密不可分，是天文观测结果推算的一种方法；1450
+年以前的三角学主要是<strong>球面三角</strong>（航海、历法推算、天文观测的需要），后因间接测量、测绘的需要出现<strong>平面三角</strong>。</p>
+<p>要点雷格蒙塔努斯（J. Regiomontanus，1436—1476）</p>
+<p>1464 年完成 5
+卷本《论各种三角形》，是欧洲<strong>第一部独立于天文学的三角学著作</strong>；前
+2
+卷论平面三角（采用印度人的正弦即弧的半弦，讨论一般三角形的正弦定理，提出求边长的代数解法），后
+3 卷论球面三角（给出球面三角的正弦定理与关于边的余弦定理）。</p>
+<p>要点雷提库斯（G. J. Rheticus，1514—1576）</p>
+<p>哥白尼的学生，把传统的<strong>弧与弦的关系</strong>改进为<strong>角的三角函数关系</strong>，把三角函数定义为<strong>直角三角形边长之比</strong>，使平面三角学从球面三角学中独立出来；采用六个函数（正弦、余弦、正切、余切、正割、余割），制定更精确的三角函数表。</p>
+<p>要点韦达（F. Viete，1540—1603）</p>
+<p>完成平面三角与球面三角的<strong>系统化</strong>工作，汇集解平面直角三角形与斜三角形的公式，补充正切公式、和差化积公式等新公式；把解斜三角形问题<strong>转化为解直角三角形</strong>问题。</p>
+<p>性质意义</p>
+<p>16
+世纪三角学从天文学中分离出来，成为数学的<strong>独立分支</strong>；后在微积分、物理学（振动、声音传播等）研究中又获新的应用。</p>
+<p>节探究与发现：函数 <span class="math inline">\(y = A\sin(\omega x +
+\varphi)\)</span> 及 <span class="math inline">\(y = A\cos(\omega x +
+\varphi)\)</span> 的周期1 小节 · 3 知识点</p>
+<p>小节本节知识点节内直列3 条知识点</p>
+<p>性质结论</p>
+<p>对 <span class="math inline">\(A \neq 0\)</span>、<span
+class="math inline">\(\omega &gt; 0\)</span>，函数 <span
+class="math inline">\(y = A\sin(\omega x + \varphi)\)</span>、<span
+class="math inline">\(y = A\cos(\omega x + \varphi)\)</span>（<span
+class="math inline">\(x \in \mathbf{R}\)</span>）的周期</p>
+<p><span class="math display">\[T = \frac{2\pi}{\omega}.\]</span></p>
+<p>要点推导思路</p>
+<p>令 <span class="math inline">\(z = \omega x + \varphi\)</span>，则
+<span class="math inline">\(z \in \mathbf{R}\)</span>，而 <span
+class="math inline">\(y = A\sin z\)</span>、<span
+class="math inline">\(y = A\cos z\)</span> 的周期为 <span
+class="math inline">\(2\pi\)</span>；因</p>
+<p><span class="math display">\[z + 2\pi = (\omega x + \varphi) + 2\pi =
+\omega\left( x + \frac{2\pi}{\omega} \right) + \varphi,\]</span></p>
+<p>故自变量 <span class="math inline">\(x\)</span> 增加 <span
+class="math inline">\(\frac{2\pi}{\omega}\)</span>
+时函数值重复出现，且增加量更小时不会总重复——故 <span
+class="math inline">\(T = \frac{2\pi}{\omega}\)</span> 是最小正数。</p>
+<p>性质推广思考</p>
+<p>命题"若 <span class="math inline">\(y = f(x)\)</span> 的周期是 <span
+class="math inline">\(T\)</span>，则 <span class="math inline">\(y =
+f(\omega x)\ (\omega &gt; 0)\)</span> 的周期是 <span
+class="math inline">\(\frac{T}{\omega}\)</span>"对一般周期函数是否成立？</p>
+<p>节探究与发现：利用单位圆的性质研究正弦函数、余弦函数的性质1 小节 · 4
+知识点</p>
+<p>小节本节知识点节内直列4 条知识点</p>
+<p>要点核心观点</p>
+<p>"单位圆上点的坐标就是三角函数"，故单位圆的性质与三角函数的性质有<strong>天然联系</strong>；借助单位圆研究三角函数性质体现了<strong>数形结合</strong>的思想方法。</p>
+<p>要点统一视角</p>
+<p>在直角坐标系 <span class="math inline">\(uOv\)</span> 中，角 <span
+class="math inline">\(x\)</span> 的终边与单位圆交于 <span
+class="math inline">\(P(\cos x,\sin
+x)\)</span>，当终边逆时针旋转时：</p>
+<ul>
+<li>横坐标按 <span class="math inline">\(1 \rightarrow 0 \rightarrow - 1
+\rightarrow 0 \rightarrow 1\cdots\)</span> 周而复始变化 →
+余弦函数的性质；</li>
+<li>纵坐标按 <span class="math inline">\(0 \rightarrow 1 \rightarrow 0
+\rightarrow - 1 \rightarrow 0\cdots\)</span> 周而复始变化 →
+正弦函数的性质。</li>
+</ul>
+<p>性质四类性质的统一解释</p>
+<ul>
+<li><strong>周期性</strong>：终边每转一周（<span
+class="math inline">\(2\pi\)</span>），坐标重复 → 周期 <span
+class="math inline">\(2\pi\)</span>；</li>
+<li><strong>奇偶性</strong>：角 <span class="math inline">\(x\)</span>
+与 <span class="math inline">\(- x\)</span> 的终边关于 <span
+class="math inline">\(u\)</span> 轴对称 → <span
+class="math inline">\(\cos( - x) = \cos x\)</span>（偶），<span
+class="math inline">\(\sin( - x) = - \sin x\)</span>（奇）；</li>
+<li><strong>单调性</strong>：由横（纵）坐标随角增大而增大/减小的区间读出；</li>
+<li><strong>最值</strong>：横坐标在 <span class="math inline">\(-
+1,1\)</span> 处取得（对应 <span class="math inline">\(\cos
+x\)</span>），纵坐标在 <span class="math inline">\(- 1,1\)</span>
+处取得（对应 <span class="math inline">\(\sin x\)</span>）。</li>
+</ul>
+<p>要点拓展</p>
+<p>借助单位圆的性质（主要是<strong>对称性</strong>），不仅可以得到三角函数的各种性质，还可以推导各种三角公式。</p>
+<p>节信息技术应用：利用信息技术制作三角函数表1 小节 · 4 知识点</p>
+<p>小节本节知识点节内直列4 条知识点</p>
+<p>要点背景</p>
+<p>纳皮尔曾利用对数手工制作 <span class="math inline">\(0^{\circ} \sim
+90^{\circ}\)</span> 每隔 <span class="math inline">\(1&#39;\)</span>
+的八位三角函数表，工作量极大。</p>
+<p>要点制作思路（递推算法）</p>
+<ul>
+<li>初始值：<span class="math inline">\(\sin 1&#39; \approx 2.908\ 882\
+046 \times 10^{- 4} \approx 0.000\ 290\ 888\)</span>；</li>
+<li><span class="math inline">\(\cos 1&#39; = \sqrt{1 -
+\sin^{2}1&#39;}\)</span>；</li>
+<li>递推：<span class="math inline">\(\alpha_{0} =
+1&#39;\)</span>，<span class="math inline">\(\alpha_{n} = \alpha_{n - 1}
++ 1&#39;\)</span>（<span class="math inline">\(n \geq
+1\)</span>）；</li>
+</ul>
+<span class="math display">\[\sin\alpha_{n} = \sin 1&#39;\cos\alpha_{n -
+1} + \cos 1&#39;\sin\alpha_{n - 1},\quad\quad\cos\alpha_{n} = \sqrt{1 -
+\sin^{2}\alpha_{n}}.\]</span>
+<p>要点实现</p>
+<p>据此写出程序框图并编程，即可得到精确的三角函数表。</p>
+<p>性质意义</p>
+<p>把"公式 + 递推 + 算法"结合，体现了信息技术在数学中的工具价值。</p>
+<p>节阅读与思考：振幅、周期、频率、相位1 小节 · 5 知识点</p>
+<p>小节本节知识点节内直列5 条知识点</p>
+<p>要点人体节律</p>
+<p>医学上把周期为 <span class="math inline">\(24\)</span>
+小时的生理运动称为<strong>中周期运动</strong>（血压、血糖浓度）；小于
+<span class="math inline">\(24\)</span>
+小时的为<strong>短周期运动</strong>（心跳、脉搏每分 <span
+class="math inline">\(50 \sim 70\)</span> 次，呼吸每分 <span
+class="math inline">\(16 \sim 24\)</span> 次）；大于 <span
+class="math inline">\(24\)</span>
+小时的为<strong>长周期运动</strong>（情绪、体力、智力）。</p>
+<p>要点声音与正弦函数</p>
+<p>声音是物体振动产生的能引起听觉的波；每个音由<strong>纯音</strong>合成，纯音的数学模型是
+<span class="math inline">\(y = A\sin\omega t\)</span>。</p>
+<p>性质音的四要素与参数的关系</p>
+<ul>
+<li><strong>响度</strong>——与<strong>振幅</strong>有关（振幅越大响度越大），音长也与振幅有关（阻尼振动使振幅逐渐减小）；</li>
+<li><strong>音调</strong>——与<strong>频率</strong>有关（频率低则声音低沉，频率高则尖利）；</li>
+<li><strong>音色</strong>——由<strong>基音与谐音</strong>的综合作用决定；</li>
+<li><strong>音长</strong>——声音持续的时间。</li>
+</ul>
+<p>要点复合音</p>
+<p>发声体全段振动产生频率为 <span class="math inline">\(f\)</span>
+的<strong>基音</strong>，其 <span
+class="math inline">\(\frac{1}{2}\)</span>、<span
+class="math inline">\(\frac{1}{3}\)</span>、<span
+class="math inline">\(\frac{1}{4}\)</span> 等部分同时振动产生频率为
+<span class="math inline">\(2f,3f,4f\)</span>
+等的<strong>谐音</strong>（振幅较小），故听到的声音函数为</p>
+<p><span class="math display">\[y = \sin x + \frac{1}{2}\sin 2x +
+\frac{1}{3}\sin 3x + \frac{1}{4}\sin 4x + \cdots\]</span></p>
+<p>要点结语</p>
+<p>周期函数产生了美妙的音乐。</p>
+<p>节本章小结（第五章）1 小节 · 8 知识点</p>
+<p>小节本节知识点节内直列8 条知识点</p>
+<p>要点知识主线</p>
+<p>角的概念推广（任意角）→ 引入弧度制 → 借助单位圆定义三角函数 →
+同角关系与诱导公式 → 图象与性质（周期、奇偶、单调、最值、对称）→
+三角恒等变换（和差角、倍角、半角、积化和差、和差化积）→ <span
+class="math inline">\(y = A\sin(\omega x + \varphi)\)</span>
+的图象与参数意义 →
+三角函数的应用（简谐运动、交变电流、潮汐、温度等）。</p>
+<p>要点研究路径</p>
+<p>先推广角的范围并引进弧度制，再借单位圆建立概念，然后用<strong>单位圆的性质（主要是对称性）</strong>以几何直观与代数运算研究性质，进而建立
+<span class="math inline">\(y = A\sin(\omega x + \varphi)\)</span>
+解决实际问题。</p>
+<p>要点弧度制的必要性</p>
+<p>函数是两个<strong>实数集</strong>之间的对应。弧度制用长度单位度量角，统一了自变量与函数值的单位；若用角度制，自变量是
+60 进位的角度、函数值是 10 进位的实数，<span
+class="math inline">\(60^{\circ} + \sin 60^{\circ}\)</span>
+之类运算将失去意义。</p>
+<p>要点单位圆的核心作用</p>
+<ul>
+<li>勾股定理 ↔︎ 同角三角函数基本关系；</li>
+<li>单位圆周长 <span class="math inline">\(2\pi\)</span> ↔︎
+正弦、余弦的周期 <span class="math inline">\(2\pi\)</span>；</li>
+<li>圆的各种对称性 ↔︎ 奇偶性、诱导公式。</li>
+</ul>
+<p>要点周期性的价值</p>
+<p>只要研究清楚三角函数在<strong>一个最小正周期</strong>内的性质即可把握整体规律。</p>
+<p>要点对称性的丰富性</p>
+<p>除奇偶性外，<span class="math inline">\(x\)</span> 轴上的点 <span
+class="math inline">\((k\pi,0)\)</span> 都是 <span
+class="math inline">\(y = \sin x\)</span> 的对称中心，直线 <span
+class="math inline">\(x = k\pi + \frac{\pi}{2}\)</span>
+都是其对称轴；余弦、正切函数有类似结论。</p>
+<p>要点公式的逻辑联系</p>
+<p>和（差）角公式具有<strong>一般意义</strong>，诱导公式、倍角公式等都是它的<strong>特例</strong>；学习时应充分利用这种联系性，<strong>避免死记硬背</strong>。</p>
+<p>方法思想方法</p>
+<p>数形结合（单位圆）、化归与转化（恒等变换）、函数与方程思想、模型思想（周期现象建模）、换元思想（"倍"与"半"的关系）。</p>
+</body>
+</html>
